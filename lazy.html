@@ -17,7 +17,9 @@
 	    	result += $('label[for="'+ state[i] +'"]').text();
 	    	result += ' ';
 	    }
-	    result += 'Всегда ваш — ' + sign + '.';
+	    if (sign != '') {
+	    	result += 'Всегда ваш — ' + sign + '.';
+		}
 	    $('#result').text(result);
 	    state = [];
 	}
