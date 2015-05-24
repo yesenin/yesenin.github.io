@@ -29,6 +29,7 @@
 		if (result.length > 0) {
 	    	$('#result').text(result);
 	    	state = [];
+	    	$('input[type="checkbox"]').attr('checked', false);
 	    	return true;
 		}
 		return false;
