@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Для ленивых</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<style>
+	label { margin-left: 20px; }
+</style>
+<script>
+	var state = [];
+	var sign = '';
+
+	var fillResult = function() {
+		var result = '';
+	    for(var i = 0; i < state.length; i++) {
+	    	result += $('label[for="'+ state[i] +'"]').text();
+	    	if (i > 0) {
+	    		result += ' ';
+	    	}
+	    }
+	    result += ' Всегда ваш — ' + sign;
+	    $('#result').text(result);
+	    state = [];
+	}
+
+	$(document).ready(function() {
+		$(document).on('click', 'input[type="checkbox"]', function() {
+			var id = $(this).attr('id');
+		    if ($(this).is(':checked')) {
+		        state.push(id);
+		    } else {
+		    	var foo = state.indexOf(id);
+		        state.splice(foo, 1);
+		    }
+		    
+		});
+		$(document).on('focusout', 'input[type="textbox"]', function() {
+			sign = $(this).val();
+		});
+		$(document).on('click', 'button', function() {
+			fillResult();
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12" style="margin-bottom: 10px;">
+			<h2>Подходящие фразы отмечаются крестиком.</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<ul>
+				<li><input type="checkbox" name="cb1" id="cb1" value=""><label for="cb1">Маменька, вышлите деньги.</label></li>
+				<li><input type="checkbox" name="cb2" id="cb2" value=""><label for="cb2">Папенька, вышлите деньги.</label></li>
+				<li><input type="checkbox" name="cb3" id="cb3" value=""><label for="cb3">Вышлите деньги.</label></li>
+				<li><input type="checkbox" name="cb4" id="cb4" value=""><label for="cb4">Дождь льет, как из ведра.</label></li>
+				<li><input type="checkbox" name="cb5" id="cb5" value=""><label for="cb5">От комаров нет спасенья.</label></li>
+				<li><input type="checkbox" name="cb6" id="cb6" value=""><label for="cb6">Обокрали дачу.</label></li>
+				<li><input type="checkbox" name="cb7" id="cb7" value=""><label for="cb7">Дача с протекцией.</label></li>
+				<li><input type="checkbox" name="cb8" id="cb8" value=""><label for="cb8">Обобрал лавочник.</label></li>
+				<li><input type="checkbox" name="cb9" id="cb9" value=""><label for="cb9">Погода превосходная.</label></li>
+				<li><input type="checkbox" name="cb10" id="cb10" value=""><label for="cb10">Трескучий мороз.</label></li>
+				<li><input type="checkbox" name="cb11" id="cb11" value=""><label for="cb11">Голова трещит с позавчерашего.</label></li>
+				<li><input type="checkbox" name="cb12" id="cb12" value=""><label for="cb12">Изжога — невероятная.</label></li>
+				<li><input type="checkbox" name="cb13" id="cb13" value=""><label for="cb13">Клопы жгут.</label></li>
+				<li><input type="checkbox" name="cb14" id="cb14" value=""><label for="cb14">Зубы ноют.</label></li>
+				<li><input type="checkbox" name="cb15" id="cb15" value=""><label for="cb15">Тощища анафемская.</label></li>
+				<li><input type="checkbox" name="cb16" id="cb16" value=""><label for="cb16">Вы — ангел.</label></li>
+				<li><input type="checkbox" name="cb17" id="cb17" value=""><label for="cb17">Вчера я видел вас во сне.</label></li>
+				<li><input type="checkbox" name="cb18" id="cb18" value=""><label for="cb18">Ваши глаза — пулеметы.</label></li>
+				<li><input type="checkbox" name="cb19" id="cb19" value=""><label for="cb19">Высылают.</label></li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+					<ul>
+					<li><input type="checkbox" name="cb20" id="cb20" value=""><label for="cb20">Прислуга грубит.</label></li>
+					<li><input type="checkbox" name="cb21" id="cb21" value=""><label for="cb21">Оштрафован за ношение ножа.</label></li>
+					<li><input type="checkbox" name="cb22" id="cb22" value=""><label for="cb22">Оштрафован за ношение вилки.</label></li>
+					<li><input type="checkbox" name="cb23" id="cb23" value=""><label for="cb23">Выпустили под залог.</label></li>
+					<li><input type="checkbox" name="cb24" id="cb24" value=""><label for="cb24">Дайте взятку.</label></li>
+					<li><input type="checkbox" name="cb25" id="cb25" value=""><label for="cb25">Возьмите и молчите.</label></li>
+					<li><input type="checkbox" name="cb26" id="cb26" value=""><label for="cb26">Продулся в прах.</label></li>
+					<li><input type="checkbox" name="cb27" id="cb27" value=""><label for="cb27">Подушку в ломбард не берут.</label></li>
+					<li><input type="checkbox" name="cb28" id="cb28" value=""><label for="cb28">Дети ревут.</label></li>
+					<li><input type="checkbox" name="cb29" id="cb29" value=""><label for="cb29">Дворник выселяет.</label></li>
+					<li><input type="checkbox" name="cb30" id="cb30" value=""><label for="cb30">Завтра к мировому.</label></li>
+					<li><input type="checkbox" name="cb31" id="cb31" value=""><label for="cb31">Хоть рыло в крови, а наша взяла.</label></li>
+					<li><input type="checkbox" name="cb32" id="cb32" value=""><label for="cb32">Дела плохи.</label></li>
+					<li><input type="checkbox" name="cb33" id="cb33" value=""><label for="cb33">Питаемся сеном.</label></li>
+					<li><input type="checkbox" name="cb34" id="cb34" value=""><label for="cb34">Хоронили писателя.</label></li>
+					<li><input type="checkbox" name="cb35" id="cb35" value=""><label for="cb35">Есть раненые.</label></li>
+					<li><input type="checkbox" name="cb36" id="cb36" value=""><label for="cb36">Слава Богу, только побили.</label></li>
+					<li><input type="checkbox" name="cb37" id="cb37" value=""><label for="cb37">Печи дымят.</label></li>
+					</ul>
+		</div>
+		<div class="col-md-4">
+				<ul>
+					<li><input type="checkbox" name="cb38" id="cb38" value=""><label for="cb38">Ем, ем, а аппетита нет.</label></li>
+					<li><input type="checkbox" name="cb39" id="cb39" value=""><label for="cb39">Пьем ваше здоровье.</label></li>
+					<li><input type="checkbox" name="cb40" id="cb40" value=""><label for="cb40">Пьем.</label></li>
+					<li><input type="checkbox" name="cb41" id="cb41" value=""><label for="cb41">А полиция у нас вежливая.</label></li>
+					<li><input type="checkbox" name="cb42" id="cb42" value=""><label for="cb42">Ошикали.</label></li>
+					<li><input type="checkbox" name="cb43" id="cb43" value=""><label for="cb43">Облила серной кислотой.</label></li>
+					<li><input type="checkbox" name="cb44" id="cb44" value=""><label for="cb44">Печень не в порядке.</label></li>
+					<li><input type="checkbox" name="cb45" id="cb45" value=""><label for="cb45">Сидеть больно...</label></li>
+					<li><input type="checkbox" name="cb46" id="cb46" value=""><label for="cb46">Вспрыснули.</label></li>
+					<li><input type="checkbox" name="cb47" id="cb47" value=""><label for="cb47">Всыпали.</label></li>
+					<li><input type="checkbox" name="cb48" id="cb48" value=""><label for="cb48">На двадцать лет.</label></li>
+					<li><input type="checkbox" name="cb49" id="cb49" value=""><label for="cb49">Прошу в моей смерти никого не винить.</label></li>
+					<li><input type="checkbox" name="cb50" id="cb50" value=""><label for="cb50">Зарезал математик.</label></li>
+					<li><input type="checkbox" name="cb51" id="cb51" value=""><label for="cb51">Поступил в авиаторы.</label></li>
+					<li><input type="checkbox" name="cb52" id="cb52" value=""><label for="cb52">Поступил в экспроприаторы.</label></li>
+					<li><input type="checkbox" name="cb53" id="cb53" value=""><label for="cb53">Пишет стихи.</label></li>
+					<li><input type="checkbox" name="cb54" id="cb54" value=""><label for="cb54">У наших соседей есть граммофон.</label></li>
+					<li><label for="tb1">Всегда ваш — </label><input type="textbox" name="tb1" id="tb1" value=""></li>
+					</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6" style="margin-top: 5px; margin-bottom: 5px; text-align: center">
+			<button id="btn" class="btn btn-info ">Готово!</textarea>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<textarea id="result" class="form-control" rows="3"></textarea>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
+</body>
+</html>	
