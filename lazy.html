@@ -24,6 +24,13 @@
 	var state = [];
 	var sign = '';
 	var yours = 'Всегда ваш — ';
+	var cb17 = 'Вчера я видѣла вас во снѣ.',
+	cb21 = 'Оштрафована за ношеніе ножа.',
+	cb22 = 'Оштрафована за ношеніе вилки.',
+	cb26 = 'Продулась в прах.',
+	cb43 = 'Облил сѣрной кислотой.',
+	cb51 = 'Поступил в авіаторы.',
+	cb52 = 'Поступил в экспропріаторы.';
 	var fillResult = function() {
 		var result = '';
 	    for(var i = 0; i < state.length; i++) {
@@ -50,8 +57,15 @@
 		});
 		$('#female').click(function() {
 			yours = "Всегда ваша — ";
-			$('#yoursModal').modal('hide');
+			$('label[for="cb17"]').text(cb17);
+			$('label[for="cb21"]').text(cb21);
+			$('label[for="cb22"]').text(cb22);
+			$('label[for="cb26"]').text(cb26);
+			$('label[for="cb43"]').text(cb43);
+			$('label[for="сb51"]').text(cb51);
+			$('label[for="сb52"]').text(cb52);
 			$('label[for="tb1"]').text(yours);
+			$('#yoursModal').modal('hide');
 		});
 		$(document).on('click', 'input[type="checkbox"]', function() {
 			var id = $(this).attr('id');
