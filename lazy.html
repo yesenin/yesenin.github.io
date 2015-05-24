@@ -7,11 +7,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <style>
 	body { background-color: #f3d0bd; font-family: 'PT Serif', serif; }
+	a {color: #66f; border-bottom: 1px solid #66f;}
+	a:hover {text-decoration: none; border-bottom: 1px solid #339; color: #339;}
 	hr { border-top: 1px solid #000; }
 	label { margin-left: 10px; font-weight: normal; font-size: 12pt; display: inline; }
 	ul { list-style-type: none; }
 	li { padding-left: 5px; }
 	li:hover { background-color: #eee; }
+	#photoModal .modal-dialog  {width:900px;}{
+    /* new custom width */
+    width: 820px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+}
 </style>
 <script>
 	var state = [];
@@ -73,7 +80,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 center" style="margin-top: 10px;">
-			<a href="https://v1.std3.ru/28/c3/1432470667-28c33ce44d69170dd57bb70fb62c8377.jpg" target="_blank">О чѣмъ рѣчь? </a>
+			<a href="#" data-target="#photoModal"  data-toggle="modal">О чѣмъ рѣчь? </a>
 		</div>
 	</div>
 	<div class="row">
@@ -192,6 +199,23 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Доволен</button>
         <button type="button" class="btn btn-warning auto">Варіанты</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #ffdecb;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="photoModalLabel">Изображеніе</h2>
+      </div>
+      <div class="modal-body text-center">
+	      <img src="https://v1.std3.ru/28/c3/1432470667-28c33ce44d69170dd57bb70fb62c8377.jpg" width="800" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ясно</button>
       </div>
     </div>
   </div>
