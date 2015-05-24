@@ -38,7 +38,16 @@
 		$(document).on('focusout', 'input[type="textbox"]', function() {
 			sign = $(this).val();
 		});
-		$(document).on('click', 'button', function() {
+		$('#manual').click(function() {
+			fillResult();
+		});
+		$('#auto').click(function() {
+			state = []
+			var b = Math.floor((Math.random() * 5) + 1);
+			for (var i = 0; i < 2 + b; i++) {
+				var a = Math.floor((Math.random() * 54) + 1);
+				state.push('cb' + a);
+			}
 			fillResult();
 		});
 	});
@@ -128,7 +137,8 @@
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6" style="margin-top: 5px; margin-bottom: 5px; text-align: center">
-			<button id="btn" class="btn btn-info ">Готово!</textarea>
+			<button class="btn btn-info " id="manual" >Готово!</button>
+			<button class="btn btn-warning " id="auto" >Еще больше лени!</button>	
 		</div>
 		<div class="col-md-3"></div>
 	</div>
