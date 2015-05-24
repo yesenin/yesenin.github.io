@@ -15,11 +15,9 @@
 		var result = '';
 	    for(var i = 0; i < state.length; i++) {
 	    	result += $('label[for="'+ state[i] +'"]').text();
-	    	if (i > 0) {
-	    		result += ' ';
-	    	}
+	    	result += ' ';
 	    }
-	    result += ' Всегда ваш — ' + sign + '.';
+	    result += 'Всегда ваш — ' + sign + '.';
 	    $('#result').text(result);
 	    state = [];
 	}
