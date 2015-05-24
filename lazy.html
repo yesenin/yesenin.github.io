@@ -43,10 +43,10 @@
 	}
 
 	$(document).ready(function() {
+		$('label[for="tb1"]').text(yours);
 		$('#yoursModal').modal('toggle');
 		$('#male').click(function() {
 			$('#yoursModal').modal('hide');
-			$('label[for="tb1"]').text(yours);
 		});
 		$('#female').click(function() {
 			yours = "Всегда ваша — ";
