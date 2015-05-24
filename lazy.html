@@ -23,15 +23,15 @@
 <script>
 	var state = [];
 	var sign = '';
-
+	var yours = 'Всегда ваша — ';
 	var fillResult = function() {
 		var result = '';
 	    for(var i = 0; i < state.length; i++) {
 	    	result += $('label[for="'+ state[i] +'"]').text();
 	    	result += ' ';
 	    }
-	    if (sign != '') {
-	    	result += 'Всегда ваш — ' + sign + '.';
+	    if (sign.trim().length > 0) {
+	    	result += yours + sign + '.';
 		}
 		if (result.length > 0) {
 	    	$('#result').text(result);
@@ -43,6 +43,16 @@
 	}
 
 	$(document).ready(function() {
+		$('#yoursModal').modal('toggle');
+		$('#male').click(function() {
+			$('#yoursModal').modal('hide');
+			$('label[for="tb1"]').text(yours);
+		});
+		$('#female').click(function() {
+			yours = "Всегда ваша — ";
+			$('#yoursModal').modal('hide');
+			$('label[for="tb1"]').text(yours);
+		});
 		$(document).on('click', 'input[type="checkbox"]', function() {
 			var id = $(this).attr('id');
 		    if ($(this).is(':checked')) {
@@ -165,14 +175,14 @@
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6" style="margin-top: 5px; margin-bottom: 5px; text-align: center">
-			<label for="tb1">Всегда ваш —&nbsp;</label><input type="textbox" name="tb1" id="tb1" value="" class="form-control">
+			<label for="tb1"></label><input type="textbox" name="tb1" id="tb1" value="" class="form-control">
 		</div>
 		<div class="col-md-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6" style="margin-top: 5px; margin-bottom: 5px; text-align: center">
-			<button class="btn btn-info " id="manual" >Дѣло сдѣлано!</button>
+			<button class="btn btn-default " id="manual" >Дѣло сдѣлано!</button>
 			<button class="btn btn-warning auto">Не желаю отм&#1123чать</button>	
 		</div>
 		<div class="col-md-3"></div>
@@ -216,6 +226,22 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Ясно</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="yoursModal" tabindex="-1" role="dialog" aria-labelledby="yoursModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #ffdecb;">
+      <div class="modal-header">
+        <h2 class="modal-title" id="yoursModalLabel">Вы случаемъ не сударыня?</h2>
+      </div>
+      <div class="modal-body text-center">
+	      <button type="button" class="btn btn-info" id="male" style="font-size: 14pt;">Никакъ нѣтъ</button>
+	      <button type="button" class="btn btn-danger" id="female" style="font-size: 14pt;">Между прочимъ — да!</button>
+      </div>
+      <div class="modal-footer">
       </div>
     </div>
   </div>
