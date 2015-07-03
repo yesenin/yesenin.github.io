@@ -55,3 +55,13 @@ står, pratar, flyger, finns, tar, stöttar, sitter
 vit, rosa, svart, vita, vitt, svarta
 orange, röda, blåa, gul, gula, färg
 lila, grå, brun, grönt, gyllene, färgglad
+
+vad, hur, vem, vems, varför, vart, var, många
+när, frågor, svaren, gör, ingen, inget, inga, förstår
+svarar, frågar, vet, vilken, vilka, vilket, jo
+
+från, i, på, vid, av, mellan
+för, utan, med, genom, till, enligt
+--
+efter, under, över, utanför, framför, bredvid
+mot, framåt, hos, före, bakom, åt
