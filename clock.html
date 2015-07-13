@@ -6,6 +6,7 @@
 <script>
 var shift = [],
     clock = [],
+	clientClock = [],
     monthList = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
     dayList = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
 
@@ -19,6 +20,16 @@ function setTime() {
     clock[5] = ('0' + date.getSeconds()).slice(-2);
     $('.clock-date').html(clock[0] + ' ' + clock[1] + ', ' + clock[2]);
     $('.clock-time').html(clock[3] + ':' + clock[4] + ':' + clock[5]);
+	
+	clientClock[0] = date.getDate();
+    clientClock[1] = monthList[date.getMonth();
+    clientClock[2] = dayList[date.getDay();
+    clientClock[3] = ('0' + (date.getHours())).slice(-2);
+    clientClock[4] = ('0' + (date.getMinutes())).slice(-2);
+    clientClock[5] = ('0' + date.getSeconds()).slice(-2);
+    $('.client-clock-date').html(clock[0] + ' ' + clock[1] + ', ' + clock[2]);
+    $('.client-clock-time').html(clock[3] + ':' + clock[4] + ':' + clock[5]);
+	
     setTimeout(function () { setTime() }, 500);
 	}
 
@@ -43,6 +54,10 @@ $(document).ready(function () {
 <span 
 	<span class="clock-date"></span>
 	<span class="clock-time"></span>
+</span>
+<span 
+	<span class="client-clock-date"></span>
+	<span class="client-clock-time"></span>
 </span>
 </body>
 </html>
