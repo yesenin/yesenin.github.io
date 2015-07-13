@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Server time</title>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" crossorigin="anonymous"></script>
+<script>
+var shift = [],
+    clock = [],
+    monthList = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+    dayList = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+
+function setTime() {
+    var date = new Date();
+    clock[0] = date.getDate() + shift[0];
+    clock[1] = monthList[date.getMonth() + shift[1]];
+    clock[2] = dayList[date.getDay() + shift[2]];
+    clock[3] = ('0' + (date.getHours() + shift[3])).slice(-2);
+    clock[4] = ('0' + (date.getMinutes() + + shift[4])).slice(-2);
+    clock[5] = ('0' + date.getSeconds()).slice(-2);
+    $('.clock-date').html(clock[0] + ' ' + clock[1] + ', ' + clock[2]);
+    $('.clock-time').html(clock[3] + ':' + clock[4] + ':' + clock[5]);
+    setTimeout(function () { setTime() }, 500);
+
+$(document).ready(function () {
+	$(document).on('click', '#get', function(e) {
+		e.preventDefault();
+		var serverDate = new Date($('#serverDatetime').val());
+		var clientDate = new Date();
+		shift[0] = serverDate.getDate() - clientDate.getDate();
+		shift[1] = serverDate.getMonth() - clientDate.getMonth();
+		shift[2] = serverDate.getDay() - clientDate.getDay();
+		shift[3] = serverDate.getHours() - clientDate.getHours();
+		shift[4] = serverDate.getMinutes() - clientDate.getMinutes();
+		setTime();
+	});
+});
+</script>
+</head>
+<body>
+<input type="text" id="serverDatetime"></input>
+<a href="#" id="get" >Get</a>
+<span 
+	<span class="clock-date"></span>
+	<span class="clock-time"></span>
+</span>
+</body>
+</html>
