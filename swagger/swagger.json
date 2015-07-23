@@ -37,10 +37,9 @@
                 ],
                 "parameters": [
                     {
-                        "name": "region_id",
+                        "name": "chain_code",
                         "in": "query",
-                        "description": "TBD!!",
-                        "required": true,
+                        "description": "Filter hotel list by chain code",
                         "type": "integer",
                         "format": "int32"
                     }
@@ -78,7 +77,7 @@
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "TBD!!",
+                        "description": "Hotel ID",
                         "required": true,
                         "type": "integer",
                         "format": "int64"
@@ -149,10 +148,9 @@
                 "operationId": "scheduleApply",
                 "parameters": [
                     {
-                        "name": "sheet",
+                        "name": "hard_reset",
                         "in": "query",
-                        "description": "TBD!!",
-                        "required": true,
+                        "description": "Stop and clean current processing tasks. Default false.",
                         "type": "integer",
                         "format": "int32"
                     }
@@ -329,7 +327,7 @@
         "/realtime/rates/processAsync/": {
             "get": {
                 "tags": [
-                    "room"
+                    "rates"
                 ],
                 "description": "Perform async realtime request to shop rates",
                 "operationId": "getHotelRooms",
@@ -399,7 +397,7 @@
         "/realtime/rates/{id}/": {
             "get": {
                 "tags": [
-                    "room"
+                    "rates"
                 ],
                 "description": "Get shoped rates of async request by scrapping id. Return a full list of evailable rates /realtime/processAsync/ method",
                 "operationId": "getHotelRooms",
@@ -428,7 +426,7 @@
         "/realtime/rates/": {
             "get": {
                 "tags": [
-                    "room"
+                    "rates"
                 ],
                 "description": "Perform realtime request to get rates",
                 "operationId": "getHotelRooms",
@@ -506,7 +504,7 @@
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "TBD!!",
+                        "description": "Hotel ID",
                         "required": true,
                         "type": "integer",
                         "format": "int32"
@@ -527,10 +525,8 @@
         "hotel": {
             "required": [
                 "name",
-                "region",
                 "url",
                 "enabled",
-                "discount_percent",
                 "chain_code",
                 "currency"
             ],
@@ -547,13 +543,13 @@
                 "enabled": {
                     "type": "string"
                 },
-                "discount_percent": {
-                    "type": "string"
-                },
                 "chain_code": {
                     "type": "string"
                 },
                 "currency": {
+                    "type": "string"
+                },
+                "hotel_code": {
                     "type": "string"
                 }
             }
@@ -564,8 +560,7 @@
             ],
             "properties": {
                 "start_date": {
-                    "type": "string",
-                    "description": "TBD"
+                    "type": "string"
                 },
                 "low": {
                     "type": "string"
