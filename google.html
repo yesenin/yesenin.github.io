@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Google anonymous</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-family: 'Bangers', cursive;
+			font-size: 35pt;
+			background-color: #000;
+			color: red;
+		}
+		.margin {
+			margin-top: 5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 margin text-center">
+				<a href="#" id="other"><img src="" id="foo"/></a>
+				<div id="text"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+	var baseUrl = 'https://ssl.gstatic.com/docs/common/profile/';
+	var suffix = '_lg.png';
+	var list = ['alligator', 'anteater', 'armadillo', 'auroch', 'axolotl', 'badger', 'bat', 'beaver', 'buffalo', 'camel', 'chameleon', 'cheetah', 'chipmunk', 'chinchilla', 'chupacabra', 'cormorant', 'coyote', 'crow', 'dingo', 'dinosaur', 'dolphin', 'duck', 'elephant', 'ferret', 'fox', 'frog', 'giraffe', 'gopher', 'grizzly', 'hedgehog', 'hippo', 'hyena', 'jackal', 'ibex', 'ifrit', 'iguana', 'koala', 'kraken', 'lemur', 'leopard', 'liger', 'llama', 'manatee', 'mink', 'monkey', 'narwhal', 'nyan cat', 'orangutan', 'otter', 'panda', 'penguin', 'platypus', 'python', 'pumpkin', 'quagga', 'rabbit', 'raccoon', 'rhino', 'sheep', 'shrew', 'skunk', 'slow loris', 'squirrel', 'turtle', 'walrus', 'wolf', 'wolverine', 'wombat'];
+	
+	function updateFoo() 
+	{
+		var i = Math.floor((Math.random() * list.length) + 1);
+		$('#foo').attr('src', baseUrl + list[i].replace(' ', '') + suffix);
+		$('#text').html(list[i][0] + '-' + list[i][0] + '-' +list[i][0] + '-' +list[i]+"!");
+	}
+	
+	$(document).ready(function() {
+		updateFoo();
+		$(document).on('click', '#other', updateFoo);
+	});
+	</script>
+</body>
+</html>
