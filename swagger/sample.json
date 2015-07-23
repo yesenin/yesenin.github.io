@@ -25,6 +25,9 @@
     "paths": {
         "/hotels": {
             "get": {
+                "tags": [
+                    "hotels"
+                ],
                 "description": "Get list of hotels",
                 "operationId": "getAllHotels",
                 "produces": [
@@ -77,6 +80,9 @@
         },
         "/hotels/{id}": {
             "get": {
+                "tags": [
+                    "hotels"
+                ],
                 "description": "Get hotel",
                 "operationId": "getHotelById",
                 "produces": [
@@ -107,6 +113,141 @@
                     },
                     "404": {
                         "description": "Hotel not found"
+                    }
+                }
+            }
+        },
+        "/schedule/update/": {
+            "get": {
+                "tags": [
+                    "schedule"
+                ],
+                "description": "Get list of hotels",
+                "operationId": "getAllHotels",
+                "parameters": [
+                    {
+                        "name": "sheet",
+                        "in": "query",
+                        "description": "TBD!!",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/schedule/apply/": {
+            "get": {
+                "tags": [
+                    "schedule"
+                ],
+                "description": "Get list of hotels",
+                "operationId": "getAllHotels",
+                "parameters": [
+                    {
+                        "name": "sheet",
+                        "in": "query",
+                        "description": "TBD!!",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/rates/hotel/{id}": {
+            "get": {
+                "tags": [
+                    "rates"
+                ],
+                "description": "TBD!!",
+                "operationId": "getAllHotels",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "TBD!!",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/rates/hotels/": {
+            "get": {
+                "tags": [
+                    "rates"
+                ],
+                "description": "TBD!!",
+                "operationId": "getAllHotels",
+                "parameters": [
+                    {
+                        "name": "sheet",
+                        "in": "query",
+                        "description": "TBD!!",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/rooms/hotel/{id}": {
+            "get": {
+                "tags": [
+                    "room"
+                ],
+                "description": "TBD!!",
+                "operationId": "getAllHotels",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "TBD!!",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 }
             }
