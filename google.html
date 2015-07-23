@@ -49,7 +49,10 @@
 	
 	$(document).ready(function() {
 		updateFoo();
-		$(document).on('click', '#other', updateFoo);
+		$(document).on('click', '#other', function(e) {
+			e.preventDefault();
+			updateFoo();
+		});
 	});
 	</script>
 </body>
