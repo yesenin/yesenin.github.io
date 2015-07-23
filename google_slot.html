@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta property="og:site_name" content="yesenin.github.io/google.html">
+	<meta property="og:title" content="Google anonymous">
+	<meta property="og:description" content="Кликайте, ради всего святого, продолжайте кликать!">
+	<meta property="og:image" content="https://ssl.gstatic.com/docs/common/profile/chinchilla_lg.png" />
+	<title>Google anonymous</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-family: 'Bangers', cursive;
+			font-size: 35pt;
+			background-color: #000;
+			color: red;
+		}
+		img {
+			margin: 10px;
+			display: none;
+			opacity: 0;
+		}
+		.margin {
+			margin-top: 5em;
+		}
+		
+		.note {
+			font-family: sans;
+			font-size: 11pt;
+			color: #777;
+		}
+		
+		#text {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 margin text-center">
+				<img src="" id="foo_1"/>
+				<img src="" id="foo_2"/>
+				<img src="" id="foo_3"/>
+				<div id="text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	var baseUrl = 'https://ssl.gstatic.com/docs/common/profile/';
+	var suffix = '_lg.png';
+	var list = ['alligator', 'anteater', 'armadillo', 'auroch', 'axolotl', 'badger', 'bat', 'beaver', 'buffalo', 'camel', 'chameleon', 'cheetah', 'chipmunk', 'chinchilla', 'chupacabra', 'cormorant', 'coyote', 'crow', 'dingo', 'dinosaur', 'dolphin', 'duck', 'elephant', 'ferret', 'fox', 'frog', 'giraffe', 'gopher', 'grizzly', 'hedgehog', 'hippo', 'hyena', 'jackal', 'ibex', 'ifrit', 'iguana', 'koala', 'kraken', 'lemur', 'leopard', 'liger', 'llama', 'manatee', 'mink', 'monkey', 'narwhal', 'nyan cat', 'orangutan', 'otter', 'panda', 'penguin', 'platypus', 'python', 'pumpkin', 'quagga', 'rabbit', 'raccoon', 'rhino', 'sheep', 'shrew', 'skunk', 'slow loris', 'squirrel', 'turtle', 'walrus', 'wolf', 'wolverine', 'wombat'];
+	
+	function updateFoo() 
+	{
+		var i = Math.floor((Math.random() * list.length / 2) + 1);
+		var j = i + Math.floor((Math.random() * (68 - i)));
+		var k = i + Math.floor((Math.random() * (j - i)));
+		$('#foo_1').attr('src', baseUrl + list[i].replace(' ', '') + suffix);
+		$('#foo_1').show();
+		$('#foo_2').attr('src', baseUrl + list[j].replace(' ', '') + suffix);
+		$('#foo_2').show();
+		$('#foo_3').attr('src', baseUrl + list[k].replace(' ', '') + suffix);
+		$('#foo_3').show();
+		
+		$( "#foo_1" ).animate({
+			opacity: 1
+		  }, 500);
+		 $( "#foo_2" ).animate({
+			opacity: 1
+		  }, 500);
+		 $( "#foo_3" ).animate({
+			opacity: 1
+		  }, 500);
+		if (i == j && i == k) {
+			$('#text').html('yeah!!');
+		}
+		else {
+			$('#text').html('nope');
+		}
+		$( "#text" ).animate({
+			opacity: 1
+		  }, 500);
+	}
+	
+	$(document).ready(function() {
+		updateFoo();
+		$(document).on('click', '#other', function(e) {
+			e.preventDefault();
+			updateFoo();
+		});
+	});
+	</script>
+</body>
+</html>
