@@ -2,17 +2,13 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "Swagger Petstore (Simple)",
-        "description": "A sample API that uses a petstore as an example to demonstrate features in the swagger-2.0 specification",
-        "termsOfService": "http://helloreverb.com/terms/",
+        "title": "Sample-Example",
+        "description": "TBD!!",
+        "termsOfService": "http://example.com",
         "contact": {
-            "name": "Swagger API team",
-            "email": "foo@example.com",
-            "url": "http://swagger.io"
-        },
-        "license": {
-            "name": "MIT",
-            "url": "http://opensource.org/licenses/MIT"
+            "name": "TBD!!",
+            "email": "sample@example.com",
+            "url": "http://example.com"
         }
     },
     "host": "petstore.swagger.wordnik.com",
@@ -29,7 +25,7 @@
     "paths": {
         "/hotels": {
             "get": {
-                "description": "Rget list of hotels",
+                "description": "Get list of hotels",
                 "operationId": "getAllHotels",
                 "produces": [
                     "application/json",
@@ -81,7 +77,7 @@
         },
         "/hotels/{id}": {
             "get": {
-                "description": "TBD!!",
+                "description": "Get hotel",
                 "operationId": "getHotelById",
                 "produces": [
                     "application/json",
