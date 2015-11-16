@@ -1,3 +1,5 @@
 $.getJSON('http://yesenin.github.io/z/spartak.json', function(data) {
-	console.log(data["rival"]);
+	for(var i in data) {
+		console.log(data[i][name]);
+	}
 });
