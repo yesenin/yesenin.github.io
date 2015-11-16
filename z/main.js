@@ -4,12 +4,11 @@ $(document).ready(function() {
 	};
 	var scale = 5;
 	var data;
-	$.getJSON('http://yesenin.github.io/z/data.json', function(data) {
+	$.getJSON('http://yesenin.github.io/z/all.json', function(data) {
 		for(var i in data['rivalList']) {
 			var item = data['rivalList'][i];
 			viewModel.rivalList.push({
 				rival: item['rival'],
-				gamesCount: parseInt(item['data']['wins']) + parseInt(item['data']['loses']) + parseInt(item['data']['draw']) + parseInt(item['data']['goalDraw']),
 				scored:item['data']['we'],
 				scoredWidth: parseInt(item['data']['we']) * scale + 'px',
 				conceded: item['data']['they'],
