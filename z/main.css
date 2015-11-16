@@ -1,3 +1,51 @@
 body {
-	background-color: #000;
+	background-color: #fff;
+	font-family: 'PT Sans', sans-serif;
+}
+.rival {
+	width: 100%;
+	text-align: center;
+}
+
+.foo {
+	width: 50%;
+	float: right;
+}
+
+.bar {
+	height: 30px;
+	margin: 2px;
+	padding: 2px;
+	font-size: 18pt;
+}
+
+.smallBar {
+	height: 20px;
+	margin: 2px;
+	padding: 2px;
+	display: table-cell; 
+	vertical-align: middle;
+}
+
+.right {
+	float: right;
+	text-align: right;
+}
+
+.left {
+	float: left;
+	text-align: left;
+}
+
+
+.caption {
+	width: 1px;
+}
+
+.conceded {
+	background-color: #FF7965;
+}
+
+.scored {
+	background-color: #01B3E1;
 }
