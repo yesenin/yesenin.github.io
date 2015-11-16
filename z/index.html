@@ -3,18 +3,27 @@
 <head>
 	<meta charset="utf-8">
 	<title>Кому, от кого и сколько</title>
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://yesenin.github.io/z/sbg.png">
+	<meta property="og:image:width" content="700" />
+  	<meta property="og:image:height" content="420" />
+  	<meta property="og:title" content="Кому и сколько забивал «Зенит». И наоборот." />
+	<meta property="og:url" content="http://yesenin.github.io/z/" />
+	<meta property="og:description" content="41 соперник за 20 с половиной сезонов в высшей футбольной лиге России. Кому «Зенит» и сколько забил за это время." />
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-<div data-bind="foreach: rivalList" class="rival">
+<div></div>
+<div data-bind="foreach: rivalList">
+	<div class="rival">
 	<h2 data-bind="text: rival" ></h2>
 	<div>
 		<div class="foo">
-			<div class="bar left scored" data-bind="style: {width: scoredWidth}, text: scored"></div>
+			<div class="captionLeft left" data-bind="text: scored"></div><div class="bar left scored" data-bind="style: {width: scoredWidth}"></div>
 		</div>
 		<div class="foo">
-			<div class="bar right conceded" data-bind="style: {width: concededWidth}, text: conceded"></div>
+			<div class="captionRight right" data-bind="text: conceded"></div><div class="bar right conceded" data-bind="style: {width: concededWidth}"></div>
 		</div>
 	</div>
 	<div>
@@ -22,10 +31,10 @@
 	</div>
 	<div>
 		<div class="foo">
-			<div class="smallBar left scored" data-bind="style: {width: weHometWidth}, text: homeScored"></div>
+			<div class="smallCaptionLeft left" data-bind="text: homeScored"></div><div class="smallBar left scored" data-bind="style: {width: weHometWidth}"></div>
 		</div>
 		<div class="foo">
-			<div class="smallBar right conceded" data-bind="style: {width: theyGuestWidth}, text: homeConceded"></div>
+			<div class="smallCaptionRight right" data-bind="text: homeConceded"></div><div class="smallBar right conceded" data-bind="style: {width: theyGuestWidth}"></div>
 		</div>
 	</div>
 	<div data-bind="{foreach: homeResult}">
@@ -36,15 +45,21 @@
 	</div>
 	<div>
 		<div class="foo">
-			<div class="smallBar left scored" data-bind="style: {width: weGuestWidth}, text: guestScored"></div>
+			<div class="smallCaptionLeft left" data-bind="text: guestScored"></div><div class="smallBar left scored" data-bind="style: {width: weGuestWidth}"></div>
 		</div>
 		<div class="foo">
-			<div class="smallBar right conceded" data-bind="style: {width: theyHomeWidth}, text: guestConceded"></div>
+			<div class="smallCaptionRight right" data-bind="text: guestConceded"></div><div class="smallBar right conceded" data-bind="style: {width: theyHomeWidth}"></div>
 		</div>
 	</div>
 	<div data-bind="{foreach: guestResult}">
 		<div></div>
 	</div>
+	</div>
+</div>
+<hr/>
+<div>
+На основе данных со <a href="http://www.sports.ru/stat/football/center/">sports.ru</a><br/>
+yesenintoxa@gmail.com
 </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js" type="text/javascript"></script>
