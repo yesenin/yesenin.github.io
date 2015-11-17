@@ -89,3 +89,15 @@ body {
 	border-left: 1px black solid;
 	text-align: left;
 }
+
+.headerLeft {
+	margin-left: 50px;
+	font-size: 18pt;
+	border: 0;
+}
+
+.headerRight {
+	margin-right: 50px;
+	font-size: 18pt;
+	border: 0;
+}
