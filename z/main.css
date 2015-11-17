@@ -2,6 +2,16 @@ body {
 	background-color: #fff;
 	font-family: 'PT Sans', sans-serif;
 }
+.result {
+	background-color: #ccc;
+	padding: 5px;
+	margin: 3px;
+	border-radius: 5px;
+	font-size: 10pt;
+	display: inline-block;
+}
+
+
 .rival {
 	width: 100%;
 	text-align: center;
