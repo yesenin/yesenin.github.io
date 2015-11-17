@@ -3,12 +3,23 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 .result {
-	background-color: #ccc;
 	padding: 5px;
 	margin: 3px;
 	border-radius: 5px;
 	font-size: 10pt;
 	display: inline-block;
+}
+
+.draw {
+	background-color: #A0A0A0;
+}
+
+.win {
+	background-color: #2D9600;
+}
+
+.lose {
+	background-color: #FF7F7F;
 }
 
 

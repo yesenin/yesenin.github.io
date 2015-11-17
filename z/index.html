@@ -57,7 +57,7 @@
 		</div>
 	</div>
 	<div data-bind="foreach: results.sort(function(left, right) { return left.count == right.count ? 0 : (left.count < right.count ? 1 : -1)})" style="padding-top: 10px; display: inline-block; width: 30%;">
-		<span class="result"><b data-bind="text: result"></b> x <span data-bind="text: count"></span></span>
+		<span data-bind="css: {result: true, draw: draw, win: win, lose: lose}"><b data-bind="text: result"></b> x <span data-bind="text: count"></span></span>
 	</div>
 	</div>
 </div>
