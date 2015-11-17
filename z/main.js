@@ -8,11 +8,11 @@ $(document).ready(function() {
 		var list = []
 		for(var i in data['rivalList']) {
 			var item = data['rivalList'][i];
-			var foo = []
-			var j;
-			for(j in item['data']['scoresAB']) {
+			var homeResults = [];
+			var guestResults = [];
+			for(var j in item['data']['scoresAB']) {
 				var sp = j.split(':')
-				var r = sp[1] + ':' + sp[0];
+				
 				var draw = win = lose = false;
 				if (parseInt(sp[0]) > parseInt(sp[1])) {
 					win = true;
@@ -23,15 +23,13 @@ $(document).ready(function() {
 				else {
 					draw = true;
 				}
-				var temp = {'result': j, 'count': parseInt(item['data']['scoresAB'][j]), 'win': win, 'lose': lose, 'draw': draw};
-				foo.push(temp)
+				
+				homeResults.push({'result': j, 'count': parseInt(item['data']['scoresAB'][j]), 'win': win, 'lose': lose, 'draw': draw})
 			}
 			
-			for(j in item['data']['scoresBA']) {
-				var sp = j.split(':')
-				var r = sp[1] + ':' + sp[0];
-				var exist = false;
-				var count = parseInt(item['data']['scoresBA'][j]);
+			for(var j in item['data']['scoresBA']) {
+				var sp = j.split(':');
+				
 				var draw = win = lose = false;
 				if (parseInt(sp[1]) > parseInt(sp[0])) {
 					win = true;
@@ -42,16 +40,8 @@ $(document).ready(function() {
 				else {
 					draw = true;
 				}
-				for (var k in foo) {
-					if (foo[k]['result'] == r) {
-						foo[k]['count'] += count;
-						exist = true;
-					}
-				}
-				if (!exist) {
-					var temp = {'result': r, 'count': count, 'win': win, 'lose': lose, 'draw': draw};
-					foo.push(temp);
-				}
+				
+				guestResults.push({'result': j, 'count': parseInt(item['data']['scoresBA'][j]), 'win': win, 'lose': lose, 'draw': draw});
 			}
 			
 			list.push({
@@ -68,15 +58,13 @@ $(document).ready(function() {
 				guestScored: item['data']['weGuest'],
 				theyHomeWidth: parseInt(item['data']['theyHome']) * scale + 'px',
 				weGuestWidth: parseInt(item['data']['weGuest']) * scale + 'px',
-				results: foo
+				homeResults: homeResults,
+				guestResults: guestResults
 			});
 		}
 		
 		var viewModel = {
-			rivalList: ko.observableArray(list),
-			resultCss: ko.pureComputed(function() {
-				return "result draw";
-			})
+			rivalList: ko.observableArray(list)
 		};
 		ko.applyBindings(viewModel);
 	});

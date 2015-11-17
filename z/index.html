@@ -13,57 +13,59 @@
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
-<body>
-<div></div>
+<body leftmargin="0" topmargin=0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight=0">
 <div data-bind="foreach: rivalList">
 	<div class="rival">
-	<h2 data-bind="text: rival" ></h2>
-	<div>
-		<div class="foo">
-			<div class="headerLeft left">Забито</div>
+		<h2 data-bind="text: rival" style="width: 90%; padding:0;" ></h2>
+		<div class="barContainer">
+			<div class="foo">
+				<div class="headerLeft left">Забито</div>
+			</div>
+			<div class="foo">
+				<div class="headerRight right">Пропущено</div>
+			</div>
 		</div>
-		<div class="foo">
-			<div class="headerRight right">Пропущено</div>
+		<div class="barContainer">
+			<div class="foo">
+				<div class="captionLeft left" data-bind="text: scored"></div><div class="bar left scored" data-bind="style: {width: scoredWidth}"></div>
+			</div>
+			<div class="foo">
+				<div class="captionRight right" data-bind="text: conceded"></div><div class="bar right conceded" data-bind="style: {width: concededWidth}"></div>
+			</div>
 		</div>
-	</div>
-	<div>
-		<div class="foo">
-			<div class="captionLeft left" data-bind="text: scored"></div><div class="bar left scored" data-bind="style: {width: scoredWidth}"></div>
+		<div>
+			Дома
 		</div>
-		<div class="foo">
-			<div class="captionRight right" data-bind="text: conceded"></div><div class="bar right conceded" data-bind="style: {width: concededWidth}"></div>
+		<div class="barContainer">
+			<div class="foo">
+				<div class="smallCaptionLeft left" data-bind="text: homeScored"></div><div class="smallBar left scored" data-bind="style: {width: weHometWidth}"></div>
+			</div>
+			<div class="foo">
+				<div class="smallCaptionRight right" data-bind="text: homeConceded"></div><div class="smallBar right conceded" data-bind="style: {width: theyGuestWidth}"></div>
+			</div>
 		</div>
-	</div>
-	<div>
-		Дома
-	</div>
-	<div>
-		<div class="foo">
-			<div class="smallCaptionLeft left" data-bind="text: homeScored"></div><div class="smallBar left scored" data-bind="style: {width: weHometWidth}"></div>
+		<div data-bind="foreach: homeResults.sort(function(left, right) { return left.count == right.count ? 0 : (left.count < right.count ? 1 : -1)})" style="display: inline-block; width: 40%">
+			<span data-bind="css: {result: true, draw: draw, win: win, lose: lose}"><b data-bind="text: result"></b> x <span data-bind="text: count"></span></span>
 		</div>
-		<div class="foo">
-			<div class="smallCaptionRight right" data-bind="text: homeConceded"></div><div class="smallBar right conceded" data-bind="style: {width: theyGuestWidth}"></div>
+		<div>
+			В гостях
 		</div>
-	</div>
-	<div>
-		В гостях
-	</div>
-	<div>
-		<div class="foo">
-			<div class="smallCaptionLeft left" data-bind="text: guestScored"></div><div class="smallBar left scored" data-bind="style: {width: weGuestWidth}"></div>
+		<div>
+			<div class="foo">
+				<div class="smallCaptionLeft left" data-bind="text: guestScored"></div><div class="smallBar left scored" data-bind="style: {width: weGuestWidth}"></div>
+			</div>
+			<div class="foo">
+				<div class="smallCaptionRight right" data-bind="text: guestConceded"></div><div class="smallBar right conceded" data-bind="style: {width: theyHomeWidth}"></div>
+			</div>
 		</div>
-		<div class="foo">
-			<div class="smallCaptionRight right" data-bind="text: guestConceded"></div><div class="smallBar right conceded" data-bind="style: {width: theyHomeWidth}"></div>
-		</div>
-	</div>
-	<div data-bind="foreach: results.sort(function(left, right) { return left.count == right.count ? 0 : (left.count < right.count ? 1 : -1)})" style="padding-top: 10px; display: inline-block; width: 30%;">
+		<div data-bind="foreach: guestResults.sort(function(left, right) { return left.count == right.count ? 0 : (left.count < right.count ? 1 : -1)})" style="display: inline-block; width: 30%">
 		<span data-bind="css: {result: true, draw: draw, win: win, lose: lose}"><b data-bind="text: result"></b> x <span data-bind="text: count"></span></span>
 	</div>
 	</div>
 </div>
 <hr/>
 <div>
-На основе данных со <a href="http://www.sports.ru/stat/football/center/">sports.ru</a><br/>
+На основе данных <a href="http://www.sports.ru/stat/football/center/">sports.ru</a><br/>
 yesenintoxa@gmail.com
 </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
