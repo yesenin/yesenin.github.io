@@ -1,4 +1,3 @@
-var data = "
 {'letters': [
     {'letter': 'B'},
     {'letter': 'D'},
@@ -16,4 +15,3 @@ var data = "
     {'letter': 'W'},
     {'letter': 'Z'}
 ]}
-";
