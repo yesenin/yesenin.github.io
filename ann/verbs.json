@@ -1,0 +1,19 @@
+var data = "
+{'letters': [
+    {'letter': 'B'},
+    {'letter': 'D'},
+    {'letter': 'E'},
+    {'letter': 'F'},
+    {'letter': 'G'},
+    {'letter': 'H'},
+    {'letter': 'K'},
+    {'letter': 'L'},
+    {'letter': 'M'},
+    {'letter': 'N'},
+    {'letter': 'R'},
+    {'letter': 'S'},
+    {'letter': 'T'},
+    {'letter': 'W'},
+    {'letter': 'Z'}
+]}
+";
