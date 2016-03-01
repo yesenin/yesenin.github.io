@@ -25,11 +25,9 @@
                 <div class="col-md-8 col-md-offset-2">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
                     <div class="panel panel-default" ng-repeat="l in data.letters">
-                        <div class="panel-heading" role="tab" id="heading{{l.letter}}">
+                        <div class="panel-heading" role="tab" id="heading{{l.letter}}" role="button"  data-parent="#accordion" data-toggle="collapse" href="#collapse{{l.letter}}" aria-expanded="true" aria-controls="collapse{{l.letter}}" >
                           <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{l.letter}}" aria-expanded="true" aria-controls="collapse{{l.letter}}">
                               {{l.letter}}
-                            </a>
                           </h4>
                         </div>
                         <div id="collapse{{l.letter}}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="heading{{l.letter}}">
