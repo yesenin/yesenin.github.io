@@ -1,18 +1,62 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <title>German irregular verbs</title>
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        
+        <style>
+            th {
+                width: 20%;
+            }
+        </style>
     </head>
     <body ng-app="verbs" ng-controller="MainCtrl">
         <div class="container" >
             <div class="row">
                 <h3>German irregular verbs</h3>
             </div>
-            {{ data }}
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+                    <div class="panel panel-default" ng-repeat="l in data.letters">
+                        <div class="panel-heading" role="tab" id="heading{{l.letter}}">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{l.letter}}" aria-expanded="true" aria-controls="collapse{{l.letter}}">
+                              {{l.letter}}
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapse{{l.letter}}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="heading{{l.letter}}">
+                            <div class="panel-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr> 
+                                            <th>Infinitive</th>
+                                            <th>English</th>
+                                            <th>Present Tense</th>
+                                            <th>Imperfet Tense</th>
+                                            <th>Participle</th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="v in l.verbs"> 
+                                            <td><b>{{v.inf}}</b></td>
+                                            <td><i>{{v.en}}</i></td>
+                                            <td>{{v.present}}</td>
+                                            <td>{{v.imp}}</td>
+                                            <td>{{v.part}}</td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
