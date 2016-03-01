@@ -11,6 +11,9 @@
             th {
                 width: 20%;
             }
+            table {
+                font-size: 10pt;
+            }
         </style>
     </head>
     <body ng-app="verbs" ng-controller="MainCtrl">
@@ -43,7 +46,7 @@
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="v in l.verbs"> 
-                                            <td><b>{{v.inf}}</b></td>
+                                            <td>{{v.inf}}</td>
                                             <td><i>{{v.en}}</i></td>
                                             <td>{{v.present}}</td>
                                             <td>{{v.imp}}</td>
