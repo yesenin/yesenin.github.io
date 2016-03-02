@@ -11,7 +11,7 @@
             th {
                 width: 20%;
             }
-            table {
+            .panel-title ng-binding, td {
                 font-size: 10pt;
             }
         </style>
@@ -26,9 +26,9 @@
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
                     <div class="panel panel-default" ng-repeat="l in data.letters">
                         <div class="panel-heading" role="tab" id="heading{{l.letter}}" role="button"  data-parent="#accordion" data-toggle="collapse" href="#collapse{{l.letter}}" aria-expanded="true" aria-controls="collapse{{l.letter}}" >
-                          <h4 class="panel-title">
+                          
                               {{l.letter}}
-                          </h4>
+                          
                         </div>
                         <div id="collapse{{l.letter}}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="heading{{l.letter}}">
                             <div class="panel-body">
@@ -36,25 +36,20 @@
                                     <thead>
                                         <tr> 
                                             <th>Infinitiv</th>
-                                            
-                                            <th>Präsens</th>
-                                            <th>Präteritum</th>
-                                            <th>Partizip II</th>
+      
                                             <th>English</th>
                                         </tr> 
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="v in l.verbs"> 
-                                            <td>{{v.inf}}</td>
-                                            
-                                            <td>{{v.present}}</td>
-                                            <td>{{v.imp}}</td>
-                                            <td>{{v.part}}</td>
-                                            <td><i>{{v.en}}</i></td>
+                                            <td>{"de": "{{v.inf}}",</td>
+
+                                            <td><i>"en": "{{v.en}}"},</i></td>
                                         </tr> 
                                     </tbody>
                                 </table>
                             </div>
+                            <i id="end{{l.letter}}"></i>
                         </div>
                     </div>
                 </div>

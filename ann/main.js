@@ -7,3 +7,14 @@ angular.module('verbs', [])
     var data = JSON.parse(raw);
     $scope.data = data;
 });
+
+$(function () {
+    $('#accordion').on('shown.bs.collapse', function (e) {
+        var offset = $('.panel.panel-default > .panel-collapse.in').offset();
+        if(offset) {
+            $('html,body').animate({
+                scrollTop: $('.panel-title a').offset().top -20
+            }, 500); 
+        }
+    }); 
+});
