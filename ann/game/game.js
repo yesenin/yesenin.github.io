@@ -47,7 +47,8 @@ angular.module("GameApp", [])
         };
         
     };
-    $scope.answer = function() {
+    $scope.answer = function($event) {
+        $(event.root).addClass('clicked');
         $scope.options = [];
         for (i in $scope.foo) {
             $scope.options.push(
