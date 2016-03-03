@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Game</title>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="game.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <style>
+            .word {
+                margin-top: 40px;
+            }
+            .clicked {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body ng-app="GameApp" ng-controller="GameCtrl">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-12 word">
+                    <div class="alert alert-warning">
+                        <p class="text-center">{{ verb.sw }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12" ng-repeat="option in options" ng-click="answer($event)">
+                    <div class="alert {{ option.class }}">
+                        <p class="text-center">{{ option.word }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-md-offset-4 text-center">
+                    <span class="btn btn-lg btn-primary text-center" ng-click="next()">Next</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
