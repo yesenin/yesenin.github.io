@@ -36,15 +36,21 @@
                                     <thead>
                                         <tr> 
                                             <th>Infinitiv</th>
-      
+                                            
+                                            <th>Präsens</th>
+                                            <th>Präteritum</th>
+                                            <th>Partizip II</th>
                                             <th>English</th>
                                         </tr> 
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="v in l.verbs"> 
-                                            <td>{"de": "{{v.inf}}",</td>
-
-                                            <td><i>"en": "{{v.en}}"},</i></td>
+                                         <tr ng-repeat="v in l.verbs"> 
+                                            <td>{{v.inf}}</td>
+                                            
+                                            <td>{{v.present}}</td>
+                                            <td>{{v.imp}}</td>
+                                            <td>{{v.part}}</td>
+                                            <td><i>{{v.en}}</i></td>
                                         </tr> 
                                     </tbody>
                                 </table>
