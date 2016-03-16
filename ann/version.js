@@ -5,11 +5,11 @@ var app = angular.module('verbs2', [
 app.config(function ($routeProvider, $httpProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'main.html',
+            templateUrl: './main.html',
             controller: 'MainCtrl'
         })
         .when('/add', {
-            templateUrl: 'add.html',
+            templateUrl: './add.html',
             controller: 'AddCtrl'
         })
         .otherwise({
