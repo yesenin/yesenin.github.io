@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>German strong verbs</title>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="version.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <style>
+            th {
+                width: 20%;
+            }
+            .panel-title ng-binding, td {
+                font-size: 10pt;
+            }
+        </style>
+    </head>
+    <body ng-app="verbs2" ng-controller="MainCtrl">
+        <div class="container" >
+            <div class="row">
+                <h3>German strong verbs</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr> 
+                                <th>Infinitiv</th>
+                                <th>Präsens</th>
+                                <th>Präteritum</th>
+                                <th colspan="2">Partizip II</th>
+                                <th>English</th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                             <tr ng-repeat="verb in data"> 
+                                <td>{{verb.infinitive}}</td>
+                                <td>
+                                    <ul ng-repeat="en in verb.presentTense"><li>{{en}}</li></ul>
+                                </td>
+                                <td>
+                                    <ul ng-repeat="en in verb.pastTense"><li>{{en}}</li></ul>
+                                <td>
+                                    <ul ng-repeat="en in verb.pastParticiple.helpingVerb"><li>{{en}}</li></ul>
+                                <td>
+                                    <ul ng-repeat="en in verb.pastParticiple.verb"><li>{{en}}</li></ul> 
+                                </td>
+                                <td>
+                                    <ul ng-repeat="en in verb.english"><li>{{en}}</li></ul>
+                                 </td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
