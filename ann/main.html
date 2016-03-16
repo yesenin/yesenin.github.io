@@ -1,0 +1,36 @@
+<div class="row">
+    <h3>German strong verbs</h3>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <table class="table table-hover">
+            <thead>
+                <tr> 
+                    <th>Infinitiv</th>
+                    <th>Präsens</th>
+                    <th>Präteritum</th>
+                    <th colspan="2">Partizip II</th>
+                    <th>English</th>
+                </tr> 
+            </thead>
+            <tbody>
+                 <tr ng-repeat="verb in data"> 
+                    <td>{{verb.infinitive}}</td>
+                    <td>
+                        <ul ng-repeat="en in verb.presentTense"><li>{{en}}</li></ul>
+                    </td>
+                    <td>
+                        <ul ng-repeat="en in verb.pastTense"><li>{{en}}</li></ul>
+                    <td>
+                        <ul ng-repeat="en in verb.pastParticiple.helpingVerb"><li>{{en}}</li></ul>
+                    <td>
+                        <ul ng-repeat="en in verb.pastParticiple.verb"><li>{{en}}</li></ul> 
+                    </td>
+                    <td>
+                        <ul ng-repeat="en in verb.english"><li>{{en}}</li></ul>
+                     </td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>
