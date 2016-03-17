@@ -30,7 +30,7 @@ angular.module('punishments', [])
     }
     
     $scope.canPunish = function(player) {
-        return !($scope.players[player].currentWord === "" && $scope.players[player].points < 3);
+        return !($scope.players[player].currentWord === "" && $scope.players[player].points < 3 && $scope.wordList.length > 0);
     }
     
     $scope.canComplete = function(player) {
