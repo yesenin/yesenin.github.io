@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>English punishments</title>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <style>
+            th {
+                width: 20%;
+            }
+            .panel-title ng-binding, td {
+                font-size: 10pt;
+            }
+            .he {
+                background-color: #98AFC7;
+                padding: 10px;
+            }
+            
+            .she {
+                background-color: #FFDFDD;
+                padding: 10px;
+            }
+            .history {
+                font-size: 10pt;
+            }
+            .mid {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body ng-app="punishments" ng-controller="MainCtrl">
+        <div class="container" >
+            <div class="col-md-4 he">
+                <div class="container">
+                    <div class="row">
+                        <h1>{{ players.player1.name }}</h1>
+                    </div>
+                    <div class="row">
+                        Total points: {{ players.player1.totalPoints }}
+                    </div>
+                    <div class="row">
+                        Points: {{ players.player1.points }}
+                    </div>
+                    <div class="row">
+                        Current word: <b>{{ players.player1.currentWord }}</b>
+                    </div>
+                    <div class="row">
+                        History:
+                        <ul ng-repeat="word in players.player1.wordList" class="history">
+                            <li>{{word}}</li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <button ng-click="punish('player1')" class="btn btn-danger" ng-disabled="canPunish('player1')">Punish</button>
+                        <button ng-click="complete('player1')" class="btn btn-success" ng-disabled="canComplete('player1')">Complete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="row mid">
+                        <div class="form-inline">
+                            <input type="text" ng-model="newWord" class="form-control" placeholder="New word"/>
+                            <button ng-click="add()" class="btn btn-primary center">Add</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul ng-repeat="word in wordList">
+                            <li>{{ word }}</li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="col-md-4 she">
+                <div class="container">
+                    <div class="row">
+                        <h1>{{ players.player2.name }}</h1>
+                    </div>
+                    <div class="row">
+                        Total points: {{ players.player2.totalPoints }}
+                    </div>
+                    <div class="row">
+                        Points: {{ players.player2.points }}
+                    </div>
+                    <div class="row">
+                        Current word: <b>{{ players.player2.currentWord }}</b>
+                    </div>
+                    <div class="row">
+                        History:
+                        <ul ng-repeat="word in players.player2.wordList" class="history">
+                            <li>{{word}}</li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <button ng-click="punish('player2')" class="btn btn-danger" ng-disabled="canPunish('player2')">Punish</button>
+                        <button ng-click="complete('player2')" class="btn btn-success" ng-disabled="canComplete('player2')">Complete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
