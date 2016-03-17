@@ -36,26 +36,26 @@
             <div class="col-md-4 he">
                 <div class="container">
                     <div class="row">
-                        <h1>{{ players.player1.name }}</h1>
+                        <h1>{{ data.he.name }}</h1>
                     </div>
                     <div class="row">
-                        Total points: {{ players.player1.totalPoints }}
+                        Total points: {{ data.he.totalPoints }}
                     </div>
                     <div class="row">
-                        Points: {{ players.player1.points }}
+                        Points: {{ data.he.points }}
                     </div>
                     <div class="row">
-                        Current word: <b>{{ players.player1.currentWord }}</b>
+                        Current word: <b>{{ data.he.currentWord }}</b>
                     </div>
                     <div class="row">
                         History:
-                        <ul ng-repeat="word in players.player1.wordList" class="history">
+                        <ul ng-repeat="word in data.he.wordList" class="history">
                             <li>{{word}}</li>
                         </ul>
                     </div>
                     <div class="row">
-                        <button ng-click="punish('player1')" class="btn btn-danger" ng-disabled="canPunish('player1')">Punish</button>
-                        <button ng-click="complete('player1')" class="btn btn-success" ng-disabled="canComplete('player1')">Complete</button>
+                        <button ng-click="punish('he')" class="btn btn-danger" ng-disabled="canPunish('he')">Punish</button>
+                        <button ng-click="complete('he')" class="btn btn-success" ng-disabled="canComplete('he')">Complete</button>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <ul ng-repeat="word in wordList">
+                        <ul ng-repeat="word in data.wordList">
                             <li>{{ word }}</li>
                         </ul>
                     </div>
@@ -75,26 +75,26 @@
             <div class="col-md-4 she">
                 <div class="container">
                     <div class="row">
-                        <h1>{{ players.player2.name }}</h1>
+                        <h1>{{ data.she.name }}</h1>
                     </div>
                     <div class="row">
-                        Total points: {{ players.player2.totalPoints }}
+                        Total points: {{ data.she.totalPoints }}
                     </div>
                     <div class="row">
-                        Points: {{ players.player2.points }}
+                        Points: {{ data.she.points }}
                     </div>
                     <div class="row">
-                        Current word: <b>{{ players.player2.currentWord }}</b>
+                        Current word: <b>{{ data.she.currentWord }}</b>
                     </div>
                     <div class="row">
                         History:
-                        <ul ng-repeat="word in players.player2.wordList" class="history">
+                        <ul ng-repeat="word in data.she.wordList" class="history">
                             <li>{{word}}</li>
                         </ul>
                     </div>
                     <div class="row">
-                        <button ng-click="punish('player2')" class="btn btn-danger" ng-disabled="canPunish('player2')">Punish</button>
-                        <button ng-click="complete('player2')" class="btn btn-success" ng-disabled="canComplete('player2')">Complete</button>
+                        <button ng-click="punish('she')" class="btn btn-danger" ng-disabled="canPunish('she')">Punish</button>
+                        <button ng-click="complete('she')" class="btn btn-success" ng-disabled="canComplete('she')">Complete</button>
                     </div>
                 </div>
             </div>
