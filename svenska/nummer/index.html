@@ -1,0 +1,170 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nummer</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			font-weight: 100%;
+		}
+		
+		.wrapper {
+			width: 100%;
+		}
+		
+		#digits {
+			margin-top: 100px;
+			padding: 20px;
+			font-size: 30pt;
+			text-align: center;
+		}
+		
+		#words {
+			padding: 20px;
+			font-size: 30pt;
+			text-align: center;
+			display: none;
+		}
+		
+		#wordsButton {
+			
+		}
+		
+		.button-wrapper {
+			text-align: center;
+		}
+		
+		.button {
+			display: inline-block;
+			width: 300px;
+			font-size: 30pt;
+			padding: 20px;
+			background-color: #3399ff;
+			color: white;
+		}
+		
+		.bottom {
+			margin-top: 40px;
+		}
+		
+		.word {
+			padding: 5px;
+		}
+		
+		#first {
+			color: #666;
+			
+		}
+		
+		#second {
+			color: #aaa;
+		}
+		
+		#third {
+			color: #999;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div id="digits"></div>
+	<div id="words">
+		<span id="first" class="word"></span>
+		<span id="second" class="word"></span>
+		<span id="third" class="word"></span>
+	</div>
+	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
+	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
+</div>
+<script language="javascript">	
+	var first = {
+		0 : "",
+		1 : "ett",
+		2 : "två",
+		3 : "tre",
+		4 : "fyra",
+		5 : "fem",
+		6 : "sex",
+		7 : "sju",
+		8 : "åtta",
+		9 : "nio",
+		10 : "tio",
+		11 : "elva",
+		12 : "tolv",
+		13 : "tretton",
+		14 : "fjorton",
+		15 : "femton",
+		16 : "sexton",
+		17 : "sjuton",
+		18 : "arton",
+		19 : "nitton",
+	};
+	
+	var third = {
+		
+		2 : "tjugo",
+		3 : "trettio",
+		4 : "fyrtio",
+		5 : "femtio",
+		6 : "sextion",
+		7 : "sjuttio",
+		8 : "attio",
+		9 : "nittio",
+	};
+	
+	window.onload = function(){
+		var number = Math.floor(Math.random() * 1000);
+		var digitsDiv = document.getElementById('digits');
+		digitsDiv.innerText = number;
+		var digits = [];
+		while (number > 0) {
+			if (digits.length == 0) {
+				if (number % 100 < 20 && number % 100 >= 10) {
+					digits.push(null);
+					digits.push(number % 100);
+					number = Math.floor(number / 100);
+				} else {
+					digits.push(number % 10);
+					number = Math.floor(number / 10);
+					digits.push(number % 10);
+					number = Math.floor(number / 10);
+				}
+			} else {
+				digits.push(number % 10);
+				number = Math.floor(number / 10);
+			}
+		}
+
+		var result = []
+		if (digits[2] !== undefined) {
+			result.push(first[digits[2]] + "hundra");
+		} else {
+			result.push("");
+		}
+		if (digits[0] === null) {
+			result.push(first[digits[1]]);
+			result.push("");
+		} else {
+			result.push(third[digits[1]]);
+			result.push(first[digits[0]]);
+		}
+		var firstSpan = document.getElementById('first');
+		var secondSpan = document.getElementById('second');
+		var thirdSpan = document.getElementById('third');
+		firstSpan.innerText = result[0];
+		secondSpan.innerText = result[1];
+		thirdSpan.innerText = result[2];
+	};
+	function showWords() {
+		var wordsDiv = document.getElementById('words');
+		var wordsButtonDiv = document.getElementById('wordsButton');
+		wordsButtonDiv.style.display = 'none';
+		wordsDiv.style.display = 'block';
+	}
+	
+	function next() {
+		location.reload();
+	}
+</script>
+</body>
+</html>
