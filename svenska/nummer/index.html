@@ -12,7 +12,7 @@
 			width: 100%;
 		}
 		
-		#digits {
+		#numbers {
 			margin-top: 100px;
 			padding: 20px;
 			font-size: 30pt;
@@ -67,18 +67,15 @@
 </head>
 <body>
 <div class="wrapper">
-	<div id="digits"></div>
-	<div id="words">
-		<span id="first" class="word"></span>
-		<span id="second" class="word"></span>
-		<span id="third" class="word"></span>
-	</div>
+	<div id="numbers"></div>
+	<div id="words"></div>
 	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
 	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
 </div>
 <script language="javascript">	
-	var first = {
-		0 : "",
+
+	var dict = {
+		0 : "noll",
 		1 : "ett",
 		2 : "två",
 		3 : "tre",
@@ -98,63 +95,76 @@
 		17 : "sjuton",
 		18 : "arton",
 		19 : "nitton",
+		20 : "tjugo",
+		30 : "trettio",
+		40 : "fyrtio",
+		50 : "femtio",
+		60 : "sextio",
+		70 : "sjuttio",
+		80 : "åttio",
+		90 : "nittio",
+		100: "hundra"
 	};
 	
-	var third = {
-		
-		2 : "tjugo",
-		3 : "trettio",
-		4 : "fyrtio",
-		5 : "femtio",
-		6 : "sextio",
-		7 : "sjuttio",
-		8 : "åttio",
-		9 : "nittio",
-	};
-	
-	window.onload = function(){
-		var number = Math.floor(Math.random() * 1000);
-		var digitsDiv = document.getElementById('digits');
-		digitsDiv.innerText = number;
-		var digits = [];
-		while (number > 0) {
-			if (digits.length == 0) {
-				if (number % 100 < 20 && number % 100 >= 10) {
-					digits.push(null);
-					digits.push(number % 100);
-					number = Math.floor(number / 100);
-				} else {
-					digits.push(number % 10);
-					number = Math.floor(number / 10);
-					digits.push(number % 10);
-					number = Math.floor(number / 10);
-				}
-			} else {
-				digits.push(number % 10);
-				number = Math.floor(number / 10);
+	var ops = {
+		'+': {
+			word: 'plus',
+			action: function(a, b) {
+				return a + b;
+			}
+		},
+		'-': {
+			word: 'minus',
+			action: function(a, b) {
+				return a - b;
 			}
 		}
-
-		var result = []
-		if (digits[2] !== undefined) {
-			result.push(first[digits[2]] + "hundra");
-		} else {
-			result.push("");
-		}
-		if (digits[0] === null) {
-			result.push(first[digits[1]]);
-			result.push("");
-		} else {
-			result.push(third[digits[1]]);
-			result.push(first[digits[0]]);
-		}
-		var firstSpan = document.getElementById('first');
-		var secondSpan = document.getElementById('second');
-		var thirdSpan = document.getElementById('third');
-		firstSpan.innerText = result[0];
-		secondSpan.innerText = result[1];
-		thirdSpan.innerText = result[2];
 	};
+	
+	setValue = function(value, id) {
+		var el = document.getElementById(id);
+		el.innerText = value;
+	}
+	
+	wordsForNumber = function(number) {
+		var digits = []
+		while (number > 0) {
+			digits.push(number % 10);
+			number = Math.floor(number / 10);
+		}
+		if (digits[1] == 1) {
+			digits[1] = digits[1] * 10 + digits[0];
+			digits[0] = 0;
+		}
+		var text = '';
+		if (digits[2] > 0) {
+			text += dict[digits[2]] + dict[100];
+		}
+		if (digits[1] > 9) {
+			text += dict[digits[1]];
+		}
+		else if (digits[1] > 0) {
+			text += dict[digits[1] * 10];
+		}
+		if (digits[0] > 0) {
+			text += dict[digits[0]];
+		}
+		return text;
+	}
+	
+	var a = Math.floor(Math.random() * 100) + 1;
+	var b = Math.floor(Math.random() * a) + 1;
+	var op = Object.keys(ops)[Math.floor(Math.random() * 2)];
+	var c = ops[op].action(a, b);
+	
+	window.onload = function(){
+		var numbersText = a + ' ' + op + ' ' + b + ' = ' + c;
+		setValue(numbersText, 'numbers');
+		var firstWord = wordsForNumber(a);
+		var wordsText = firstWord[0].toUpperCase() + firstWord.slice(1) + ' ' + ops[op].word + ' ' + wordsForNumber(b) + ' är lika med ' + wordsForNumber(c);
+		setValue(wordsText, 'words');
+	}
+	
 	function showWords() {
 		var wordsDiv = document.getElementById('words');
 		var wordsButtonDiv = document.getElementById('wordsButton');
