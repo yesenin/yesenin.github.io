@@ -1,0 +1,185 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fraser</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			font-weight: 100%;
+		}
+		
+		.wrapper {
+			width: 100%;
+		}
+		
+		#ruWords {
+			margin-top: 100px;
+			padding: 20px;
+			font-size: 30pt;
+			text-align: center;
+		}
+		
+		#svWords {
+			padding: 20px;
+			font-size: 30pt;
+			text-align: center;
+			display: none;
+		}
+		
+		#wordsButton {
+			
+		}
+		
+		.button-wrapper {
+			text-align: center;
+		}
+		
+		.button {
+			display: inline-block;
+			width: 300px;
+			font-size: 30pt;
+			padding: 20px;
+			background-color: #3399ff;
+			color: white;
+		}
+		
+		.bottom {
+			margin-top: 40px;
+		}
+		
+		.word {
+			padding: 5px;
+		}
+		
+		#first {
+			color: #666;
+			
+		}
+		
+		#second {
+			color: #aaa;
+		}
+		
+		#third {
+			color: #999;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div id="ruWords"></div>
+	<div id="svWords"></div>
+	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
+	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
+</div>
+<script language="javascript">	
+	// ÅÄÖåäö
+	var dict = [
+		{ ru: "Точно!", sv: "Precis!" },
+		{ ru: "Не совсем", sv: "Inte riktigt" },
+		{ ru: "Не очень", sv: "Inget vidare" },
+		{ ru: "Я не помню", sv: "Det minns jag inte" },
+		{ ru: "Конечно!", sv: "Ja visst!" },
+		{ ru: "Ах да!", sv: "Ja visst ja!" },
+		{ ru: "Я не знаю", sv: "Det vet jag inte" },
+		{ ru: "Увидимся!", sv: "Vi ses!" },
+		{ ru: "Приятного пути!", sv: "Trevlig resa!" },
+		{ ru: "Это неправильно", sv: "Det är  fel" },
+		{ ru: "Хорошо", sv: "Det är bra" },
+		{ ru: "Очень хорошо", sv: "Bara bra" },
+		{ ru: "Да ладно!", sv: "Jaha!" },
+		{ ru: "Мне подходит", sv: "Det passar bra!" },
+		{ ru: "Спасибо за день", sv: "Tack for idag!" },
+		{ ru: "Тебе тоже (спасибо)", sv: "Tack det samma!" },
+		{ ru: "Не правда ли?", sv: "Inte sant?" },
+		{ ru: "Осторожно!", sv: "Akta dig!" },
+		{ ru: "Спасибо!", sv: "Grattis!" },
+		{ ru: "Всего хорошего!", sv: "Har det så bra!" },
+		{ ru: "Как дела?", sv: "Hur är det?" },
+		{ ru: "Как твои дела?", sv: "Hur är det med dig?" },
+		{ ru: "Как дела? (ситуация)", sv: "Hur är läget?" },
+		{ ru: "Какая погода", sv: "Vad är det för väder?" },
+		{ ru: "Да неужели! Кого я вижу!", sv: "Nej men hej! Det var länge sen!" },
+		{ ru: "Подождите немного", sv: "Vänta lite" },
+		{ ru: "Будь добр", sv: "Snälla du!" },
+		{ ru: "Согласны?", sv: "Stämmer det?" },
+		{ ru: "Это правильно?", sv: "är det rätt?" },
+		{ ru: "Так не пойдет", sv: "Det går inte" },
+		{ ru: "Это зависти от ...", sv: "Det beror på ..." },
+		{ ru: "Я не понимаю", sv: "Jag förstår inte" },
+		{ ru: "Выпьем!", sv: "Skål!" },
+		{ ru: "Есть ли вопросы?", sv: "Har du någon fråga?" },
+		{ ru: "Доброе утро", sv: "God morgon" },
+		{ ru: "Прекрасно!", sv: "Toppen!" },
+		{ ru: "Это было хорошо", sv: "Det var gott" },
+		{ ru: "Ты согласен?", sv: "HDet var gottller du med?" },
+		{ ru: "Добро пожаловать", sv: "Välkommen!" },
+		{ ru: "Я так не думаю", sv: "Det tror jag inte" },
+		{ ru: "Это интересно", sv: "Va roligt!" },
+		{ ru: "Есть разница", sv: "Det är olika" },
+		{ ru: "С ума сойти!", sv: "Det är inte klokt!" },
+		{ ru: "С ума сошел?", sv: "Du är inte klok!" },
+		{ ru: "Так не хорошо", sv: "Inget vidare" },
+		{ ru: "Понятия не имею!", sv: "Inget aning!" },
+		{ ru: "Идет дождь", sv: "Det regnar" },
+		{ ru: "Это не играет роли", sv: "Det spelar ingen roll" },
+		{ ru: "Что значит ... ?", sv: "Vad betyder det ... ?" },
+		{ ru: "Спасибо большое", sv: "Tack så mycket!" },
+		{ ru: "Очень жаль", sv: "Det var synd" },
+		{ ru: "Я так не считаю", sv: "Det tycker jag inte" },
+		{ ru: "С Новым гордом!", sv: "Gott Nytt År!" },
+		{ ru: "Секундочку", sv: "Ett ögonblick" },
+		{ ru: "Это возможно", sv: "Det ar möjligt" },
+		{ ru: "Это невозможно", sv: "Det ar omöjligt" },
+		{ ru: "Все вместе", sv: "Till sammas" },
+		{ ru: "Достаточно", sv: "Det är bra så" },
+		{ ru: "Это завист от ...", sv: "Det beror på ..." },
+		{ ru: "Ты согласен?", sv: "Håller du med?" },
+		{ ru: "Еще раз", sv: "En gang till" },
+		{ ru: "Как себя чувствуешь?", sv: "Har mår du?" },
+		{ ru: "Ты готов?", sv: "Är du färdig" },
+		{ ru: "Как продвигается?", sv: "Hur går det?" },
+		{ ru: "Что это?", sv: "Vad är det här?" },
+		{ ru: "Что то?", sv: "Var är det där?" },
+		{ ru: "Не помешаю?", sv: "Stör jag inte?" },
+		{ ru: "Не теряйся", sv: "Hör är dig!" },
+		{ ru: "Услышимся", sv: "Vi hörs!" },
+		{ ru: "Извиняюсь, что помешаю", sv: "Ursäkta att jag stor" },
+		{ ru: "Ничего не значит", sv: "Det gör ingenting" },
+		{ ru: "Что ты сказал?", sv: "Vad säger du?" },
+		{ ru: "Я сказал ...", sv: "Ja säger att ..." },
+		{ ru: "Твой вопрос/Ты спрашиваешь", sv: "Din fråga" },
+		{ ru: "Ты готов?", sv: "Är ni klara?" },
+		{ ru: "Я готов", sv: "Jag är klar" },
+		{ ru: "Кто ответит?", sv: "Vem ska svara?" },
+		{ ru: "Не за что", sv: "Ingen orsak" },
+		{ ru: "Спасибо за внимание", sv: "Tak för senast!" },
+		{ ru: "Все будет хорошо", sv: "Det ordnar sig" }
+	];
+	
+	setValue = function(value, id) {
+		var el = document.getElementById(id);
+		el.innerText = value;
+	}
+	
+	window.onload = function(){
+		var i = Math.floor(Math.random()*dict.length);
+		var phrase = dict[i];
+		setValue('Vad heter "' + phrase.ru + '" på svenska?', 'ruWords');
+		var wordsText = phrase.sv[0].toUpperCase() + phrase.sv.slice(1);
+		setValue(wordsText, 'svWords');
+	}
+	
+	function showWords() {
+		var wordsDiv = document.getElementById('svWords');
+		var wordsButtonDiv = document.getElementById('wordsButton');
+		wordsButtonDiv.style.display = 'none';
+		wordsDiv.style.display = 'block';
+	}
+	
+	function next() {
+		location.reload();
+	}
+</script>
+</body>
+</html>
