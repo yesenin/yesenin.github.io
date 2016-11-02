@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Fraser</title>
@@ -23,7 +23,6 @@
 			padding: 20px;
 			font-size: 30pt;
 			text-align: center;
-			display: none;
 		}
 		
 		#wordsButton {
@@ -69,7 +68,6 @@
 <div class="wrapper">
 	<div id="ruWords"></div>
 	<div id="svWords"></div>
-	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
 	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
 </div>
 <script language="javascript">	
@@ -161,23 +159,19 @@
 		el.innerText = value;
 	}
 	
-	window.onload = function(){
+	function nextWords() {
 		var i = Math.floor(Math.random()*dict.length);
 		var phrase = dict[i];
-		setValue('Vad heter "' + phrase.ru + '" på svenska?', 'ruWords');
-		var wordsText = phrase.sv[0].toUpperCase() + phrase.sv.slice(1);
-		setValue(wordsText, 'svWords');
+		setValue(phrase.ru, 'ruWords');
+		setValue(phrase.sv, 'svWords');
 	}
 	
-	function showWords() {
-		var wordsDiv = document.getElementById('svWords');
-		var wordsButtonDiv = document.getElementById('wordsButton');
-		wordsButtonDiv.style.display = 'none';
-		wordsDiv.style.display = 'block';
+	window.onload = function(){
+		nextWords();
 	}
 	
 	function next() {
-		location.reload();
+		nextWords();
 	}
 </script>
 </body>
