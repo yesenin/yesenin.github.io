@@ -151,18 +151,22 @@
 		}
 		return text;
 	}
-	
-	var a = Math.floor(Math.random() * 100) + 1;
-	var b = Math.floor(Math.random() * a) + 1;
-	var op = Object.keys(ops)[Math.floor(Math.random() * 2)];
-	var c = ops[op].action(a, b);
-	
-	window.onload = function(){
+
+	function nextNumbers() {
+		var a = Math.floor(Math.random() * 100) + 1;
+		var b = Math.floor(Math.random() * a) + 1;
+		var op = Object.keys(ops)[Math.floor(Math.random() * 2)];
+		var c = ops[op].action(a, b);
+		
 		var numbersText = a + ' ' + op + ' ' + b + ' = ' + c;
 		setValue(numbersText, 'numbers');
 		var firstWord = wordsForNumber(a);
 		var wordsText = firstWord[0].toUpperCase() + firstWord.slice(1) + ' ' + ops[op].word + ' ' + wordsForNumber(b) + ' är lika med ' + wordsForNumber(c);
 		setValue(wordsText, 'words');
+	}
+	
+	window.onload = function(){
+		nextNumbers();
 	}
 	
 	function showWords() {
@@ -173,7 +177,7 @@
 	}
 	
 	function next() {
-		location.reload();
+		nextNumbers();
 	}
 </script>
 </body>
