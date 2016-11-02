@@ -165,8 +165,7 @@
 		var i = Math.floor(Math.random()*dict.length);
 		var phrase = dict[i];
 		setValue('Vad heter "' + phrase.ru + '" på svenska?', 'ruWords');
-		var wordsText = phrase.sv[0].toUpperCase() + phrase.sv.slice(1);
-		setValue(wordsText, 'svWords');
+		setValue(phrase.sv, 'svWords');
 	}
 	
 	function showWords() {
