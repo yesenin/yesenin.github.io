@@ -144,7 +144,7 @@
 		var minutesStr = minutes + "";
 		minutesStr = minutesStr.length == 1 ? "0" + minutesStr : minutesStr;
 		setValue(hours + ":" + minutesStr, 'ruWords');
-		var hoursWords = wordsForNumber(hours);
+		
 		var minutesWords = wordsForNumber(minutes);
 		if (minutes == 30) minutesWords = "halv";
 		if (minutes < 30) {
@@ -159,17 +159,22 @@
 			}
 		}
 		if (minutes > 30) {
+			
 			if (minutes <= 37) {
 				minutesWords = wordsForNumber(minutes - 30) + " över halv ";
 			}
 			else {
 				minutesWords = wordsForNumber(60 - minutes) + " i ";
+				hours += 1;
 			}
 			if (minutes == 15) {
 				minutesWords = " kvart i ";
+				hours += 1;
 			}
 		}
 		if (minutes == 0) minutesWords = "";
+		
+		var hoursWords = wordsForNumber(hours);
 		setValue("Hon är " + minutesWords + " " + hoursWords, 'svWords');
 	}
 	
