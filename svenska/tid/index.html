@@ -143,7 +143,7 @@
 		var minutes = Math.floor(Math.random()*60);
 		var minutesStr = minutes + "";
 		minutesStr = minutesStr.length == 1 ? "0" + minutesStr : minutesStr;
-		setValue(hours + ":" + minutesStr, 'ruWords');
+		setValue("— Vad är klockan?\n — " + hours + ":" + minutesStr, 'ruWords');
 		
 		var minutesWords = wordsForNumber(minutes);
 		if (minutes == 30) minutesWords = "halv";
@@ -175,7 +175,7 @@
 		if (minutes == 0) minutesWords = " klockan ";
 		
 		var hoursWords = wordsForNumber(hours);
-		setValue("Hon är " + minutesWords + " " + hoursWords, 'svWords');
+		setValue("— Hon är " + minutesWords + " " + hoursWords, 'svWords');
 	}
 	
 		
