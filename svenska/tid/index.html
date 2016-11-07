@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
 	<meta charset="utf-8">
-	<title>Nummer</title>
+	<title>Tid</title>
 	<style>
 		body {
 			font-family: sans-serif;
@@ -12,14 +12,14 @@
 			width: 100%;
 		}
 		
-		#numbers {
+		#ruWords {
 			margin-top: 100px;
 			padding: 20px;
 			font-size: 30pt;
 			text-align: center;
 		}
 		
-		#words {
+		#svWords {
 			padding: 20px;
 			font-size: 30pt;
 			text-align: center;
@@ -68,8 +68,8 @@
 <body>
 <div class="wrapper">
 	<div><a href="http://yesenin.github.io/svenska/">Main</a></div>
-	<div id="numbers"></div>
-	<div id="words"></div>
+	<div id="ruWords"></div>
+	<div id="svWords"></div>
 	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
 	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
 </div>
@@ -107,26 +107,6 @@
 		100: "hundra"
 	};
 	
-	var ops = {
-		'+': {
-			word: 'plus',
-			action: function(a, b) {
-				return a + b;
-			}
-		},
-		'−': {
-			word: 'minus',
-			action: function(a, b) {
-				return a - b;
-			}
-		}
-	};
-	
-	setValue = function(value, id) {
-		var el = document.getElementById(id);
-		el.innerText = value;
-	}
-	
 	wordsForNumber = function(number) {
 		var digits = []
 		while (number > 0) {
@@ -152,31 +132,48 @@
 		}
 		return text;
 	}
+	
+	setValue = function(value, id) {
+		var el = document.getElementById(id);
+		el.innerText = value;
+	}
 
-	function nextNumbers() {
-		var a = Math.floor(Math.random() * 100) + 1;
-		var b = Math.floor(Math.random() * a) + 1;
-		var op = Object.keys(ops)[Math.floor(Math.random() * 2)];
-		var c = ops[op].action(a, b);
+	function nextWords() {
+		var hours = Math.floor(Math.random()*12) + 1;
+		var minutes = Math.floor(Math.random()*60);
+		var minutesStr = minutes + "";
+		minutesStr = minutesStr.length == 1 ? "0" + minutesStr : minutesStr;
+		setValue(hours + ":" + minutesStr, 'ruWords');
+		var hoursWords = wordsForNumber(hours);
+		var minutesWords = wordsForNumber(minutes);
+		if (minutes == 30) minutesWords = "halv";
+		if (minutes < 30) {
+			if (minutes > 23) {
+				minutesWords = wordsForNumber(30 - minutes) + " i halv ";
+			}
+			else {
+				minutesWords = wordsForNumber(minutes) + " över ";
+			}
+			if (minutes == 15) {
+				minutesWords = " kvart över ";
+			}
+		}
+		if (minutes > 30) {
+			if (minutes < 37) {
+				minutesWords = wordsForNumber(minutes - 30) + " över halv ";
+			}
+			else {
+				minutesWords = wordsForNumber(60 - minutes) + " i ";
+			}
+			if (minutes == 15) {
+				minutesWords = " kvart i ";
+			}
+		}
+		if (minutes == 0) minutesWords = "";
+		setValue("Hon är " + minutesWords + " " + hoursWords, 'svWords');
+	}
+	
 		
-		var numbersText = a + ' ' + op + ' ' + b + ' = ' + c;
-		setValue(numbersText, 'numbers');
-		var firstWord = wordsForNumber(a);
-		var wordsText = firstWord[0].toUpperCase() + firstWord.slice(1) + ' ' + ops[op].word + ' ' + wordsForNumber(b) + ' är lika med ' + wordsForNumber(c);
-		setValue(wordsText, 'words');
-	}
-	
-	window.onload = function(){
-		nextNumbers();
-	}
-	
-	function showWords() {
-		var wordsDiv = document.getElementById('words');
-		var wordsButtonDiv = document.getElementById('wordsButton');
-		wordsButtonDiv.style.display = 'none';
-		wordsDiv.style.display = 'block';
-	}
-	
 	function hideWords() {
 		var wordsDiv = document.getElementById('svWords');
 		var wordsButtonDiv = document.getElementById('wordsButton');
@@ -184,9 +181,20 @@
 		wordsDiv.style.display = 'none';
 	}
 	
+	function showWords() {
+		var wordsDiv = document.getElementById('svWords');
+		var wordsButtonDiv = document.getElementById('wordsButton');
+		wordsButtonDiv.style.display = 'none';
+		wordsDiv.style.display = 'block';
+	}
+	
+	window.onload = function(){
+		nextWords();
+	}
+	
 	function next() {
 		hideWords();
-		nextNumbers();
+		nextWords();
 	}
 </script>
 </body>

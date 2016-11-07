@@ -162,11 +162,16 @@
 		el.innerText = value;
 	}
 	
-	window.onload = function(){
+	
+	function nextWords() {
 		var i = Math.floor(Math.random()*dict.length);
 		var phrase = dict[i];
 		setValue('Vad heter "' + phrase.ru + '" på svenska?', 'ruWords');
 		setValue(phrase.sv, 'svWords');
+	}
+	
+	window.onload = function(){
+		nextWords();
 	}
 	
 	function showWords() {
@@ -176,7 +181,15 @@
 		wordsDiv.style.display = 'block';
 	}
 	
+	function hideWords() {
+		var wordsDiv = document.getElementById('svWords');
+		var wordsButtonDiv = document.getElementById('wordsButton');
+		wordsButtonDiv.style.display = 'block';
+		wordsDiv.style.display = 'none';
+	}
+	
 	function next() {
+		hideWords();
 		location.reload();
 	}
 </script>
