@@ -148,7 +148,7 @@
 		var minutesWords = wordsForNumber(minutes);
 		if (minutes == 30) minutesWords = "halv";
 		if (minutes < 30) {
-			if (minutes > 23) {
+			if (minutes >= 23) {
 				minutesWords = wordsForNumber(30 - minutes) + " i halv ";
 			}
 			else {
@@ -159,7 +159,7 @@
 			}
 		}
 		if (minutes > 30) {
-			if (minutes < 37) {
+			if (minutes <= 37) {
 				minutesWords = wordsForNumber(minutes - 30) + " över halv ";
 			}
 			else {
