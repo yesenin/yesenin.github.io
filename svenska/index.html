@@ -2,25 +2,57 @@
 <head>
 	<meta charset="utf-8">
 	<title>Svenska</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 	<style>
 		body {
-			font-family: sans-serif;
-			font-weight: 100%;
+			font-family: 'PT Serif', serif;
 		}
 		
 		.wrapper {
 			width: 100%;
 		}
+		
+		.header {
+			margin-top: 30px;
+			text-align: center;
+			padding: 10px;
+		}
+		
+		.list {
+			list-style-type: none;
+			
+		}
+		
+		.list li {
+			display: inline-block;
+		}
+		
+		.list span {
+			width: 200px;
+			margin: 5px;
+			padding: 20px;
+			background-color: #3399ff;
+		}
+		
+		.list a {
+			text-decoration: none;
+			color: #fff;
+		}
+		
+		.list a:hover {
+			text-decoration: none;
+			color: #fff;
+		}
 	</style>
 </head>
 <body>
-<div><h3>Svenska</h3></div>
+<div class="header"><h1>Svenska</h1></div>
 <div class="wrapper">
-	<ul>
-		<li><a href ="./nummer/">Nummer</a></li>
-		<li><a href ="./fraser/">Fraser</a></li>
-		<li><a href ="./fraser/o/">Oppna fraser</a></li>
-		<li><a href ="./tid/">Tid</a></li>
+	<ul class="list">
+		<li><span><a href ="./nummer/">Nummer</a></span></li>
+		<li><span><a href ="./fraser/">Fraser</a></span></li>
+		<li><span><a href ="./fraser/o/">Oppna fraser</a></span></li>
+		<li><span><a href ="./tid/">Tid</a></span></li>
 	</ul>
 </div>
 </body>
