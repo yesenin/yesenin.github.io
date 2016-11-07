@@ -159,7 +159,7 @@
 		var op = Object.keys(ops)[Math.floor(Math.random() * 2)];
 		var c = ops[op].action(a, b);
 		
-		var numbersText = a + ' ' + op + ' ' + b + ' = ' + c;
+		var numbersText = a + ' ' + op + ' ' + b + ' = ...';
 		setValue(numbersText, 'numbers');
 		var firstWord = wordsForNumber(a);
 		var wordsText = firstWord[0].toUpperCase() + firstWord.slice(1) + ' ' + ops[op].word + ' ' + wordsForNumber(b) + ' är lika med ' + wordsForNumber(c);
