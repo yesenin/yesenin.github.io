@@ -41,6 +41,7 @@
 			padding: 20px;
 			background-color: #3399ff;
 			color: white;
+			cursor: pointer;
 		}
 		
 		.bottom {
@@ -51,23 +52,31 @@
 			padding: 5px;
 		}
 		
-		#first {
-			color: #666;
-			
+		.back-button {
+			display: inline-block;
+			width: 300px;
+			font-size: 20pt;
+			padding: 10px;
+			background-color: #ccc;
+			color: white;
+			text-align: center;
+			cursor: pointer;
 		}
 		
-		#second {
-			color: #aaa;
+		.back-button a {
+			text-decoration: none;
+			color: #000;
 		}
 		
-		#third {
-			color: #999;
+		.back-button a:hover {
+			text-decoration: none;
+			color: #000;
 		}
 	</style>
 </head>
 <body>
 <div class="wrapper">
-	<div><a href="http://yesenin.github.io/svenska/">Main</a></div>
+	<div><span class="back-button"><a href="http://yesenin.github.io/svenska/">Meny</a></span></div>
 	<div id="ruWords"></div>
 	<div id="svWords"></div>
 	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
