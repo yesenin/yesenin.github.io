@@ -91,8 +91,10 @@
 	<div><a href="http://yesenin.github.io/svenska/"><span class="back-button">Meny</span></a></div>
 	<div id="ruWords"></div>
 	<div id="svWords"></div>
-	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
-	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
+	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa<br/><span style="text-align: center; margin: 10px; color: #ddd; font-size: 10pt;"><a href="#" onclick="showWords()">Ctrl + ↑</a></span></span></div>
+	
+	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa<br/><span style="text-align: center; margin: 10px; color: #ddd; font-size: 10pt;"><a href="#" onclick="next()">Ctrl + →</a></span></span></div>
+	
 </div>
 <script language="javascript">	
 
@@ -212,6 +214,18 @@
 		var wordsButtonDiv = document.getElementById('wordsButton');
 		wordsButtonDiv.style.display = 'none';
 		wordsDiv.style.display = 'block';
+	}
+	
+	document.body.onkeydown = function(e) {
+		if (e.ctrlKey) {
+			e.preventDefault();
+			if (e.keyCode == 39) {
+				next();
+			}
+			if (e.keyCode == 38) {
+				showWords();
+			}
+		}
 	}
 	
 	window.onload = function(){
