@@ -131,6 +131,7 @@
 	};
 	
 	wordsForNumber = function(number) {
+		if (number == 0) return dict[number];
 		var digits = []
 		while (number > 0) {
 			digits.push(number % 10);
