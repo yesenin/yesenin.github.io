@@ -162,6 +162,12 @@
 		el.innerText = value;
 	}
 
+	var begin = [
+		"— Hon är ",
+		"— Den är ",
+		"— Klockan är "
+	];
+	
 	function nextWords() {
 		var hours = Math.floor(Math.random()*12) + 1;
 		var minutes = Math.floor(Math.random()*60);
@@ -199,7 +205,9 @@
 		if (minutes == 0) minutesWords = " klockan ";
 		if (hours > 12) hours = 1;
 		var hoursWords = wordsForNumber(hours);
-		setValue("— Hon är " + minutesWords + " " + hoursWords, 'svWords');
+		var i = Math.floor(Math.random()*begin.length);
+		var phrase = begin[i];
+		setValue(phrase + minutesWords + " " + hoursWords, 'svWords');
 	}
 	
 		
