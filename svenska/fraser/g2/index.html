@@ -1,7 +1,7 @@
-﻿<html>
+<html>
 <head>
 	<meta charset="utf-8">
-	<title>Fraser</title>
+	<title>Игра Ru → Sw</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 	<style>
 		body {
@@ -13,7 +13,7 @@
 		}
 		
 		#ruWords {
-			margin-top: 100px;
+			margin-top: 50px;
 			padding: 20px;
 			font-size: 30pt;
 			text-align: center;
@@ -23,7 +23,6 @@
 			padding: 20px;
 			font-size: 30pt;
 			text-align: center;
-			display: none;
 		}
 		
 		#wordsButton {
@@ -72,15 +71,42 @@
 			text-decoration: none;
 			color: #000;
 		}
+		
+		.right {
+			background-color: #ffff00;
+			color: black;
+		}
+		
+		.wrong {
+			background-color: #ccc;
+		}
+		
+		.selected {
+			border: 2px solid black
+		}
+		
+		.centered {
+			padding: 10px;
+			font-size: 20pt;
+			text-align: center;
+		}
+		
 	</style>
 </head>
 <body>
 <div class="wrapper">
 	<div><a href="http://yesenin.github.io/svenska/"><span class="back-button">Meny</span></a></div>
 	<div id="ruWords"></div>
-	<div id="svWords"></div>
-	<div class="button-wrapper" id="wordsButton"><span class="button" onclick="showWords()">Visa</span></div>
+	<div id="svWords">
+		<span class="button" id="first" onclick="check(1)"></span>
+		<span class="button" id="second" onclick="check(2)"></span>
+		<span class="button" id="third" onclick="check(3)"></span>
+	</div>
+	<div class="centered" id="message"></div>
 	<div class="button-wrapper"><span class="button bottom" onclick="next()">Nästa</span></div>
+	<div class="centered">
+		<span id="right"></span> : <span id="wrong"></span>
+	</div>
 </div>
 <script language="javascript">	
 	// ÅÄÖåäö
@@ -94,7 +120,7 @@
 		{ ru: "Я не знаю", sv: "Det vet jag inte" },
 		{ ru: "Увидимся!", sv: "Vi ses!" },
 		{ ru: "Приятного пути!", sv: "Trevlig resa!" },
-		{ ru: "Это неправильно", sv: "Det är  fel" },
+		{ ru: "Это неправильно", sv: "Det är fel" },
 		{ ru: "Хорошо", sv: "Det är bra" },
 		{ ru: "Очень хорошо", sv: "Bara bra" },
 		{ ru: "Да ладно!", sv: "Jaha!" },
@@ -113,7 +139,7 @@
 		{ ru: "Подождите немного", sv: "Vänta lite" },
 		{ ru: "Будь добр", sv: "Snälla du!" },
 		{ ru: "Согласны?", sv: "Stämmer det?" },
-		{ ru: "Это правильно?", sv: "är det rätt?" },
+		{ ru: "Это правильно?", sv: "Är det rätt?" },
 		{ ru: "Так не пойдет", sv: "Det går inte" },
 		{ ru: "Это зависит от ...", sv: "Det beror på ..." },
 		{ ru: "Я не понимаю", sv: "Jag förstår inte" },
@@ -152,7 +178,7 @@
 		{ ru: "Что то?", sv: "Var är det där?" },
 		{ ru: "Не помешаю?", sv: "Stör jag inte?" },
 		{ ru: "Не теряйся", sv: "Hör är dig!" },
-		{ ru: "Созвонимся!", sv: "Vi hörs!" },
+		{ ru: "Созвонимся", sv: "Vi hörs!" },
 		{ ru: "Извиняюсь, что помешаю", sv: "Ursäkta att jag stor" },
 		{ ru: "Ничего не значит", sv: "Det gör ingenting" },
 		{ ru: "Что ты сказал?", sv: "Vad säger du?" },
@@ -184,35 +210,91 @@
 		el.innerText = value;
 	}
 	
+	var elDict = {
+		1: 'first',
+		2: 'second',
+		3: 'third'
+	}
+	
+	var count = {
+		right: 0,
+		wrong: 0
+	}
+	
+	var answered;
+	var check = function(i) {
+		if (!answered) {
+			var list = [1, 2, 3];
+			if (i == selectedIndex) {
+				count.right++;
+				setValue("Det är rätt", 'message');
+			} else {
+				count.wrong++;
+				setValue("Det är fel", 'message');
+			}
+			
+			setValue(count.right, 'right');
+			setValue(count.wrong, 'wrong');
+			
+			var index = list.indexOf(selectedIndex);
+			list.splice(index, 1);
+			
+			document.getElementById(elDict[selectedIndex]).className += " right";
+			for (var j in list) {
+				document.getElementById(elDict[list[j]]).className += " wrong";
+			}
+			document.getElementById(elDict[i]).className += " selected";
+			answered = true;
+		}
+	}
+	
+	var selectedIndex;
+	
+	
 	
 	function nextWords() {
-		var i = Math.floor(Math.random()*dict.length);
-		var phrase = dict[i];
-		setValue('Vad heter "' + phrase.ru + '" på svenska?', 'ruWords');
-		setValue(phrase.sv, 'svWords');
+		answered = false;
+		document.getElementById(elDict[1]).className = "button";
+		document.getElementById(elDict[2]).className = "button";
+		document.getElementById(elDict[3]).className = "button";
+		
+		setValue("", 'first');
+		setValue("", 'second');
+		setValue("", 'third');
+		
+		var list = [1, 2, 3];
+		
+		var selectedWord = dict[Math.floor(Math.random()*dict.length)];
+		setValue(selectedWord.ru, 'ruWords');
+		selectedIndex = Math.floor(Math.random()*3) + 1;
+		setValue(selectedWord.sv, elDict[selectedIndex]);
+		
+		var index = list.indexOf(selectedIndex);
+		list.splice(index, 1);
+		
+	
+		var foo = [];
+		for (var j in list) {
+			var k;
+			do {
+				k = Math.floor(Math.random()*dict.length);
+			} while(k == selectedIndex || foo.indexOf(k) >= 0);
+			foo.push(k);
+			setValue(dict[k].sv, elDict[list[j]]);
+		}
+		setValue("", 'message');
 	}
 	
 	window.onload = function(){
+		setValue(count.right, 'right');
+		setValue(count.wrong, 'wrong');
 		nextWords();
 	}
 	
-	function showWords() {
-		var wordsDiv = document.getElementById('svWords');
-		var wordsButtonDiv = document.getElementById('wordsButton');
-		wordsButtonDiv.style.display = 'none';
-		wordsDiv.style.display = 'block';
-	}
-	
-	function hideWords() {
-		var wordsDiv = document.getElementById('svWords');
-		var wordsButtonDiv = document.getElementById('wordsButton');
-		wordsButtonDiv.style.display = 'block';
-		wordsDiv.style.display = 'none';
-	}
-	
 	function next() {
-		hideWords();
-		location.reload();
+		if (answered) {
+			nextWords();
+		}
 	}
 </script>
 </body>

@@ -51,19 +51,7 @@
 		.word {
 			padding: 5px;
 		}
-		
-		#first {
-			color: #666;
-			
-		}
-		
-		#second {
-			color: #aaa;
-		}
-		
-		#third {
-			color: #999;
-		}
+
 		.back-button {
 			display: inline-block;
 			width: 300px;
@@ -168,12 +156,18 @@
 		"— Klockan är "
 	];
 	
+	var question = [
+		"— Vad är klockan?",
+		"— Har mycket är klockan?"
+	];
+	
 	function nextWords() {
 		var hours = Math.floor(Math.random()*12) + 1;
 		var minutes = Math.floor(Math.random()*60);
 		var minutesStr = minutes + "";
 		minutesStr = minutesStr.length == 1 ? "0" + minutesStr : minutesStr;
-		setValue("— Vad är klockan?\n — " + hours + ":" + minutesStr, 'ruWords');
+		var q = Math.floor(Math.random()*question.length);
+		setValue(question[q] + "\n — " + hours + ":" + minutesStr, 'ruWords');
 		
 		var minutesWords = wordsForNumber(minutes);
 		if (minutes == 30) minutesWords = "halv";
