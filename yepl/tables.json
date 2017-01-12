@@ -1,1 +1,4994 @@
-{"tables": [{"table": [{"won": 24, "lost": 6, "goals_for": 67, "points": 84, "goals_against": 31, "team": "Man Utd", "drawn": 12, "goals_diff": 36}, {"won": 21, "lost": 10, "goals_for": 57, "points": 74, "goals_against": 40, "team": "Aston Villa", "drawn": 11, "goals_diff": 17}, {"won": 21, "lost": 12, "goals_for": 61, "points": 72, "goals_against": 65, "team": "Norwich", "drawn": 9, "goals_diff": -4}, {"won": 20, "lost": 11, "goals_for": 68, "points": 71, "goals_against": 46, "team": "Blackburn", "drawn": 11, "goals_diff": 22}, {"won": 17, "lost": 13, "goals_for": 63, "points": 63, "goals_against": 55, "team": "QPR", "drawn": 12, "goals_diff": 8}, {"won": 16, "lost": 15, "goals_for": 62, "points": 59, "goals_against": 55, "team": "Liverpool", "drawn": 11, "goals_diff": 7}, {"won": 15, "lost": 13, "goals_for": 55, "points": 59, "goals_against": 51, "team": "Sheffield Wed", "drawn": 14, "goals_diff": 4}, {"won": 16, "lost": 15, "goals_for": 60, "points": 59, "goals_against": 66, "team": "Spurs", "drawn": 11, "goals_diff": -6}, {"won": 15, "lost": 15, "goals_for": 56, "points": 57, "goals_against": 51, "team": "Man City", "drawn": 12, "goals_diff": 5}, {"won": 15, "lost": 16, "goals_for": 40, "points": 56, "goals_against": 38, "team": "Arsenal", "drawn": 11, "goals_diff": 2}, {"won": 14, "lost": 14, "goals_for": 51, "points": 56, "goals_against": 54, "team": "Chelsea", "drawn": 14, "goals_diff": -3}, {"won": 14, "lost": 16, "goals_for": 56, "points": 54, "goals_against": 55, "team": "Wimbledon", "drawn": 12, "goals_diff": 1}, {"won": 15, "lost": 19, "goals_for": 53, "points": 53, "goals_against": 55, "team": "Everton", "drawn": 8, "goals_diff": -2}, {"won": 14, "lost": 18, "goals_for": 54, "points": 52, "goals_against": 53, "team": "Sheffield Utd", "drawn": 10, "goals_diff": 1}, {"won": 13, "lost": 16, "goals_for": 52, "points": 52, "goals_against": 57, "team": "Coventry", "drawn": 13, "goals_diff": -5}, {"won": 12, "lost": 14, "goals_for": 50, "points": 52, "goals_against": 55, "team": "Ipswich", "drawn": 16, "goals_diff": -5}, {"won": 12, "lost": 15, "goals_for": 57, "points": 51, "goals_against": 62, "team": "Leeds", "drawn": 15, "goals_diff": -5}, {"won": 13, "lost": 18, "goals_for": 54, "points": 50, "goals_against": 61, "team": "Southampton", "drawn": 11, "goals_diff": -7}, {"won": 13, "lost": 19, "goals_for": 63, "points": 49, "goals_against": 74, "team": "Oldham", "drawn": 10, "goals_diff": -11}, {"won": 11, "lost": 15, "goals_for": 48, "points": 49, "goals_against": 61, "team": "Crystal Palace", "drawn": 16, "goals_diff": -13}, {"won": 11, "lost": 20, "goals_for": 54, "points": 44, "goals_against": 75, "team": "Middlesbrough", "drawn": 11, "goals_diff": -21}, {"won": 10, "lost": 22, "goals_for": 41, "points": 40, "goals_against": 62, "team": "Nott'm Forest", "drawn": 10, "goals_diff": -21}], "_id": "1992/93"}, {"table": [{"won": 27, "lost": 4, "goals_for": 80, "points": 92, "goals_against": 38, "team": "Man Utd", "drawn": 11, "goals_diff": 42}, {"won": 25, "lost": 8, "goals_for": 63, "points": 84, "goals_against": 36, "team": "Blackburn", "drawn": 9, "goals_diff": 27}, {"won": 23, "lost": 11, "goals_for": 82, "points": 77, "goals_against": 41, "team": "Newcastle", "drawn": 8, "goals_diff": 41}, {"won": 18, "lost": 7, "goals_for": 53, "points": 71, "goals_against": 28, "team": "Arsenal", "drawn": 17, "goals_diff": 25}, {"won": 18, "lost": 8, "goals_for": 65, "points": 70, "goals_against": 39, "team": "Leeds", "drawn": 16, "goals_diff": 26}, {"won": 18, "lost": 13, "goals_for": 56, "points": 65, "goals_against": 53, "team": "Wimbledon", "drawn": 11, "goals_diff": 3}, {"won": 16, "lost": 10, "goals_for": 76, "points": 64, "goals_against": 54, "team": "Sheffield Wed", "drawn": 16, "goals_diff": 22}, {"won": 17, "lost": 16, "goals_for": 59, "points": 60, "goals_against": 55, "team": "Liverpool", "drawn": 9, "goals_diff": 4}, {"won": 16, "lost": 14, "goals_for": 62, "points": 60, "goals_against": 61, "team": "QPR", "drawn": 12, "goals_diff": 1}, {"won": 15, "lost": 15, "goals_for": 46, "points": 57, "goals_against": 50, "team": "Aston Villa", "drawn": 12, "goals_diff": -4}, {"won": 14, "lost": 14, "goals_for": 43, "points": 56, "goals_against": 45, "team": "Coventry", "drawn": 14, "goals_diff": -2}, {"won": 12, "lost": 13, "goals_for": 65, "points": 53, "goals_against": 61, "team": "Norwich", "drawn": 17, "goals_diff": 4}, {"won": 13, "lost": 16, "goals_for": 47, "points": 52, "goals_against": 58, "team": "West Ham", "drawn": 13, "goals_diff": -11}, {"won": 13, "lost": 17, "goals_for": 49, "points": 51, "goals_against": 53, "team": "Chelsea", "drawn": 12, "goals_diff": -4}, {"won": 11, "lost": 19, "goals_for": 54, "points": 45, "goals_against": 59, "team": "Spurs", "drawn": 12, "goals_diff": -5}, {"won": 9, "lost": 15, "goals_for": 38, "points": 45, "goals_against": 49, "team": "Man City", "drawn": 18, "goals_diff": -11}, {"won": 12, "lost": 22, "goals_for": 42, "points": 44, "goals_against": 63, "team": "Everton", "drawn": 8, "goals_diff": -21}, {"won": 12, "lost": 23, "goals_for": 49, "points": 43, "goals_against": 66, "team": "Southampton", "drawn": 7, "goals_diff": -17}, {"won": 9, "lost": 17, "goals_for": 35, "points": 43, "goals_against": 58, "team": "Ipswich", "drawn": 16, "goals_diff": -23}, {"won": 8, "lost": 16, "goals_for": 42, "points": 42, "goals_against": 60, "team": "Sheffield Utd", "drawn": 18, "goals_diff": -18}, {"won": 9, "lost": 20, "goals_for": 42, "points": 40, "goals_against": 68, "team": "Oldham", "drawn": 13, "goals_diff": -26}, {"won": 5, "lost": 22, "goals_for": 47, "points": 30, "goals_against": 100, "team": "Swindon", "drawn": 15, "goals_diff": -53}], "_id": "1993/94"}, {"table": [{"won": 27, "lost": 7, "goals_for": 80, "points": 89, "goals_against": 39, "team": "Blackburn", "drawn": 8, "goals_diff": 41}, {"won": 26, "lost": 6, "goals_for": 77, "points": 88, "goals_against": 28, "team": "Man Utd", "drawn": 10, "goals_diff": 49}, {"won": 22, "lost": 9, "goals_for": 72, "points": 77, "goals_against": 43, "team": "Nott'm Forest", "drawn": 11, "goals_diff": 29}, {"won": 21, "lost": 10, "goals_for": 65, "points": 74, "goals_against": 37, "team": "Liverpool", "drawn": 11, "goals_diff": 28}, {"won": 20, "lost": 9, "goals_for": 59, "points": 73, "goals_against": 38, "team": "Leeds", "drawn": 13, "goals_diff": 21}, {"won": 20, "lost": 10, "goals_for": 67, "points": 72, "goals_against": 47, "team": "Newcastle", "drawn": 12, "goals_diff": 20}, {"won": 16, "lost": 12, "goals_for": 66, "points": 62, "goals_against": 58, "team": "Spurs", "drawn": 14, "goals_diff": 8}, {"won": 17, "lost": 16, "goals_for": 61, "points": 60, "goals_against": 59, "team": "QPR", "drawn": 9, "goals_diff": 2}, {"won": 15, "lost": 16, "goals_for": 48, "points": 56, "goals_against": 65, "team": "Wimbledon", "drawn": 11, "goals_diff": -17}, {"won": 12, "lost": 12, "goals_for": 61, "points": 54, "goals_against": 63, "team": "Southampton", "drawn": 18, "goals_diff": -2}, {"won": 13, "lost": 14, "goals_for": 50, "points": 54, "goals_against": 55, "team": "Chelsea", "drawn": 15, "goals_diff": -5}, {"won": 13, "lost": 17, "goals_for": 52, "points": 51, "goals_against": 49, "team": "Arsenal", "drawn": 12, "goals_diff": 3}, {"won": 13, "lost": 17, "goals_for": 49, "points": 51, "goals_against": 57, "team": "Sheffield Wed", "drawn": 12, "goals_diff": -8}, {"won": 13, "lost": 18, "goals_for": 44, "points": 50, "goals_against": 48, "team": "West Ham", "drawn": 11, "goals_diff": -4}, {"won": 11, "lost": 14, "goals_for": 44, "points": 50, "goals_against": 51, "team": "Everton", "drawn": 17, "goals_diff": -7}, {"won": 12, "lost": 16, "goals_for": 44, "points": 50, "goals_against": 62, "team": "Coventry", "drawn": 14, "goals_diff": -18}, {"won": 12, "lost": 17, "goals_for": 53, "points": 49, "goals_against": 64, "team": "Man City", "drawn": 13, "goals_diff": -11}, {"won": 11, "lost": 16, "goals_for": 51, "points": 48, "goals_against": 56, "team": "Aston Villa", "drawn": 15, "goals_diff": -5}, {"won": 11, "lost": 19, "goals_for": 34, "points": 45, "goals_against": 49, "team": "Crystal Palace", "drawn": 12, "goals_diff": -15}, {"won": 10, "lost": 19, "goals_for": 37, "points": 43, "goals_against": 54, "team": "Norwich", "drawn": 13, "goals_diff": -17}, {"won": 6, "lost": 25, "goals_for": 45, "points": 29, "goals_against": 80, "team": "Leicester", "drawn": 11, "goals_diff": -35}, {"won": 7, "lost": 29, "goals_for": 36, "points": 27, "goals_against": 93, "team": "Ipswich", "drawn": 6, "goals_diff": -57}], "_id": "1994/95"}, {"table": [{"won": 25, "lost": 6, "goals_for": 73, "points": 82, "goals_against": 35, "team": "Man Utd", "drawn": 7, "goals_diff": 38}, {"won": 24, "lost": 8, "goals_for": 66, "points": 78, "goals_against": 37, "team": "Newcastle", "drawn": 6, "goals_diff": 29}, {"won": 20, "lost": 7, "goals_for": 70, "points": 71, "goals_against": 34, "team": "Liverpool", "drawn": 11, "goals_diff": 36}, {"won": 18, "lost": 11, "goals_for": 52, "points": 63, "goals_against": 35, "team": "Aston Villa", "drawn": 9, "goals_diff": 17}, {"won": 17, "lost": 9, "goals_for": 49, "points": 63, "goals_against": 32, "team": "Arsenal", "drawn": 12, "goals_diff": 17}, {"won": 17, "lost": 11, "goals_for": 64, "points": 61, "goals_against": 44, "team": "Everton", "drawn": 10, "goals_diff": 20}, {"won": 18, "lost": 13, "goals_for": 61, "points": 61, "goals_against": 47, "team": "Blackburn", "drawn": 7, "goals_diff": 14}, {"won": 16, "lost": 9, "goals_for": 50, "points": 61, "goals_against": 38, "team": "Spurs", "drawn": 13, "goals_diff": 12}, {"won": 15, "lost": 10, "goals_for": 50, "points": 58, "goals_against": 54, "team": "Nott'm Forest", "drawn": 13, "goals_diff": -4}, {"won": 14, "lost": 15, "goals_for": 43, "points": 51, "goals_against": 52, "team": "West Ham", "drawn": 9, "goals_diff": -9}, {"won": 12, "lost": 12, "goals_for": 46, "points": 50, "goals_against": 44, "team": "Chelsea", "drawn": 14, "goals_diff": 2}, {"won": 11, "lost": 17, "goals_for": 35, "points": 43, "goals_against": 50, "team": "Middlesbrough", "drawn": 10, "goals_diff": -15}, {"won": 12, "lost": 19, "goals_for": 40, "points": 43, "goals_against": 57, "team": "Leeds", "drawn": 7, "goals_diff": -17}, {"won": 10, "lost": 17, "goals_for": 55, "points": 41, "goals_against": 70, "team": "Wimbledon", "drawn": 11, "goals_diff": -15}, {"won": 10, "lost": 18, "goals_for": 48, "points": 40, "goals_against": 61, "team": "Sheffield Wed", "drawn": 10, "goals_diff": -13}, {"won": 8, "lost": 16, "goals_for": 42, "points": 38, "goals_against": 60, "team": "Coventry", "drawn": 14, "goals_diff": -18}, {"won": 9, "lost": 18, "goals_for": 34, "points": 38, "goals_against": 52, "team": "Southampton", "drawn": 11, "goals_diff": -18}, {"won": 9, "lost": 18, "goals_for": 33, "points": 38, "goals_against": 58, "team": "Man City", "drawn": 11, "goals_diff": -25}, {"won": 9, "lost": 23, "goals_for": 38, "points": 33, "goals_against": 57, "team": "QPR", "drawn": 6, "goals_diff": -19}, {"won": 8, "lost": 25, "goals_for": 39, "points": 29, "goals_against": 71, "team": "Bolton", "drawn": 5, "goals_diff": -32}], "_id": "1995/96"}, {"table": [{"won": 21, "lost": 5, "goals_for": 76, "points": 75, "goals_against": 44, "team": "Man Utd", "drawn": 12, "goals_diff": 32}, {"won": 19, "lost": 8, "goals_for": 73, "points": 68, "goals_against": 40, "team": "Newcastle", "drawn": 11, "goals_diff": 33}, {"won": 19, "lost": 8, "goals_for": 62, "points": 68, "goals_against": 32, "team": "Arsenal", "drawn": 11, "goals_diff": 30}, {"won": 19, "lost": 8, "goals_for": 62, "points": 68, "goals_against": 37, "team": "Liverpool", "drawn": 11, "goals_diff": 25}, {"won": 17, "lost": 11, "goals_for": 47, "points": 61, "goals_against": 34, "team": "Aston Villa", "drawn": 10, "goals_diff": 13}, {"won": 16, "lost": 11, "goals_for": 58, "points": 59, "goals_against": 55, "team": "Chelsea", "drawn": 11, "goals_diff": 3}, {"won": 14, "lost": 9, "goals_for": 50, "points": 57, "goals_against": 51, "team": "Sheffield Wed", "drawn": 15, "goals_diff": -1}, {"won": 15, "lost": 12, "goals_for": 49, "points": 56, "goals_against": 46, "team": "Wimbledon", "drawn": 11, "goals_diff": 3}, {"won": 12, "lost": 15, "goals_for": 46, "points": 47, "goals_against": 54, "team": "Leicester", "drawn": 11, "goals_diff": -8}, {"won": 13, "lost": 18, "goals_for": 44, "points": 46, "goals_against": 51, "team": "Spurs", "drawn": 7, "goals_diff": -7}, {"won": 11, "lost": 14, "goals_for": 28, "points": 46, "goals_against": 38, "team": "Leeds", "drawn": 13, "goals_diff": -10}, {"won": 11, "lost": 14, "goals_for": 45, "points": 46, "goals_against": 58, "team": "Derby", "drawn": 13, "goals_diff": -13}, {"won": 9, "lost": 14, "goals_for": 42, "points": 42, "goals_against": 43, "team": "Blackburn", "drawn": 15, "goals_diff": -1}, {"won": 10, "lost": 16, "goals_for": 51, "points": 42, "goals_against": 60, "team": "Middlesbrough", "drawn": 12, "goals_diff": -9}, {"won": 10, "lost": 16, "goals_for": 39, "points": 42, "goals_against": 48, "team": "West Ham", "drawn": 12, "goals_diff": -9}, {"won": 10, "lost": 16, "goals_for": 44, "points": 42, "goals_against": 57, "team": "Everton", "drawn": 12, "goals_diff": -13}, {"won": 10, "lost": 17, "goals_for": 50, "points": 41, "goals_against": 56, "team": "Southampton", "drawn": 11, "goals_diff": -6}, {"won": 9, "lost": 15, "goals_for": 38, "points": 41, "goals_against": 54, "team": "Coventry", "drawn": 14, "goals_diff": -16}, {"won": 10, "lost": 18, "goals_for": 35, "points": 40, "goals_against": 53, "team": "Sunderland", "drawn": 10, "goals_diff": -18}, {"won": 6, "lost": 16, "goals_for": 31, "points": 34, "goals_against": 59, "team": "Nott'm Forest", "drawn": 16, "goals_diff": -28}], "_id": "1996/97"}, {"table": [{"won": 23, "lost": 6, "goals_for": 68, "points": 78, "goals_against": 33, "team": "Arsenal", "drawn": 9, "goals_diff": 35}, {"won": 23, "lost": 7, "goals_for": 73, "points": 77, "goals_against": 26, "team": "Man Utd", "drawn": 8, "goals_diff": 47}, {"won": 18, "lost": 9, "goals_for": 68, "points": 65, "goals_against": 42, "team": "Liverpool", "drawn": 11, "goals_diff": 26}, {"won": 20, "lost": 15, "goals_for": 71, "points": 63, "goals_against": 43, "team": "Chelsea", "drawn": 3, "goals_diff": 28}, {"won": 17, "lost": 13, "goals_for": 57, "points": 59, "goals_against": 46, "team": "Leeds", "drawn": 8, "goals_diff": 11}, {"won": 16, "lost": 12, "goals_for": 57, "points": 58, "goals_against": 52, "team": "Blackburn", "drawn": 10, "goals_diff": 5}, {"won": 17, "lost": 15, "goals_for": 49, "points": 57, "goals_against": 48, "team": "Aston Villa", "drawn": 6, "goals_diff": 1}, {"won": 16, "lost": 14, "goals_for": 56, "points": 56, "goals_against": 57, "team": "West Ham", "drawn": 8, "goals_diff": -1}, {"won": 16, "lost": 15, "goals_for": 52, "points": 55, "goals_against": 49, "team": "Derby", "drawn": 7, "goals_diff": 3}, {"won": 13, "lost": 11, "goals_for": 51, "points": 53, "goals_against": 41, "team": "Leicester", "drawn": 14, "goals_diff": 10}, {"won": 12, "lost": 10, "goals_for": 46, "points": 52, "goals_against": 44, "team": "Coventry", "drawn": 16, "goals_diff": 2}, {"won": 14, "lost": 18, "goals_for": 50, "points": 48, "goals_against": 55, "team": "Southampton", "drawn": 6, "goals_diff": -5}, {"won": 11, "lost": 16, "goals_for": 35, "points": 44, "goals_against": 44, "team": "Newcastle", "drawn": 11, "goals_diff": -9}, {"won": 11, "lost": 16, "goals_for": 44, "points": 44, "goals_against": 56, "team": "Spurs", "drawn": 11, "goals_diff": -12}, {"won": 10, "lost": 14, "goals_for": 34, "points": 44, "goals_against": 46, "team": "Wimbledon", "drawn": 14, "goals_diff": -12}, {"won": 12, "lost": 18, "goals_for": 52, "points": 44, "goals_against": 67, "team": "Sheffield Wed", "drawn": 8, "goals_diff": -15}, {"won": 9, "lost": 16, "goals_for": 41, "points": 40, "goals_against": 56, "team": "Everton", "drawn": 13, "goals_diff": -15}, {"won": 9, "lost": 16, "goals_for": 41, "points": 40, "goals_against": 61, "team": "Bolton", "drawn": 13, "goals_diff": -20}, {"won": 10, "lost": 23, "goals_for": 37, "points": 35, "goals_against": 82, "team": "Barnsley", "drawn": 5, "goals_diff": -45}, {"won": 8, "lost": 21, "goals_for": 37, "points": 33, "goals_against": 71, "team": "Crystal Palace", "drawn": 9, "goals_diff": -34}], "_id": "1997/98"}, {"table": [{"won": 22, "lost": 3, "goals_for": 80, "points": 79, "goals_against": 37, "team": "Man Utd", "drawn": 13, "goals_diff": 43}, {"won": 22, "lost": 4, "goals_for": 59, "points": 78, "goals_against": 17, "team": "Arsenal", "drawn": 12, "goals_diff": 42}, {"won": 20, "lost": 3, "goals_for": 57, "points": 75, "goals_against": 30, "team": "Chelsea", "drawn": 15, "goals_diff": 27}, {"won": 18, "lost": 7, "goals_for": 62, "points": 67, "goals_against": 34, "team": "Leeds", "drawn": 13, "goals_diff": 28}, {"won": 16, "lost": 13, "goals_for": 46, "points": 57, "goals_against": 53, "team": "West Ham", "drawn": 9, "goals_diff": -7}, {"won": 15, "lost": 13, "goals_for": 51, "points": 55, "goals_against": 46, "team": "Aston Villa", "drawn": 10, "goals_diff": 5}, {"won": 15, "lost": 14, "goals_for": 68, "points": 54, "goals_against": 49, "team": "Liverpool", "drawn": 9, "goals_diff": 19}, {"won": 13, "lost": 12, "goals_for": 40, "points": 52, "goals_against": 45, "team": "Derby", "drawn": 13, "goals_diff": -5}, {"won": 12, "lost": 11, "goals_for": 48, "points": 51, "goals_against": 54, "team": "Middlesbrough", "drawn": 15, "goals_diff": -6}, {"won": 12, "lost": 13, "goals_for": 40, "points": 49, "goals_against": 46, "team": "Leicester", "drawn": 13, "goals_diff": -6}, {"won": 11, "lost": 13, "goals_for": 47, "points": 47, "goals_against": 50, "team": "Spurs", "drawn": 14, "goals_diff": -3}, {"won": 13, "lost": 18, "goals_for": 41, "points": 46, "goals_against": 42, "team": "Sheffield Wed", "drawn": 7, "goals_diff": -1}, {"won": 11, "lost": 14, "goals_for": 48, "points": 46, "goals_against": 54, "team": "Newcastle", "drawn": 13, "goals_diff": -6}, {"won": 11, "lost": 17, "goals_for": 42, "points": 43, "goals_against": 47, "team": "Everton", "drawn": 10, "goals_diff": -5}, {"won": 11, "lost": 18, "goals_for": 39, "points": 42, "goals_against": 51, "team": "Coventry", "drawn": 9, "goals_diff": -12}, {"won": 10, "lost": 16, "goals_for": 40, "points": 42, "goals_against": 63, "team": "Wimbledon", "drawn": 12, "goals_diff": -23}, {"won": 11, "lost": 19, "goals_for": 37, "points": 41, "goals_against": 64, "team": "Southampton", "drawn": 8, "goals_diff": -27}, {"won": 8, "lost": 18, "goals_for": 41, "points": 36, "goals_against": 56, "team": "Charlton", "drawn": 12, "goals_diff": -15}, {"won": 7, "lost": 17, "goals_for": 38, "points": 35, "goals_against": 52, "team": "Blackburn", "drawn": 14, "goals_diff": -14}, {"won": 7, "lost": 22, "goals_for": 35, "points": 30, "goals_against": 69, "team": "Nott'm Forest", "drawn": 9, "goals_diff": -34}], "_id": "1998/99"}, {"table": [{"won": 28, "lost": 3, "goals_for": 97, "points": 91, "goals_against": 45, "team": "Man Utd", "drawn": 7, "goals_diff": 52}, {"won": 22, "lost": 9, "goals_for": 73, "points": 73, "goals_against": 43, "team": "Arsenal", "drawn": 7, "goals_diff": 30}, {"won": 21, "lost": 11, "goals_for": 58, "points": 69, "goals_against": 43, "team": "Leeds", "drawn": 6, "goals_diff": 15}, {"won": 19, "lost": 9, "goals_for": 51, "points": 67, "goals_against": 30, "team": "Liverpool", "drawn": 10, "goals_diff": 21}, {"won": 18, "lost": 9, "goals_for": 53, "points": 65, "goals_against": 34, "team": "Chelsea", "drawn": 11, "goals_diff": 19}, {"won": 15, "lost": 10, "goals_for": 46, "points": 58, "goals_against": 35, "team": "Aston Villa", "drawn": 13, "goals_diff": 11}, {"won": 16, "lost": 12, "goals_for": 57, "points": 58, "goals_against": 56, "team": "Sunderland", "drawn": 10, "goals_diff": 1}, {"won": 16, "lost": 15, "goals_for": 55, "points": 55, "goals_against": 55, "team": "Leicester", "drawn": 7, "goals_diff": 0}, {"won": 15, "lost": 13, "goals_for": 52, "points": 55, "goals_against": 53, "team": "West Ham", "drawn": 10, "goals_diff": -1}, {"won": 15, "lost": 15, "goals_for": 57, "points": 53, "goals_against": 49, "team": "Spurs", "drawn": 8, "goals_diff": 8}, {"won": 14, "lost": 14, "goals_for": 63, "points": 52, "goals_against": 54, "team": "Newcastle", "drawn": 10, "goals_diff": 9}, {"won": 14, "lost": 14, "goals_for": 46, "points": 52, "goals_against": 52, "team": "Middlesbrough", "drawn": 10, "goals_diff": -6}, {"won": 12, "lost": 12, "goals_for": 59, "points": 50, "goals_against": 49, "team": "Everton", "drawn": 14, "goals_diff": 10}, {"won": 12, "lost": 18, "goals_for": 47, "points": 44, "goals_against": 54, "team": "Coventry", "drawn": 8, "goals_diff": -7}, {"won": 12, "lost": 18, "goals_for": 45, "points": 44, "goals_against": 62, "team": "Southampton", "drawn": 8, "goals_diff": -17}, {"won": 9, "lost": 18, "goals_for": 44, "points": 38, "goals_against": 57, "team": "Derby", "drawn": 11, "goals_diff": -13}, {"won": 9, "lost": 20, "goals_for": 38, "points": 36, "goals_against": 68, "team": "Bradford", "drawn": 9, "goals_diff": -30}, {"won": 7, "lost": 19, "goals_for": 46, "points": 33, "goals_against": 74, "team": "Wimbledon", "drawn": 12, "goals_diff": -28}, {"won": 8, "lost": 23, "goals_for": 38, "points": 31, "goals_against": 70, "team": "Sheffield Wed", "drawn": 7, "goals_diff": -32}, {"won": 6, "lost": 26, "goals_for": 35, "points": 24, "goals_against": 77, "team": "Watford", "drawn": 6, "goals_diff": -42}], "_id": "1999/00"}, {"table": [{"won": 24, "lost": 6, "goals_for": 79, "points": 80, "goals_against": 31, "team": "Man Utd", "drawn": 8, "goals_diff": 48}, {"won": 20, "lost": 8, "goals_for": 63, "points": 70, "goals_against": 38, "team": "Arsenal", "drawn": 10, "goals_diff": 25}, {"won": 20, "lost": 9, "goals_for": 71, "points": 69, "goals_against": 39, "team": "Liverpool", "drawn": 9, "goals_diff": 32}, {"won": 20, "lost": 10, "goals_for": 64, "points": 68, "goals_against": 43, "team": "Leeds", "drawn": 8, "goals_diff": 21}, {"won": 20, "lost": 12, "goals_for": 57, "points": 66, "goals_against": 42, "team": "Ipswich", "drawn": 6, "goals_diff": 15}, {"won": 17, "lost": 11, "goals_for": 68, "points": 61, "goals_against": 45, "team": "Chelsea", "drawn": 10, "goals_diff": 23}, {"won": 15, "lost": 11, "goals_for": 46, "points": 57, "goals_against": 41, "team": "Sunderland", "drawn": 12, "goals_diff": 5}, {"won": 13, "lost": 10, "goals_for": 46, "points": 54, "goals_against": 43, "team": "Aston Villa", "drawn": 15, "goals_diff": 3}, {"won": 14, "lost": 14, "goals_for": 50, "points": 52, "goals_against": 57, "team": "Charlton", "drawn": 10, "goals_diff": -7}, {"won": 14, "lost": 14, "goals_for": 40, "points": 52, "goals_against": 48, "team": "Southampton", "drawn": 10, "goals_diff": -8}, {"won": 14, "lost": 15, "goals_for": 44, "points": 51, "goals_against": 50, "team": "Newcastle", "drawn": 9, "goals_diff": -6}, {"won": 13, "lost": 15, "goals_for": 47, "points": 49, "goals_against": 54, "team": "Spurs", "drawn": 10, "goals_diff": -7}, {"won": 14, "lost": 18, "goals_for": 39, "points": 48, "goals_against": 51, "team": "Leicester", "drawn": 6, "goals_diff": -12}, {"won": 9, "lost": 14, "goals_for": 44, "points": 42, "goals_against": 44, "team": "Middlesbrough", "drawn": 15, "goals_diff": 0}, {"won": 10, "lost": 16, "goals_for": 45, "points": 42, "goals_against": 50, "team": "West Ham", "drawn": 12, "goals_diff": -5}, {"won": 11, "lost": 18, "goals_for": 45, "points": 42, "goals_against": 59, "team": "Everton", "drawn": 9, "goals_diff": -14}, {"won": 10, "lost": 16, "goals_for": 37, "points": 42, "goals_against": 59, "team": "Derby", "drawn": 12, "goals_diff": -22}, {"won": 8, "lost": 20, "goals_for": 41, "points": 34, "goals_against": 65, "team": "Man City", "drawn": 10, "goals_diff": -24}, {"won": 8, "lost": 20, "goals_for": 36, "points": 34, "goals_against": 63, "team": "Coventry", "drawn": 10, "goals_diff": -27}, {"won": 5, "lost": 22, "goals_for": 30, "points": 26, "goals_against": 70, "team": "Bradford", "drawn": 11, "goals_diff": -40}], "_id": "2000/01"}, {"table": [{"won": 26, "lost": 3, "goals_for": 79, "points": 87, "goals_against": 36, "team": "Arsenal", "drawn": 9, "goals_diff": 43}, {"won": 24, "lost": 6, "goals_for": 67, "points": 80, "goals_against": 30, "team": "Liverpool", "drawn": 8, "goals_diff": 37}, {"won": 24, "lost": 9, "goals_for": 87, "points": 77, "goals_against": 45, "team": "Man Utd", "drawn": 5, "goals_diff": 42}, {"won": 21, "lost": 9, "goals_for": 74, "points": 71, "goals_against": 52, "team": "Newcastle", "drawn": 8, "goals_diff": 22}, {"won": 18, "lost": 8, "goals_for": 53, "points": 66, "goals_against": 37, "team": "Leeds", "drawn": 12, "goals_diff": 16}, {"won": 17, "lost": 8, "goals_for": 66, "points": 64, "goals_against": 38, "team": "Chelsea", "drawn": 13, "goals_diff": 28}, {"won": 15, "lost": 15, "goals_for": 48, "points": 53, "goals_against": 57, "team": "West Ham", "drawn": 8, "goals_diff": -9}, {"won": 12, "lost": 12, "goals_for": 46, "points": 50, "goals_against": 47, "team": "Aston Villa", "drawn": 14, "goals_diff": -1}, {"won": 14, "lost": 16, "goals_for": 49, "points": 50, "goals_against": 53, "team": "Spurs", "drawn": 8, "goals_diff": -4}, {"won": 12, "lost": 16, "goals_for": 55, "points": 46, "goals_against": 51, "team": "Blackburn", "drawn": 10, "goals_diff": 4}, {"won": 12, "lost": 17, "goals_for": 46, "points": 45, "goals_against": 54, "team": "Southampton", "drawn": 9, "goals_diff": -8}, {"won": 12, "lost": 17, "goals_for": 35, "points": 45, "goals_against": 47, "team": "Middlesbrough", "drawn": 9, "goals_diff": -12}, {"won": 10, "lost": 14, "goals_for": 36, "points": 44, "goals_against": 44, "team": "Fulham", "drawn": 14, "goals_diff": -8}, {"won": 10, "lost": 14, "goals_for": 38, "points": 44, "goals_against": 49, "team": "Charlton", "drawn": 14, "goals_diff": -11}, {"won": 11, "lost": 17, "goals_for": 45, "points": 43, "goals_against": 57, "team": "Everton", "drawn": 10, "goals_diff": -12}, {"won": 9, "lost": 16, "goals_for": 44, "points": 40, "goals_against": 62, "team": "Bolton", "drawn": 13, "goals_diff": -18}, {"won": 10, "lost": 18, "goals_for": 29, "points": 40, "goals_against": 51, "team": "Sunderland", "drawn": 10, "goals_diff": -22}, {"won": 9, "lost": 20, "goals_for": 41, "points": 36, "goals_against": 64, "team": "Ipswich", "drawn": 9, "goals_diff": -23}, {"won": 8, "lost": 24, "goals_for": 33, "points": 30, "goals_against": 63, "team": "Derby", "drawn": 6, "goals_diff": -30}, {"won": 5, "lost": 20, "goals_for": 30, "points": 28, "goals_against": 64, "team": "Leicester", "drawn": 13, "goals_diff": -34}], "_id": "2001/02"}, {"table": [{"won": 25, "lost": 5, "goals_for": 74, "points": 83, "goals_against": 34, "team": "Man Utd", "drawn": 8, "goals_diff": 40}, {"won": 23, "lost": 6, "goals_for": 85, "points": 78, "goals_against": 42, "team": "Arsenal", "drawn": 9, "goals_diff": 43}, {"won": 21, "lost": 11, "goals_for": 63, "points": 69, "goals_against": 48, "team": "Newcastle", "drawn": 6, "goals_diff": 15}, {"won": 19, "lost": 9, "goals_for": 68, "points": 67, "goals_against": 38, "team": "Chelsea", "drawn": 10, "goals_diff": 30}, {"won": 18, "lost": 10, "goals_for": 61, "points": 64, "goals_against": 41, "team": "Liverpool", "drawn": 10, "goals_diff": 20}, {"won": 16, "lost": 10, "goals_for": 52, "points": 60, "goals_against": 43, "team": "Blackburn", "drawn": 12, "goals_diff": 9}, {"won": 17, "lost": 13, "goals_for": 48, "points": 59, "goals_against": 49, "team": "Everton", "drawn": 8, "goals_diff": -1}, {"won": 13, "lost": 12, "goals_for": 43, "points": 52, "goals_against": 46, "team": "Southampton", "drawn": 13, "goals_diff": -3}, {"won": 15, "lost": 17, "goals_for": 47, "points": 51, "goals_against": 54, "team": "Man City", "drawn": 6, "goals_diff": -7}, {"won": 14, "lost": 16, "goals_for": 51, "points": 50, "goals_against": 62, "team": "Spurs", "drawn": 8, "goals_diff": -11}, {"won": 13, "lost": 15, "goals_for": 48, "points": 49, "goals_against": 44, "team": "Middlesbrough", "drawn": 10, "goals_diff": 4}, {"won": 14, "lost": 17, "goals_for": 45, "points": 49, "goals_against": 56, "team": "Charlton", "drawn": 7, "goals_diff": -11}, {"won": 13, "lost": 16, "goals_for": 41, "points": 48, "goals_against": 49, "team": "Birmingham", "drawn": 9, "goals_diff": -8}, {"won": 13, "lost": 16, "goals_for": 41, "points": 48, "goals_against": 50, "team": "Fulham", "drawn": 9, "goals_diff": -9}, {"won": 14, "lost": 19, "goals_for": 58, "points": 47, "goals_against": 57, "team": "Leeds", "drawn": 5, "goals_diff": 1}, {"won": 12, "lost": 17, "goals_for": 42, "points": 45, "goals_against": 47, "team": "Aston Villa", "drawn": 9, "goals_diff": -5}, {"won": 10, "lost": 14, "goals_for": 41, "points": 44, "goals_against": 51, "team": "Bolton", "drawn": 14, "goals_diff": -10}, {"won": 10, "lost": 16, "goals_for": 42, "points": 42, "goals_against": 59, "team": "West Ham", "drawn": 12, "goals_diff": -17}, {"won": 6, "lost": 24, "goals_for": 29, "points": 26, "goals_against": 65, "team": "West Brom", "drawn": 8, "goals_diff": -36}, {"won": 4, "lost": 27, "goals_for": 21, "points": 19, "goals_against": 65, "team": "Sunderland", "drawn": 7, "goals_diff": -44}], "_id": "2002/03"}, {"table": [{"won": 26, "lost": 0, "goals_for": 73, "points": 90, "goals_against": 26, "team": "Arsenal", "drawn": 12, "goals_diff": 47}, {"won": 24, "lost": 7, "goals_for": 67, "points": 79, "goals_against": 30, "team": "Chelsea", "drawn": 7, "goals_diff": 37}, {"won": 23, "lost": 9, "goals_for": 64, "points": 75, "goals_against": 35, "team": "Man Utd", "drawn": 6, "goals_diff": 29}, {"won": 16, "lost": 10, "goals_for": 55, "points": 60, "goals_against": 37, "team": "Liverpool", "drawn": 12, "goals_diff": 18}, {"won": 13, "lost": 8, "goals_for": 52, "points": 56, "goals_against": 40, "team": "Newcastle", "drawn": 17, "goals_diff": 12}, {"won": 15, "lost": 12, "goals_for": 48, "points": 56, "goals_against": 44, "team": "Aston Villa", "drawn": 11, "goals_diff": 4}, {"won": 14, "lost": 13, "goals_for": 51, "points": 53, "goals_against": 51, "team": "Charlton", "drawn": 11, "goals_diff": 0}, {"won": 14, "lost": 13, "goals_for": 48, "points": 53, "goals_against": 56, "team": "Bolton", "drawn": 11, "goals_diff": -8}, {"won": 14, "lost": 14, "goals_for": 52, "points": 52, "goals_against": 46, "team": "Fulham", "drawn": 10, "goals_diff": 6}, {"won": 12, "lost": 12, "goals_for": 43, "points": 50, "goals_against": 48, "team": "Birmingham", "drawn": 14, "goals_diff": -5}, {"won": 13, "lost": 16, "goals_for": 44, "points": 48, "goals_against": 52, "team": "Middlesbrough", "drawn": 9, "goals_diff": -8}, {"won": 12, "lost": 15, "goals_for": 44, "points": 47, "goals_against": 45, "team": "Southampton", "drawn": 11, "goals_diff": -1}, {"won": 12, "lost": 17, "goals_for": 47, "points": 45, "goals_against": 54, "team": "Portsmouth", "drawn": 9, "goals_diff": -7}, {"won": 13, "lost": 19, "goals_for": 47, "points": 45, "goals_against": 57, "team": "Spurs", "drawn": 6, "goals_diff": -10}, {"won": 12, "lost": 18, "goals_for": 51, "points": 44, "goals_against": 59, "team": "Blackburn", "drawn": 8, "goals_diff": -8}, {"won": 9, "lost": 15, "goals_for": 55, "points": 41, "goals_against": 54, "team": "Man City", "drawn": 14, "goals_diff": 1}, {"won": 9, "lost": 17, "goals_for": 45, "points": 39, "goals_against": 57, "team": "Everton", "drawn": 12, "goals_diff": -12}, {"won": 6, "lost": 17, "goals_for": 48, "points": 33, "goals_against": 65, "team": "Leicester", "drawn": 15, "goals_diff": -17}, {"won": 8, "lost": 21, "goals_for": 40, "points": 33, "goals_against": 79, "team": "Leeds", "drawn": 9, "goals_diff": -39}, {"won": 7, "lost": 19, "goals_for": 38, "points": 33, "goals_against": 77, "team": "Wolves", "drawn": 12, "goals_diff": -39}], "_id": "2003/04"}, {"table": [{"won": 29, "lost": 1, "goals_for": 72, "points": 95, "goals_against": 15, "team": "Chelsea", "drawn": 8, "goals_diff": 57}, {"won": 25, "lost": 5, "goals_for": 87, "points": 83, "goals_against": 36, "team": "Arsenal", "drawn": 8, "goals_diff": 51}, {"won": 22, "lost": 5, "goals_for": 58, "points": 77, "goals_against": 26, "team": "Man Utd", "drawn": 11, "goals_diff": 32}, {"won": 18, "lost": 13, "goals_for": 45, "points": 61, "goals_against": 46, "team": "Everton", "drawn": 7, "goals_diff": -1}, {"won": 17, "lost": 14, "goals_for": 52, "points": 58, "goals_against": 41, "team": "Liverpool", "drawn": 7, "goals_diff": 11}, {"won": 16, "lost": 12, "goals_for": 49, "points": 58, "goals_against": 44, "team": "Bolton", "drawn": 10, "goals_diff": 5}, {"won": 14, "lost": 11, "goals_for": 53, "points": 55, "goals_against": 46, "team": "Middlesbrough", "drawn": 13, "goals_diff": 7}, {"won": 13, "lost": 12, "goals_for": 47, "points": 52, "goals_against": 39, "team": "Man City", "drawn": 13, "goals_diff": 8}, {"won": 14, "lost": 14, "goals_for": 47, "points": 52, "goals_against": 41, "team": "Spurs", "drawn": 10, "goals_diff": 6}, {"won": 12, "lost": 15, "goals_for": 45, "points": 47, "goals_against": 52, "team": "Aston Villa", "drawn": 11, "goals_diff": -7}, {"won": 12, "lost": 16, "goals_for": 42, "points": 46, "goals_against": 58, "team": "Charlton", "drawn": 10, "goals_diff": -16}, {"won": 11, "lost": 15, "goals_for": 40, "points": 45, "goals_against": 46, "team": "Birmingham", "drawn": 12, "goals_diff": -6}, {"won": 12, "lost": 18, "goals_for": 52, "points": 44, "goals_against": 60, "team": "Fulham", "drawn": 8, "goals_diff": -8}, {"won": 10, "lost": 14, "goals_for": 47, "points": 44, "goals_against": 57, "team": "Newcastle", "drawn": 14, "goals_diff": -10}, {"won": 9, "lost": 14, "goals_for": 32, "points": 42, "goals_against": 43, "team": "Blackburn", "drawn": 15, "goals_diff": -11}, {"won": 10, "lost": 19, "goals_for": 43, "points": 39, "goals_against": 59, "team": "Portsmouth", "drawn": 9, "goals_diff": -16}, {"won": 6, "lost": 16, "goals_for": 36, "points": 34, "goals_against": 61, "team": "West Brom", "drawn": 16, "goals_diff": -25}, {"won": 7, "lost": 19, "goals_for": 41, "points": 33, "goals_against": 62, "team": "Crystal Palace", "drawn": 12, "goals_diff": -21}, {"won": 7, "lost": 19, "goals_for": 42, "points": 33, "goals_against": 77, "team": "Norwich", "drawn": 12, "goals_diff": -35}, {"won": 6, "lost": 18, "goals_for": 45, "points": 32, "goals_against": 66, "team": "Southampton", "drawn": 14, "goals_diff": -21}], "_id": "2004/05"}, {"table": [{"won": 29, "lost": 5, "goals_for": 72, "points": 91, "goals_against": 22, "team": "Chelsea", "drawn": 4, "goals_diff": 50}, {"won": 25, "lost": 5, "goals_for": 72, "points": 83, "goals_against": 34, "team": "Man Utd", "drawn": 8, "goals_diff": 38}, {"won": 25, "lost": 6, "goals_for": 57, "points": 82, "goals_against": 25, "team": "Liverpool", "drawn": 7, "goals_diff": 32}, {"won": 20, "lost": 11, "goals_for": 68, "points": 67, "goals_against": 31, "team": "Arsenal", "drawn": 7, "goals_diff": 37}, {"won": 18, "lost": 9, "goals_for": 53, "points": 65, "goals_against": 38, "team": "Spurs", "drawn": 11, "goals_diff": 15}, {"won": 19, "lost": 13, "goals_for": 51, "points": 63, "goals_against": 42, "team": "Blackburn", "drawn": 6, "goals_diff": 9}, {"won": 17, "lost": 14, "goals_for": 47, "points": 58, "goals_against": 42, "team": "Newcastle", "drawn": 7, "goals_diff": 5}, {"won": 15, "lost": 12, "goals_for": 49, "points": 56, "goals_against": 41, "team": "Bolton", "drawn": 11, "goals_diff": 8}, {"won": 16, "lost": 15, "goals_for": 52, "points": 55, "goals_against": 55, "team": "West Ham", "drawn": 7, "goals_diff": -3}, {"won": 15, "lost": 17, "goals_for": 45, "points": 51, "goals_against": 52, "team": "Wigan", "drawn": 6, "goals_diff": -7}, {"won": 14, "lost": 16, "goals_for": 34, "points": 50, "goals_against": 49, "team": "Everton", "drawn": 8, "goals_diff": -15}, {"won": 14, "lost": 18, "goals_for": 48, "points": 48, "goals_against": 58, "team": "Fulham", "drawn": 6, "goals_diff": -10}, {"won": 13, "lost": 17, "goals_for": 41, "points": 47, "goals_against": 55, "team": "Charlton", "drawn": 8, "goals_diff": -14}, {"won": 12, "lost": 17, "goals_for": 48, "points": 45, "goals_against": 58, "team": "Middlesbrough", "drawn": 9, "goals_diff": -10}, {"won": 13, "lost": 21, "goals_for": 43, "points": 43, "goals_against": 48, "team": "Man City", "drawn": 4, "goals_diff": -5}, {"won": 10, "lost": 16, "goals_for": 42, "points": 42, "goals_against": 55, "team": "Aston Villa", "drawn": 12, "goals_diff": -13}, {"won": 10, "lost": 20, "goals_for": 37, "points": 38, "goals_against": 62, "team": "Portsmouth", "drawn": 8, "goals_diff": -25}, {"won": 8, "lost": 20, "goals_for": 28, "points": 34, "goals_against": 50, "team": "Birmingham", "drawn": 10, "goals_diff": -22}, {"won": 7, "lost": 22, "goals_for": 31, "points": 30, "goals_against": 58, "team": "West Brom", "drawn": 9, "goals_diff": -27}, {"won": 3, "lost": 29, "goals_for": 26, "points": 15, "goals_against": 69, "team": "Sunderland", "drawn": 6, "goals_diff": -43}], "_id": "2005/06"}, {"table": [{"won": 28, "lost": 5, "goals_for": 83, "points": 89, "goals_against": 27, "team": "Man Utd", "drawn": 5, "goals_diff": 56}, {"won": 24, "lost": 3, "goals_for": 64, "points": 83, "goals_against": 24, "team": "Chelsea", "drawn": 11, "goals_diff": 40}, {"won": 20, "lost": 10, "goals_for": 57, "points": 68, "goals_against": 27, "team": "Liverpool", "drawn": 8, "goals_diff": 30}, {"won": 19, "lost": 8, "goals_for": 63, "points": 68, "goals_against": 35, "team": "Arsenal", "drawn": 11, "goals_diff": 28}, {"won": 17, "lost": 12, "goals_for": 57, "points": 60, "goals_against": 54, "team": "Spurs", "drawn": 9, "goals_diff": 3}, {"won": 15, "lost": 10, "goals_for": 52, "points": 58, "goals_against": 36, "team": "Everton", "drawn": 13, "goals_diff": 16}, {"won": 16, "lost": 14, "goals_for": 47, "points": 56, "goals_against": 52, "team": "Bolton", "drawn": 8, "goals_diff": -5}, {"won": 16, "lost": 15, "goals_for": 52, "points": 55, "goals_against": 47, "team": "Reading", "drawn": 7, "goals_diff": 5}, {"won": 14, "lost": 12, "goals_for": 45, "points": 54, "goals_against": 42, "team": "Portsmouth", "drawn": 12, "goals_diff": 3}, {"won": 15, "lost": 16, "goals_for": 52, "points": 52, "goals_against": 54, "team": "Blackburn", "drawn": 7, "goals_diff": -2}, {"won": 11, "lost": 10, "goals_for": 43, "points": 50, "goals_against": 41, "team": "Aston Villa", "drawn": 17, "goals_diff": 2}, {"won": 12, "lost": 16, "goals_for": 44, "points": 46, "goals_against": 49, "team": "Middlesbrough", "drawn": 10, "goals_diff": -5}, {"won": 11, "lost": 17, "goals_for": 38, "points": 43, "goals_against": 47, "team": "Newcastle", "drawn": 10, "goals_diff": -9}, {"won": 11, "lost": 18, "goals_for": 29, "points": 42, "goals_against": 44, "team": "Man City", "drawn": 9, "goals_diff": -15}, {"won": 12, "lost": 21, "goals_for": 35, "points": 41, "goals_against": 59, "team": "West Ham", "drawn": 5, "goals_diff": -24}, {"won": 8, "lost": 15, "goals_for": 38, "points": 39, "goals_against": 60, "team": "Fulham", "drawn": 15, "goals_diff": -22}, {"won": 10, "lost": 20, "goals_for": 37, "points": 38, "goals_against": 59, "team": "Wigan", "drawn": 8, "goals_diff": -22}, {"won": 10, "lost": 20, "goals_for": 32, "points": 38, "goals_against": 55, "team": "Sheffield Utd", "drawn": 8, "goals_diff": -23}, {"won": 8, "lost": 20, "goals_for": 34, "points": 34, "goals_against": 60, "team": "Charlton", "drawn": 10, "goals_diff": -26}, {"won": 5, "lost": 20, "goals_for": 29, "points": 28, "goals_against": 59, "team": "Watford", "drawn": 13, "goals_diff": -30}], "_id": "2006/07"}, {"table": [{"won": 27, "lost": 5, "goals_for": 80, "points": 87, "goals_against": 22, "team": "Man Utd", "drawn": 6, "goals_diff": 58}, {"won": 25, "lost": 3, "goals_for": 65, "points": 85, "goals_against": 26, "team": "Chelsea", "drawn": 10, "goals_diff": 39}, {"won": 24, "lost": 3, "goals_for": 74, "points": 83, "goals_against": 31, "team": "Arsenal", "drawn": 11, "goals_diff": 43}, {"won": 21, "lost": 4, "goals_for": 67, "points": 76, "goals_against": 28, "team": "Liverpool", "drawn": 13, "goals_diff": 39}, {"won": 19, "lost": 11, "goals_for": 55, "points": 65, "goals_against": 33, "team": "Everton", "drawn": 8, "goals_diff": 22}, {"won": 16, "lost": 10, "goals_for": 71, "points": 60, "goals_against": 51, "team": "Aston Villa", "drawn": 12, "goals_diff": 20}, {"won": 15, "lost": 10, "goals_for": 50, "points": 58, "goals_against": 48, "team": "Blackburn", "drawn": 13, "goals_diff": 2}, {"won": 16, "lost": 13, "goals_for": 48, "points": 57, "goals_against": 40, "team": "Portsmouth", "drawn": 9, "goals_diff": 8}, {"won": 15, "lost": 13, "goals_for": 45, "points": 55, "goals_against": 53, "team": "Man City", "drawn": 10, "goals_diff": -8}, {"won": 13, "lost": 15, "goals_for": 42, "points": 49, "goals_against": 50, "team": "West Ham", "drawn": 10, "goals_diff": -8}, {"won": 11, "lost": 14, "goals_for": 66, "points": 46, "goals_against": 61, "team": "Spurs", "drawn": 13, "goals_diff": 5}, {"won": 11, "lost": 17, "goals_for": 45, "points": 43, "goals_against": 65, "team": "Newcastle", "drawn": 10, "goals_diff": -20}, {"won": 10, "lost": 16, "goals_for": 43, "points": 42, "goals_against": 53, "team": "Middlesbrough", "drawn": 12, "goals_diff": -10}, {"won": 10, "lost": 18, "goals_for": 34, "points": 40, "goals_against": 51, "team": "Wigan", "drawn": 10, "goals_diff": -17}, {"won": 11, "lost": 21, "goals_for": 36, "points": 39, "goals_against": 59, "team": "Sunderland", "drawn": 6, "goals_diff": -23}, {"won": 9, "lost": 19, "goals_for": 36, "points": 37, "goals_against": 54, "team": "Bolton", "drawn": 10, "goals_diff": -18}, {"won": 8, "lost": 18, "goals_for": 38, "points": 36, "goals_against": 60, "team": "Fulham", "drawn": 12, "goals_diff": -22}, {"won": 10, "lost": 22, "goals_for": 41, "points": 36, "goals_against": 66, "team": "Reading", "drawn": 6, "goals_diff": -25}, {"won": 8, "lost": 19, "goals_for": 46, "points": 35, "goals_against": 62, "team": "Birmingham", "drawn": 11, "goals_diff": -16}, {"won": 1, "lost": 29, "goals_for": 20, "points": 11, "goals_against": 89, "team": "Derby", "drawn": 8, "goals_diff": -69}], "_id": "2007/08"}, {"table": [{"won": 28, "lost": 4, "goals_for": 68, "points": 90, "goals_against": 24, "team": "Man Utd", "drawn": 6, "goals_diff": 44}, {"won": 25, "lost": 2, "goals_for": 77, "points": 86, "goals_against": 27, "team": "Liverpool", "drawn": 11, "goals_diff": 50}, {"won": 25, "lost": 5, "goals_for": 68, "points": 83, "goals_against": 24, "team": "Chelsea", "drawn": 8, "goals_diff": 44}, {"won": 20, "lost": 6, "goals_for": 68, "points": 72, "goals_against": 37, "team": "Arsenal", "drawn": 12, "goals_diff": 31}, {"won": 17, "lost": 9, "goals_for": 55, "points": 63, "goals_against": 37, "team": "Everton", "drawn": 12, "goals_diff": 18}, {"won": 17, "lost": 10, "goals_for": 54, "points": 62, "goals_against": 48, "team": "Aston Villa", "drawn": 11, "goals_diff": 6}, {"won": 14, "lost": 13, "goals_for": 39, "points": 53, "goals_against": 34, "team": "Fulham", "drawn": 11, "goals_diff": 5}, {"won": 14, "lost": 15, "goals_for": 45, "points": 51, "goals_against": 45, "team": "Spurs", "drawn": 9, "goals_diff": 0}, {"won": 14, "lost": 15, "goals_for": 42, "points": 51, "goals_against": 45, "team": "West Ham", "drawn": 9, "goals_diff": -3}, {"won": 15, "lost": 18, "goals_for": 58, "points": 50, "goals_against": 50, "team": "Man City", "drawn": 5, "goals_diff": 8}, {"won": 12, "lost": 17, "goals_for": 34, "points": 45, "goals_against": 45, "team": "Wigan", "drawn": 9, "goals_diff": -11}, {"won": 12, "lost": 17, "goals_for": 38, "points": 45, "goals_against": 55, "team": "Stoke", "drawn": 9, "goals_diff": -17}, {"won": 11, "lost": 19, "goals_for": 41, "points": 41, "goals_against": 53, "team": "Bolton", "drawn": 8, "goals_diff": -12}, {"won": 10, "lost": 17, "goals_for": 38, "points": 41, "goals_against": 57, "team": "Portsmouth", "drawn": 11, "goals_diff": -19}, {"won": 10, "lost": 17, "goals_for": 40, "points": 41, "goals_against": 60, "team": "Blackburn", "drawn": 11, "goals_diff": -20}, {"won": 9, "lost": 20, "goals_for": 34, "points": 36, "goals_against": 54, "team": "Sunderland", "drawn": 9, "goals_diff": -20}, {"won": 8, "lost": 19, "goals_for": 39, "points": 35, "goals_against": 64, "team": "Hull", "drawn": 11, "goals_diff": -25}, {"won": 7, "lost": 18, "goals_for": 40, "points": 34, "goals_against": 59, "team": "Newcastle", "drawn": 13, "goals_diff": -19}, {"won": 7, "lost": 20, "goals_for": 28, "points": 32, "goals_against": 57, "team": "Middlesbrough", "drawn": 11, "goals_diff": -29}, {"won": 8, "lost": 22, "goals_for": 36, "points": 32, "goals_against": 67, "team": "West Brom", "drawn": 8, "goals_diff": -31}], "_id": "2008/09"}, {"table": [{"won": 27, "lost": 6, "goals_for": 103, "points": 86, "goals_against": 32, "team": "Chelsea", "drawn": 5, "goals_diff": 71}, {"won": 27, "lost": 7, "goals_for": 86, "points": 85, "goals_against": 28, "team": "Man Utd", "drawn": 4, "goals_diff": 58}, {"won": 23, "lost": 9, "goals_for": 83, "points": 75, "goals_against": 41, "team": "Arsenal", "drawn": 6, "goals_diff": 42}, {"won": 21, "lost": 10, "goals_for": 67, "points": 70, "goals_against": 41, "team": "Spurs", "drawn": 7, "goals_diff": 26}, {"won": 18, "lost": 7, "goals_for": 73, "points": 67, "goals_against": 45, "team": "Man City", "drawn": 13, "goals_diff": 28}, {"won": 17, "lost": 8, "goals_for": 52, "points": 64, "goals_against": 39, "team": "Aston Villa", "drawn": 13, "goals_diff": 13}, {"won": 18, "lost": 11, "goals_for": 61, "points": 63, "goals_against": 35, "team": "Liverpool", "drawn": 9, "goals_diff": 26}, {"won": 16, "lost": 9, "goals_for": 60, "points": 61, "goals_against": 49, "team": "Everton", "drawn": 13, "goals_diff": 11}, {"won": 13, "lost": 14, "goals_for": 38, "points": 50, "goals_against": 47, "team": "Birmingham", "drawn": 11, "goals_diff": -9}, {"won": 13, "lost": 14, "goals_for": 41, "points": 50, "goals_against": 55, "team": "Blackburn", "drawn": 11, "goals_diff": -14}, {"won": 11, "lost": 13, "goals_for": 34, "points": 47, "goals_against": 48, "team": "Stoke", "drawn": 14, "goals_diff": -14}, {"won": 12, "lost": 16, "goals_for": 39, "points": 46, "goals_against": 46, "team": "Fulham", "drawn": 10, "goals_diff": -7}, {"won": 11, "lost": 16, "goals_for": 48, "points": 44, "goals_against": 56, "team": "Sunderland", "drawn": 11, "goals_diff": -8}, {"won": 10, "lost": 19, "goals_for": 42, "points": 39, "goals_against": 67, "team": "Bolton", "drawn": 9, "goals_diff": -25}, {"won": 9, "lost": 18, "goals_for": 32, "points": 38, "goals_against": 56, "team": "Wolves", "drawn": 11, "goals_diff": -24}, {"won": 9, "lost": 20, "goals_for": 37, "points": 36, "goals_against": 79, "team": "Wigan", "drawn": 9, "goals_diff": -42}, {"won": 8, "lost": 19, "goals_for": 47, "points": 35, "goals_against": 66, "team": "West Ham", "drawn": 11, "goals_diff": -19}, {"won": 8, "lost": 24, "goals_for": 42, "points": 30, "goals_against": 82, "team": "Burnley", "drawn": 6, "goals_diff": -40}, {"won": 6, "lost": 20, "goals_for": 34, "points": 30, "goals_against": 75, "team": "Hull", "drawn": 12, "goals_diff": -41}, {"won": 7, "lost": 24, "goals_for": 34, "points": 28, "goals_against": 66, "team": "Portsmouth", "drawn": 7, "goals_diff": -32}], "_id": "2009/10"}, {"table": [{"won": 23, "lost": 4, "goals_for": 78, "points": 80, "goals_against": 37, "team": "Man Utd", "drawn": 11, "goals_diff": 41}, {"won": 21, "lost": 9, "goals_for": 69, "points": 71, "goals_against": 33, "team": "Chelsea", "drawn": 8, "goals_diff": 36}, {"won": 21, "lost": 9, "goals_for": 60, "points": 71, "goals_against": 33, "team": "Man City", "drawn": 8, "goals_diff": 27}, {"won": 19, "lost": 8, "goals_for": 72, "points": 68, "goals_against": 43, "team": "Arsenal", "drawn": 11, "goals_diff": 29}, {"won": 16, "lost": 8, "goals_for": 55, "points": 62, "goals_against": 46, "team": "Spurs", "drawn": 14, "goals_diff": 9}, {"won": 17, "lost": 14, "goals_for": 59, "points": 58, "goals_against": 44, "team": "Liverpool", "drawn": 7, "goals_diff": 15}, {"won": 13, "lost": 10, "goals_for": 51, "points": 54, "goals_against": 45, "team": "Everton", "drawn": 15, "goals_diff": 6}, {"won": 11, "lost": 11, "goals_for": 49, "points": 49, "goals_against": 43, "team": "Fulham", "drawn": 16, "goals_diff": 6}, {"won": 12, "lost": 14, "goals_for": 48, "points": 48, "goals_against": 59, "team": "Aston Villa", "drawn": 12, "goals_diff": -11}, {"won": 12, "lost": 15, "goals_for": 45, "points": 47, "goals_against": 56, "team": "Sunderland", "drawn": 11, "goals_diff": -11}, {"won": 12, "lost": 15, "goals_for": 56, "points": 47, "goals_against": 71, "team": "West Brom", "drawn": 11, "goals_diff": -15}, {"won": 11, "lost": 14, "goals_for": 56, "points": 46, "goals_against": 57, "team": "Newcastle", "drawn": 13, "goals_diff": -1}, {"won": 13, "lost": 18, "goals_for": 46, "points": 46, "goals_against": 48, "team": "Stoke", "drawn": 7, "goals_diff": -2}, {"won": 12, "lost": 16, "goals_for": 52, "points": 46, "goals_against": 56, "team": "Bolton", "drawn": 10, "goals_diff": -4}, {"won": 11, "lost": 17, "goals_for": 46, "points": 43, "goals_against": 59, "team": "Blackburn", "drawn": 10, "goals_diff": -13}, {"won": 9, "lost": 14, "goals_for": 40, "points": 42, "goals_against": 61, "team": "Wigan", "drawn": 15, "goals_diff": -21}, {"won": 11, "lost": 20, "goals_for": 46, "points": 40, "goals_against": 66, "team": "Wolves", "drawn": 7, "goals_diff": -20}, {"won": 8, "lost": 15, "goals_for": 37, "points": 39, "goals_against": 58, "team": "Birmingham", "drawn": 15, "goals_diff": -21}, {"won": 10, "lost": 19, "goals_for": 55, "points": 39, "goals_against": 78, "team": "Blackpool", "drawn": 9, "goals_diff": -23}, {"won": 7, "lost": 19, "goals_for": 43, "points": 33, "goals_against": 70, "team": "West Ham", "drawn": 12, "goals_diff": -27}], "_id": "2010/11"}, {"table": [{"won": 28, "lost": 5, "goals_for": 93, "points": 89, "goals_against": 29, "team": "Man City", "drawn": 5, "goals_diff": 64}, {"won": 28, "lost": 5, "goals_for": 89, "points": 89, "goals_against": 33, "team": "Man Utd", "drawn": 5, "goals_diff": 56}, {"won": 21, "lost": 10, "goals_for": 74, "points": 70, "goals_against": 49, "team": "Arsenal", "drawn": 7, "goals_diff": 25}, {"won": 20, "lost": 9, "goals_for": 66, "points": 69, "goals_against": 41, "team": "Spurs", "drawn": 9, "goals_diff": 25}, {"won": 19, "lost": 11, "goals_for": 56, "points": 65, "goals_against": 51, "team": "Newcastle", "drawn": 8, "goals_diff": 5}, {"won": 18, "lost": 10, "goals_for": 65, "points": 64, "goals_against": 46, "team": "Chelsea", "drawn": 10, "goals_diff": 19}, {"won": 15, "lost": 12, "goals_for": 50, "points": 56, "goals_against": 40, "team": "Everton", "drawn": 11, "goals_diff": 10}, {"won": 14, "lost": 14, "goals_for": 47, "points": 52, "goals_against": 40, "team": "Liverpool", "drawn": 10, "goals_diff": 7}, {"won": 14, "lost": 14, "goals_for": 48, "points": 52, "goals_against": 51, "team": "Fulham", "drawn": 10, "goals_diff": -3}, {"won": 13, "lost": 17, "goals_for": 45, "points": 47, "goals_against": 52, "team": "West Brom", "drawn": 8, "goals_diff": -7}, {"won": 12, "lost": 15, "goals_for": 44, "points": 47, "goals_against": 51, "team": "Swansea", "drawn": 11, "goals_diff": -7}, {"won": 12, "lost": 15, "goals_for": 52, "points": 47, "goals_against": 66, "team": "Norwich", "drawn": 11, "goals_diff": -14}, {"won": 11, "lost": 15, "goals_for": 45, "points": 45, "goals_against": 46, "team": "Sunderland", "drawn": 12, "goals_diff": -1}, {"won": 11, "lost": 15, "goals_for": 36, "points": 45, "goals_against": 53, "team": "Stoke", "drawn": 12, "goals_diff": -17}, {"won": 11, "lost": 17, "goals_for": 42, "points": 43, "goals_against": 62, "team": "Wigan", "drawn": 10, "goals_diff": -20}, {"won": 7, "lost": 14, "goals_for": 37, "points": 38, "goals_against": 53, "team": "Aston Villa", "drawn": 17, "goals_diff": -16}, {"won": 10, "lost": 21, "goals_for": 43, "points": 37, "goals_against": 66, "team": "QPR", "drawn": 7, "goals_diff": -23}, {"won": 10, "lost": 22, "goals_for": 46, "points": 36, "goals_against": 77, "team": "Bolton", "drawn": 6, "goals_diff": -31}, {"won": 8, "lost": 23, "goals_for": 48, "points": 31, "goals_against": 78, "team": "Blackburn", "drawn": 7, "goals_diff": -30}, {"won": 5, "lost": 23, "goals_for": 40, "points": 25, "goals_against": 82, "team": "Wolves", "drawn": 10, "goals_diff": -42}], "_id": "2011/12"}, {"table": [{"won": 28, "lost": 5, "goals_for": 86, "points": 89, "goals_against": 43, "team": "Man Utd", "drawn": 5, "goals_diff": 43}, {"won": 23, "lost": 6, "goals_for": 66, "points": 78, "goals_against": 34, "team": "Man City", "drawn": 9, "goals_diff": 32}, {"won": 22, "lost": 7, "goals_for": 75, "points": 75, "goals_against": 39, "team": "Chelsea", "drawn": 9, "goals_diff": 36}, {"won": 21, "lost": 7, "goals_for": 72, "points": 73, "goals_against": 37, "team": "Arsenal", "drawn": 10, "goals_diff": 35}, {"won": 21, "lost": 8, "goals_for": 66, "points": 72, "goals_against": 46, "team": "Spurs", "drawn": 9, "goals_diff": 20}, {"won": 16, "lost": 7, "goals_for": 55, "points": 63, "goals_against": 40, "team": "Everton", "drawn": 15, "goals_diff": 15}, {"won": 16, "lost": 9, "goals_for": 71, "points": 61, "goals_against": 43, "team": "Liverpool", "drawn": 13, "goals_diff": 28}, {"won": 14, "lost": 17, "goals_for": 53, "points": 49, "goals_against": 57, "team": "West Brom", "drawn": 7, "goals_diff": -4}, {"won": 11, "lost": 14, "goals_for": 47, "points": 46, "goals_against": 51, "team": "Swansea", "drawn": 13, "goals_diff": -4}, {"won": 12, "lost": 16, "goals_for": 45, "points": 46, "goals_against": 53, "team": "West Ham", "drawn": 10, "goals_diff": -8}, {"won": 10, "lost": 14, "goals_for": 41, "points": 44, "goals_against": 58, "team": "Norwich", "drawn": 14, "goals_diff": -17}, {"won": 11, "lost": 17, "goals_for": 50, "points": 43, "goals_against": 60, "team": "Fulham", "drawn": 10, "goals_diff": -10}, {"won": 9, "lost": 14, "goals_for": 34, "points": 42, "goals_against": 45, "team": "Stoke", "drawn": 15, "goals_diff": -11}, {"won": 9, "lost": 15, "goals_for": 49, "points": 41, "goals_against": 60, "team": "Southampton", "drawn": 14, "goals_diff": -11}, {"won": 10, "lost": 17, "goals_for": 47, "points": 41, "goals_against": 69, "team": "Aston Villa", "drawn": 11, "goals_diff": -22}, {"won": 11, "lost": 19, "goals_for": 45, "points": 41, "goals_against": 68, "team": "Newcastle", "drawn": 8, "goals_diff": -23}, {"won": 9, "lost": 17, "goals_for": 41, "points": 39, "goals_against": 54, "team": "Sunderland", "drawn": 12, "goals_diff": -13}, {"won": 9, "lost": 20, "goals_for": 47, "points": 36, "goals_against": 73, "team": "Wigan", "drawn": 9, "goals_diff": -26}, {"won": 6, "lost": 22, "goals_for": 43, "points": 28, "goals_against": 73, "team": "Reading", "drawn": 10, "goals_diff": -30}, {"won": 4, "lost": 21, "goals_for": 30, "points": 25, "goals_against": 60, "team": "QPR", "drawn": 13, "goals_diff": -30}], "_id": "2012/13"}, {"table": [{"won": 27, "lost": 6, "goals_for": 102, "points": 86, "goals_against": 37, "team": "Man City", "drawn": 5, "goals_diff": 65}, {"won": 26, "lost": 6, "goals_for": 101, "points": 84, "goals_against": 50, "team": "Liverpool", "drawn": 6, "goals_diff": 51}, {"won": 25, "lost": 6, "goals_for": 71, "points": 82, "goals_against": 27, "team": "Chelsea", "drawn": 7, "goals_diff": 44}, {"won": 24, "lost": 7, "goals_for": 68, "points": 79, "goals_against": 41, "team": "Arsenal", "drawn": 7, "goals_diff": 27}, {"won": 21, "lost": 8, "goals_for": 61, "points": 72, "goals_against": 39, "team": "Everton", "drawn": 9, "goals_diff": 22}, {"won": 21, "lost": 11, "goals_for": 55, "points": 69, "goals_against": 51, "team": "Spurs", "drawn": 6, "goals_diff": 4}, {"won": 19, "lost": 12, "goals_for": 64, "points": 64, "goals_against": 43, "team": "Man Utd", "drawn": 7, "goals_diff": 21}, {"won": 15, "lost": 12, "goals_for": 54, "points": 56, "goals_against": 46, "team": "Southampton", "drawn": 11, "goals_diff": 8}, {"won": 13, "lost": 14, "goals_for": 45, "points": 50, "goals_against": 52, "team": "Stoke", "drawn": 11, "goals_diff": -7}, {"won": 15, "lost": 19, "goals_for": 43, "points": 49, "goals_against": 59, "team": "Newcastle", "drawn": 4, "goals_diff": -16}, {"won": 13, "lost": 19, "goals_for": 33, "points": 45, "goals_against": 48, "team": "Crystal Palace", "drawn": 6, "goals_diff": -15}, {"won": 11, "lost": 18, "goals_for": 54, "points": 42, "goals_against": 54, "team": "Swansea", "drawn": 9, "goals_diff": 0}, {"won": 11, "lost": 20, "goals_for": 40, "points": 40, "goals_against": 51, "team": "West Ham", "drawn": 7, "goals_diff": -11}, {"won": 10, "lost": 20, "goals_for": 41, "points": 38, "goals_against": 60, "team": "Sunderland", "drawn": 8, "goals_diff": -19}, {"won": 10, "lost": 20, "goals_for": 39, "points": 38, "goals_against": 61, "team": "Aston Villa", "drawn": 8, "goals_diff": -22}, {"won": 10, "lost": 21, "goals_for": 38, "points": 37, "goals_against": 53, "team": "Hull", "drawn": 7, "goals_diff": -15}, {"won": 7, "lost": 16, "goals_for": 43, "points": 36, "goals_against": 59, "team": "West Brom", "drawn": 15, "goals_diff": -16}, {"won": 8, "lost": 21, "goals_for": 28, "points": 33, "goals_against": 62, "team": "Norwich", "drawn": 9, "goals_diff": -34}, {"won": 9, "lost": 24, "goals_for": 40, "points": 32, "goals_against": 85, "team": "Fulham", "drawn": 5, "goals_diff": -45}, {"won": 6, "lost": 18, "goals_for": 26, "points": 25, "goals_against": 58, "team": "Cardiff City", "drawn": 7, "goals_diff": -32}, {"won": 1, "lost": 4, "goals_for": 6, "points": 5, "goals_against": 16, "team": "Cardiff", "drawn": 2, "goals_diff": -10}], "_id": "2013/14"}, {"table": [{"won": 26, "lost": 3, "goals_for": 73, "points": 87, "goals_against": 32, "team": "Chelsea", "drawn": 9, "goals_diff": 41}, {"won": 24, "lost": 7, "goals_for": 83, "points": 79, "goals_against": 38, "team": "Man City", "drawn": 7, "goals_diff": 45}, {"won": 22, "lost": 7, "goals_for": 71, "points": 75, "goals_against": 36, "team": "Arsenal", "drawn": 9, "goals_diff": 35}, {"won": 20, "lost": 8, "goals_for": 62, "points": 70, "goals_against": 37, "team": "Man Utd", "drawn": 10, "goals_diff": 25}, {"won": 19, "lost": 12, "goals_for": 58, "points": 64, "goals_against": 53, "team": "Spurs", "drawn": 7, "goals_diff": 5}, {"won": 18, "lost": 12, "goals_for": 52, "points": 62, "goals_against": 48, "team": "Liverpool", "drawn": 8, "goals_diff": 4}, {"won": 18, "lost": 14, "goals_for": 54, "points": 60, "goals_against": 33, "team": "Southampton", "drawn": 6, "goals_diff": 21}, {"won": 16, "lost": 14, "goals_for": 46, "points": 56, "goals_against": 49, "team": "Swansea", "drawn": 8, "goals_diff": -3}, {"won": 15, "lost": 14, "goals_for": 48, "points": 54, "goals_against": 45, "team": "Stoke", "drawn": 9, "goals_diff": 3}, {"won": 13, "lost": 16, "goals_for": 47, "points": 48, "goals_against": 51, "team": "Crystal Palace", "drawn": 9, "goals_diff": -4}, {"won": 12, "lost": 15, "goals_for": 48, "points": 47, "goals_against": 50, "team": "Everton", "drawn": 11, "goals_diff": -2}, {"won": 12, "lost": 15, "goals_for": 44, "points": 47, "goals_against": 47, "team": "West Ham", "drawn": 11, "goals_diff": -3}, {"won": 11, "lost": 16, "goals_for": 38, "points": 44, "goals_against": 51, "team": "West Brom", "drawn": 11, "goals_diff": -13}, {"won": 11, "lost": 19, "goals_for": 46, "points": 41, "goals_against": 55, "team": "Leicester", "drawn": 8, "goals_diff": -9}, {"won": 10, "lost": 19, "goals_for": 40, "points": 39, "goals_against": 63, "team": "Newcastle", "drawn": 9, "goals_diff": -23}, {"won": 7, "lost": 14, "goals_for": 31, "points": 38, "goals_against": 53, "team": "Sunderland", "drawn": 17, "goals_diff": -22}, {"won": 10, "lost": 20, "goals_for": 31, "points": 38, "goals_against": 57, "team": "Aston Villa", "drawn": 8, "goals_diff": -26}, {"won": 8, "lost": 19, "goals_for": 33, "points": 35, "goals_against": 51, "team": "Hull", "drawn": 11, "goals_diff": -18}, {"won": 7, "lost": 19, "goals_for": 28, "points": 33, "goals_against": 53, "team": "Burnley", "drawn": 12, "goals_diff": -25}, {"won": 8, "lost": 24, "goals_for": 42, "points": 30, "goals_against": 73, "team": "QPR", "drawn": 6, "goals_diff": -31}], "_id": "2014/15"}, {"table": [{"won": 23, "lost": 3, "goals_for": 68, "points": 81, "goals_against": 36, "team": "Leicester", "drawn": 12, "goals_diff": 32}, {"won": 20, "lost": 7, "goals_for": 65, "points": 71, "goals_against": 36, "team": "Arsenal", "drawn": 11, "goals_diff": 29}, {"won": 19, "lost": 6, "goals_for": 69, "points": 70, "goals_against": 35, "team": "Spurs", "drawn": 13, "goals_diff": 34}, {"won": 19, "lost": 10, "goals_for": 71, "points": 66, "goals_against": 41, "team": "Man City", "drawn": 9, "goals_diff": 30}, {"won": 19, "lost": 10, "goals_for": 49, "points": 66, "goals_against": 35, "team": "Man Utd", "drawn": 9, "goals_diff": 14}, {"won": 18, "lost": 11, "goals_for": 59, "points": 63, "goals_against": 41, "team": "Southampton", "drawn": 9, "goals_diff": 18}, {"won": 16, "lost": 8, "goals_for": 65, "points": 62, "goals_against": 51, "team": "West Ham", "drawn": 14, "goals_diff": 14}, {"won": 16, "lost": 10, "goals_for": 63, "points": 60, "goals_against": 50, "team": "Liverpool", "drawn": 12, "goals_diff": 13}, {"won": 14, "lost": 15, "goals_for": 41, "points": 51, "goals_against": 55, "team": "Stoke", "drawn": 9, "goals_diff": -14}, {"won": 12, "lost": 12, "goals_for": 59, "points": 50, "goals_against": 53, "team": "Chelsea", "drawn": 14, "goals_diff": 6}, {"won": 11, "lost": 13, "goals_for": 59, "points": 47, "goals_against": 55, "team": "Everton", "drawn": 14, "goals_diff": 4}, {"won": 12, "lost": 15, "goals_for": 42, "points": 47, "goals_against": 52, "team": "Swansea", "drawn": 11, "goals_diff": -10}, {"won": 12, "lost": 17, "goals_for": 40, "points": 45, "goals_against": 50, "team": "Watford", "drawn": 9, "goals_diff": -10}, {"won": 10, "lost": 15, "goals_for": 34, "points": 43, "goals_against": 48, "team": "West Brom", "drawn": 13, "goals_diff": -14}, {"won": 11, "lost": 18, "goals_for": 39, "points": 42, "goals_against": 51, "team": "Crystal Palace", "drawn": 9, "goals_diff": -12}, {"won": 11, "lost": 18, "goals_for": 45, "points": 42, "goals_against": 67, "team": "Bournemouth", "drawn": 9, "goals_diff": -22}, {"won": 9, "lost": 17, "goals_for": 48, "points": 39, "goals_against": 62, "team": "Sunderland", "drawn": 12, "goals_diff": -14}, {"won": 9, "lost": 19, "goals_for": 44, "points": 37, "goals_against": 65, "team": "Newcastle", "drawn": 10, "goals_diff": -21}, {"won": 9, "lost": 22, "goals_for": 39, "points": 34, "goals_against": 67, "team": "Norwich", "drawn": 7, "goals_diff": -28}, {"won": 3, "lost": 27, "goals_for": 27, "points": 17, "goals_against": 76, "team": "Aston Villa", "drawn": 8, "goals_diff": -49}], "_id": "2015/16"}]}
+{
+  "tables": [
+    {
+      "table": [
+        {
+          "won": 24,
+          "lost": 6,
+          "goals_for": 67,
+          "points": 84,
+          "goals_against": 31,
+          "team": "Man Utd",
+          "drawn": 12,
+          "goals_diff": 36
+        },
+        {
+          "won": 21,
+          "lost": 10,
+          "goals_for": 57,
+          "points": 74,
+          "goals_against": 40,
+          "team": "Aston Villa",
+          "drawn": 11,
+          "goals_diff": 17
+        },
+        {
+          "won": 21,
+          "lost": 12,
+          "goals_for": 61,
+          "points": 72,
+          "goals_against": 65,
+          "team": "Norwich",
+          "drawn": 9,
+          "goals_diff": -4
+        },
+        {
+          "won": 20,
+          "lost": 11,
+          "goals_for": 68,
+          "points": 71,
+          "goals_against": 46,
+          "team": "Blackburn",
+          "drawn": 11,
+          "goals_diff": 22
+        },
+        {
+          "won": 17,
+          "lost": 13,
+          "goals_for": 63,
+          "points": 63,
+          "goals_against": 55,
+          "team": "QPR",
+          "drawn": 12,
+          "goals_diff": 8
+        },
+        {
+          "won": 16,
+          "lost": 15,
+          "goals_for": 62,
+          "points": 59,
+          "goals_against": 55,
+          "team": "Liverpool",
+          "drawn": 11,
+          "goals_diff": 7
+        },
+        {
+          "won": 15,
+          "lost": 13,
+          "goals_for": 55,
+          "points": 59,
+          "goals_against": 51,
+          "team": "Sheffield Wed",
+          "drawn": 14,
+          "goals_diff": 4
+        },
+        {
+          "won": 16,
+          "lost": 15,
+          "goals_for": 60,
+          "points": 59,
+          "goals_against": 66,
+          "team": "Spurs",
+          "drawn": 11,
+          "goals_diff": -6
+        },
+        {
+          "won": 15,
+          "lost": 15,
+          "goals_for": 56,
+          "points": 57,
+          "goals_against": 51,
+          "team": "Man City",
+          "drawn": 12,
+          "goals_diff": 5
+        },
+        {
+          "won": 15,
+          "lost": 16,
+          "goals_for": 40,
+          "points": 56,
+          "goals_against": 38,
+          "team": "Arsenal",
+          "drawn": 11,
+          "goals_diff": 2
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 51,
+          "points": 56,
+          "goals_against": 54,
+          "team": "Chelsea",
+          "drawn": 14,
+          "goals_diff": -3
+        },
+        {
+          "won": 14,
+          "lost": 16,
+          "goals_for": 56,
+          "points": 54,
+          "goals_against": 55,
+          "team": "Wimbledon",
+          "drawn": 12,
+          "goals_diff": 1
+        },
+        {
+          "won": 15,
+          "lost": 19,
+          "goals_for": 53,
+          "points": 53,
+          "goals_against": 55,
+          "team": "Everton",
+          "drawn": 8,
+          "goals_diff": -2
+        },
+        {
+          "won": 14,
+          "lost": 18,
+          "goals_for": 54,
+          "points": 52,
+          "goals_against": 53,
+          "team": "Sheffield Utd",
+          "drawn": 10,
+          "goals_diff": 1
+        },
+        {
+          "won": 13,
+          "lost": 16,
+          "goals_for": 52,
+          "points": 52,
+          "goals_against": 57,
+          "team": "Coventry",
+          "drawn": 13,
+          "goals_diff": -5
+        },
+        {
+          "won": 12,
+          "lost": 14,
+          "goals_for": 50,
+          "points": 52,
+          "goals_against": 55,
+          "team": "Ipswich",
+          "drawn": 16,
+          "goals_diff": -5
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 57,
+          "points": 51,
+          "goals_against": 62,
+          "team": "Leeds",
+          "drawn": 15,
+          "goals_diff": -5
+        },
+        {
+          "won": 13,
+          "lost": 18,
+          "goals_for": 54,
+          "points": 50,
+          "goals_against": 61,
+          "team": "Southampton",
+          "drawn": 11,
+          "goals_diff": -7
+        },
+        {
+          "won": 13,
+          "lost": 19,
+          "goals_for": 63,
+          "points": 49,
+          "goals_against": 74,
+          "team": "Oldham",
+          "drawn": 10,
+          "goals_diff": -11
+        },
+        {
+          "won": 11,
+          "lost": 15,
+          "goals_for": 48,
+          "points": 49,
+          "goals_against": 61,
+          "team": "Crystal Palace",
+          "drawn": 16,
+          "goals_diff": -13
+        },
+        {
+          "won": 11,
+          "lost": 20,
+          "goals_for": 54,
+          "points": 44,
+          "goals_against": 75,
+          "team": "Middlesbrough",
+          "drawn": 11,
+          "goals_diff": -21
+        },
+        {
+          "won": 10,
+          "lost": 22,
+          "goals_for": 41,
+          "points": 40,
+          "goals_against": 62,
+          "team": "Nott'm Forest",
+          "drawn": 10,
+          "goals_diff": -21
+        }
+      ],
+      "_id": "1992/93"
+    },
+    {
+      "table": [
+        {
+          "won": 27,
+          "lost": 4,
+          "goals_for": 80,
+          "points": 92,
+          "goals_against": 38,
+          "team": "Man Utd",
+          "drawn": 11,
+          "goals_diff": 42
+        },
+        {
+          "won": 25,
+          "lost": 8,
+          "goals_for": 63,
+          "points": 84,
+          "goals_against": 36,
+          "team": "Blackburn",
+          "drawn": 9,
+          "goals_diff": 27
+        },
+        {
+          "won": 23,
+          "lost": 11,
+          "goals_for": 82,
+          "points": 77,
+          "goals_against": 41,
+          "team": "Newcastle",
+          "drawn": 8,
+          "goals_diff": 41
+        },
+        {
+          "won": 18,
+          "lost": 7,
+          "goals_for": 53,
+          "points": 71,
+          "goals_against": 28,
+          "team": "Arsenal",
+          "drawn": 17,
+          "goals_diff": 25
+        },
+        {
+          "won": 18,
+          "lost": 8,
+          "goals_for": 65,
+          "points": 70,
+          "goals_against": 39,
+          "team": "Leeds",
+          "drawn": 16,
+          "goals_diff": 26
+        },
+        {
+          "won": 18,
+          "lost": 13,
+          "goals_for": 56,
+          "points": 65,
+          "goals_against": 53,
+          "team": "Wimbledon",
+          "drawn": 11,
+          "goals_diff": 3
+        },
+        {
+          "won": 16,
+          "lost": 10,
+          "goals_for": 76,
+          "points": 64,
+          "goals_against": 54,
+          "team": "Sheffield Wed",
+          "drawn": 16,
+          "goals_diff": 22
+        },
+        {
+          "won": 17,
+          "lost": 16,
+          "goals_for": 59,
+          "points": 60,
+          "goals_against": 55,
+          "team": "Liverpool",
+          "drawn": 9,
+          "goals_diff": 4
+        },
+        {
+          "won": 16,
+          "lost": 14,
+          "goals_for": 62,
+          "points": 60,
+          "goals_against": 61,
+          "team": "QPR",
+          "drawn": 12,
+          "goals_diff": 1
+        },
+        {
+          "won": 15,
+          "lost": 15,
+          "goals_for": 46,
+          "points": 57,
+          "goals_against": 50,
+          "team": "Aston Villa",
+          "drawn": 12,
+          "goals_diff": -4
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 43,
+          "points": 56,
+          "goals_against": 45,
+          "team": "Coventry",
+          "drawn": 14,
+          "goals_diff": -2
+        },
+        {
+          "won": 12,
+          "lost": 13,
+          "goals_for": 65,
+          "points": 53,
+          "goals_against": 61,
+          "team": "Norwich",
+          "drawn": 17,
+          "goals_diff": 4
+        },
+        {
+          "won": 13,
+          "lost": 16,
+          "goals_for": 47,
+          "points": 52,
+          "goals_against": 58,
+          "team": "West Ham",
+          "drawn": 13,
+          "goals_diff": -11
+        },
+        {
+          "won": 13,
+          "lost": 17,
+          "goals_for": 49,
+          "points": 51,
+          "goals_against": 53,
+          "team": "Chelsea",
+          "drawn": 12,
+          "goals_diff": -4
+        },
+        {
+          "won": 11,
+          "lost": 19,
+          "goals_for": 54,
+          "points": 45,
+          "goals_against": 59,
+          "team": "Spurs",
+          "drawn": 12,
+          "goals_diff": -5
+        },
+        {
+          "won": 9,
+          "lost": 15,
+          "goals_for": 38,
+          "points": 45,
+          "goals_against": 49,
+          "team": "Man City",
+          "drawn": 18,
+          "goals_diff": -11
+        },
+        {
+          "won": 12,
+          "lost": 22,
+          "goals_for": 42,
+          "points": 44,
+          "goals_against": 63,
+          "team": "Everton",
+          "drawn": 8,
+          "goals_diff": -21
+        },
+        {
+          "won": 12,
+          "lost": 23,
+          "goals_for": 49,
+          "points": 43,
+          "goals_against": 66,
+          "team": "Southampton",
+          "drawn": 7,
+          "goals_diff": -17
+        },
+        {
+          "won": 9,
+          "lost": 17,
+          "goals_for": 35,
+          "points": 43,
+          "goals_against": 58,
+          "team": "Ipswich",
+          "drawn": 16,
+          "goals_diff": -23
+        },
+        {
+          "won": 8,
+          "lost": 16,
+          "goals_for": 42,
+          "points": 42,
+          "goals_against": 60,
+          "team": "Sheffield Utd",
+          "drawn": 18,
+          "goals_diff": -18
+        },
+        {
+          "won": 9,
+          "lost": 20,
+          "goals_for": 42,
+          "points": 40,
+          "goals_against": 68,
+          "team": "Oldham",
+          "drawn": 13,
+          "goals_diff": -26
+        },
+        {
+          "won": 5,
+          "lost": 22,
+          "goals_for": 47,
+          "points": 30,
+          "goals_against": 100,
+          "team": "Swindon",
+          "drawn": 15,
+          "goals_diff": -53
+        }
+      ],
+      "_id": "1993/94"
+    },
+    {
+      "table": [
+        {
+          "won": 27,
+          "lost": 7,
+          "goals_for": 80,
+          "points": 89,
+          "goals_against": 39,
+          "team": "Blackburn",
+          "drawn": 8,
+          "goals_diff": 41
+        },
+        {
+          "won": 26,
+          "lost": 6,
+          "goals_for": 77,
+          "points": 88,
+          "goals_against": 28,
+          "team": "Man Utd",
+          "drawn": 10,
+          "goals_diff": 49
+        },
+        {
+          "won": 22,
+          "lost": 9,
+          "goals_for": 72,
+          "points": 77,
+          "goals_against": 43,
+          "team": "Nott'm Forest",
+          "drawn": 11,
+          "goals_diff": 29
+        },
+        {
+          "won": 21,
+          "lost": 10,
+          "goals_for": 65,
+          "points": 74,
+          "goals_against": 37,
+          "team": "Liverpool",
+          "drawn": 11,
+          "goals_diff": 28
+        },
+        {
+          "won": 20,
+          "lost": 9,
+          "goals_for": 59,
+          "points": 73,
+          "goals_against": 38,
+          "team": "Leeds",
+          "drawn": 13,
+          "goals_diff": 21
+        },
+        {
+          "won": 20,
+          "lost": 10,
+          "goals_for": 67,
+          "points": 72,
+          "goals_against": 47,
+          "team": "Newcastle",
+          "drawn": 12,
+          "goals_diff": 20
+        },
+        {
+          "won": 16,
+          "lost": 12,
+          "goals_for": 66,
+          "points": 62,
+          "goals_against": 58,
+          "team": "Spurs",
+          "drawn": 14,
+          "goals_diff": 8
+        },
+        {
+          "won": 17,
+          "lost": 16,
+          "goals_for": 61,
+          "points": 60,
+          "goals_against": 59,
+          "team": "QPR",
+          "drawn": 9,
+          "goals_diff": 2
+        },
+        {
+          "won": 15,
+          "lost": 16,
+          "goals_for": 48,
+          "points": 56,
+          "goals_against": 65,
+          "team": "Wimbledon",
+          "drawn": 11,
+          "goals_diff": -17
+        },
+        {
+          "won": 12,
+          "lost": 12,
+          "goals_for": 61,
+          "points": 54,
+          "goals_against": 63,
+          "team": "Southampton",
+          "drawn": 18,
+          "goals_diff": -2
+        },
+        {
+          "won": 13,
+          "lost": 14,
+          "goals_for": 50,
+          "points": 54,
+          "goals_against": 55,
+          "team": "Chelsea",
+          "drawn": 15,
+          "goals_diff": -5
+        },
+        {
+          "won": 13,
+          "lost": 17,
+          "goals_for": 52,
+          "points": 51,
+          "goals_against": 49,
+          "team": "Arsenal",
+          "drawn": 12,
+          "goals_diff": 3
+        },
+        {
+          "won": 13,
+          "lost": 17,
+          "goals_for": 49,
+          "points": 51,
+          "goals_against": 57,
+          "team": "Sheffield Wed",
+          "drawn": 12,
+          "goals_diff": -8
+        },
+        {
+          "won": 13,
+          "lost": 18,
+          "goals_for": 44,
+          "points": 50,
+          "goals_against": 48,
+          "team": "West Ham",
+          "drawn": 11,
+          "goals_diff": -4
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 44,
+          "points": 50,
+          "goals_against": 51,
+          "team": "Everton",
+          "drawn": 17,
+          "goals_diff": -7
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 44,
+          "points": 50,
+          "goals_against": 62,
+          "team": "Coventry",
+          "drawn": 14,
+          "goals_diff": -18
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 53,
+          "points": 49,
+          "goals_against": 64,
+          "team": "Man City",
+          "drawn": 13,
+          "goals_diff": -11
+        },
+        {
+          "won": 11,
+          "lost": 16,
+          "goals_for": 51,
+          "points": 48,
+          "goals_against": 56,
+          "team": "Aston Villa",
+          "drawn": 15,
+          "goals_diff": -5
+        },
+        {
+          "won": 11,
+          "lost": 19,
+          "goals_for": 34,
+          "points": 45,
+          "goals_against": 49,
+          "team": "Crystal Palace",
+          "drawn": 12,
+          "goals_diff": -15
+        },
+        {
+          "won": 10,
+          "lost": 19,
+          "goals_for": 37,
+          "points": 43,
+          "goals_against": 54,
+          "team": "Norwich",
+          "drawn": 13,
+          "goals_diff": -17
+        },
+        {
+          "won": 6,
+          "lost": 25,
+          "goals_for": 45,
+          "points": 29,
+          "goals_against": 80,
+          "team": "Leicester",
+          "drawn": 11,
+          "goals_diff": -35
+        },
+        {
+          "won": 7,
+          "lost": 29,
+          "goals_for": 36,
+          "points": 27,
+          "goals_against": 93,
+          "team": "Ipswich",
+          "drawn": 6,
+          "goals_diff": -57
+        }
+      ],
+      "_id": "1994/95"
+    },
+    {
+      "table": [
+        {
+          "won": 25,
+          "lost": 6,
+          "goals_for": 73,
+          "points": 82,
+          "goals_against": 35,
+          "team": "Man Utd",
+          "drawn": 7,
+          "goals_diff": 38
+        },
+        {
+          "won": 24,
+          "lost": 8,
+          "goals_for": 66,
+          "points": 78,
+          "goals_against": 37,
+          "team": "Newcastle",
+          "drawn": 6,
+          "goals_diff": 29
+        },
+        {
+          "won": 20,
+          "lost": 7,
+          "goals_for": 70,
+          "points": 71,
+          "goals_against": 34,
+          "team": "Liverpool",
+          "drawn": 11,
+          "goals_diff": 36
+        },
+        {
+          "won": 18,
+          "lost": 11,
+          "goals_for": 52,
+          "points": 63,
+          "goals_against": 35,
+          "team": "Aston Villa",
+          "drawn": 9,
+          "goals_diff": 17
+        },
+        {
+          "won": 17,
+          "lost": 9,
+          "goals_for": 49,
+          "points": 63,
+          "goals_against": 32,
+          "team": "Arsenal",
+          "drawn": 12,
+          "goals_diff": 17
+        },
+        {
+          "won": 17,
+          "lost": 11,
+          "goals_for": 64,
+          "points": 61,
+          "goals_against": 44,
+          "team": "Everton",
+          "drawn": 10,
+          "goals_diff": 20
+        },
+        {
+          "won": 18,
+          "lost": 13,
+          "goals_for": 61,
+          "points": 61,
+          "goals_against": 47,
+          "team": "Blackburn",
+          "drawn": 7,
+          "goals_diff": 14
+        },
+        {
+          "won": 16,
+          "lost": 9,
+          "goals_for": 50,
+          "points": 61,
+          "goals_against": 38,
+          "team": "Spurs",
+          "drawn": 13,
+          "goals_diff": 12
+        },
+        {
+          "won": 15,
+          "lost": 10,
+          "goals_for": 50,
+          "points": 58,
+          "goals_against": 54,
+          "team": "Nott'm Forest",
+          "drawn": 13,
+          "goals_diff": -4
+        },
+        {
+          "won": 14,
+          "lost": 15,
+          "goals_for": 43,
+          "points": 51,
+          "goals_against": 52,
+          "team": "West Ham",
+          "drawn": 9,
+          "goals_diff": -9
+        },
+        {
+          "won": 12,
+          "lost": 12,
+          "goals_for": 46,
+          "points": 50,
+          "goals_against": 44,
+          "team": "Chelsea",
+          "drawn": 14,
+          "goals_diff": 2
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 35,
+          "points": 43,
+          "goals_against": 50,
+          "team": "Middlesbrough",
+          "drawn": 10,
+          "goals_diff": -15
+        },
+        {
+          "won": 12,
+          "lost": 19,
+          "goals_for": 40,
+          "points": 43,
+          "goals_against": 57,
+          "team": "Leeds",
+          "drawn": 7,
+          "goals_diff": -17
+        },
+        {
+          "won": 10,
+          "lost": 17,
+          "goals_for": 55,
+          "points": 41,
+          "goals_against": 70,
+          "team": "Wimbledon",
+          "drawn": 11,
+          "goals_diff": -15
+        },
+        {
+          "won": 10,
+          "lost": 18,
+          "goals_for": 48,
+          "points": 40,
+          "goals_against": 61,
+          "team": "Sheffield Wed",
+          "drawn": 10,
+          "goals_diff": -13
+        },
+        {
+          "won": 8,
+          "lost": 16,
+          "goals_for": 42,
+          "points": 38,
+          "goals_against": 60,
+          "team": "Coventry",
+          "drawn": 14,
+          "goals_diff": -18
+        },
+        {
+          "won": 9,
+          "lost": 18,
+          "goals_for": 34,
+          "points": 38,
+          "goals_against": 52,
+          "team": "Southampton",
+          "drawn": 11,
+          "goals_diff": -18
+        },
+        {
+          "won": 9,
+          "lost": 18,
+          "goals_for": 33,
+          "points": 38,
+          "goals_against": 58,
+          "team": "Man City",
+          "drawn": 11,
+          "goals_diff": -25
+        },
+        {
+          "won": 9,
+          "lost": 23,
+          "goals_for": 38,
+          "points": 33,
+          "goals_against": 57,
+          "team": "QPR",
+          "drawn": 6,
+          "goals_diff": -19
+        },
+        {
+          "won": 8,
+          "lost": 25,
+          "goals_for": 39,
+          "points": 29,
+          "goals_against": 71,
+          "team": "Bolton",
+          "drawn": 5,
+          "goals_diff": -32
+        }
+      ],
+      "_id": "1995/96"
+    },
+    {
+      "table": [
+        {
+          "won": 21,
+          "lost": 5,
+          "goals_for": 76,
+          "points": 75,
+          "goals_against": 44,
+          "team": "Man Utd",
+          "drawn": 12,
+          "goals_diff": 32
+        },
+        {
+          "won": 19,
+          "lost": 8,
+          "goals_for": 73,
+          "points": 68,
+          "goals_against": 40,
+          "team": "Newcastle",
+          "drawn": 11,
+          "goals_diff": 33
+        },
+        {
+          "won": 19,
+          "lost": 8,
+          "goals_for": 62,
+          "points": 68,
+          "goals_against": 32,
+          "team": "Arsenal",
+          "drawn": 11,
+          "goals_diff": 30
+        },
+        {
+          "won": 19,
+          "lost": 8,
+          "goals_for": 62,
+          "points": 68,
+          "goals_against": 37,
+          "team": "Liverpool",
+          "drawn": 11,
+          "goals_diff": 25
+        },
+        {
+          "won": 17,
+          "lost": 11,
+          "goals_for": 47,
+          "points": 61,
+          "goals_against": 34,
+          "team": "Aston Villa",
+          "drawn": 10,
+          "goals_diff": 13
+        },
+        {
+          "won": 16,
+          "lost": 11,
+          "goals_for": 58,
+          "points": 59,
+          "goals_against": 55,
+          "team": "Chelsea",
+          "drawn": 11,
+          "goals_diff": 3
+        },
+        {
+          "won": 14,
+          "lost": 9,
+          "goals_for": 50,
+          "points": 57,
+          "goals_against": 51,
+          "team": "Sheffield Wed",
+          "drawn": 15,
+          "goals_diff": -1
+        },
+        {
+          "won": 15,
+          "lost": 12,
+          "goals_for": 49,
+          "points": 56,
+          "goals_against": 46,
+          "team": "Wimbledon",
+          "drawn": 11,
+          "goals_diff": 3
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 46,
+          "points": 47,
+          "goals_against": 54,
+          "team": "Leicester",
+          "drawn": 11,
+          "goals_diff": -8
+        },
+        {
+          "won": 13,
+          "lost": 18,
+          "goals_for": 44,
+          "points": 46,
+          "goals_against": 51,
+          "team": "Spurs",
+          "drawn": 7,
+          "goals_diff": -7
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 28,
+          "points": 46,
+          "goals_against": 38,
+          "team": "Leeds",
+          "drawn": 13,
+          "goals_diff": -10
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 45,
+          "points": 46,
+          "goals_against": 58,
+          "team": "Derby",
+          "drawn": 13,
+          "goals_diff": -13
+        },
+        {
+          "won": 9,
+          "lost": 14,
+          "goals_for": 42,
+          "points": 42,
+          "goals_against": 43,
+          "team": "Blackburn",
+          "drawn": 15,
+          "goals_diff": -1
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 51,
+          "points": 42,
+          "goals_against": 60,
+          "team": "Middlesbrough",
+          "drawn": 12,
+          "goals_diff": -9
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 39,
+          "points": 42,
+          "goals_against": 48,
+          "team": "West Ham",
+          "drawn": 12,
+          "goals_diff": -9
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 44,
+          "points": 42,
+          "goals_against": 57,
+          "team": "Everton",
+          "drawn": 12,
+          "goals_diff": -13
+        },
+        {
+          "won": 10,
+          "lost": 17,
+          "goals_for": 50,
+          "points": 41,
+          "goals_against": 56,
+          "team": "Southampton",
+          "drawn": 11,
+          "goals_diff": -6
+        },
+        {
+          "won": 9,
+          "lost": 15,
+          "goals_for": 38,
+          "points": 41,
+          "goals_against": 54,
+          "team": "Coventry",
+          "drawn": 14,
+          "goals_diff": -16
+        },
+        {
+          "won": 10,
+          "lost": 18,
+          "goals_for": 35,
+          "points": 40,
+          "goals_against": 53,
+          "team": "Sunderland",
+          "drawn": 10,
+          "goals_diff": -18
+        },
+        {
+          "won": 6,
+          "lost": 16,
+          "goals_for": 31,
+          "points": 34,
+          "goals_against": 59,
+          "team": "Nott'm Forest",
+          "drawn": 16,
+          "goals_diff": -28
+        }
+      ],
+      "_id": "1996/97"
+    },
+    {
+      "table": [
+        {
+          "won": 23,
+          "lost": 6,
+          "goals_for": 68,
+          "points": 78,
+          "goals_against": 33,
+          "team": "Arsenal",
+          "drawn": 9,
+          "goals_diff": 35
+        },
+        {
+          "won": 23,
+          "lost": 7,
+          "goals_for": 73,
+          "points": 77,
+          "goals_against": 26,
+          "team": "Man Utd",
+          "drawn": 8,
+          "goals_diff": 47
+        },
+        {
+          "won": 18,
+          "lost": 9,
+          "goals_for": 68,
+          "points": 65,
+          "goals_against": 42,
+          "team": "Liverpool",
+          "drawn": 11,
+          "goals_diff": 26
+        },
+        {
+          "won": 20,
+          "lost": 15,
+          "goals_for": 71,
+          "points": 63,
+          "goals_against": 43,
+          "team": "Chelsea",
+          "drawn": 3,
+          "goals_diff": 28
+        },
+        {
+          "won": 17,
+          "lost": 13,
+          "goals_for": 57,
+          "points": 59,
+          "goals_against": 46,
+          "team": "Leeds",
+          "drawn": 8,
+          "goals_diff": 11
+        },
+        {
+          "won": 16,
+          "lost": 12,
+          "goals_for": 57,
+          "points": 58,
+          "goals_against": 52,
+          "team": "Blackburn",
+          "drawn": 10,
+          "goals_diff": 5
+        },
+        {
+          "won": 17,
+          "lost": 15,
+          "goals_for": 49,
+          "points": 57,
+          "goals_against": 48,
+          "team": "Aston Villa",
+          "drawn": 6,
+          "goals_diff": 1
+        },
+        {
+          "won": 16,
+          "lost": 14,
+          "goals_for": 56,
+          "points": 56,
+          "goals_against": 57,
+          "team": "West Ham",
+          "drawn": 8,
+          "goals_diff": -1
+        },
+        {
+          "won": 16,
+          "lost": 15,
+          "goals_for": 52,
+          "points": 55,
+          "goals_against": 49,
+          "team": "Derby",
+          "drawn": 7,
+          "goals_diff": 3
+        },
+        {
+          "won": 13,
+          "lost": 11,
+          "goals_for": 51,
+          "points": 53,
+          "goals_against": 41,
+          "team": "Leicester",
+          "drawn": 14,
+          "goals_diff": 10
+        },
+        {
+          "won": 12,
+          "lost": 10,
+          "goals_for": 46,
+          "points": 52,
+          "goals_against": 44,
+          "team": "Coventry",
+          "drawn": 16,
+          "goals_diff": 2
+        },
+        {
+          "won": 14,
+          "lost": 18,
+          "goals_for": 50,
+          "points": 48,
+          "goals_against": 55,
+          "team": "Southampton",
+          "drawn": 6,
+          "goals_diff": -5
+        },
+        {
+          "won": 11,
+          "lost": 16,
+          "goals_for": 35,
+          "points": 44,
+          "goals_against": 44,
+          "team": "Newcastle",
+          "drawn": 11,
+          "goals_diff": -9
+        },
+        {
+          "won": 11,
+          "lost": 16,
+          "goals_for": 44,
+          "points": 44,
+          "goals_against": 56,
+          "team": "Spurs",
+          "drawn": 11,
+          "goals_diff": -12
+        },
+        {
+          "won": 10,
+          "lost": 14,
+          "goals_for": 34,
+          "points": 44,
+          "goals_against": 46,
+          "team": "Wimbledon",
+          "drawn": 14,
+          "goals_diff": -12
+        },
+        {
+          "won": 12,
+          "lost": 18,
+          "goals_for": 52,
+          "points": 44,
+          "goals_against": 67,
+          "team": "Sheffield Wed",
+          "drawn": 8,
+          "goals_diff": -15
+        },
+        {
+          "won": 9,
+          "lost": 16,
+          "goals_for": 41,
+          "points": 40,
+          "goals_against": 56,
+          "team": "Everton",
+          "drawn": 13,
+          "goals_diff": -15
+        },
+        {
+          "won": 9,
+          "lost": 16,
+          "goals_for": 41,
+          "points": 40,
+          "goals_against": 61,
+          "team": "Bolton",
+          "drawn": 13,
+          "goals_diff": -20
+        },
+        {
+          "won": 10,
+          "lost": 23,
+          "goals_for": 37,
+          "points": 35,
+          "goals_against": 82,
+          "team": "Barnsley",
+          "drawn": 5,
+          "goals_diff": -45
+        },
+        {
+          "won": 8,
+          "lost": 21,
+          "goals_for": 37,
+          "points": 33,
+          "goals_against": 71,
+          "team": "Crystal Palace",
+          "drawn": 9,
+          "goals_diff": -34
+        }
+      ],
+      "_id": "1997/98"
+    },
+    {
+      "table": [
+        {
+          "won": 22,
+          "lost": 3,
+          "goals_for": 80,
+          "points": 79,
+          "goals_against": 37,
+          "team": "Man Utd",
+          "drawn": 13,
+          "goals_diff": 43
+        },
+        {
+          "won": 22,
+          "lost": 4,
+          "goals_for": 59,
+          "points": 78,
+          "goals_against": 17,
+          "team": "Arsenal",
+          "drawn": 12,
+          "goals_diff": 42
+        },
+        {
+          "won": 20,
+          "lost": 3,
+          "goals_for": 57,
+          "points": 75,
+          "goals_against": 30,
+          "team": "Chelsea",
+          "drawn": 15,
+          "goals_diff": 27
+        },
+        {
+          "won": 18,
+          "lost": 7,
+          "goals_for": 62,
+          "points": 67,
+          "goals_against": 34,
+          "team": "Leeds",
+          "drawn": 13,
+          "goals_diff": 28
+        },
+        {
+          "won": 16,
+          "lost": 13,
+          "goals_for": 46,
+          "points": 57,
+          "goals_against": 53,
+          "team": "West Ham",
+          "drawn": 9,
+          "goals_diff": -7
+        },
+        {
+          "won": 15,
+          "lost": 13,
+          "goals_for": 51,
+          "points": 55,
+          "goals_against": 46,
+          "team": "Aston Villa",
+          "drawn": 10,
+          "goals_diff": 5
+        },
+        {
+          "won": 15,
+          "lost": 14,
+          "goals_for": 68,
+          "points": 54,
+          "goals_against": 49,
+          "team": "Liverpool",
+          "drawn": 9,
+          "goals_diff": 19
+        },
+        {
+          "won": 13,
+          "lost": 12,
+          "goals_for": 40,
+          "points": 52,
+          "goals_against": 45,
+          "team": "Derby",
+          "drawn": 13,
+          "goals_diff": -5
+        },
+        {
+          "won": 12,
+          "lost": 11,
+          "goals_for": 48,
+          "points": 51,
+          "goals_against": 54,
+          "team": "Middlesbrough",
+          "drawn": 15,
+          "goals_diff": -6
+        },
+        {
+          "won": 12,
+          "lost": 13,
+          "goals_for": 40,
+          "points": 49,
+          "goals_against": 46,
+          "team": "Leicester",
+          "drawn": 13,
+          "goals_diff": -6
+        },
+        {
+          "won": 11,
+          "lost": 13,
+          "goals_for": 47,
+          "points": 47,
+          "goals_against": 50,
+          "team": "Spurs",
+          "drawn": 14,
+          "goals_diff": -3
+        },
+        {
+          "won": 13,
+          "lost": 18,
+          "goals_for": 41,
+          "points": 46,
+          "goals_against": 42,
+          "team": "Sheffield Wed",
+          "drawn": 7,
+          "goals_diff": -1
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 48,
+          "points": 46,
+          "goals_against": 54,
+          "team": "Newcastle",
+          "drawn": 13,
+          "goals_diff": -6
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 42,
+          "points": 43,
+          "goals_against": 47,
+          "team": "Everton",
+          "drawn": 10,
+          "goals_diff": -5
+        },
+        {
+          "won": 11,
+          "lost": 18,
+          "goals_for": 39,
+          "points": 42,
+          "goals_against": 51,
+          "team": "Coventry",
+          "drawn": 9,
+          "goals_diff": -12
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 40,
+          "points": 42,
+          "goals_against": 63,
+          "team": "Wimbledon",
+          "drawn": 12,
+          "goals_diff": -23
+        },
+        {
+          "won": 11,
+          "lost": 19,
+          "goals_for": 37,
+          "points": 41,
+          "goals_against": 64,
+          "team": "Southampton",
+          "drawn": 8,
+          "goals_diff": -27
+        },
+        {
+          "won": 8,
+          "lost": 18,
+          "goals_for": 41,
+          "points": 36,
+          "goals_against": 56,
+          "team": "Charlton",
+          "drawn": 12,
+          "goals_diff": -15
+        },
+        {
+          "won": 7,
+          "lost": 17,
+          "goals_for": 38,
+          "points": 35,
+          "goals_against": 52,
+          "team": "Blackburn",
+          "drawn": 14,
+          "goals_diff": -14
+        },
+        {
+          "won": 7,
+          "lost": 22,
+          "goals_for": 35,
+          "points": 30,
+          "goals_against": 69,
+          "team": "Nott'm Forest",
+          "drawn": 9,
+          "goals_diff": -34
+        }
+      ],
+      "_id": "1998/99"
+    },
+    {
+      "table": [
+        {
+          "won": 28,
+          "lost": 3,
+          "goals_for": 97,
+          "points": 91,
+          "goals_against": 45,
+          "team": "Man Utd",
+          "drawn": 7,
+          "goals_diff": 52
+        },
+        {
+          "won": 22,
+          "lost": 9,
+          "goals_for": 73,
+          "points": 73,
+          "goals_against": 43,
+          "team": "Arsenal",
+          "drawn": 7,
+          "goals_diff": 30
+        },
+        {
+          "won": 21,
+          "lost": 11,
+          "goals_for": 58,
+          "points": 69,
+          "goals_against": 43,
+          "team": "Leeds",
+          "drawn": 6,
+          "goals_diff": 15
+        },
+        {
+          "won": 19,
+          "lost": 9,
+          "goals_for": 51,
+          "points": 67,
+          "goals_against": 30,
+          "team": "Liverpool",
+          "drawn": 10,
+          "goals_diff": 21
+        },
+        {
+          "won": 18,
+          "lost": 9,
+          "goals_for": 53,
+          "points": 65,
+          "goals_against": 34,
+          "team": "Chelsea",
+          "drawn": 11,
+          "goals_diff": 19
+        },
+        {
+          "won": 15,
+          "lost": 10,
+          "goals_for": 46,
+          "points": 58,
+          "goals_against": 35,
+          "team": "Aston Villa",
+          "drawn": 13,
+          "goals_diff": 11
+        },
+        {
+          "won": 16,
+          "lost": 12,
+          "goals_for": 57,
+          "points": 58,
+          "goals_against": 56,
+          "team": "Sunderland",
+          "drawn": 10,
+          "goals_diff": 1
+        },
+        {
+          "won": 16,
+          "lost": 15,
+          "goals_for": 55,
+          "points": 55,
+          "goals_against": 55,
+          "team": "Leicester",
+          "drawn": 7,
+          "goals_diff": 0
+        },
+        {
+          "won": 15,
+          "lost": 13,
+          "goals_for": 52,
+          "points": 55,
+          "goals_against": 53,
+          "team": "West Ham",
+          "drawn": 10,
+          "goals_diff": -1
+        },
+        {
+          "won": 15,
+          "lost": 15,
+          "goals_for": 57,
+          "points": 53,
+          "goals_against": 49,
+          "team": "Spurs",
+          "drawn": 8,
+          "goals_diff": 8
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 63,
+          "points": 52,
+          "goals_against": 54,
+          "team": "Newcastle",
+          "drawn": 10,
+          "goals_diff": 9
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 46,
+          "points": 52,
+          "goals_against": 52,
+          "team": "Middlesbrough",
+          "drawn": 10,
+          "goals_diff": -6
+        },
+        {
+          "won": 12,
+          "lost": 12,
+          "goals_for": 59,
+          "points": 50,
+          "goals_against": 49,
+          "team": "Everton",
+          "drawn": 14,
+          "goals_diff": 10
+        },
+        {
+          "won": 12,
+          "lost": 18,
+          "goals_for": 47,
+          "points": 44,
+          "goals_against": 54,
+          "team": "Coventry",
+          "drawn": 8,
+          "goals_diff": -7
+        },
+        {
+          "won": 12,
+          "lost": 18,
+          "goals_for": 45,
+          "points": 44,
+          "goals_against": 62,
+          "team": "Southampton",
+          "drawn": 8,
+          "goals_diff": -17
+        },
+        {
+          "won": 9,
+          "lost": 18,
+          "goals_for": 44,
+          "points": 38,
+          "goals_against": 57,
+          "team": "Derby",
+          "drawn": 11,
+          "goals_diff": -13
+        },
+        {
+          "won": 9,
+          "lost": 20,
+          "goals_for": 38,
+          "points": 36,
+          "goals_against": 68,
+          "team": "Bradford",
+          "drawn": 9,
+          "goals_diff": -30
+        },
+        {
+          "won": 7,
+          "lost": 19,
+          "goals_for": 46,
+          "points": 33,
+          "goals_against": 74,
+          "team": "Wimbledon",
+          "drawn": 12,
+          "goals_diff": -28
+        },
+        {
+          "won": 8,
+          "lost": 23,
+          "goals_for": 38,
+          "points": 31,
+          "goals_against": 70,
+          "team": "Sheffield Wed",
+          "drawn": 7,
+          "goals_diff": -32
+        },
+        {
+          "won": 6,
+          "lost": 26,
+          "goals_for": 35,
+          "points": 24,
+          "goals_against": 77,
+          "team": "Watford",
+          "drawn": 6,
+          "goals_diff": -42
+        }
+      ],
+      "_id": "1999/00"
+    },
+    {
+      "table": [
+        {
+          "won": 24,
+          "lost": 6,
+          "goals_for": 79,
+          "points": 80,
+          "goals_against": 31,
+          "team": "Man Utd",
+          "drawn": 8,
+          "goals_diff": 48
+        },
+        {
+          "won": 20,
+          "lost": 8,
+          "goals_for": 63,
+          "points": 70,
+          "goals_against": 38,
+          "team": "Arsenal",
+          "drawn": 10,
+          "goals_diff": 25
+        },
+        {
+          "won": 20,
+          "lost": 9,
+          "goals_for": 71,
+          "points": 69,
+          "goals_against": 39,
+          "team": "Liverpool",
+          "drawn": 9,
+          "goals_diff": 32
+        },
+        {
+          "won": 20,
+          "lost": 10,
+          "goals_for": 64,
+          "points": 68,
+          "goals_against": 43,
+          "team": "Leeds",
+          "drawn": 8,
+          "goals_diff": 21
+        },
+        {
+          "won": 20,
+          "lost": 12,
+          "goals_for": 57,
+          "points": 66,
+          "goals_against": 42,
+          "team": "Ipswich",
+          "drawn": 6,
+          "goals_diff": 15
+        },
+        {
+          "won": 17,
+          "lost": 11,
+          "goals_for": 68,
+          "points": 61,
+          "goals_against": 45,
+          "team": "Chelsea",
+          "drawn": 10,
+          "goals_diff": 23
+        },
+        {
+          "won": 15,
+          "lost": 11,
+          "goals_for": 46,
+          "points": 57,
+          "goals_against": 41,
+          "team": "Sunderland",
+          "drawn": 12,
+          "goals_diff": 5
+        },
+        {
+          "won": 13,
+          "lost": 10,
+          "goals_for": 46,
+          "points": 54,
+          "goals_against": 43,
+          "team": "Aston Villa",
+          "drawn": 15,
+          "goals_diff": 3
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 50,
+          "points": 52,
+          "goals_against": 57,
+          "team": "Charlton",
+          "drawn": 10,
+          "goals_diff": -7
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 40,
+          "points": 52,
+          "goals_against": 48,
+          "team": "Southampton",
+          "drawn": 10,
+          "goals_diff": -8
+        },
+        {
+          "won": 14,
+          "lost": 15,
+          "goals_for": 44,
+          "points": 51,
+          "goals_against": 50,
+          "team": "Newcastle",
+          "drawn": 9,
+          "goals_diff": -6
+        },
+        {
+          "won": 13,
+          "lost": 15,
+          "goals_for": 47,
+          "points": 49,
+          "goals_against": 54,
+          "team": "Spurs",
+          "drawn": 10,
+          "goals_diff": -7
+        },
+        {
+          "won": 14,
+          "lost": 18,
+          "goals_for": 39,
+          "points": 48,
+          "goals_against": 51,
+          "team": "Leicester",
+          "drawn": 6,
+          "goals_diff": -12
+        },
+        {
+          "won": 9,
+          "lost": 14,
+          "goals_for": 44,
+          "points": 42,
+          "goals_against": 44,
+          "team": "Middlesbrough",
+          "drawn": 15,
+          "goals_diff": 0
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 45,
+          "points": 42,
+          "goals_against": 50,
+          "team": "West Ham",
+          "drawn": 12,
+          "goals_diff": -5
+        },
+        {
+          "won": 11,
+          "lost": 18,
+          "goals_for": 45,
+          "points": 42,
+          "goals_against": 59,
+          "team": "Everton",
+          "drawn": 9,
+          "goals_diff": -14
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 37,
+          "points": 42,
+          "goals_against": 59,
+          "team": "Derby",
+          "drawn": 12,
+          "goals_diff": -22
+        },
+        {
+          "won": 8,
+          "lost": 20,
+          "goals_for": 41,
+          "points": 34,
+          "goals_against": 65,
+          "team": "Man City",
+          "drawn": 10,
+          "goals_diff": -24
+        },
+        {
+          "won": 8,
+          "lost": 20,
+          "goals_for": 36,
+          "points": 34,
+          "goals_against": 63,
+          "team": "Coventry",
+          "drawn": 10,
+          "goals_diff": -27
+        },
+        {
+          "won": 5,
+          "lost": 22,
+          "goals_for": 30,
+          "points": 26,
+          "goals_against": 70,
+          "team": "Bradford",
+          "drawn": 11,
+          "goals_diff": -40
+        }
+      ],
+      "_id": "2000/01"
+    },
+    {
+      "table": [
+        {
+          "won": 26,
+          "lost": 3,
+          "goals_for": 79,
+          "points": 87,
+          "goals_against": 36,
+          "team": "Arsenal",
+          "drawn": 9,
+          "goals_diff": 43
+        },
+        {
+          "won": 24,
+          "lost": 6,
+          "goals_for": 67,
+          "points": 80,
+          "goals_against": 30,
+          "team": "Liverpool",
+          "drawn": 8,
+          "goals_diff": 37
+        },
+        {
+          "won": 24,
+          "lost": 9,
+          "goals_for": 87,
+          "points": 77,
+          "goals_against": 45,
+          "team": "Man Utd",
+          "drawn": 5,
+          "goals_diff": 42
+        },
+        {
+          "won": 21,
+          "lost": 9,
+          "goals_for": 74,
+          "points": 71,
+          "goals_against": 52,
+          "team": "Newcastle",
+          "drawn": 8,
+          "goals_diff": 22
+        },
+        {
+          "won": 18,
+          "lost": 8,
+          "goals_for": 53,
+          "points": 66,
+          "goals_against": 37,
+          "team": "Leeds",
+          "drawn": 12,
+          "goals_diff": 16
+        },
+        {
+          "won": 17,
+          "lost": 8,
+          "goals_for": 66,
+          "points": 64,
+          "goals_against": 38,
+          "team": "Chelsea",
+          "drawn": 13,
+          "goals_diff": 28
+        },
+        {
+          "won": 15,
+          "lost": 15,
+          "goals_for": 48,
+          "points": 53,
+          "goals_against": 57,
+          "team": "West Ham",
+          "drawn": 8,
+          "goals_diff": -9
+        },
+        {
+          "won": 12,
+          "lost": 12,
+          "goals_for": 46,
+          "points": 50,
+          "goals_against": 47,
+          "team": "Aston Villa",
+          "drawn": 14,
+          "goals_diff": -1
+        },
+        {
+          "won": 14,
+          "lost": 16,
+          "goals_for": 49,
+          "points": 50,
+          "goals_against": 53,
+          "team": "Spurs",
+          "drawn": 8,
+          "goals_diff": -4
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 55,
+          "points": 46,
+          "goals_against": 51,
+          "team": "Blackburn",
+          "drawn": 10,
+          "goals_diff": 4
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 46,
+          "points": 45,
+          "goals_against": 54,
+          "team": "Southampton",
+          "drawn": 9,
+          "goals_diff": -8
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 35,
+          "points": 45,
+          "goals_against": 47,
+          "team": "Middlesbrough",
+          "drawn": 9,
+          "goals_diff": -12
+        },
+        {
+          "won": 10,
+          "lost": 14,
+          "goals_for": 36,
+          "points": 44,
+          "goals_against": 44,
+          "team": "Fulham",
+          "drawn": 14,
+          "goals_diff": -8
+        },
+        {
+          "won": 10,
+          "lost": 14,
+          "goals_for": 38,
+          "points": 44,
+          "goals_against": 49,
+          "team": "Charlton",
+          "drawn": 14,
+          "goals_diff": -11
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 45,
+          "points": 43,
+          "goals_against": 57,
+          "team": "Everton",
+          "drawn": 10,
+          "goals_diff": -12
+        },
+        {
+          "won": 9,
+          "lost": 16,
+          "goals_for": 44,
+          "points": 40,
+          "goals_against": 62,
+          "team": "Bolton",
+          "drawn": 13,
+          "goals_diff": -18
+        },
+        {
+          "won": 10,
+          "lost": 18,
+          "goals_for": 29,
+          "points": 40,
+          "goals_against": 51,
+          "team": "Sunderland",
+          "drawn": 10,
+          "goals_diff": -22
+        },
+        {
+          "won": 9,
+          "lost": 20,
+          "goals_for": 41,
+          "points": 36,
+          "goals_against": 64,
+          "team": "Ipswich",
+          "drawn": 9,
+          "goals_diff": -23
+        },
+        {
+          "won": 8,
+          "lost": 24,
+          "goals_for": 33,
+          "points": 30,
+          "goals_against": 63,
+          "team": "Derby",
+          "drawn": 6,
+          "goals_diff": -30
+        },
+        {
+          "won": 5,
+          "lost": 20,
+          "goals_for": 30,
+          "points": 28,
+          "goals_against": 64,
+          "team": "Leicester",
+          "drawn": 13,
+          "goals_diff": -34
+        }
+      ],
+      "_id": "2001/02"
+    },
+    {
+      "table": [
+        {
+          "won": 25,
+          "lost": 5,
+          "goals_for": 74,
+          "points": 83,
+          "goals_against": 34,
+          "team": "Man Utd",
+          "drawn": 8,
+          "goals_diff": 40
+        },
+        {
+          "won": 23,
+          "lost": 6,
+          "goals_for": 85,
+          "points": 78,
+          "goals_against": 42,
+          "team": "Arsenal",
+          "drawn": 9,
+          "goals_diff": 43
+        },
+        {
+          "won": 21,
+          "lost": 11,
+          "goals_for": 63,
+          "points": 69,
+          "goals_against": 48,
+          "team": "Newcastle",
+          "drawn": 6,
+          "goals_diff": 15
+        },
+        {
+          "won": 19,
+          "lost": 9,
+          "goals_for": 68,
+          "points": 67,
+          "goals_against": 38,
+          "team": "Chelsea",
+          "drawn": 10,
+          "goals_diff": 30
+        },
+        {
+          "won": 18,
+          "lost": 10,
+          "goals_for": 61,
+          "points": 64,
+          "goals_against": 41,
+          "team": "Liverpool",
+          "drawn": 10,
+          "goals_diff": 20
+        },
+        {
+          "won": 16,
+          "lost": 10,
+          "goals_for": 52,
+          "points": 60,
+          "goals_against": 43,
+          "team": "Blackburn",
+          "drawn": 12,
+          "goals_diff": 9
+        },
+        {
+          "won": 17,
+          "lost": 13,
+          "goals_for": 48,
+          "points": 59,
+          "goals_against": 49,
+          "team": "Everton",
+          "drawn": 8,
+          "goals_diff": -1
+        },
+        {
+          "won": 13,
+          "lost": 12,
+          "goals_for": 43,
+          "points": 52,
+          "goals_against": 46,
+          "team": "Southampton",
+          "drawn": 13,
+          "goals_diff": -3
+        },
+        {
+          "won": 15,
+          "lost": 17,
+          "goals_for": 47,
+          "points": 51,
+          "goals_against": 54,
+          "team": "Man City",
+          "drawn": 6,
+          "goals_diff": -7
+        },
+        {
+          "won": 14,
+          "lost": 16,
+          "goals_for": 51,
+          "points": 50,
+          "goals_against": 62,
+          "team": "Spurs",
+          "drawn": 8,
+          "goals_diff": -11
+        },
+        {
+          "won": 13,
+          "lost": 15,
+          "goals_for": 48,
+          "points": 49,
+          "goals_against": 44,
+          "team": "Middlesbrough",
+          "drawn": 10,
+          "goals_diff": 4
+        },
+        {
+          "won": 14,
+          "lost": 17,
+          "goals_for": 45,
+          "points": 49,
+          "goals_against": 56,
+          "team": "Charlton",
+          "drawn": 7,
+          "goals_diff": -11
+        },
+        {
+          "won": 13,
+          "lost": 16,
+          "goals_for": 41,
+          "points": 48,
+          "goals_against": 49,
+          "team": "Birmingham",
+          "drawn": 9,
+          "goals_diff": -8
+        },
+        {
+          "won": 13,
+          "lost": 16,
+          "goals_for": 41,
+          "points": 48,
+          "goals_against": 50,
+          "team": "Fulham",
+          "drawn": 9,
+          "goals_diff": -9
+        },
+        {
+          "won": 14,
+          "lost": 19,
+          "goals_for": 58,
+          "points": 47,
+          "goals_against": 57,
+          "team": "Leeds",
+          "drawn": 5,
+          "goals_diff": 1
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 42,
+          "points": 45,
+          "goals_against": 47,
+          "team": "Aston Villa",
+          "drawn": 9,
+          "goals_diff": -5
+        },
+        {
+          "won": 10,
+          "lost": 14,
+          "goals_for": 41,
+          "points": 44,
+          "goals_against": 51,
+          "team": "Bolton",
+          "drawn": 14,
+          "goals_diff": -10
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 42,
+          "points": 42,
+          "goals_against": 59,
+          "team": "West Ham",
+          "drawn": 12,
+          "goals_diff": -17
+        },
+        {
+          "won": 6,
+          "lost": 24,
+          "goals_for": 29,
+          "points": 26,
+          "goals_against": 65,
+          "team": "West Brom",
+          "drawn": 8,
+          "goals_diff": -36
+        },
+        {
+          "won": 4,
+          "lost": 27,
+          "goals_for": 21,
+          "points": 19,
+          "goals_against": 65,
+          "team": "Sunderland",
+          "drawn": 7,
+          "goals_diff": -44
+        }
+      ],
+      "_id": "2002/03"
+    },
+    {
+      "table": [
+        {
+          "won": 26,
+          "lost": 0,
+          "goals_for": 73,
+          "points": 90,
+          "goals_against": 26,
+          "team": "Arsenal",
+          "drawn": 12,
+          "goals_diff": 47
+        },
+        {
+          "won": 24,
+          "lost": 7,
+          "goals_for": 67,
+          "points": 79,
+          "goals_against": 30,
+          "team": "Chelsea",
+          "drawn": 7,
+          "goals_diff": 37
+        },
+        {
+          "won": 23,
+          "lost": 9,
+          "goals_for": 64,
+          "points": 75,
+          "goals_against": 35,
+          "team": "Man Utd",
+          "drawn": 6,
+          "goals_diff": 29
+        },
+        {
+          "won": 16,
+          "lost": 10,
+          "goals_for": 55,
+          "points": 60,
+          "goals_against": 37,
+          "team": "Liverpool",
+          "drawn": 12,
+          "goals_diff": 18
+        },
+        {
+          "won": 13,
+          "lost": 8,
+          "goals_for": 52,
+          "points": 56,
+          "goals_against": 40,
+          "team": "Newcastle",
+          "drawn": 17,
+          "goals_diff": 12
+        },
+        {
+          "won": 15,
+          "lost": 12,
+          "goals_for": 48,
+          "points": 56,
+          "goals_against": 44,
+          "team": "Aston Villa",
+          "drawn": 11,
+          "goals_diff": 4
+        },
+        {
+          "won": 14,
+          "lost": 13,
+          "goals_for": 51,
+          "points": 53,
+          "goals_against": 51,
+          "team": "Charlton",
+          "drawn": 11,
+          "goals_diff": 0
+        },
+        {
+          "won": 14,
+          "lost": 13,
+          "goals_for": 48,
+          "points": 53,
+          "goals_against": 56,
+          "team": "Bolton",
+          "drawn": 11,
+          "goals_diff": -8
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 52,
+          "points": 52,
+          "goals_against": 46,
+          "team": "Fulham",
+          "drawn": 10,
+          "goals_diff": 6
+        },
+        {
+          "won": 12,
+          "lost": 12,
+          "goals_for": 43,
+          "points": 50,
+          "goals_against": 48,
+          "team": "Birmingham",
+          "drawn": 14,
+          "goals_diff": -5
+        },
+        {
+          "won": 13,
+          "lost": 16,
+          "goals_for": 44,
+          "points": 48,
+          "goals_against": 52,
+          "team": "Middlesbrough",
+          "drawn": 9,
+          "goals_diff": -8
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 44,
+          "points": 47,
+          "goals_against": 45,
+          "team": "Southampton",
+          "drawn": 11,
+          "goals_diff": -1
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 47,
+          "points": 45,
+          "goals_against": 54,
+          "team": "Portsmouth",
+          "drawn": 9,
+          "goals_diff": -7
+        },
+        {
+          "won": 13,
+          "lost": 19,
+          "goals_for": 47,
+          "points": 45,
+          "goals_against": 57,
+          "team": "Spurs",
+          "drawn": 6,
+          "goals_diff": -10
+        },
+        {
+          "won": 12,
+          "lost": 18,
+          "goals_for": 51,
+          "points": 44,
+          "goals_against": 59,
+          "team": "Blackburn",
+          "drawn": 8,
+          "goals_diff": -8
+        },
+        {
+          "won": 9,
+          "lost": 15,
+          "goals_for": 55,
+          "points": 41,
+          "goals_against": 54,
+          "team": "Man City",
+          "drawn": 14,
+          "goals_diff": 1
+        },
+        {
+          "won": 9,
+          "lost": 17,
+          "goals_for": 45,
+          "points": 39,
+          "goals_against": 57,
+          "team": "Everton",
+          "drawn": 12,
+          "goals_diff": -12
+        },
+        {
+          "won": 6,
+          "lost": 17,
+          "goals_for": 48,
+          "points": 33,
+          "goals_against": 65,
+          "team": "Leicester",
+          "drawn": 15,
+          "goals_diff": -17
+        },
+        {
+          "won": 8,
+          "lost": 21,
+          "goals_for": 40,
+          "points": 33,
+          "goals_against": 79,
+          "team": "Leeds",
+          "drawn": 9,
+          "goals_diff": -39
+        },
+        {
+          "won": 7,
+          "lost": 19,
+          "goals_for": 38,
+          "points": 33,
+          "goals_against": 77,
+          "team": "Wolves",
+          "drawn": 12,
+          "goals_diff": -39
+        }
+      ],
+      "_id": "2003/04"
+    },
+    {
+      "table": [
+        {
+          "won": 29,
+          "lost": 1,
+          "goals_for": 72,
+          "points": 95,
+          "goals_against": 15,
+          "team": "Chelsea",
+          "drawn": 8,
+          "goals_diff": 57
+        },
+        {
+          "won": 25,
+          "lost": 5,
+          "goals_for": 87,
+          "points": 83,
+          "goals_against": 36,
+          "team": "Arsenal",
+          "drawn": 8,
+          "goals_diff": 51
+        },
+        {
+          "won": 22,
+          "lost": 5,
+          "goals_for": 58,
+          "points": 77,
+          "goals_against": 26,
+          "team": "Man Utd",
+          "drawn": 11,
+          "goals_diff": 32
+        },
+        {
+          "won": 18,
+          "lost": 13,
+          "goals_for": 45,
+          "points": 61,
+          "goals_against": 46,
+          "team": "Everton",
+          "drawn": 7,
+          "goals_diff": -1
+        },
+        {
+          "won": 17,
+          "lost": 14,
+          "goals_for": 52,
+          "points": 58,
+          "goals_against": 41,
+          "team": "Liverpool",
+          "drawn": 7,
+          "goals_diff": 11
+        },
+        {
+          "won": 16,
+          "lost": 12,
+          "goals_for": 49,
+          "points": 58,
+          "goals_against": 44,
+          "team": "Bolton",
+          "drawn": 10,
+          "goals_diff": 5
+        },
+        {
+          "won": 14,
+          "lost": 11,
+          "goals_for": 53,
+          "points": 55,
+          "goals_against": 46,
+          "team": "Middlesbrough",
+          "drawn": 13,
+          "goals_diff": 7
+        },
+        {
+          "won": 13,
+          "lost": 12,
+          "goals_for": 47,
+          "points": 52,
+          "goals_against": 39,
+          "team": "Man City",
+          "drawn": 13,
+          "goals_diff": 8
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 47,
+          "points": 52,
+          "goals_against": 41,
+          "team": "Spurs",
+          "drawn": 10,
+          "goals_diff": 6
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 45,
+          "points": 47,
+          "goals_against": 52,
+          "team": "Aston Villa",
+          "drawn": 11,
+          "goals_diff": -7
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 42,
+          "points": 46,
+          "goals_against": 58,
+          "team": "Charlton",
+          "drawn": 10,
+          "goals_diff": -16
+        },
+        {
+          "won": 11,
+          "lost": 15,
+          "goals_for": 40,
+          "points": 45,
+          "goals_against": 46,
+          "team": "Birmingham",
+          "drawn": 12,
+          "goals_diff": -6
+        },
+        {
+          "won": 12,
+          "lost": 18,
+          "goals_for": 52,
+          "points": 44,
+          "goals_against": 60,
+          "team": "Fulham",
+          "drawn": 8,
+          "goals_diff": -8
+        },
+        {
+          "won": 10,
+          "lost": 14,
+          "goals_for": 47,
+          "points": 44,
+          "goals_against": 57,
+          "team": "Newcastle",
+          "drawn": 14,
+          "goals_diff": -10
+        },
+        {
+          "won": 9,
+          "lost": 14,
+          "goals_for": 32,
+          "points": 42,
+          "goals_against": 43,
+          "team": "Blackburn",
+          "drawn": 15,
+          "goals_diff": -11
+        },
+        {
+          "won": 10,
+          "lost": 19,
+          "goals_for": 43,
+          "points": 39,
+          "goals_against": 59,
+          "team": "Portsmouth",
+          "drawn": 9,
+          "goals_diff": -16
+        },
+        {
+          "won": 6,
+          "lost": 16,
+          "goals_for": 36,
+          "points": 34,
+          "goals_against": 61,
+          "team": "West Brom",
+          "drawn": 16,
+          "goals_diff": -25
+        },
+        {
+          "won": 7,
+          "lost": 19,
+          "goals_for": 41,
+          "points": 33,
+          "goals_against": 62,
+          "team": "Crystal Palace",
+          "drawn": 12,
+          "goals_diff": -21
+        },
+        {
+          "won": 7,
+          "lost": 19,
+          "goals_for": 42,
+          "points": 33,
+          "goals_against": 77,
+          "team": "Norwich",
+          "drawn": 12,
+          "goals_diff": -35
+        },
+        {
+          "won": 6,
+          "lost": 18,
+          "goals_for": 45,
+          "points": 32,
+          "goals_against": 66,
+          "team": "Southampton",
+          "drawn": 14,
+          "goals_diff": -21
+        }
+      ],
+      "_id": "2004/05"
+    },
+    {
+      "table": [
+        {
+          "won": 29,
+          "lost": 5,
+          "goals_for": 72,
+          "points": 91,
+          "goals_against": 22,
+          "team": "Chelsea",
+          "drawn": 4,
+          "goals_diff": 50
+        },
+        {
+          "won": 25,
+          "lost": 5,
+          "goals_for": 72,
+          "points": 83,
+          "goals_against": 34,
+          "team": "Man Utd",
+          "drawn": 8,
+          "goals_diff": 38
+        },
+        {
+          "won": 25,
+          "lost": 6,
+          "goals_for": 57,
+          "points": 82,
+          "goals_against": 25,
+          "team": "Liverpool",
+          "drawn": 7,
+          "goals_diff": 32
+        },
+        {
+          "won": 20,
+          "lost": 11,
+          "goals_for": 68,
+          "points": 67,
+          "goals_against": 31,
+          "team": "Arsenal",
+          "drawn": 7,
+          "goals_diff": 37
+        },
+        {
+          "won": 18,
+          "lost": 9,
+          "goals_for": 53,
+          "points": 65,
+          "goals_against": 38,
+          "team": "Spurs",
+          "drawn": 11,
+          "goals_diff": 15
+        },
+        {
+          "won": 19,
+          "lost": 13,
+          "goals_for": 51,
+          "points": 63,
+          "goals_against": 42,
+          "team": "Blackburn",
+          "drawn": 6,
+          "goals_diff": 9
+        },
+        {
+          "won": 17,
+          "lost": 14,
+          "goals_for": 47,
+          "points": 58,
+          "goals_against": 42,
+          "team": "Newcastle",
+          "drawn": 7,
+          "goals_diff": 5
+        },
+        {
+          "won": 15,
+          "lost": 12,
+          "goals_for": 49,
+          "points": 56,
+          "goals_against": 41,
+          "team": "Bolton",
+          "drawn": 11,
+          "goals_diff": 8
+        },
+        {
+          "won": 16,
+          "lost": 15,
+          "goals_for": 52,
+          "points": 55,
+          "goals_against": 55,
+          "team": "West Ham",
+          "drawn": 7,
+          "goals_diff": -3
+        },
+        {
+          "won": 15,
+          "lost": 17,
+          "goals_for": 45,
+          "points": 51,
+          "goals_against": 52,
+          "team": "Wigan",
+          "drawn": 6,
+          "goals_diff": -7
+        },
+        {
+          "won": 14,
+          "lost": 16,
+          "goals_for": 34,
+          "points": 50,
+          "goals_against": 49,
+          "team": "Everton",
+          "drawn": 8,
+          "goals_diff": -15
+        },
+        {
+          "won": 14,
+          "lost": 18,
+          "goals_for": 48,
+          "points": 48,
+          "goals_against": 58,
+          "team": "Fulham",
+          "drawn": 6,
+          "goals_diff": -10
+        },
+        {
+          "won": 13,
+          "lost": 17,
+          "goals_for": 41,
+          "points": 47,
+          "goals_against": 55,
+          "team": "Charlton",
+          "drawn": 8,
+          "goals_diff": -14
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 48,
+          "points": 45,
+          "goals_against": 58,
+          "team": "Middlesbrough",
+          "drawn": 9,
+          "goals_diff": -10
+        },
+        {
+          "won": 13,
+          "lost": 21,
+          "goals_for": 43,
+          "points": 43,
+          "goals_against": 48,
+          "team": "Man City",
+          "drawn": 4,
+          "goals_diff": -5
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 42,
+          "points": 42,
+          "goals_against": 55,
+          "team": "Aston Villa",
+          "drawn": 12,
+          "goals_diff": -13
+        },
+        {
+          "won": 10,
+          "lost": 20,
+          "goals_for": 37,
+          "points": 38,
+          "goals_against": 62,
+          "team": "Portsmouth",
+          "drawn": 8,
+          "goals_diff": -25
+        },
+        {
+          "won": 8,
+          "lost": 20,
+          "goals_for": 28,
+          "points": 34,
+          "goals_against": 50,
+          "team": "Birmingham",
+          "drawn": 10,
+          "goals_diff": -22
+        },
+        {
+          "won": 7,
+          "lost": 22,
+          "goals_for": 31,
+          "points": 30,
+          "goals_against": 58,
+          "team": "West Brom",
+          "drawn": 9,
+          "goals_diff": -27
+        },
+        {
+          "won": 3,
+          "lost": 29,
+          "goals_for": 26,
+          "points": 15,
+          "goals_against": 69,
+          "team": "Sunderland",
+          "drawn": 6,
+          "goals_diff": -43
+        }
+      ],
+      "_id": "2005/06"
+    },
+    {
+      "table": [
+        {
+          "won": 28,
+          "lost": 5,
+          "goals_for": 83,
+          "points": 89,
+          "goals_against": 27,
+          "team": "Man Utd",
+          "drawn": 5,
+          "goals_diff": 56
+        },
+        {
+          "won": 24,
+          "lost": 3,
+          "goals_for": 64,
+          "points": 83,
+          "goals_against": 24,
+          "team": "Chelsea",
+          "drawn": 11,
+          "goals_diff": 40
+        },
+        {
+          "won": 20,
+          "lost": 10,
+          "goals_for": 57,
+          "points": 68,
+          "goals_against": 27,
+          "team": "Liverpool",
+          "drawn": 8,
+          "goals_diff": 30
+        },
+        {
+          "won": 19,
+          "lost": 8,
+          "goals_for": 63,
+          "points": 68,
+          "goals_against": 35,
+          "team": "Arsenal",
+          "drawn": 11,
+          "goals_diff": 28
+        },
+        {
+          "won": 17,
+          "lost": 12,
+          "goals_for": 57,
+          "points": 60,
+          "goals_against": 54,
+          "team": "Spurs",
+          "drawn": 9,
+          "goals_diff": 3
+        },
+        {
+          "won": 15,
+          "lost": 10,
+          "goals_for": 52,
+          "points": 58,
+          "goals_against": 36,
+          "team": "Everton",
+          "drawn": 13,
+          "goals_diff": 16
+        },
+        {
+          "won": 16,
+          "lost": 14,
+          "goals_for": 47,
+          "points": 56,
+          "goals_against": 52,
+          "team": "Bolton",
+          "drawn": 8,
+          "goals_diff": -5
+        },
+        {
+          "won": 16,
+          "lost": 15,
+          "goals_for": 52,
+          "points": 55,
+          "goals_against": 47,
+          "team": "Reading",
+          "drawn": 7,
+          "goals_diff": 5
+        },
+        {
+          "won": 14,
+          "lost": 12,
+          "goals_for": 45,
+          "points": 54,
+          "goals_against": 42,
+          "team": "Portsmouth",
+          "drawn": 12,
+          "goals_diff": 3
+        },
+        {
+          "won": 15,
+          "lost": 16,
+          "goals_for": 52,
+          "points": 52,
+          "goals_against": 54,
+          "team": "Blackburn",
+          "drawn": 7,
+          "goals_diff": -2
+        },
+        {
+          "won": 11,
+          "lost": 10,
+          "goals_for": 43,
+          "points": 50,
+          "goals_against": 41,
+          "team": "Aston Villa",
+          "drawn": 17,
+          "goals_diff": 2
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 44,
+          "points": 46,
+          "goals_against": 49,
+          "team": "Middlesbrough",
+          "drawn": 10,
+          "goals_diff": -5
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 38,
+          "points": 43,
+          "goals_against": 47,
+          "team": "Newcastle",
+          "drawn": 10,
+          "goals_diff": -9
+        },
+        {
+          "won": 11,
+          "lost": 18,
+          "goals_for": 29,
+          "points": 42,
+          "goals_against": 44,
+          "team": "Man City",
+          "drawn": 9,
+          "goals_diff": -15
+        },
+        {
+          "won": 12,
+          "lost": 21,
+          "goals_for": 35,
+          "points": 41,
+          "goals_against": 59,
+          "team": "West Ham",
+          "drawn": 5,
+          "goals_diff": -24
+        },
+        {
+          "won": 8,
+          "lost": 15,
+          "goals_for": 38,
+          "points": 39,
+          "goals_against": 60,
+          "team": "Fulham",
+          "drawn": 15,
+          "goals_diff": -22
+        },
+        {
+          "won": 10,
+          "lost": 20,
+          "goals_for": 37,
+          "points": 38,
+          "goals_against": 59,
+          "team": "Wigan",
+          "drawn": 8,
+          "goals_diff": -22
+        },
+        {
+          "won": 10,
+          "lost": 20,
+          "goals_for": 32,
+          "points": 38,
+          "goals_against": 55,
+          "team": "Sheffield Utd",
+          "drawn": 8,
+          "goals_diff": -23
+        },
+        {
+          "won": 8,
+          "lost": 20,
+          "goals_for": 34,
+          "points": 34,
+          "goals_against": 60,
+          "team": "Charlton",
+          "drawn": 10,
+          "goals_diff": -26
+        },
+        {
+          "won": 5,
+          "lost": 20,
+          "goals_for": 29,
+          "points": 28,
+          "goals_against": 59,
+          "team": "Watford",
+          "drawn": 13,
+          "goals_diff": -30
+        }
+      ],
+      "_id": "2006/07"
+    },
+    {
+      "table": [
+        {
+          "won": 27,
+          "lost": 5,
+          "goals_for": 80,
+          "points": 87,
+          "goals_against": 22,
+          "team": "Man Utd",
+          "drawn": 6,
+          "goals_diff": 58
+        },
+        {
+          "won": 25,
+          "lost": 3,
+          "goals_for": 65,
+          "points": 85,
+          "goals_against": 26,
+          "team": "Chelsea",
+          "drawn": 10,
+          "goals_diff": 39
+        },
+        {
+          "won": 24,
+          "lost": 3,
+          "goals_for": 74,
+          "points": 83,
+          "goals_against": 31,
+          "team": "Arsenal",
+          "drawn": 11,
+          "goals_diff": 43
+        },
+        {
+          "won": 21,
+          "lost": 4,
+          "goals_for": 67,
+          "points": 76,
+          "goals_against": 28,
+          "team": "Liverpool",
+          "drawn": 13,
+          "goals_diff": 39
+        },
+        {
+          "won": 19,
+          "lost": 11,
+          "goals_for": 55,
+          "points": 65,
+          "goals_against": 33,
+          "team": "Everton",
+          "drawn": 8,
+          "goals_diff": 22
+        },
+        {
+          "won": 16,
+          "lost": 10,
+          "goals_for": 71,
+          "points": 60,
+          "goals_against": 51,
+          "team": "Aston Villa",
+          "drawn": 12,
+          "goals_diff": 20
+        },
+        {
+          "won": 15,
+          "lost": 10,
+          "goals_for": 50,
+          "points": 58,
+          "goals_against": 48,
+          "team": "Blackburn",
+          "drawn": 13,
+          "goals_diff": 2
+        },
+        {
+          "won": 16,
+          "lost": 13,
+          "goals_for": 48,
+          "points": 57,
+          "goals_against": 40,
+          "team": "Portsmouth",
+          "drawn": 9,
+          "goals_diff": 8
+        },
+        {
+          "won": 15,
+          "lost": 13,
+          "goals_for": 45,
+          "points": 55,
+          "goals_against": 53,
+          "team": "Man City",
+          "drawn": 10,
+          "goals_diff": -8
+        },
+        {
+          "won": 13,
+          "lost": 15,
+          "goals_for": 42,
+          "points": 49,
+          "goals_against": 50,
+          "team": "West Ham",
+          "drawn": 10,
+          "goals_diff": -8
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 66,
+          "points": 46,
+          "goals_against": 61,
+          "team": "Spurs",
+          "drawn": 13,
+          "goals_diff": 5
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 45,
+          "points": 43,
+          "goals_against": 65,
+          "team": "Newcastle",
+          "drawn": 10,
+          "goals_diff": -20
+        },
+        {
+          "won": 10,
+          "lost": 16,
+          "goals_for": 43,
+          "points": 42,
+          "goals_against": 53,
+          "team": "Middlesbrough",
+          "drawn": 12,
+          "goals_diff": -10
+        },
+        {
+          "won": 10,
+          "lost": 18,
+          "goals_for": 34,
+          "points": 40,
+          "goals_against": 51,
+          "team": "Wigan",
+          "drawn": 10,
+          "goals_diff": -17
+        },
+        {
+          "won": 11,
+          "lost": 21,
+          "goals_for": 36,
+          "points": 39,
+          "goals_against": 59,
+          "team": "Sunderland",
+          "drawn": 6,
+          "goals_diff": -23
+        },
+        {
+          "won": 9,
+          "lost": 19,
+          "goals_for": 36,
+          "points": 37,
+          "goals_against": 54,
+          "team": "Bolton",
+          "drawn": 10,
+          "goals_diff": -18
+        },
+        {
+          "won": 8,
+          "lost": 18,
+          "goals_for": 38,
+          "points": 36,
+          "goals_against": 60,
+          "team": "Fulham",
+          "drawn": 12,
+          "goals_diff": -22
+        },
+        {
+          "won": 10,
+          "lost": 22,
+          "goals_for": 41,
+          "points": 36,
+          "goals_against": 66,
+          "team": "Reading",
+          "drawn": 6,
+          "goals_diff": -25
+        },
+        {
+          "won": 8,
+          "lost": 19,
+          "goals_for": 46,
+          "points": 35,
+          "goals_against": 62,
+          "team": "Birmingham",
+          "drawn": 11,
+          "goals_diff": -16
+        },
+        {
+          "won": 1,
+          "lost": 29,
+          "goals_for": 20,
+          "points": 11,
+          "goals_against": 89,
+          "team": "Derby",
+          "drawn": 8,
+          "goals_diff": -69
+        }
+      ],
+      "_id": "2007/08"
+    },
+    {
+      "table": [
+        {
+          "won": 28,
+          "lost": 4,
+          "goals_for": 68,
+          "points": 90,
+          "goals_against": 24,
+          "team": "Man Utd",
+          "drawn": 6,
+          "goals_diff": 44
+        },
+        {
+          "won": 25,
+          "lost": 2,
+          "goals_for": 77,
+          "points": 86,
+          "goals_against": 27,
+          "team": "Liverpool",
+          "drawn": 11,
+          "goals_diff": 50
+        },
+        {
+          "won": 25,
+          "lost": 5,
+          "goals_for": 68,
+          "points": 83,
+          "goals_against": 24,
+          "team": "Chelsea",
+          "drawn": 8,
+          "goals_diff": 44
+        },
+        {
+          "won": 20,
+          "lost": 6,
+          "goals_for": 68,
+          "points": 72,
+          "goals_against": 37,
+          "team": "Arsenal",
+          "drawn": 12,
+          "goals_diff": 31
+        },
+        {
+          "won": 17,
+          "lost": 9,
+          "goals_for": 55,
+          "points": 63,
+          "goals_against": 37,
+          "team": "Everton",
+          "drawn": 12,
+          "goals_diff": 18
+        },
+        {
+          "won": 17,
+          "lost": 10,
+          "goals_for": 54,
+          "points": 62,
+          "goals_against": 48,
+          "team": "Aston Villa",
+          "drawn": 11,
+          "goals_diff": 6
+        },
+        {
+          "won": 14,
+          "lost": 13,
+          "goals_for": 39,
+          "points": 53,
+          "goals_against": 34,
+          "team": "Fulham",
+          "drawn": 11,
+          "goals_diff": 5
+        },
+        {
+          "won": 14,
+          "lost": 15,
+          "goals_for": 45,
+          "points": 51,
+          "goals_against": 45,
+          "team": "Spurs",
+          "drawn": 9,
+          "goals_diff": 0
+        },
+        {
+          "won": 14,
+          "lost": 15,
+          "goals_for": 42,
+          "points": 51,
+          "goals_against": 45,
+          "team": "West Ham",
+          "drawn": 9,
+          "goals_diff": -3
+        },
+        {
+          "won": 15,
+          "lost": 18,
+          "goals_for": 58,
+          "points": 50,
+          "goals_against": 50,
+          "team": "Man City",
+          "drawn": 5,
+          "goals_diff": 8
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 34,
+          "points": 45,
+          "goals_against": 45,
+          "team": "Wigan",
+          "drawn": 9,
+          "goals_diff": -11
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 38,
+          "points": 45,
+          "goals_against": 55,
+          "team": "Stoke",
+          "drawn": 9,
+          "goals_diff": -17
+        },
+        {
+          "won": 11,
+          "lost": 19,
+          "goals_for": 41,
+          "points": 41,
+          "goals_against": 53,
+          "team": "Bolton",
+          "drawn": 8,
+          "goals_diff": -12
+        },
+        {
+          "won": 10,
+          "lost": 17,
+          "goals_for": 38,
+          "points": 41,
+          "goals_against": 57,
+          "team": "Portsmouth",
+          "drawn": 11,
+          "goals_diff": -19
+        },
+        {
+          "won": 10,
+          "lost": 17,
+          "goals_for": 40,
+          "points": 41,
+          "goals_against": 60,
+          "team": "Blackburn",
+          "drawn": 11,
+          "goals_diff": -20
+        },
+        {
+          "won": 9,
+          "lost": 20,
+          "goals_for": 34,
+          "points": 36,
+          "goals_against": 54,
+          "team": "Sunderland",
+          "drawn": 9,
+          "goals_diff": -20
+        },
+        {
+          "won": 8,
+          "lost": 19,
+          "goals_for": 39,
+          "points": 35,
+          "goals_against": 64,
+          "team": "Hull",
+          "drawn": 11,
+          "goals_diff": -25
+        },
+        {
+          "won": 7,
+          "lost": 18,
+          "goals_for": 40,
+          "points": 34,
+          "goals_against": 59,
+          "team": "Newcastle",
+          "drawn": 13,
+          "goals_diff": -19
+        },
+        {
+          "won": 7,
+          "lost": 20,
+          "goals_for": 28,
+          "points": 32,
+          "goals_against": 57,
+          "team": "Middlesbrough",
+          "drawn": 11,
+          "goals_diff": -29
+        },
+        {
+          "won": 8,
+          "lost": 22,
+          "goals_for": 36,
+          "points": 32,
+          "goals_against": 67,
+          "team": "West Brom",
+          "drawn": 8,
+          "goals_diff": -31
+        }
+      ],
+      "_id": "2008/09"
+    },
+    {
+      "table": [
+        {
+          "won": 27,
+          "lost": 6,
+          "goals_for": 103,
+          "points": 86,
+          "goals_against": 32,
+          "team": "Chelsea",
+          "drawn": 5,
+          "goals_diff": 71
+        },
+        {
+          "won": 27,
+          "lost": 7,
+          "goals_for": 86,
+          "points": 85,
+          "goals_against": 28,
+          "team": "Man Utd",
+          "drawn": 4,
+          "goals_diff": 58
+        },
+        {
+          "won": 23,
+          "lost": 9,
+          "goals_for": 83,
+          "points": 75,
+          "goals_against": 41,
+          "team": "Arsenal",
+          "drawn": 6,
+          "goals_diff": 42
+        },
+        {
+          "won": 21,
+          "lost": 10,
+          "goals_for": 67,
+          "points": 70,
+          "goals_against": 41,
+          "team": "Spurs",
+          "drawn": 7,
+          "goals_diff": 26
+        },
+        {
+          "won": 18,
+          "lost": 7,
+          "goals_for": 73,
+          "points": 67,
+          "goals_against": 45,
+          "team": "Man City",
+          "drawn": 13,
+          "goals_diff": 28
+        },
+        {
+          "won": 17,
+          "lost": 8,
+          "goals_for": 52,
+          "points": 64,
+          "goals_against": 39,
+          "team": "Aston Villa",
+          "drawn": 13,
+          "goals_diff": 13
+        },
+        {
+          "won": 18,
+          "lost": 11,
+          "goals_for": 61,
+          "points": 63,
+          "goals_against": 35,
+          "team": "Liverpool",
+          "drawn": 9,
+          "goals_diff": 26
+        },
+        {
+          "won": 16,
+          "lost": 9,
+          "goals_for": 60,
+          "points": 61,
+          "goals_against": 49,
+          "team": "Everton",
+          "drawn": 13,
+          "goals_diff": 11
+        },
+        {
+          "won": 13,
+          "lost": 14,
+          "goals_for": 38,
+          "points": 50,
+          "goals_against": 47,
+          "team": "Birmingham",
+          "drawn": 11,
+          "goals_diff": -9
+        },
+        {
+          "won": 13,
+          "lost": 14,
+          "goals_for": 41,
+          "points": 50,
+          "goals_against": 55,
+          "team": "Blackburn",
+          "drawn": 11,
+          "goals_diff": -14
+        },
+        {
+          "won": 11,
+          "lost": 13,
+          "goals_for": 34,
+          "points": 47,
+          "goals_against": 48,
+          "team": "Stoke",
+          "drawn": 14,
+          "goals_diff": -14
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 39,
+          "points": 46,
+          "goals_against": 46,
+          "team": "Fulham",
+          "drawn": 10,
+          "goals_diff": -7
+        },
+        {
+          "won": 11,
+          "lost": 16,
+          "goals_for": 48,
+          "points": 44,
+          "goals_against": 56,
+          "team": "Sunderland",
+          "drawn": 11,
+          "goals_diff": -8
+        },
+        {
+          "won": 10,
+          "lost": 19,
+          "goals_for": 42,
+          "points": 39,
+          "goals_against": 67,
+          "team": "Bolton",
+          "drawn": 9,
+          "goals_diff": -25
+        },
+        {
+          "won": 9,
+          "lost": 18,
+          "goals_for": 32,
+          "points": 38,
+          "goals_against": 56,
+          "team": "Wolves",
+          "drawn": 11,
+          "goals_diff": -24
+        },
+        {
+          "won": 9,
+          "lost": 20,
+          "goals_for": 37,
+          "points": 36,
+          "goals_against": 79,
+          "team": "Wigan",
+          "drawn": 9,
+          "goals_diff": -42
+        },
+        {
+          "won": 8,
+          "lost": 19,
+          "goals_for": 47,
+          "points": 35,
+          "goals_against": 66,
+          "team": "West Ham",
+          "drawn": 11,
+          "goals_diff": -19
+        },
+        {
+          "won": 8,
+          "lost": 24,
+          "goals_for": 42,
+          "points": 30,
+          "goals_against": 82,
+          "team": "Burnley",
+          "drawn": 6,
+          "goals_diff": -40
+        },
+        {
+          "won": 6,
+          "lost": 20,
+          "goals_for": 34,
+          "points": 30,
+          "goals_against": 75,
+          "team": "Hull",
+          "drawn": 12,
+          "goals_diff": -41
+        },
+        {
+          "won": 7,
+          "lost": 24,
+          "goals_for": 34,
+          "points": 28,
+          "goals_against": 66,
+          "team": "Portsmouth",
+          "drawn": 7,
+          "goals_diff": -32
+        }
+      ],
+      "_id": "2009/10"
+    },
+    {
+      "table": [
+        {
+          "won": 23,
+          "lost": 4,
+          "goals_for": 78,
+          "points": 80,
+          "goals_against": 37,
+          "team": "Man Utd",
+          "drawn": 11,
+          "goals_diff": 41
+        },
+        {
+          "won": 21,
+          "lost": 9,
+          "goals_for": 69,
+          "points": 71,
+          "goals_against": 33,
+          "team": "Chelsea",
+          "drawn": 8,
+          "goals_diff": 36
+        },
+        {
+          "won": 21,
+          "lost": 9,
+          "goals_for": 60,
+          "points": 71,
+          "goals_against": 33,
+          "team": "Man City",
+          "drawn": 8,
+          "goals_diff": 27
+        },
+        {
+          "won": 19,
+          "lost": 8,
+          "goals_for": 72,
+          "points": 68,
+          "goals_against": 43,
+          "team": "Arsenal",
+          "drawn": 11,
+          "goals_diff": 29
+        },
+        {
+          "won": 16,
+          "lost": 8,
+          "goals_for": 55,
+          "points": 62,
+          "goals_against": 46,
+          "team": "Spurs",
+          "drawn": 14,
+          "goals_diff": 9
+        },
+        {
+          "won": 17,
+          "lost": 14,
+          "goals_for": 59,
+          "points": 58,
+          "goals_against": 44,
+          "team": "Liverpool",
+          "drawn": 7,
+          "goals_diff": 15
+        },
+        {
+          "won": 13,
+          "lost": 10,
+          "goals_for": 51,
+          "points": 54,
+          "goals_against": 45,
+          "team": "Everton",
+          "drawn": 15,
+          "goals_diff": 6
+        },
+        {
+          "won": 11,
+          "lost": 11,
+          "goals_for": 49,
+          "points": 49,
+          "goals_against": 43,
+          "team": "Fulham",
+          "drawn": 16,
+          "goals_diff": 6
+        },
+        {
+          "won": 12,
+          "lost": 14,
+          "goals_for": 48,
+          "points": 48,
+          "goals_against": 59,
+          "team": "Aston Villa",
+          "drawn": 12,
+          "goals_diff": -11
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 45,
+          "points": 47,
+          "goals_against": 56,
+          "team": "Sunderland",
+          "drawn": 11,
+          "goals_diff": -11
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 56,
+          "points": 47,
+          "goals_against": 71,
+          "team": "West Brom",
+          "drawn": 11,
+          "goals_diff": -15
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 56,
+          "points": 46,
+          "goals_against": 57,
+          "team": "Newcastle",
+          "drawn": 13,
+          "goals_diff": -1
+        },
+        {
+          "won": 13,
+          "lost": 18,
+          "goals_for": 46,
+          "points": 46,
+          "goals_against": 48,
+          "team": "Stoke",
+          "drawn": 7,
+          "goals_diff": -2
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 52,
+          "points": 46,
+          "goals_against": 56,
+          "team": "Bolton",
+          "drawn": 10,
+          "goals_diff": -4
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 46,
+          "points": 43,
+          "goals_against": 59,
+          "team": "Blackburn",
+          "drawn": 10,
+          "goals_diff": -13
+        },
+        {
+          "won": 9,
+          "lost": 14,
+          "goals_for": 40,
+          "points": 42,
+          "goals_against": 61,
+          "team": "Wigan",
+          "drawn": 15,
+          "goals_diff": -21
+        },
+        {
+          "won": 11,
+          "lost": 20,
+          "goals_for": 46,
+          "points": 40,
+          "goals_against": 66,
+          "team": "Wolves",
+          "drawn": 7,
+          "goals_diff": -20
+        },
+        {
+          "won": 8,
+          "lost": 15,
+          "goals_for": 37,
+          "points": 39,
+          "goals_against": 58,
+          "team": "Birmingham",
+          "drawn": 15,
+          "goals_diff": -21
+        },
+        {
+          "won": 10,
+          "lost": 19,
+          "goals_for": 55,
+          "points": 39,
+          "goals_against": 78,
+          "team": "Blackpool",
+          "drawn": 9,
+          "goals_diff": -23
+        },
+        {
+          "won": 7,
+          "lost": 19,
+          "goals_for": 43,
+          "points": 33,
+          "goals_against": 70,
+          "team": "West Ham",
+          "drawn": 12,
+          "goals_diff": -27
+        }
+      ],
+      "_id": "2010/11"
+    },
+    {
+      "table": [
+        {
+          "won": 28,
+          "lost": 5,
+          "goals_for": 93,
+          "points": 89,
+          "goals_against": 29,
+          "team": "Man City",
+          "drawn": 5,
+          "goals_diff": 64
+        },
+        {
+          "won": 28,
+          "lost": 5,
+          "goals_for": 89,
+          "points": 89,
+          "goals_against": 33,
+          "team": "Man Utd",
+          "drawn": 5,
+          "goals_diff": 56
+        },
+        {
+          "won": 21,
+          "lost": 10,
+          "goals_for": 74,
+          "points": 70,
+          "goals_against": 49,
+          "team": "Arsenal",
+          "drawn": 7,
+          "goals_diff": 25
+        },
+        {
+          "won": 20,
+          "lost": 9,
+          "goals_for": 66,
+          "points": 69,
+          "goals_against": 41,
+          "team": "Spurs",
+          "drawn": 9,
+          "goals_diff": 25
+        },
+        {
+          "won": 19,
+          "lost": 11,
+          "goals_for": 56,
+          "points": 65,
+          "goals_against": 51,
+          "team": "Newcastle",
+          "drawn": 8,
+          "goals_diff": 5
+        },
+        {
+          "won": 18,
+          "lost": 10,
+          "goals_for": 65,
+          "points": 64,
+          "goals_against": 46,
+          "team": "Chelsea",
+          "drawn": 10,
+          "goals_diff": 19
+        },
+        {
+          "won": 15,
+          "lost": 12,
+          "goals_for": 50,
+          "points": 56,
+          "goals_against": 40,
+          "team": "Everton",
+          "drawn": 11,
+          "goals_diff": 10
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 47,
+          "points": 52,
+          "goals_against": 40,
+          "team": "Liverpool",
+          "drawn": 10,
+          "goals_diff": 7
+        },
+        {
+          "won": 14,
+          "lost": 14,
+          "goals_for": 48,
+          "points": 52,
+          "goals_against": 51,
+          "team": "Fulham",
+          "drawn": 10,
+          "goals_diff": -3
+        },
+        {
+          "won": 13,
+          "lost": 17,
+          "goals_for": 45,
+          "points": 47,
+          "goals_against": 52,
+          "team": "West Brom",
+          "drawn": 8,
+          "goals_diff": -7
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 44,
+          "points": 47,
+          "goals_against": 51,
+          "team": "Swansea",
+          "drawn": 11,
+          "goals_diff": -7
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 52,
+          "points": 47,
+          "goals_against": 66,
+          "team": "Norwich",
+          "drawn": 11,
+          "goals_diff": -14
+        },
+        {
+          "won": 11,
+          "lost": 15,
+          "goals_for": 45,
+          "points": 45,
+          "goals_against": 46,
+          "team": "Sunderland",
+          "drawn": 12,
+          "goals_diff": -1
+        },
+        {
+          "won": 11,
+          "lost": 15,
+          "goals_for": 36,
+          "points": 45,
+          "goals_against": 53,
+          "team": "Stoke",
+          "drawn": 12,
+          "goals_diff": -17
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 42,
+          "points": 43,
+          "goals_against": 62,
+          "team": "Wigan",
+          "drawn": 10,
+          "goals_diff": -20
+        },
+        {
+          "won": 7,
+          "lost": 14,
+          "goals_for": 37,
+          "points": 38,
+          "goals_against": 53,
+          "team": "Aston Villa",
+          "drawn": 17,
+          "goals_diff": -16
+        },
+        {
+          "won": 10,
+          "lost": 21,
+          "goals_for": 43,
+          "points": 37,
+          "goals_against": 66,
+          "team": "QPR",
+          "drawn": 7,
+          "goals_diff": -23
+        },
+        {
+          "won": 10,
+          "lost": 22,
+          "goals_for": 46,
+          "points": 36,
+          "goals_against": 77,
+          "team": "Bolton",
+          "drawn": 6,
+          "goals_diff": -31
+        },
+        {
+          "won": 8,
+          "lost": 23,
+          "goals_for": 48,
+          "points": 31,
+          "goals_against": 78,
+          "team": "Blackburn",
+          "drawn": 7,
+          "goals_diff": -30
+        },
+        {
+          "won": 5,
+          "lost": 23,
+          "goals_for": 40,
+          "points": 25,
+          "goals_against": 82,
+          "team": "Wolves",
+          "drawn": 10,
+          "goals_diff": -42
+        }
+      ],
+      "_id": "2011/12"
+    },
+    {
+      "table": [
+        {
+          "won": 28,
+          "lost": 5,
+          "goals_for": 86,
+          "points": 89,
+          "goals_against": 43,
+          "team": "Man Utd",
+          "drawn": 5,
+          "goals_diff": 43
+        },
+        {
+          "won": 23,
+          "lost": 6,
+          "goals_for": 66,
+          "points": 78,
+          "goals_against": 34,
+          "team": "Man City",
+          "drawn": 9,
+          "goals_diff": 32
+        },
+        {
+          "won": 22,
+          "lost": 7,
+          "goals_for": 75,
+          "points": 75,
+          "goals_against": 39,
+          "team": "Chelsea",
+          "drawn": 9,
+          "goals_diff": 36
+        },
+        {
+          "won": 21,
+          "lost": 7,
+          "goals_for": 72,
+          "points": 73,
+          "goals_against": 37,
+          "team": "Arsenal",
+          "drawn": 10,
+          "goals_diff": 35
+        },
+        {
+          "won": 21,
+          "lost": 8,
+          "goals_for": 66,
+          "points": 72,
+          "goals_against": 46,
+          "team": "Spurs",
+          "drawn": 9,
+          "goals_diff": 20
+        },
+        {
+          "won": 16,
+          "lost": 7,
+          "goals_for": 55,
+          "points": 63,
+          "goals_against": 40,
+          "team": "Everton",
+          "drawn": 15,
+          "goals_diff": 15
+        },
+        {
+          "won": 16,
+          "lost": 9,
+          "goals_for": 71,
+          "points": 61,
+          "goals_against": 43,
+          "team": "Liverpool",
+          "drawn": 13,
+          "goals_diff": 28
+        },
+        {
+          "won": 14,
+          "lost": 17,
+          "goals_for": 53,
+          "points": 49,
+          "goals_against": 57,
+          "team": "West Brom",
+          "drawn": 7,
+          "goals_diff": -4
+        },
+        {
+          "won": 11,
+          "lost": 14,
+          "goals_for": 47,
+          "points": 46,
+          "goals_against": 51,
+          "team": "Swansea",
+          "drawn": 13,
+          "goals_diff": -4
+        },
+        {
+          "won": 12,
+          "lost": 16,
+          "goals_for": 45,
+          "points": 46,
+          "goals_against": 53,
+          "team": "West Ham",
+          "drawn": 10,
+          "goals_diff": -8
+        },
+        {
+          "won": 10,
+          "lost": 14,
+          "goals_for": 41,
+          "points": 44,
+          "goals_against": 58,
+          "team": "Norwich",
+          "drawn": 14,
+          "goals_diff": -17
+        },
+        {
+          "won": 11,
+          "lost": 17,
+          "goals_for": 50,
+          "points": 43,
+          "goals_against": 60,
+          "team": "Fulham",
+          "drawn": 10,
+          "goals_diff": -10
+        },
+        {
+          "won": 9,
+          "lost": 14,
+          "goals_for": 34,
+          "points": 42,
+          "goals_against": 45,
+          "team": "Stoke",
+          "drawn": 15,
+          "goals_diff": -11
+        },
+        {
+          "won": 9,
+          "lost": 15,
+          "goals_for": 49,
+          "points": 41,
+          "goals_against": 60,
+          "team": "Southampton",
+          "drawn": 14,
+          "goals_diff": -11
+        },
+        {
+          "won": 10,
+          "lost": 17,
+          "goals_for": 47,
+          "points": 41,
+          "goals_against": 69,
+          "team": "Aston Villa",
+          "drawn": 11,
+          "goals_diff": -22
+        },
+        {
+          "won": 11,
+          "lost": 19,
+          "goals_for": 45,
+          "points": 41,
+          "goals_against": 68,
+          "team": "Newcastle",
+          "drawn": 8,
+          "goals_diff": -23
+        },
+        {
+          "won": 9,
+          "lost": 17,
+          "goals_for": 41,
+          "points": 39,
+          "goals_against": 54,
+          "team": "Sunderland",
+          "drawn": 12,
+          "goals_diff": -13
+        },
+        {
+          "won": 9,
+          "lost": 20,
+          "goals_for": 47,
+          "points": 36,
+          "goals_against": 73,
+          "team": "Wigan",
+          "drawn": 9,
+          "goals_diff": -26
+        },
+        {
+          "won": 6,
+          "lost": 22,
+          "goals_for": 43,
+          "points": 28,
+          "goals_against": 73,
+          "team": "Reading",
+          "drawn": 10,
+          "goals_diff": -30
+        },
+        {
+          "won": 4,
+          "lost": 21,
+          "goals_for": 30,
+          "points": 25,
+          "goals_against": 60,
+          "team": "QPR",
+          "drawn": 13,
+          "goals_diff": -30
+        }
+      ],
+      "_id": "2012/13"
+    },
+    {
+      "table": [
+        {
+          "won": 27,
+          "lost": 6,
+          "goals_for": 102,
+          "points": 86,
+          "goals_against": 37,
+          "team": "Man City",
+          "drawn": 5,
+          "goals_diff": 65
+        },
+        {
+          "won": 26,
+          "lost": 6,
+          "goals_for": 101,
+          "points": 84,
+          "goals_against": 50,
+          "team": "Liverpool",
+          "drawn": 6,
+          "goals_diff": 51
+        },
+        {
+          "won": 25,
+          "lost": 6,
+          "goals_for": 71,
+          "points": 82,
+          "goals_against": 27,
+          "team": "Chelsea",
+          "drawn": 7,
+          "goals_diff": 44
+        },
+        {
+          "won": 24,
+          "lost": 7,
+          "goals_for": 68,
+          "points": 79,
+          "goals_against": 41,
+          "team": "Arsenal",
+          "drawn": 7,
+          "goals_diff": 27
+        },
+        {
+          "won": 21,
+          "lost": 8,
+          "goals_for": 61,
+          "points": 72,
+          "goals_against": 39,
+          "team": "Everton",
+          "drawn": 9,
+          "goals_diff": 22
+        },
+        {
+          "won": 21,
+          "lost": 11,
+          "goals_for": 55,
+          "points": 69,
+          "goals_against": 51,
+          "team": "Spurs",
+          "drawn": 6,
+          "goals_diff": 4
+        },
+        {
+          "won": 19,
+          "lost": 12,
+          "goals_for": 64,
+          "points": 64,
+          "goals_against": 43,
+          "team": "Man Utd",
+          "drawn": 7,
+          "goals_diff": 21
+        },
+        {
+          "won": 15,
+          "lost": 12,
+          "goals_for": 54,
+          "points": 56,
+          "goals_against": 46,
+          "team": "Southampton",
+          "drawn": 11,
+          "goals_diff": 8
+        },
+        {
+          "won": 13,
+          "lost": 14,
+          "goals_for": 45,
+          "points": 50,
+          "goals_against": 52,
+          "team": "Stoke",
+          "drawn": 11,
+          "goals_diff": -7
+        },
+        {
+          "won": 15,
+          "lost": 19,
+          "goals_for": 43,
+          "points": 49,
+          "goals_against": 59,
+          "team": "Newcastle",
+          "drawn": 4,
+          "goals_diff": -16
+        },
+        {
+          "won": 13,
+          "lost": 19,
+          "goals_for": 33,
+          "points": 45,
+          "goals_against": 48,
+          "team": "Crystal Palace",
+          "drawn": 6,
+          "goals_diff": -15
+        },
+        {
+          "won": 11,
+          "lost": 18,
+          "goals_for": 54,
+          "points": 42,
+          "goals_against": 54,
+          "team": "Swansea",
+          "drawn": 9,
+          "goals_diff": 0
+        },
+        {
+          "won": 11,
+          "lost": 20,
+          "goals_for": 40,
+          "points": 40,
+          "goals_against": 51,
+          "team": "West Ham",
+          "drawn": 7,
+          "goals_diff": -11
+        },
+        {
+          "won": 10,
+          "lost": 20,
+          "goals_for": 41,
+          "points": 38,
+          "goals_against": 60,
+          "team": "Sunderland",
+          "drawn": 8,
+          "goals_diff": -19
+        },
+        {
+          "won": 10,
+          "lost": 20,
+          "goals_for": 39,
+          "points": 38,
+          "goals_against": 61,
+          "team": "Aston Villa",
+          "drawn": 8,
+          "goals_diff": -22
+        },
+        {
+          "won": 10,
+          "lost": 21,
+          "goals_for": 38,
+          "points": 37,
+          "goals_against": 53,
+          "team": "Hull",
+          "drawn": 7,
+          "goals_diff": -15
+        },
+        {
+          "won": 7,
+          "lost": 16,
+          "goals_for": 43,
+          "points": 36,
+          "goals_against": 59,
+          "team": "West Brom",
+          "drawn": 15,
+          "goals_diff": -16
+        },
+        {
+          "won": 8,
+          "lost": 21,
+          "goals_for": 28,
+          "points": 33,
+          "goals_against": 62,
+          "team": "Norwich",
+          "drawn": 9,
+          "goals_diff": -34
+        },
+        {
+          "won": 9,
+          "lost": 24,
+          "goals_for": 40,
+          "points": 32,
+          "goals_against": 85,
+          "team": "Fulham",
+          "drawn": 5,
+          "goals_diff": -45
+        },
+        {
+          "won": 6,
+          "lost": 18,
+          "goals_for": 26,
+          "points": 25,
+          "goals_against": 58,
+          "team": "Cardiff City",
+          "drawn": 7,
+          "goals_diff": -32
+        },
+        {
+          "won": 1,
+          "lost": 4,
+          "goals_for": 6,
+          "points": 5,
+          "goals_against": 16,
+          "team": "Cardiff",
+          "drawn": 2,
+          "goals_diff": -10
+        }
+      ],
+      "_id": "2013/14"
+    },
+    {
+      "table": [
+        {
+          "won": 26,
+          "lost": 3,
+          "goals_for": 73,
+          "points": 87,
+          "goals_against": 32,
+          "team": "Chelsea",
+          "drawn": 9,
+          "goals_diff": 41
+        },
+        {
+          "won": 24,
+          "lost": 7,
+          "goals_for": 83,
+          "points": 79,
+          "goals_against": 38,
+          "team": "Man City",
+          "drawn": 7,
+          "goals_diff": 45
+        },
+        {
+          "won": 22,
+          "lost": 7,
+          "goals_for": 71,
+          "points": 75,
+          "goals_against": 36,
+          "team": "Arsenal",
+          "drawn": 9,
+          "goals_diff": 35
+        },
+        {
+          "won": 20,
+          "lost": 8,
+          "goals_for": 62,
+          "points": 70,
+          "goals_against": 37,
+          "team": "Man Utd",
+          "drawn": 10,
+          "goals_diff": 25
+        },
+        {
+          "won": 19,
+          "lost": 12,
+          "goals_for": 58,
+          "points": 64,
+          "goals_against": 53,
+          "team": "Spurs",
+          "drawn": 7,
+          "goals_diff": 5
+        },
+        {
+          "won": 18,
+          "lost": 12,
+          "goals_for": 52,
+          "points": 62,
+          "goals_against": 48,
+          "team": "Liverpool",
+          "drawn": 8,
+          "goals_diff": 4
+        },
+        {
+          "won": 18,
+          "lost": 14,
+          "goals_for": 54,
+          "points": 60,
+          "goals_against": 33,
+          "team": "Southampton",
+          "drawn": 6,
+          "goals_diff": 21
+        },
+        {
+          "won": 16,
+          "lost": 14,
+          "goals_for": 46,
+          "points": 56,
+          "goals_against": 49,
+          "team": "Swansea",
+          "drawn": 8,
+          "goals_diff": -3
+        },
+        {
+          "won": 15,
+          "lost": 14,
+          "goals_for": 48,
+          "points": 54,
+          "goals_against": 45,
+          "team": "Stoke",
+          "drawn": 9,
+          "goals_diff": 3
+        },
+        {
+          "won": 13,
+          "lost": 16,
+          "goals_for": 47,
+          "points": 48,
+          "goals_against": 51,
+          "team": "Crystal Palace",
+          "drawn": 9,
+          "goals_diff": -4
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 48,
+          "points": 47,
+          "goals_against": 50,
+          "team": "Everton",
+          "drawn": 11,
+          "goals_diff": -2
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 44,
+          "points": 47,
+          "goals_against": 47,
+          "team": "West Ham",
+          "drawn": 11,
+          "goals_diff": -3
+        },
+        {
+          "won": 11,
+          "lost": 16,
+          "goals_for": 38,
+          "points": 44,
+          "goals_against": 51,
+          "team": "West Brom",
+          "drawn": 11,
+          "goals_diff": -13
+        },
+        {
+          "won": 11,
+          "lost": 19,
+          "goals_for": 46,
+          "points": 41,
+          "goals_against": 55,
+          "team": "Leicester",
+          "drawn": 8,
+          "goals_diff": -9
+        },
+        {
+          "won": 10,
+          "lost": 19,
+          "goals_for": 40,
+          "points": 39,
+          "goals_against": 63,
+          "team": "Newcastle",
+          "drawn": 9,
+          "goals_diff": -23
+        },
+        {
+          "won": 7,
+          "lost": 14,
+          "goals_for": 31,
+          "points": 38,
+          "goals_against": 53,
+          "team": "Sunderland",
+          "drawn": 17,
+          "goals_diff": -22
+        },
+        {
+          "won": 10,
+          "lost": 20,
+          "goals_for": 31,
+          "points": 38,
+          "goals_against": 57,
+          "team": "Aston Villa",
+          "drawn": 8,
+          "goals_diff": -26
+        },
+        {
+          "won": 8,
+          "lost": 19,
+          "goals_for": 33,
+          "points": 35,
+          "goals_against": 51,
+          "team": "Hull",
+          "drawn": 11,
+          "goals_diff": -18
+        },
+        {
+          "won": 7,
+          "lost": 19,
+          "goals_for": 28,
+          "points": 33,
+          "goals_against": 53,
+          "team": "Burnley",
+          "drawn": 12,
+          "goals_diff": -25
+        },
+        {
+          "won": 8,
+          "lost": 24,
+          "goals_for": 42,
+          "points": 30,
+          "goals_against": 73,
+          "team": "QPR",
+          "drawn": 6,
+          "goals_diff": -31
+        }
+      ],
+      "_id": "2014/15"
+    },
+    {
+      "table": [
+        {
+          "won": 23,
+          "lost": 3,
+          "goals_for": 68,
+          "points": 81,
+          "goals_against": 36,
+          "team": "Leicester",
+          "drawn": 12,
+          "goals_diff": 32
+        },
+        {
+          "won": 20,
+          "lost": 7,
+          "goals_for": 65,
+          "points": 71,
+          "goals_against": 36,
+          "team": "Arsenal",
+          "drawn": 11,
+          "goals_diff": 29
+        },
+        {
+          "won": 19,
+          "lost": 6,
+          "goals_for": 69,
+          "points": 70,
+          "goals_against": 35,
+          "team": "Spurs",
+          "drawn": 13,
+          "goals_diff": 34
+        },
+        {
+          "won": 19,
+          "lost": 10,
+          "goals_for": 71,
+          "points": 66,
+          "goals_against": 41,
+          "team": "Man City",
+          "drawn": 9,
+          "goals_diff": 30
+        },
+        {
+          "won": 19,
+          "lost": 10,
+          "goals_for": 49,
+          "points": 66,
+          "goals_against": 35,
+          "team": "Man Utd",
+          "drawn": 9,
+          "goals_diff": 14
+        },
+        {
+          "won": 18,
+          "lost": 11,
+          "goals_for": 59,
+          "points": 63,
+          "goals_against": 41,
+          "team": "Southampton",
+          "drawn": 9,
+          "goals_diff": 18
+        },
+        {
+          "won": 16,
+          "lost": 8,
+          "goals_for": 65,
+          "points": 62,
+          "goals_against": 51,
+          "team": "West Ham",
+          "drawn": 14,
+          "goals_diff": 14
+        },
+        {
+          "won": 16,
+          "lost": 10,
+          "goals_for": 63,
+          "points": 60,
+          "goals_against": 50,
+          "team": "Liverpool",
+          "drawn": 12,
+          "goals_diff": 13
+        },
+        {
+          "won": 14,
+          "lost": 15,
+          "goals_for": 41,
+          "points": 51,
+          "goals_against": 55,
+          "team": "Stoke",
+          "drawn": 9,
+          "goals_diff": -14
+        },
+        {
+          "won": 12,
+          "lost": 12,
+          "goals_for": 59,
+          "points": 50,
+          "goals_against": 53,
+          "team": "Chelsea",
+          "drawn": 14,
+          "goals_diff": 6
+        },
+        {
+          "won": 11,
+          "lost": 13,
+          "goals_for": 59,
+          "points": 47,
+          "goals_against": 55,
+          "team": "Everton",
+          "drawn": 14,
+          "goals_diff": 4
+        },
+        {
+          "won": 12,
+          "lost": 15,
+          "goals_for": 42,
+          "points": 47,
+          "goals_against": 52,
+          "team": "Swansea",
+          "drawn": 11,
+          "goals_diff": -10
+        },
+        {
+          "won": 12,
+          "lost": 17,
+          "goals_for": 40,
+          "points": 45,
+          "goals_against": 50,
+          "team": "Watford",
+          "drawn": 9,
+          "goals_diff": -10
+        },
+        {
+          "won": 10,
+          "lost": 15,
+          "goals_for": 34,
+          "points": 43,
+          "goals_against": 48,
+          "team": "West Brom",
+          "drawn": 13,
+          "goals_diff": -14
+        },
+        {
+          "won": 11,
+          "lost": 18,
+          "goals_for": 39,
+          "points": 42,
+          "goals_against": 51,
+          "team": "Crystal Palace",
+          "drawn": 9,
+          "goals_diff": -12
+        },
+        {
+          "won": 11,
+          "lost": 18,
+          "goals_for": 45,
+          "points": 42,
+          "goals_against": 67,
+          "team": "Bournemouth",
+          "drawn": 9,
+          "goals_diff": -22
+        },
+        {
+          "won": 9,
+          "lost": 17,
+          "goals_for": 48,
+          "points": 39,
+          "goals_against": 62,
+          "team": "Sunderland",
+          "drawn": 12,
+          "goals_diff": -14
+        },
+        {
+          "won": 9,
+          "lost": 19,
+          "goals_for": 44,
+          "points": 37,
+          "goals_against": 65,
+          "team": "Newcastle",
+          "drawn": 10,
+          "goals_diff": -21
+        },
+        {
+          "won": 9,
+          "lost": 22,
+          "goals_for": 39,
+          "points": 34,
+          "goals_against": 67,
+          "team": "Norwich",
+          "drawn": 7,
+          "goals_diff": -28
+        },
+        {
+          "won": 3,
+          "lost": 27,
+          "goals_for": 27,
+          "points": 17,
+          "goals_against": 76,
+          "team": "Aston Villa",
+          "drawn": 8,
+          "goals_diff": -49
+        }
+      ],
+      "_id": "2015/16"
+    }
+  ]
+}
