@@ -1,3 +1,6 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+}
 .seasonList {
 	display: flex;
 	justify-content: center;
@@ -14,4 +17,62 @@
 	margin: 10px;
 	text-align: center;
 	border: 1px solid black;
+}
+
+.table {
+	display: table;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.table h1 {
+	display: table-caption;
+	caption-side: top;
+	text-align: center;
+}
+
+.table header {
+	display: table-header-group;
+}
+
+.table ul {
+	display: table-row;
+}
+
+.table ul:hover{
+	background-color: #eee;
+}
+
+.table li {
+	display: table-cell;
+	border: 1px solid black;
+	padding: 5px 20px;
+}
+
+header ul {
+	background-color: #ccc;
+}
+
+header li {
+	text-align: center;
+	font-weight: bold;
+}
+
+.tableSection {
+	background-color: #ddd;
+	margin: 200px 0;
+	padding: 50px 0;
+}
+
+.column {
+	display: table-column;
+}
+
+.column-group {
+	display: table-column-group;
+}
+
+.number-cell {
+	text-align: right;
 }

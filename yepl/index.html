@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>EPL tables</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
@@ -17,8 +18,8 @@
 		
 		$.getJSON('http://yesenin.github.io/yepl/seasons.json', function(data) {
 			seasons = data.seasons;
-			//$.getJSON('http://yesenin.github.io/yepl/tables.json',
-			$.getJSON('http://yesenin.github.io/yepl/one_table.json',
+			$.getJSON('http://yesenin.github.io/yepl/tables.json',
+			//$.getJSON('http://yesenin.github.io/yepl/one_table.json',
 			function(data) {
 				tables = data.tables;
 				ReactDOM.render(<App />, document.getElementById('app'));
@@ -38,15 +39,51 @@
 			}
 		}
 		
+		class TableHeader extends React.Component {
+			render() {
+				return <header><ul>
+					<li></li>
+					<li>Pts</li>
+					<li>Diff</li>
+					<li>G+</li>
+					<li>G-</li>
+					<li>W</li>
+					<li>D</li>
+					<li>L</li>
+				</ul></header>
+			}
+		}
+		
+		
+		class TableRow extends React.Component {
+			render() {
+				return <ul>
+					<li>{this.props.item.team}</li>
+					<li className="number-cell">{this.props.item.points}</li>
+					<li className="number-cell">{this.props.item.goals_diff}</li>
+					<li className="number-cell">{this.props.item.goals_for}</li>
+					<li className="number-cell">{this.props.item.goals_against}</li>
+					<li className="number-cell">{this.props.item.won}</li>
+					<li className="number-cell">{this.props.item.drawn}</li>
+					<li className="number-cell">{this.props.item.lost}</li>
+				</ul>
+			}
+		}
+		
 		class Table extends React.Component {
 			render() {
-				return <h1>{this.props.season}</h1>
+				const rows = this.props.item.table.map((row) => <TableRow item={row} key={row.team}/>);
+				return <section className="table">
+						<h1>{this.props.item._id}</h1>
+						<TableHeader />
+						{rows}
+					</section>
 			}
 		}
 		
 		class TableList extends React.Component {
 			render() {
-				const tableList = tables.map((table) => <Table season={table._id} key={table._id} />);
+				const tableList = tables.map((table) => <div className="tableSection" key={table._id}><Table item={table} /></div>);
 				return <section>{tableList}</section>;
 			}
 		}
