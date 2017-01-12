@@ -28,14 +28,14 @@
 		
 		class SeasonCaption extends React.Component {
 			render() {
-				return <div className="seasonCaption">{this.props.caption}</div>;
+				return <a href={"#" + this.props.caption}><div className="seasonCaption">{this.props.caption}</div></a>;
 			}
 		}
 		
 		class SeasonCaptionList extends React.Component {
 			render() {
 				const seasonList = seasons.map((season) => <SeasonCaption caption={season} key={season}/>);
-				return <section className="seasonList">{seasonList}</section>
+				return <section className="seasonList"><a name="top"></a>{seasonList}</section>
 			}
 		}
 		
@@ -74,6 +74,7 @@
 			render() {
 				const rows = this.props.item.table.map((row) => <TableRow item={row} key={row.team}/>);
 				return <section className="table">
+						<a name={this.props.item._id}></a><a href="#top">Top</a>
 						<h1>{this.props.item._id}</h1>
 						<TableHeader />
 						{rows}
