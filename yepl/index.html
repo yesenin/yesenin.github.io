@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>EPL tables</title>
+<link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+	<div id="app"></div>
+	
+	<script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<script type="text/babel">
+		var seasons = [];
+		var tables = [];
+		
+		$.getJSON('http://yesenin.github.io/yepl/seasons.json', function(data) {
+			seasons = data.seasons;
+			//$.getJSON('http://yesenin.github.io/yepl/tables.json',
+			$.getJSON('http://yesenin.github.io/yepl/one_table.json',
+			function(data) {
+				tables = data.tables;
+				ReactDOM.render(<App />, document.getElementById('app'));
+			});
+		});
+		
+		class SeasonCaption extends React.Component {
+			render() {
+				return <div className="seasonCaption">{this.props.caption}</div>;
+			}
+		}
+		
+		class SeasonCaptionList extends React.Component {
+			render() {
+				const seasonList = seasons.map((season) => <SeasonCaption caption={season} key={season}/>);
+				return <section className="seasonList">{seasonList}</section>
+			}
+		}
+		
+		class Table extends React.Component {
+			render() {
+				return <h1>{this.props.season}</h1>
+			}
+		}
+		
+		class TableList extends React.Component {
+			render() {
+				const tableList = tables.map((table) => <Table season={table._id} key={table._id} />);
+				return <section>{tableList}</section>;
+			}
+		}
+		
+		class App extends React.Component {
+			render() {
+				return <article>
+					<SeasonCaptionList />
+					<TableList />
+				</article>
+			}
+		}
+	</script>
+</body>
+</html>
