@@ -3,6 +3,7 @@
 <head>
 <title>EPL tables</title>
 <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
 <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
@@ -12,6 +13,7 @@
 	<script src="https://unpkg.com/react@latest/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
 	<script type="text/babel">
 		var seasons = [];
 		var tables = [];
@@ -27,15 +29,28 @@
 		});
 		
 		class SeasonCaption extends React.Component {
+			
 			render() {
-				return <a href={"#" + this.props.caption}><div className="seasonCaption">{this.props.caption}</div></a>;
+				return <li className={this.props.bar} onClick={this.props.onClick}>{this.props.caption}</li>;
 			}
 		}
 		
 		class SeasonCaptionList extends React.Component {
+			constructor(props) {
+				super(props);
+				this.state = {
+					activeSeason: seasons[0]
+				};
+			}
+			foo(s) {
+				this.setState({activeSeason: s});
+				$('html, body').animate({
+			        scrollTop: $(".table[data-name='" + s + "']").offset().top
+			    }, 500);
+			}
 			render() {
-				const seasonList = seasons.map((season) => <SeasonCaption caption={season} key={season}/>);
-				return <section className="seasonList"><a name="top"></a>{seasonList}</section>
+				const seasonList = seasons.map((season) => <SeasonCaption bar={season==this.state.activeSeason ? 'active' : ''} caption={season} onClick={() => this.foo(season)} key={season}/>);
+				return <aside><ul>{seasonList}</ul></aside>
 			}
 		}
 		
@@ -43,13 +58,13 @@
 			render() {
 				return <header><ul>
 					<li></li>
-					<li>Pts</li>
-					<li>Diff</li>
-					<li>G+</li>
-					<li>G-</li>
-					<li>W</li>
-					<li>D</li>
-					<li>L</li>
+					<li>Points</li>
+					<li>Goals diff</li>
+					<li>Goals for</li>
+					<li>Goals against</li>
+					<li>Won</li>
+					<li>Drawn</li>
+					<li>Lost</li>
 				</ul></header>
 			}
 		}
@@ -73,8 +88,7 @@
 		class Table extends React.Component {
 			render() {
 				const rows = this.props.item.table.map((row) => <TableRow item={row} key={row.team}/>);
-				return <section className="table">
-						<a name={this.props.item._id}></a><a href="#top">Top</a>
+				return <section className="table" data-name={this.props.item._id}>
 						<h1>{this.props.item._id}</h1>
 						<TableHeader />
 						{rows}
