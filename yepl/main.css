@@ -121,3 +121,8 @@ aside li.active::before {
 	border-radius: 10px;
 
 }
+
+.pageHeader {
+	font-size: 10pt;
+	text-align: right;
+}
