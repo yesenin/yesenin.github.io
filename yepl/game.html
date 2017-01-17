@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>EPL game</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+	<main id="app"></main>
+	<script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+	<script type="text/babel">
+		$.getJSON('http://yesenin.github.io/yepl/one_game.json',
+		function(data) {
+			games = data.games;
+			ReactDOM.render(<App />, document.getElementById('app'));
+		});
+		
+		class App extends React.Component {
+			render() {
+				<h1>A game</h1>
+			}
+		}
+	</script>
+</body>
+</html>
