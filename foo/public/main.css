@@ -1,1 +1,90 @@
-body{background-color:#fff;margin:0;padding:0;font-family:sans-serif}.app{display:flex;flex-direction:column;min-height:100%}.app main{flex-grow:1}.page-header{background-color:#fff;display:flex;padding:0 20px;align-items:baseline}.page-header .left,.page-header .right{flex-basis:20%}.page-header .center{justify-content:center;flex-grow:2}.page-header .center nav{display:flex;justify-content:center;align-items:baseline}.page-header .center nav div{padding:5px;text-transform:uppercase;letter-spacing:1pt}.page-header .center nav div a{text-decoration:none}.page-header .center nav div a:visited{color:#000}.page-header .center nav div a:hover{color:#bbb}.page-header .center nav div.active,.page-header .center nav div.active a:visited{color:gold}.page-header .center nav div.active a:hover{color:#bbb}.page-header .left{display:flex;justify-content:flex-end}main article{max-width:1000px;margin:0 auto}main article .caption{margin:20px 0;font-size:16pt}main article .sub-caption{font-size:14pt;font-style:italic}main article .meta{font-size:10pt;color:#bbb;margin:5px 0}main article .text{font-size:12pt;margin:10px 0}.page-footer{background-color:#000;color:#fff;padding:10px;font-size:10pt;font-weight:100}
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.app main {
+  flex-grow: 1;
+}
+.page-header {
+  background-color: white;
+  display: flex;
+  padding: 0 20px;
+  align-items: baseline;
+}
+.page-header .right,
+.page-header .left {
+  flex-basis: 20%;
+}
+.page-header .center {
+  justify-content: center;
+  flex-grow: 2;
+}
+.page-header .center nav {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.page-header .center nav div {
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+}
+.page-header .center nav div a {
+  text-decoration: none;
+}
+.page-header .center nav div a:visited {
+  color: black;
+}
+.page-header .center nav div a:hover {
+  color: #bbb;
+}
+.page-header .center nav div.active {
+  color: gold;
+}
+.page-header .center nav div.active a:visited {
+  color: gold;
+}
+.page-header .center nav div.active a:hover {
+  color: #bbb;
+}
+.page-header .left {
+  display: flex;
+  justify-content: flex-end;
+}
+main article {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main article .caption {
+  margin: 20px 0;
+  font-size: 16pt;
+}
+main article .sub-caption {
+  font-size: 14pt;
+  font-style: italic;
+}
+main article .meta {
+  font-size: 10pt;
+  color: #bbb;
+  margin: 5px 0;
+}
+main article .text {
+  font-size: 12pt;
+  margin: 10px 0;
+}
+.page-footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 10pt;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=main.css.map*/

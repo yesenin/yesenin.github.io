@@ -14,13 +14,19 @@
 	<script type="text/babel">
 		$.getJSON('http://yesenin.github.io/yepl/one_game.json',
 		function(data) {
-			games = data.games;
-			ReactDOM.render(<App />, document.getElementById('app'));
+			let games = data.games;
+			ReactDOM.render(<App game={games[0]}/>, document.getElementById('app'));
 		});
+		
+		class Game extends React.Component {
+			render() {
+				return <h1>{this.props.game.home_team.name} - {this.props.game.guest_team.name}</h1>
+			}
+		}
 		
 		class App extends React.Component {
 			render() {
-				<h1>A game</h1>
+				return <Game game={this.props.game} />
 			}
 		}
 	</script>
