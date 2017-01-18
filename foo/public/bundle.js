@@ -47,8 +47,8 @@
   \******************/
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(/*! D:\src\github\yesenin.github.io\foo\app/index.jsx */1);
-	module.exports = __webpack_require__(/*! D:\src\github\yesenin.github.io\foo\app/main.less */179);
+	__webpack_require__(/*! /Users/yesenin/src/github/io/foo/app/index.jsx */1);
+	module.exports = __webpack_require__(/*! /Users/yesenin/src/github/io/foo/app/main.less */179);
 
 
 /***/ },
@@ -80,19 +80,19 @@
 	
 	var _seasons2 = _interopRequireDefault(_seasons);
 	
-	var _season = __webpack_require__(/*! ./components/season.jsx */ 273);
+	var _season = __webpack_require__(/*! ./components/season.jsx */ 270);
 	
 	var _season2 = _interopRequireDefault(_season);
 	
-	var _teams = __webpack_require__(/*! ./components/teams.jsx */ 269);
+	var _teams = __webpack_require__(/*! ./components/teams.jsx */ 271);
 	
 	var _teams2 = _interopRequireDefault(_teams);
 	
-	var _team = __webpack_require__(/*! ./components/team.jsx */ 271);
+	var _team = __webpack_require__(/*! ./components/team.jsx */ 272);
 	
 	var _team2 = _interopRequireDefault(_team);
 	
-	var _footer = __webpack_require__(/*! ./components/footer.jsx */ 272);
+	var _footer = __webpack_require__(/*! ./components/footer.jsx */ 273);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
@@ -23064,7 +23064,7 @@
 	        children = _props.children;
 	
 	
-	    !history.getCurrentLocation ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v2.x or ' + 'earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please upgrade to history v3.x.') : (0, _invariant2.default)(false) : void 0;
+	    !history.getCurrentLocation ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v4.x or v2.x ' + 'and earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please change to history v3.x.') : (0, _invariant2.default)(false) : void 0;
 	
 	    return (0, _createTransitionManager3.default)(history, (0, _RouteUtils.createRoutes)(routes || children));
 	  },
@@ -27631,7 +27631,7 @@
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
-	var _underscore = __webpack_require__(/*! underscore */ 270);
+	var _underscore = __webpack_require__(/*! underscore */ 269);
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
@@ -29319,147 +29319,6 @@
 
 /***/ },
 /* 269 */
-/*!**********************************!*\
-  !*** ./app/components/teams.jsx ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _axios = __webpack_require__(/*! axios */ 244);
-	
-	var _axios2 = _interopRequireDefault(_axios);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 187);
-	
-	var _underscore = __webpack_require__(/*! underscore */ 270);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var TeamItem = function (_React$Component) {
-	  _inherits(TeamItem, _React$Component);
-	
-	  function TeamItem() {
-	    _classCallCheck(this, TeamItem);
-	
-	    return _possibleConstructorReturn(this, (TeamItem.__proto__ || Object.getPrototypeOf(TeamItem)).apply(this, arguments));
-	  }
-	
-	  _createClass(TeamItem, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'li',
-	        null,
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: 'teams/' + this.props.team.code },
-	          this.props.team.name
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return TeamItem;
-	}(_react2.default.Component);
-	
-	var TeamList = function (_React$Component2) {
-	  _inherits(TeamList, _React$Component2);
-	
-	  function TeamList(props) {
-	    _classCallCheck(this, TeamList);
-	
-	    var _this2 = _possibleConstructorReturn(this, (TeamList.__proto__ || Object.getPrototypeOf(TeamList)).call(this, props));
-	
-	    _this2.state = {
-	      teams: []
-	    };
-	    return _this2;
-	  }
-	
-	  _createClass(TeamList, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var _this3 = this;
-	
-	      _axios2.default.get('http://yesenin.github.io/yepl/teams.json').then(function (response) {
-	        var teamList = _underscore2.default.sortBy(response.data, function (item) {
-	          return item.name;
-	        });
-	        _this3.setState({ teams: teamList });
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var items = this.state.teams.map(function (team) {
-	        return _react2.default.createElement(TeamItem, { team: team, key: team.code });
-	      });
-	      return _react2.default.createElement(
-	        'ul',
-	        null,
-	        items
-	      );
-	    }
-	  }]);
-	
-	  return TeamList;
-	}(_react2.default.Component);
-	
-	var TeamsComponent = function (_React$Component3) {
-	  _inherits(TeamsComponent, _React$Component3);
-	
-	  function TeamsComponent() {
-	    _classCallCheck(this, TeamsComponent);
-	
-	    return _possibleConstructorReturn(this, (TeamsComponent.__proto__ || Object.getPrototypeOf(TeamsComponent)).apply(this, arguments));
-	  }
-	
-	  _createClass(TeamsComponent, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'main',
-	        null,
-	        _react2.default.createElement(
-	          'article',
-	          null,
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'caption' },
-	            'Team list'
-	          ),
-	          _react2.default.createElement(TeamList, null)
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return TeamsComponent;
-	}(_react2.default.Component);
-	
-	exports.default = TeamsComponent;
-
-/***/ },
-/* 270 */
 /*!************************************!*\
   !*** ./~/underscore/underscore.js ***!
   \************************************/
@@ -31016,7 +30875,246 @@
 
 
 /***/ },
+/* 270 */
+/*!***********************************!*\
+  !*** ./app/components/season.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SeasonComponent = function (_React$Component) {
+	  _inherits(SeasonComponent, _React$Component);
+	
+	  function SeasonComponent() {
+	    _classCallCheck(this, SeasonComponent);
+	
+	    return _possibleConstructorReturn(this, (SeasonComponent.__proto__ || Object.getPrototypeOf(SeasonComponent)).apply(this, arguments));
+	  }
+	
+	  _createClass(SeasonComponent, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'h1',
+	        null,
+	        'Season ',
+	        this.props.params.alias
+	      );
+	    }
+	  }]);
+	
+	  return SeasonComponent;
+	}(_react2.default.Component);
+	
+	exports.default = SeasonComponent;
+
+/***/ },
 /* 271 */
+/*!**********************************!*\
+  !*** ./app/components/teams.jsx ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _axios = __webpack_require__(/*! axios */ 244);
+	
+	var _axios2 = _interopRequireDefault(_axios);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 187);
+	
+	var _underscore = __webpack_require__(/*! underscore */ 269);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var TeamItem = function (_React$Component) {
+	  _inherits(TeamItem, _React$Component);
+	
+	  function TeamItem() {
+	    _classCallCheck(this, TeamItem);
+	
+	    return _possibleConstructorReturn(this, (TeamItem.__proto__ || Object.getPrototypeOf(TeamItem)).apply(this, arguments));
+	  }
+	
+	  _createClass(TeamItem, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: 'teams/' + this.props.team.code },
+	          this.props.team.name
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return TeamItem;
+	}(_react2.default.Component);
+	
+	var TeamGroupItem = function (_React$Component2) {
+	  _inherits(TeamGroupItem, _React$Component2);
+	
+	  function TeamGroupItem() {
+	    _classCallCheck(this, TeamGroupItem);
+	
+	    return _possibleConstructorReturn(this, (TeamGroupItem.__proto__ || Object.getPrototypeOf(TeamGroupItem)).apply(this, arguments));
+	  }
+	
+	  _createClass(TeamGroupItem, [{
+	    key: 'render',
+	    value: function render() {
+	      var bar = _underscore2.default.sortBy(this.props.team.value, function (x) {
+	        return x.name;
+	      });
+	      var foo = bar.map(function (x) {
+	        return _react2.default.createElement(TeamItem, { key: x.code, team: x });
+	      });
+	      return _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          this.props.team.key
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          foo
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return TeamGroupItem;
+	}(_react2.default.Component);
+	
+	var TeamList = function (_React$Component3) {
+	  _inherits(TeamList, _React$Component3);
+	
+	  function TeamList(props) {
+	    _classCallCheck(this, TeamList);
+	
+	    var _this3 = _possibleConstructorReturn(this, (TeamList.__proto__ || Object.getPrototypeOf(TeamList)).call(this, props));
+	
+	    _this3.state = {
+	      teams: []
+	    };
+	    return _this3;
+	  }
+	
+	  _createClass(TeamList, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this4 = this;
+	
+	      _axios2.default.get('http://yesenin.github.io/yepl/teams.json').then(function (response) {
+	        var teamList = _underscore2.default.groupBy(response.data, function (item) {
+	          return item.name[0];
+	        });
+	        console.log(teamList);
+	        var foo = _underscore2.default.map(teamList, function (a, b) {
+	          return { key: b, value: a };
+	        });
+	        console.log(foo);
+	        _this4.setState({ teams: _underscore2.default.sortBy(foo, function (x) {
+	            return x.key;
+	          }) });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var items = this.state.teams.map(function (team) {
+	        return _react2.default.createElement(TeamGroupItem, { key: team.key, team: team });
+	      });
+	      return _react2.default.createElement(
+	        'ul',
+	        null,
+	        items
+	      );
+	    }
+	  }]);
+	
+	  return TeamList;
+	}(_react2.default.Component);
+	
+	var TeamsComponent = function (_React$Component4) {
+	  _inherits(TeamsComponent, _React$Component4);
+	
+	  function TeamsComponent() {
+	    _classCallCheck(this, TeamsComponent);
+	
+	    return _possibleConstructorReturn(this, (TeamsComponent.__proto__ || Object.getPrototypeOf(TeamsComponent)).apply(this, arguments));
+	  }
+	
+	  _createClass(TeamsComponent, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'main',
+	        null,
+	        _react2.default.createElement(
+	          'article',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'caption' },
+	            'Team list'
+	          ),
+	          _react2.default.createElement(TeamList, null)
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return TeamsComponent;
+	}(_react2.default.Component);
+	
+	exports.default = TeamsComponent;
+
+/***/ },
+/* 272 */
 /*!*********************************!*\
   !*** ./app/components/team.jsx ***!
   \*********************************/
@@ -31069,7 +31167,7 @@
 	exports.default = TeamComponent;
 
 /***/ },
-/* 272 */
+/* 273 */
 /*!***********************************!*\
   !*** ./app/components/footer.jsx ***!
   \***********************************/
@@ -31123,59 +31221,6 @@
 	}(_react2.default.Component);
 	
 	exports.default = FooterComponent;
-
-/***/ },
-/* 273 */
-/*!***********************************!*\
-  !*** ./app/components/season.jsx ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var SeasonComponent = function (_React$Component) {
-	  _inherits(SeasonComponent, _React$Component);
-	
-	  function SeasonComponent() {
-	    _classCallCheck(this, SeasonComponent);
-	
-	    return _possibleConstructorReturn(this, (SeasonComponent.__proto__ || Object.getPrototypeOf(SeasonComponent)).apply(this, arguments));
-	  }
-	
-	  _createClass(SeasonComponent, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Season ',
-	        this.props.params.alias
-	      );
-	    }
-	  }]);
-	
-	  return SeasonComponent;
-	}(_react2.default.Component);
-	
-	exports.default = SeasonComponent;
 
 /***/ }
 /******/ ]);

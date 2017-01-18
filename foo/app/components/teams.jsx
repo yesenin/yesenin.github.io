@@ -2,9 +2,19 @@ import React from 'react';
 import axios from 'axios'
 import {Link} from 'react-router'
 import _ from 'underscore';
+
 class TeamItem extends React.Component {
   render() {
-    return <li><Link to={'teams/' + this.props.team.code} >{this.props.team.name}</Link></li>
+    return <li><Link to={'teams/' + this.props.team.code}>{this.props.team.name}</Link></li>
+  }
+}
+
+class TeamGroupItem extends React.Component {
+  render() {
+    let bar = _.sortBy(this.props.team.value, (x) => x.name);
+    let foo = bar.map((x) => <TeamItem key={x.code} team={x} />);
+    return <li><h1>{this.props.team.key}</h1>
+    <ul>{foo}</ul></li>
   }
 }
 
@@ -19,13 +29,16 @@ class TeamList extends React.Component {
   componentDidMount() {
     axios.get('http://yesenin.github.io/yepl/teams.json')
       .then(response => {
-        let teamList = _.sortBy(response.data, (item) => item.name);
-        this.setState({teams: teamList});
+        let teamList = _.groupBy(response.data, (item) => item.name[0]);
+        console.log(teamList);
+        let foo = _.map(teamList, (a, b) => ({key: b, value: a}));
+        console.log(foo);
+        this.setState({teams: _.sortBy(foo, (x) => x.key)});
       });
   }
 
   render() {
-    const items = this.state.teams.map((team) => <TeamItem team={team} key={team.code} />)
+    const items = this.state.teams.map((team) => <TeamGroupItem key={team.key} team={team} />)
     return <ul>{items}</ul>
   }
 }
