@@ -3,8 +3,9 @@ import {render} from 'react-dom';
 import css from './main.less';
 
 import HeaderComponent from './components/header.jsx';
-import ContentComponent from './components/content.jsx';
-import Content2Component from './components/content2.jsx';
+import SeasonsComponent from './components/seasons.jsx';
+import TeamsComponent from './components/teams.jsx';
+import TeamComponent from './components/team.jsx';
 import FooterComponent from './components/footer.jsx';
 
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
@@ -22,8 +23,9 @@ class App extends React.Component {
 
 render(<Router history={hashHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={ContentComponent} />
-      <Route path='seasons' component={ContentComponent} />
-      <Route path='teams' component={Content2Component} />
+      <IndexRoute component={SeasonsComponent} />
+      <Route path='seasons' component={SeasonsComponent} />
+      <Route path='teams' component={TeamsComponent} />
+      <Route path='teams/:teamcode' component={TeamComponent} />
     </Route>
   </Router>, document.getElementById('app'));
