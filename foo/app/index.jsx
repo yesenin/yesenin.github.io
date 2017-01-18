@@ -15,7 +15,7 @@ class App extends React.Component {
 
     render() {
         return <div className="app">
-                <HeaderComponent />
+                <HeaderComponent active={this.props.children}/>
                 {this.props.children}
                 <FooterComponent />
             </div>

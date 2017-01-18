@@ -9,7 +9,7 @@ class HeaderComponent extends React.Component {
   render() {
       return <header className="page-header">
         <HeaderRightComponent />
-        <HeaderCenterComponent />
+        <HeaderCenterComponent active={this.props.active.type.name}/>
         <HeaderLeftComponent />
       </header>;
   }

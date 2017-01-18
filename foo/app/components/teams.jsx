@@ -13,8 +13,8 @@ class TeamGroupItem extends React.Component {
   render() {
     let bar = _.sortBy(this.props.team.value, (x) => x.name);
     let foo = bar.map((x) => <TeamItem key={x.code} team={x} />);
-    return <li><h1>{this.props.team.key}</h1>
-    <ul>{foo}</ul></li>
+    return <div className="team-group"><h2>{this.props.team.key}</h2>
+    <ul className="team-list">{foo}</ul></div>
   }
 }
 
@@ -30,16 +30,14 @@ class TeamList extends React.Component {
     axios.get('http://yesenin.github.io/yepl/teams.json')
       .then(response => {
         let teamList = _.groupBy(response.data, (item) => item.name[0]);
-        console.log(teamList);
         let foo = _.map(teamList, (a, b) => ({key: b, value: a}));
-        console.log(foo);
         this.setState({teams: _.sortBy(foo, (x) => x.key)});
       });
   }
 
   render() {
     const items = this.state.teams.map((team) => <TeamGroupItem key={team.key} team={team} />)
-    return <ul>{items}</ul>
+    return <div className="team-container">{items}</div>
   }
 }
 

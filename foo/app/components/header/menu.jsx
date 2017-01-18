@@ -5,8 +5,8 @@ class MenuComponent extends React.Component {
 
   render() {
       return <nav>
-        <div><Link to='/teams'>Teams</Link></div>
-        <div><Link to='/seasons'>Seasons</Link></div>
+        <div className={this.props.active == 'TeamsComponent' ? 'active' : ''}><Link to='/teams'>Teams</Link></div>
+        <div className={this.props.active == 'ContentComponent' ? 'active' : ''}><Link to='/seasons'>Seasons</Link></div>
       </nav>;
   }
 }
