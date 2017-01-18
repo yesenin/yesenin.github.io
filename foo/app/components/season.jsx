@@ -2,7 +2,7 @@ import React from 'react';
 
 class SeasonComponent extends React.Component {
   render() {
-      return <p> foo </p>;
+      return <h1>Season {this.props.params.alias}</h1>;
   }
 }
 

@@ -80,6 +80,10 @@
 	
 	var _seasons2 = _interopRequireDefault(_seasons);
 	
+	var _season = __webpack_require__(/*! ./components/season.jsx */ 273);
+	
+	var _season2 = _interopRequireDefault(_season);
+	
 	var _teams = __webpack_require__(/*! ./components/teams.jsx */ 269);
 	
 	var _teams2 = _interopRequireDefault(_teams);
@@ -135,6 +139,7 @@
 	        { path: '/', component: App },
 	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _seasons2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: 'seasons', component: _seasons2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: 'seasons/:alias', component: _season2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: 'teams', component: _teams2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: 'teams/:teamcode', component: _team2.default })
 	    )
@@ -27626,6 +27631,12 @@
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
+	var _underscore = __webpack_require__(/*! underscore */ 270);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 187);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27649,7 +27660,11 @@
 	      return _react2.default.createElement(
 	        'li',
 	        null,
-	        this.props.title
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: 'seasons/' + this.props.season.alias },
+	          this.props.season.title
+	        )
 	      );
 	    }
 	  }]);
@@ -27677,15 +27692,17 @@
 	      var _this3 = this;
 	
 	      _axios2.default.get('http://yesenin.github.io/yepl/seasons.json').then(function (response) {
-	        var foo = response.data.seasons;
-	        _this3.setState({ seasons: response.data.seasons });
+	        var foo = _underscore2.default.sortBy(response.data.seasons, function (item) {
+	          return item.title;
+	        });
+	        _this3.setState({ seasons: foo });
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var items = this.state.seasons.map(function (season) {
-	        return _react2.default.createElement(SeasonItem, { key: season, title: season });
+	        return _react2.default.createElement(SeasonItem, { key: season.title, season: season });
 	      });
 	      return _react2.default.createElement(
 	        'ul',
@@ -31106,6 +31123,59 @@
 	}(_react2.default.Component);
 	
 	exports.default = FooterComponent;
+
+/***/ },
+/* 273 */
+/*!***********************************!*\
+  !*** ./app/components/season.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SeasonComponent = function (_React$Component) {
+	  _inherits(SeasonComponent, _React$Component);
+	
+	  function SeasonComponent() {
+	    _classCallCheck(this, SeasonComponent);
+	
+	    return _possibleConstructorReturn(this, (SeasonComponent.__proto__ || Object.getPrototypeOf(SeasonComponent)).apply(this, arguments));
+	  }
+	
+	  _createClass(SeasonComponent, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'h1',
+	        null,
+	        'Season ',
+	        this.props.params.alias
+	      );
+	    }
+	  }]);
+	
+	  return SeasonComponent;
+	}(_react2.default.Component);
+	
+	exports.default = SeasonComponent;
 
 /***/ }
 /******/ ]);
