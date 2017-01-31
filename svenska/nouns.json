@@ -1,0 +1,1350 @@
+{
+"etc": ["å", "ä", "ö"],
+  "word_list": [
+    {
+      "word": "arbete",
+      "gender": "ett",
+      "plural": "5",
+      "translation": "работа",
+	  "exception": false,
+      "forms": {
+        "indefinite_singular": "ett arbete",
+        "indefinite_plural": "arbetet",
+        "definite_singular": "arbeten",
+        "definite_plural": "arbetena"
+      }
+    },
+    {
+      "word": "lampa",
+      "gender": "en",
+      "plural": "a", "exception": false,
+      "translation": "лампа",
+      "forms": {
+        "indefinite_singular": "en lampa",
+        "indefinite_plural": "lampan",
+        "definite_singular": "lampor",
+        "definite_plural": "lamporna"
+      }
+    },
+    {
+      "word": "kök",
+      "gender": "ett",
+      "plural": "5", "exception": false,
+      "translation": "кухня",
+      "forms": {
+        "indefinite_singular": "ett kök",
+        "indefinite_plural": "köket",
+        "definite_singular": "kök",
+        "definite_plural": "köken"
+      }
+    },
+    {
+      "word": "våning",
+      "gender": "en",
+      "plural": "2", "exception": false,
+      "translation": "пол",
+      "forms": {
+        "indefinite_singular": "en våning",
+        "indefinite_plural": "våningen",
+        "definite_singular": "våningar",
+        "definite_plural": "våningarna"
+      }
+    },
+    {
+      "word": "lägenhet",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "rum",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "hus",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "toalett",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "säng",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "stol",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "matta",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tavla",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "skåp",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "piano",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "telefon",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "soffa",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "fåtölj",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "bord",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tak",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "golv",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "vägg",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "dörr",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "fönster",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "gardin",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tidning",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "brev",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "penna",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "papper",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "ord",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "skola",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "lärare",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "fråga",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "svar",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "jobb",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "man",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kvinna",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "barn",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "pojke",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "flicka",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "hund",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "katt",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kopp",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "fat",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "glas",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "sked",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kniv",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "gaffel",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tallrik",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "affär",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kappa",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "klänning",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "expedit",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "mössa",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "väska",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "klocka",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "rock",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kostym",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "hatt",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "skjorta",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tröja",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "paraply",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "stad",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "gata",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "väg",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "park",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "sjö",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "skog",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "berg",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kyrka",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "station",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "polis",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "pass",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "adress",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "bil",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "hållplats",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "biljett",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "buss",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "cykel",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tåg",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "kontor",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "bank",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "krona",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "restaurang",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "smörgås",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "familj",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "pappa",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "mamma",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "syster",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "bror",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "son",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "dotter",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "fru",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "släkting",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "medicin",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "recept",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "läkare",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "apotek",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "tvål",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "äpple",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "träd",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "blomma",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "cigarett",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "paket",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "frimärke",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "nyckel",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "dag",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "natt",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "år",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "månad",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "vecka",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "timme",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    },
+    {
+      "word": "minut",
+      "gender": "",
+      "plural": "", "exception": false,
+      "translation": "",
+      "forms": {
+        "indefinite_singular": "",
+        "indefinite_plural": "",
+        "definite_singular": "",
+        "definite_plural": ""
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Node extends Component {
     render() {
         let renderedNodes = this.props.item.children.map((node) => <Node key={node.title} item={node}/>);
-        return <div className="node">{this.props.item.title}
+        return <div className="node"><span>{this.props.item.title}</span>
         <div className="tree">{renderedNodes}</div></div>
     }
 }

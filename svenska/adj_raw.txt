@@ -1,0 +1,49 @@
+å, ä, ö
+
+Vilket fint väder!
+Vilket hemkst väder!
+Vilket vackert väder!
+Vilket dåligt väder!
+
+Det är varmt idag.
+Det är svalt idag.
+Det är mulet idag.
+Det är soligt idag.
+Det är klart idag.
+Det är slaskigt idag.
+Det är halt idag.
+
+Det är vackert väder idag.
+Det är fult väder idag.
+Det är dåligt väder idag.
+
+Det regnar.
+Det snöar.
+Det blåser.
+
+Det är t
+Det är sol.
+
+Det är plus minus noll.
+Det är plus tio grader.
+Det är minus tio grader.
+
+Väderprognosen säget att ...
+Väderleksprognosen säget att ...
+
+måttlig vind
+västlig vind
+sydlig vind
+östlig vind
+nordlig vind
+
+Det blåser hart
+Det blåser mattligt
+Det blåser kallt
+
+Vilket oväder
+
+Det ösregnar
+
+Fint väder idag
+

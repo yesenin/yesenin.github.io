@@ -47,8 +47,8 @@
   \******************/
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(/*! /Users/yesenin/src/github/io/foo/app/index.jsx */1);
-	module.exports = __webpack_require__(/*! /Users/yesenin/src/github/io/foo/app/main.less */179);
+	__webpack_require__(/*! D:\src\github\yesenin.github.io\foo\app/index.jsx */1);
+	module.exports = __webpack_require__(/*! D:\src\github\yesenin.github.io\foo\app/main.less */179);
 
 
 /***/ },
@@ -23064,7 +23064,7 @@
 	        children = _props.children;
 	
 	
-	    !history.getCurrentLocation ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v4.x or v2.x ' + 'and earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please change to history v3.x.') : (0, _invariant2.default)(false) : void 0;
+	    !history.getCurrentLocation ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v2.x or ' + 'earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please upgrade to history v3.x.') : (0, _invariant2.default)(false) : void 0;
 	
 	    return (0, _createTransitionManager3.default)(history, (0, _RouteUtils.createRoutes)(routes || children));
 	  },

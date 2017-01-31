@@ -50,6 +50,7 @@ main section {
   border-radius: 5px;
   margin: 5px;
   background-color: red;
+  cursor: pointer;
 }
 
 .note {
@@ -65,12 +66,10 @@ main section {
 
 .tree {
   margin-left: 10px;
+  border-left: 1px solid black;
+  
 }
 
-.node::before {
-  content: '';
-  width: 1px;
-  background-color: black;
-  height: 100%;
-
+.node {
+  padding-left: 5px;
 }
