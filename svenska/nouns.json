@@ -1132,7 +1132,7 @@
     },
     {
       "word": "recept",
-      "gender": "et",
+      "gender": "ett",
       "plural": "5", "exception": false,
       "translation": "рецепт",
       "forms": {
@@ -1148,9 +1148,9 @@
       "plural": "", "exception": false,
       "translation": "врач",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en läkare",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "läkaren",
         "definite_plural": ""
       }
     },
@@ -1160,9 +1160,9 @@
       "plural": "", "exception": false,
       "translation": "аптека",
       "forms": {
-        "indefinite_singular": "",
-        "indefinite_plural": "",
-        "definite_singular": "",
+        "indefinite_singular": "ett apotek",
+        "indefinite_plural": "apotek",
+        "definite_singular": "apoteket",
         "definite_plural": ""
       }
     },
@@ -1172,9 +1172,9 @@
       "plural": "", "exception": false,
       "translation": "суп",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en tvål",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "tvålen",
         "definite_plural": ""
       }
     },
@@ -1184,21 +1184,21 @@
       "plural": "", "exception": false,
       "translation": "яблоко",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "ett äpple",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "äpplet",
         "definite_plural": ""
       }
     },
     {
       "word": "träd",
       "gender": "ett",
-      "plural": "", "exception": false,
+      "plural": "5", "exception": false,
       "translation": "дерево",
       "forms": {
-        "indefinite_singular": "",
-        "indefinite_plural": "",
-        "definite_singular": "",
+        "indefinite_singular": "ett träd",
+        "indefinite_plural": "träd",
+        "definite_singular": "trädet",
         "definite_plural": ""
       }
     },
@@ -1208,9 +1208,9 @@
       "plural": "", "exception": false,
       "translation": "цветок",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en blomma",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "blomman",
         "definite_plural": ""
       }
     },
@@ -1220,21 +1220,21 @@
       "plural": "", "exception": false,
       "translation": "сигарета",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en cigarett",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "cigaretten",
         "definite_plural": ""
       }
     },
     {
       "word": "paket",
       "gender": "ett",
-      "plural": "", "exception": false,
+      "plural": "5", "exception": false,
       "translation": "посылка",
       "forms": {
-        "indefinite_singular": "",
-        "indefinite_plural": "",
-        "definite_singular": "",
+        "indefinite_singular": "ett paket",
+        "indefinite_plural": "paket",
+        "definite_singular": "paketet",
         "definite_plural": ""
       }
     },
@@ -1244,9 +1244,9 @@
       "plural": "", "exception": false,
       "translation": "почтовая марка",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "ett ",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "frimärket",
         "definite_plural": ""
       }
     },
@@ -1256,9 +1256,9 @@
       "plural": "", "exception": false,
       "translation": "ключ",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en nyckel",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "nyckeln",
         "definite_plural": ""
       }
     },
@@ -1268,9 +1268,9 @@
       "plural": "", "exception": false,
       "translation": "день",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en dag",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "dagen",
         "definite_plural": ""
       }
     },
@@ -1280,21 +1280,21 @@
       "plural": "", "exception": false,
       "translation": "ночь",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en natt",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "natten",
         "definite_plural": ""
       }
     },
     {
       "word": "år",
       "gender": "ett",
-      "plural": "", "exception": false,
+      "plural": "5", "exception": false,
       "translation": "год",
       "forms": {
-        "indefinite_singular": "",
-        "indefinite_plural": "",
-        "definite_singular": "",
+        "indefinite_singular": "ett år",
+        "indefinite_plural": "år",
+        "definite_singular": "året",
         "definite_plural": ""
       }
     },
@@ -1304,21 +1304,21 @@
       "plural": "", "exception": false,
       "translation": "месяц",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en månad",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "månaden",
         "definite_plural": ""
       }
     },
     {
       "word": "vecka",
       "gender": "en",
-      "plural": "", "exception": false,
+      "plural": "1", "exception": false,
       "translation": "неделя",
       "forms": {
-        "indefinite_singular": "",
-        "indefinite_plural": "",
-        "definite_singular": "",
+        "indefinite_singular": "en vecka",
+        "indefinite_plural": "veckor",
+        "definite_singular": "veckan",
         "definite_plural": ""
       }
     },
@@ -1328,9 +1328,9 @@
       "plural": "", "exception": false,
       "translation": "час",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en timme",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "timmen",
         "definite_plural": ""
       }
     },
@@ -1340,9 +1340,9 @@
       "plural": "", "exception": false,
       "translation": "минута",
       "forms": {
-        "indefinite_singular": "",
+        "indefinite_singular": "en minut",
         "indefinite_plural": "",
-        "definite_singular": "",
+        "definite_singular": "minuten",
         "definite_plural": ""
       }
     }

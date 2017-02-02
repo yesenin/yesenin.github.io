@@ -1,0 +1,54 @@
+Å, Ä, Ö, å, ä, ö
+Ex. Det finns ett land i Europa som heter Sverige.
+1. Det finns ett landskap i Sverige (i landet) som heter Uppland.
+2. Det finns en stad i Uppland (i landskapet) som heter Uppsala.
+3. Det finns en gata i Uppsala (i staden) som heter Sjukhusevägen.
+4. Det finns ett sjukhus på Sjukhusevägen (på gatan) som heter Akademiska sjukhuset.
+5. Det finns en avdelning på sjukhuset som heter Kirurgen.
+6. Det finns en sal på avdelningen som heter Sal 4.
+7. Det ligger en patient i salen som heter Karlsson.
+
+Ex. I Europa finns det ett land som heter Sverige.
+1. I Sverige (I landet) finns det ett landskap som heter Uppland.
+2. I Uppland (I landskapet) finns det en stad som heter Uppsala.
+3. I Uppsala (I staden) finns det en gata som heter Sjukhusevägen.
+4. På Sjukhusevägen (På gatan) finns det ett sjukhus som heter Akademiska sjukhuset.
+5. På sjukhuset finns det en avdelning som heter Kirurgen.
+6. På avdelningen finns det en sal som heter Sal 4.
+7. I salen finns det en patient som heter Karlsson.
+
+Какая у тебя замечательная квартира!
+Vad fin har du lägenheten!
+
+Да, она недурна, но слишком дорога.
+Ja, den är ful inte, men den är mycket dyr.
+
+Да-а, а какая у тебя квартплата?
+Jaha, och vilken hura för du?
+
+8000 крон в месяц.
+Den är 8 tysen kronor i månaden
+
+А сколько у тебя комнат?
+Hur monga lägenheter har du?
+
+Три комнаты и кухня.
+Tre lägenheter och ett kök.
+
+А у меня только однокомнатная квартира.
+Och jag har bara en ettrumslägenhet.
+
+Да, но у меня еще и сын.
+Jaså, men jag har en son.
+
+А-а, а сколько ему лет?
+Jaha, och hur gammal han?
+
+Пять.
+Fem.
+
+Ты замужем?
+Är du gift?
+
+Нет, я в разводе.
+Nej, det är jag inte, jag är skild (ogift).
