@@ -1,4 +1,6 @@
 Å, Ä, Ö, å, ä, ö
+
+Övning 1
 Ex. Det finns ett land i Europa som heter Sverige.
 1. Det finns ett landskap i Sverige (i landet) som heter Uppland.
 2. Det finns en stad i Uppland (i landskapet) som heter Uppsala.
@@ -17,6 +19,21 @@ Ex. I Europa finns det ett land som heter Sverige.
 6. På avdelningen finns det en sal som heter Sal 4.
 7. I salen finns det en patient som heter Karlsson.
 
+Övning 2
+Ex. Vad har du för adress?
+1. Vad har du för telefonnummer?
+2. Vad har du för bostad?
+3. Vad har du för arbete?
+4. Vad har du för bil?
+5. Vad har du för problem?
+Ex. Vad röker du för cigaretter?
+6. Vad läser du för tidningar?
+7. Vad sjunger du för visor?
+8. Vad tycker om du för musik?
+9. Vad träffar du för vänner?
+10. Vad talar du för språk?
+
+Övning 3
 Какая у тебя замечательная квартира!
 Vad fin har du lägenheten!
 
@@ -51,4 +68,21 @@ Fem.
 Är du gift?
 
 Нет, я в разводе.
-Nej, det är jag inte, jag är skild (ogift).
+Nej, det är jag inte, jag är skild (ell ogift?).
+
+
+Övning 8
+1. Patrik gillar godis. Патрик любит конфеты.
+2. Paketet måste Peter hämta på posten. Посылку должен Петер забрать на почте.
+3. Anna vill aldrig dricka vin. Анна никогда не хочет пить вино.
+4. I pressbyrån kan inte man köpa medicin. В газетном киоске не может человек купить лекарство. 
+5. Kaffe dricker jag ofta i köket. Кофе пьюя я часто на кухне.
+6. Lena röker inte hemma. Лена не курит дома.
+7. Min bill ska jag hämta på fredag. Мою машину я собираюсь забрать в пятницу.
+8. Man måste deklarera sin inkomst varje år. Человек должен декларировать свои доходы каждый год.
+9. På söndagarna behöver inte jag läsa läxor. По воскресеньям мне не нужно делать задания.
+10. Han spelar alltid fotboll på sommaren. Он всегда играет в футбол летом.
+11. I staden har de ett hus. В городе у них есть автобус.
+12. I efternamn heter han Bergman. По фамилии он Бергман.
+13. I bokhandeln finns det mångo bra böcker. В книжном магазине есть много хороших книг.
+14. Det hanger en tavla på väggen. На стене висит картина.
