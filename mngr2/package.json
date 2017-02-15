@@ -1,0 +1,21 @@
+{
+  "name": "mngr2",
+  "version": "0.0.1",
+  "description": "Notes manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "Anton Yesenin",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^0.9.0"
+  }
+}

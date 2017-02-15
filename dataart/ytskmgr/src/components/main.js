@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Menu from './main/menu.js'
 import Tree from './main/tree.js'
-import Content from './main/content.js'
+//import Content from './main/content.js'
 
 class Main extends Component {
   render() {
@@ -10,7 +10,6 @@ class Main extends Component {
       <main>
         <Menu />
         <Tree />
-        <Content />
       </main>
     );
   }
