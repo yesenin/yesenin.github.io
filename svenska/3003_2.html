@@ -58,6 +58,16 @@
 					bar = '<p>' + bar.join('') + '</p>';
 					content += bar;
 				}
+			} else if (location.hash === '#s') {
+				for (var i in text.lines) {
+					var foo = text.lines[i].split('.');
+					var bar = foo.map(function(word) {
+						var style = 'word hide';
+						return '<span class="' + style + '">' + word + '</span>.';
+					});
+					bar = '<p>' + bar.join('') + '</p>';
+					content += bar;
+				}
 			} else {
 				for (var i in text.lines) {
 					var foo = text.lines[i].split(' ');
