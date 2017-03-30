@@ -42,19 +42,32 @@
 		]}
 		
 		window.onload = function(){
+		
 			var content = '';
-			for (var i in text.lines) {
-				var foo = text.lines[i].split(' ');
-				var bar = foo.map(function(word) {
-					if (word == '—') return word;
-					var isHidden = Math.random() > 0.7 ? ' hide' : '';
-					var style = 'word' + isHidden;
-					return '<span class="' + style + '">' + word + '</span>';
-				});
-				bar = '<p>' + bar.join('') + '</p>';
-				content += bar;
+			if (location.hash === '') {
+				for (var i in text.lines) {
+					var foo = text.lines[i].split(' ');
+					var bar = foo.map(function(word) {
+						var isHidden = Math.random() > 0.7 ? ' hide' : '';
+						var style = 'word' + isHidden;
+						return '<span class="' + style + '">' + word + '</span>';
+					});
+					bar = '<p>' + bar.join('') + '</p>';
+					content += bar;
+				}
+			} else {
+				for (var i in text.lines) {
+					var foo = text.lines[i].split(' ');
+					var bar = foo.map(function(word) {
+						var style = 'word';
+						return '<span class="' + style + '">' + word + '</span>';
+					});
+					bar = '<p>' + bar.join('') + '</p>';
+					content += bar;
+				}
 			}
 			document.getElementById('text').innerHTML = content;
+			
 		}
 	</script>
 </body>
