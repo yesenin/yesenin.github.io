@@ -1,17 +1,61 @@
 <html>
+<head>
+	<style>
+		body {
+			font-size: 14pt;
+		}
+		#text {
+			width: 500px;
+		}
+		.word {
+			margin: 1px 2px;
+			display: inline-block;
+			padding: 2px;
+		}
+		.hide {
+			color: white;
+			border: 1px black solid;
+		}
+		.hide:hover {
+			color: blue;
+		}
+	</style>
+</head>
 <body>
-	<p>Familjen Malmsjö ser en annons om en vpning att hyra. Herr Malmsjö ringer:</p>
-<p>&mdash; Goddag. Det är med anledning av annonsen om våning. Är vpningen upptagen?</p>
-<p>&mdash; Nej, den är ledig. Jag ska åka till England och stanna där ett år, så jag vill hyra ut våningen.</p>
-<p>&mdash; Jaha.</p>
-<p>&mdash; Det är två stora rum och ett litet rum, ett kök och ett badrum. Det är en bra våning!</p>
-<p>&mdash; Det låter bra. Hur stor är hyran?</p>
-<p>&mdash; 7000 kronor för ett år. Har ni några barn?</p>
-<p>&mdash; Ja, vi har två flickor en är ett år och en är fem år. Jag skulle gärna vilja se våningen. Passar det idag?</p>
-<p>&mdash; Ja, det passar bra. Kan ni komma klockan fyra?</p>
-<p>&mdash; Det går bra. Mitt namn är Malmsjö.</p>
-<p>&mdash; Jag heter Frosberg. Adressen är Kyrkvägen, 17, tre tappor. Ni är välkommen klockan fyra.</p>
-<p>&mdash; Ja tack. Adjö, adjö.</p>
-<p>&mdash; Adjö.</p>
+	<div id="text">
+	</div>
+	<script>
+		var text = { lines: [
+			"Familjen Malmsjö ser en annons om en vpning att hyra. Herr Malmsjö ringer:",
+			"— Goddag. Det är med anledning av annonsen om våning. Är vpningen upptagen?",
+			"— Nej, den är ledig. Jag ska åka till England och stanna där ett år, så jag vill hyra ut våningen.",
+			"— Jaha.",
+			"— Det är två stora rum och ett litet rum, ett kök och ett badrum. Det är en bra våning!",
+			"— Det låter bra. Hur stor är hyran?",
+			"— 7000 kronor för ett år. Har ni några barn?",
+			"— Ja, vi har två flickor en är ett år och en är fem år. Jag skulle gärna vilja se våningen. Passar det idag?",
+			"— Ja, det passar bra. Kan ni komma klockan fyra?",
+			"— Det går bra. Mitt namn är Malmsjö.",
+			"— Jag heter Frosberg. Adressen är Kyrkvägen, 17, tre tappor. Ni är välkommen klockan fyra.",
+			"— Ja tack. Adjö, adjö.",
+			"— Adjö."
+		]}
+		
+		window.onload = function(){
+			var content = '';
+			for (var i in text.lines) {
+				var foo = text.lines[i].split(' ');
+				var bar = foo.map(function(word) {
+					if (word == '—') return word;
+					var isHidden = Math.random() > 0.7 ? ' hide' : '';
+					var style = 'word' + isHidden;
+					return '<span class="' + style + '">' + word + '</span>';
+				});
+				bar = '<p>' + bar.join('') + '</p>';
+				content += bar;
+			}
+			document.getElementById('text').innerHTML = content;
+		}
+	</script>
 </body>
 </html>

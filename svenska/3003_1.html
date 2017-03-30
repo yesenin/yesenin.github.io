@@ -1,6 +1,49 @@
 <html>
+<head>
+<style>
+		body {
+			font-size: 14pt;
+		}
+		#text {
+			width: 500px;
+		}
+		.word {
+			margin: 1px 2px;
+			display: inline-block;
+			padding: 2px;
+		}
+		.hide {
+			color: white;
+			border: 1px black solid;
+		}
+		.hide:hover {
+			color: blue;
+		}
+	</style>
+</head>
 <body>
-	<p>Ulla Nilsson är tjugo år. Hon har en lägenhet på ett rum och kök. Hon arbetar på ett sjukhus. Hon börjar kl 8 och slutar kl 5. Hon tjänar 2300 kronor i månaden. Hon sparar till en Mallorcaresa. En resa till Mallorca kostar 400 kronor.</p>
-	<p>1935 var Ulas mamma rjugo år. Hon hade ingen lägenhet, bara ett rum. Hon arbetade också på ett sjukhus. Hon började halv 7 och slutade halv 6. Hon tjänade 75 kronor i månaden. Hon sparade till en kappa. En kappa kostade 1935 40 kronor.</p>
+	<div id="text">
+	</div>
+	<script>
+		var text = { lines: [
+			"Ulla Nilsson är tjugo år. Hon har en lägenhet på ett rum och kök. Hon arbetar på ett sjukhus. Hon börjar kl 8 och slutar kl 5. Hon tjänar 2300 kronor i månaden. Hon sparar till en Mallorcaresa. En resa till Mallorca kostar 400 kronor.",
+			"1935 var Ulas mamma rjugo år. Hon hade ingen lägenhet, bara ett rum. Hon arbetade också på ett sjukhus. Hon började halv 7 och slutade halv 6. Hon tjänade 75 kronor i månaden. Hon sparade till en kappa. En kappa kostade 1935 40 kronor."
+		]}
+		
+		window.onload = function(){
+			var content = '';
+			for (var i in text.lines) {
+				var foo = text.lines[i].split(' ');
+				var bar = foo.map(function(word) {
+					var isHidden = Math.random() > 0.7 ? ' hide' : '';
+					var style = 'word' + isHidden;
+					return '<span class="' + style + '">' + word + '</span>';
+				});
+				bar = '<p>' + bar.join('') + '</p>';
+				content += bar;
+			}
+			document.getElementById('text').innerHTML = content;
+		}
+	</script>
 </body>
 </html>
