@@ -73,10 +73,13 @@
 	i {
 		display: inline-block;
 		heigh: auto;
-		padding: 0 10px;
 		min-width: 50px;
 		color: #3399ff;
 		font-style: normal;
+		border-bottom: 2px solid black;
+	}
+	i.open {
+		border-bottom: none;
 	}
 </style>
 </head>
@@ -97,8 +100,8 @@
 </div>
 <script>
 	var data = [
-		{'q': 'Kan du öppna dörr <i id="a"></i> rummet?', 'a': 'till'},
-		{'q': 'Vad tittar du <i id="a"></i>?', 'a': 'på'}
+		{'q': 'Kan du öppna dörr # rummet?', 'a': 'till'},
+		{'q': 'Vad tittar du #?', 'a': 'på'}
 	]
 	var answer = '';
 	var allOption = ['i', 'om', 'till', 'på'];
@@ -107,7 +110,7 @@
 		document.getElementById('answer').className = '';
 		var q = Math.floor(Math.random() * data.length);
 		answer = data[q]['a'];
-		document.getElementById('question').innerHTML = data[q]['q'];
+		document.getElementById('question').innerHTML = data[q]['q'].replace('#', '<i id="a"></i>');
 		var options = [answer];
 		var op1 = Math.floor(Math.random() * allOption.length);
 		while(options.indexOf(allOption[op1]) >= 0) {
@@ -135,6 +138,7 @@
 			document.getElementById('answer').className = 'wrong';
 		}
 		document.getElementById('a').innerHTML = answer;
+		document.getElementById('a').className = 'open';
 	}
 	
 	function shuffle(a) {
