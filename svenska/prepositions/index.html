@@ -155,10 +155,44 @@
 		{"q": "En resa # England kostar 1000 kronor", "a": "till"},
 		{"q": "Hon sparar # en kappa", "a": "till"},
 		{"q": "Hon arbetar # ett sjukhus", "a": "på"},
+		{"q": "Han bor # Stockholm", "a": "i"},
+		{"q": "Ska vi träffas # Eremitaget klockan elva", "a": "vid"},
+		{"q": "Jag har en lägenhet # två rum och kök", "a": "på"},
+		{"q": "Karin arbetar # en affär", "a": "i"},
+		{"q": "De bor # Kungsgatan", "a": "på"},
+		{"q": "Anna är hemma # dagarna", "a": "på"},
+		{"q": "Stugan ligger # en stor sjö", "a": "vid"},
+		{"q": "Vi pratar inte # politik", "a": "om"},
+		{"q": "Jag har ont # hjärtat", "a": "i"},
+		{"q": "Kan jag få prata # doktor Ek", "a": "med"},
+		{"q": "Här är ett recept # hjärtmedicin", "a": "på"},
+		{"q": "John spelar # piano", "a": "_"},
+		{"q": "Det ringer # telefonen", "a": "på"},
+		{"q": "De har en dotter # fem år", "a": "på"},
+		{"q": "Spelar du # gitarr?", "a": "_"},
+		{"q": "Han arbetar # ett sjukhus och hans svåger arbetar i en litten affär", "a": "på"},
+		{"q": "Han arbetar på ett sjukhus och hans svåger arbetar # en litten affär", "a": "i"},
+		{"q": "Mats kan inte svara, han talar # chefen just nu", "a": "med"},
+		{"q": "Vem väntar ni #?", "a": "på"},
+		{"q": "Tomas dricker allted vatten # maten", "a": "till"},
+		{"q": "Vad tittar du # hela tiden?", "a": "på"},
+		{"q": "Har ni någon kurs # svenska?", "a": "i"},
+		{"q": "Hurdags brukar du komma hem # jobbet?", "a": "till"},
+		{"q": "Är du inte glad # det?", "a": "över"},
+		{"q": "Det ligger en vacker kyrka # andra sidan vid gatan", "a": "på"},
+		{"q": "Det ligger en vacker kyrka på andra sidan # gatan", "a": "vid"},
+		{"q": "Det här är en karta # en stad i Sverige", "a": "över"},
+		{"q": "Det här är en karta över en stad # Sverige", "a": "i"},
+		{"q": "Vem går till sängs före kl. 12 # natten?", "a": "på"},
+		{"q": "Vem stiger upp först # familjen?", "a": "i"},
+
+
+		
 	]
+	//{"q": "", "a": ""},
 	var isAnswered = false;
 	var answer = '';
-	var allOption = ['i', 'om', 'till', 'på'];
+	var allOption = ['i', 'om', 'till', 'på', 'vid', 'för', 'från', 'med', '_'];
 	var nextQuestion = function() {
 		isAnswered = false;
 		document.getElementById('answer').innerHTML = '';
