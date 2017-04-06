@@ -1,0 +1,116 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+<style>
+	body {
+			font-family: 'PT Serif', serif;
+		}
+		
+	.table {
+		margin: 50px 0;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 30pt;
+	}
+	
+	.header {
+		display: table-header-group;
+	}
+	.header-item {
+		display: table-cell;
+		width: 150px;
+		font-size: 22pt;
+		text-align: center;
+		color: grey;
+		padding: 10px;
+		border-bottom: 1px black solid;
+	}
+	.content {
+		display: table-row;
+	}
+	.content-item {
+		display: table-cell;
+		width: 150px;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.hidden {
+		opacity: 0;
+	}
+	
+	.button-wrapper {
+			text-align: center;
+			margin: 10px 0;
+		}
+		.button {
+			display: inline-block;
+			width: 300px;
+			font-size: 30pt;
+			padding: 20px;
+			background-color: #3399ff;
+			color: white;
+			cursor: pointer;
+		}
+
+
+</style>
+</head>
+<body>
+	<div class="table">
+		<div class="header">
+			<div class="header-item">infinitiv</div>
+			<div class="header-item">presens</div>
+			<div class="header-item">preteritum</div>
+			<div class="header-item">supinum</div>
+		</div>
+		<div class="content">
+			<div id="infinitiv" class="content-item"></div>
+			<div id="presens" class="content-item"></div>
+			<div id="preteritum" class="content-item"></div>
+			<div id="supinum" class="content-item"></div>
+		</div>
+	</div>
+	<div class="button-wrapper" id="showButton" style="display: block;">
+			<span class="button" onclick="showAnswer()">Visa</span>
+		</div>
+	<div class="button-wrapper">
+			<span class="button" onClick="makeTable()">Nästa</span>
+		</div>
+
+<script>
+	var data = {"verbs":[{"infinitiv":"göra","presens":"gör","preteritum":"gjorde","supinum":"gjort","translation":"делать"},{"infinitiv":"vara","presens":"är","preteritum":"var","supinum":"varit","translation":"быть"},{"infinitiv":"finnas","presens":"finns","preteritum":"fanns","supinum":"funnits","translation":"находиться"},{"infinitiv":"ha","presens":"har","preteritum":"hade","supinum":"haft","translation":"иметь"},{"infinitiv":"ta","presens":"tar","preteritum":"tog","supinum":"tagit","translation":"брать"},{"infinitiv":"komma","presens":"kommer","preteritum":"kom","supinum":"kommit","translation":"приходить"},{"infinitiv":"gå","presens":"går","preteritum":"gick","supinum":"gått","translation":"идти"},{"infinitiv":"dricka","presens":"dricker","preteritum":"drack","supinum":"druckit","translation":"пить"},{"infinitiv":"äta","presens":"äter","preteritum":"åt","supinum":"ätit","translation":"есть"},{"infinitiv":"se","presens":"ser","preteritum":"såg","supinum":"sett","translation":"видеть"},{"infinitiv":"ge","presens":"ger","preteritum":"gav","supinum":"gett","translation":"давать"},{"infinitiv":"springa","presens":"springer","preteritum":"sprang","supinum":"sprungit","translation":"бежать"},{"infinitiv":"stiga","presens":"stiger","preteritum":"steg","supinum":"stigit","translation":"вставать"},{"infinitiv":"skriva","presens":"skriver","preteritum":"skrev","supinum":"skrivit","translation":"писать"}]};
+	
+	var options = ["infinitiv", "presens", "preteritum", "supinum"];
+	
+	var showAll = function() {
+		document.getElementById('infinitiv').style.opacity = "1";
+		document.getElementById('presens').style.opacity = "1";
+		document.getElementById('preteritum').style.opacity = "1";
+		document.getElementById('supinum').style.opacity = "1";
+	}
+	
+	var showAnswer = function() {
+		showAll();
+	}
+	
+	var makeTable = function() {
+		var v = Math.floor(Math.random() * data['verbs'].length);
+		var a = Math.floor(Math.random() * options.length);
+		document.getElementById('infinitiv').innerHTML = data.verbs[v].infinitiv;
+		document.getElementById('presens').innerHTML = data.verbs[v].presens;
+		document.getElementById('preteritum').innerHTML = data.verbs[v].preteritum;
+		document.getElementById('supinum').innerHTML = data.verbs[v].supinum;
+		showAll();
+		document.getElementById(options[a]).style.opacity ='0';
+	}
+	
+	window.onload = function() {
+		makeTable();
+	}
+
+</script>
+</body>
+</html>
