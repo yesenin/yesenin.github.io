@@ -1,0 +1,471 @@
+kursen,the course
+tuben,the tube
+tröjan,the sweater / jumper
+byggnaden,the building
+skidan,the ski
+kvinnan,the woman
+världen,the world
+pausen,the break
+läkaren,the doctor
+frukosten,the breakfast
+vintern,the winter
+djuret,the animal
+abonnemanget,the subscription
+tandläkaren,the dentist
+döden,the death
+läraren,the teacher
+aprikosen,the apricot
+druvan,the grape
+hösten,the autumn
+telefonen,the telephone
+byn,the village
+partiet,the part / the party (political)
+asken,the (small) box
+brodern,the brother
+landet,the country
+dansen,the dance
+ananasen,the pineapple
+programmet,the programme
+barnet,the child
+tiggaren,the beggar
+presenten,the present
+fabriken,the factory
+dataspelet,the computer game
+skinkan,the ham
+bordet,the table
+släkten,the family / relatives
+parken,the park
+älgen,the elk
+paketet,the package
+restaurangen,the restaurant
+klockan,the clock / the watch
+året,the year
+golvet,the floor
+fastern,the (paternal) aunt
+tidningen,the newspaper
+benet,the leg
+brottet,the crime
+kusinen,the cousin
+gitarren,the guitar
+bussen,the bus
+flaskan,the bottle
+datorn,the computer
+bananen,the banana
+puben,the pub
+väskan,the bag
+våren,the spring (season)
+helgen,the weekend
+dagen,the day
+föräldern,the parent
+paprikan,the pepper (bell)
+företaget,the business
+lunchen,the lunch
+huset,the house
+gurkan,the cucumber
+sonen,the son
+flygplatsen,the airport
+namnet,the name
+arbetet,the job
+pojken,the boy
+telefonkortet,the phone card
+ölet,the beer
+apelsinen,the orange
+ordet,the word
+dörren,the door
+kiosken,the kiosk
+väninnan,the female friend
+meningen,the opinion / sentence / meaning
+teveprogrammet,the TV program
+grillningen,the barbecue
+kexet,the biscuit
+kartan,the map
+veckan,the week
+experimentet,the experiment
+vampyren,the vampire
+pianot,the piano
+sommaren,the summer
+täcket,the cover / sheet
+pirogen,the pastry
+mannen,the man
+teven,the TV
+radion,the radio
+fotbollen,the football
+hyllan,the shelf
+purjolöken,the leek
+resan,the trip / journey
+mejlet,the email
+systern,the sister
+bläckfisken,the octopus
+turneringen,the tournament
+rummet,the room
+päronet,the pear
+kollegan,the colleague
+strutsfarmen,the ostrich farm
+välgörenhetsorganisationen,the charity
+biljetten,the ticket
+bilden,the image
+kompisen,the buddy / mate
+biblioteket,the library
+äpplet,the apple
+gänget,the gang
+saken,the thing
+tuggummit,the chewing gum
+mostern,the (maternal) aunt
+timmen,the hour
+kameran,the camera
+syskonet,the sibling
+tomaten,the tomato
+vännen,the friend
+konserten,the concert
+fotot,the photo
+pensionären,the pensioner
+kanelbullen,the cinnamon bun
+burken,the can / pot / jar
+annonsen,the advertisement
+bilen,the car
+MP3-spelaren,The MP3 player
+påsen,the plastic bag
+mobilen,the mobile phone
+flickan,the girl
+filten,the blanket / rug
+boken,the book
+bion,the cinema
+spegeln,the mirror
+tåget,the train
+frun,the woman / the wife
+yrket,the profession
+fisken,the fish
+människan,the person
+natten,the night
+middagen,the dinner
+stugan,the cabin / cottage
+farbrorn,the (paternal) uncle
+våldet,the violence
+tältet,the tent
+laxen,the salmon
+soffan,the sofa
+gymet,the gym / health centre
+målet,the objective / goal
+innehållet,the content / substance
+provet,the test / exam
+modersmålet,the mother tongue / native language
+valet,the election
+riksdagen,the parliament
+personalen,the staff
+förrätten,the starter / entre
+miljön,the surroundings / scene
+vitlöken,the garlic
+stycket,the piece / unit
+dricksen,the tip
+kakan,the cookie
+tårtan,the cake
+notan,the bill
+kvittot,the receipt
+kryddan,the spice
+snabbmaten,the fast food
+överraskningen,the surprise
+menyn,the menu
+smaklöken,the taste bud
+beställningen,the order / reservation
+hummern,the lobster
+huvudet,the head
+huvudrätten,the main course
+efterrätten,the dessert course
+servitrisen,the waitress
+sädesslaget,the cereal
+havren,the oats
+kornet,the barley
+rågen,the rye
+palsternackan,the parsnip
+hjortronet,the cloudberry
+färskpotatisen,the new potato
+kon,the cow
+ättikan,the vinegar
+havet,the sea
+smaken,the taste
+guldet,the gold
+huvudsatsen,the main clause
+bisatsen,the secondary clause
+sängen,the bed
+leken,the game
+uppmaningen,the order / request
+korven,the sausage
+läxan,the task / homework
+uppfinningen,the invention
+forskaren,the researcher / boffin
+straffsparken,the penalty kick
+månen,the moon
+programledaren,the TV presenter
+skådespelaren,the actor
+läkemedlet,the drug (pharmaceutical)
+mötet,the meeting
+chefen,the boss
+planet,the plane
+berättelsen,the story
+målaren,the painter
+bröllopet,the wedding (b)
+hjärtat,the heart
+pajen,the pie
+bastun,the sauna
+fotbollsplanen,the football pitch / ground
+djurparken,the zoo
+stjärnan,the star
+mössan,the hat / cap
+strumpan,the sock
+kappan,the (woman&#39;s) coat
+kostymen,the suit
+skjortan,the shirt
+kjolen,the skirt
+färgen,the colour
+ögat,the eye
+konstnären,the artist
+ön,the island
+utbildningen,the education / training
+egenskapen,the quality / capacity / attribute
+mottagningen,the reception
+förtroendet,the faith
+tunnelbanan,the subway
+spårvagnen,the tram
+motionen,the exercise
+lappen,the note
+bryggan,the pier
+utlänningen,the foreigner
+läppen,the lip
+luften,the air
+ljudet,the sound / noise
+regeringen,the government
+ytan,the surface / area
+träet,the wood
+trädet,the tree
+delen,the part / section
+valutan,the currency
+myntet,the coin
+makten,the power
+valen,the whale
+tåren,the tear
+kinden,the cheek
+skärmen,the screen / monitor
+sladden,the lead / cable
+tangentbordet,the keyboard (computer)
+utropstecknet,the exclamation mark
+frågetecknet,the question mark
+punkten,the point / full stop
+musen,the mouse
+mappen,the folder / file
+utvecklingen,the development
+missförståndet,the misunderstanding
+uppträdandet,the performance
+olyckshändelsen,the accident
+svärmodern,the mother-in-law
+fläcken,the spot
+känningen,the feeling
+godkännandet,the approval
+nätet,the net / internet
+förbundskaptenen,the manager (sport)
+landslaget,the national team
+brickan,the tray
+upplevelsen,the experience
+räkan,the shrimp
+jordgubben,the strawberry
+melonen,the melon
+cykeln,the bicycle
+dottern,the daughter
+morgonen,the morning
+nyckeln,the key
+semestern,the holiday / vacation
+teatern,the theater
+foten,the foot
+handen,the hand
+museet,the museum
+staden,the city
+tanden,the tooth
+örat,the ear
+fönstret,the window
+hemmet,the home
+taket,the roof; the ceiling
+lampan,the lamp
+skåpet,the closet / cupboard
+mattan,the carpet
+väggen,the wall
+gardinen,the curtain
+tavlan,the picture / painting / board
+fåtöljen,the armchair
+växten,the plant
+krukväxten,the potted plant
+tvättstugan,the laundry room
+badrummet,the bathroom
+badet,the bath
+köket,the kitchen
+toaletten,the toilet
+ögonblicket,the moment / instant
+insatsen,the effort / stake
+myndigheten,the majority / authority
+förvaltningen,the administration / management
+tvångsomhändertagandet,the forced legal restraint
+domen,the verdict / judgement
+konflikten,the conflict
+tillfället,the occasion / moment
+bostaden,the home
+tillståndet,the state / condition
+dygnet,the day (24 hour period)
+rytmen,the rhythm
+hälsan,the health
+insikten,the insight
+bedömningen,the estimate / assessment
+festen,the party
+skuggan,the shadow / shade
+satsningen,the venture / commitment
+bidraget,the contribution / allowance
+studiebidraget,the student grant
+minskningen,the reduction / decrease
+förslaget,the proposal
+försörjningen,the support / maintenance
+tvånget,the coercion / force
+ansvaret,the responsibility
+ansiktet,the face
+varvet,the circuit
+segern,the victory
+trycket,the pressure
+underlaget,the basis / foundation
+skottet,the shot
+stolpen,the post / pole
+förändringen,the change / transformation
+ovädret,the storm
+orkanen,the hurricane
+översvämningen,the flood
+skadan,the injury / damage
+vinsten,the prize / profit
+medborgaren,the citizen
+borgmästaren,the mayor
+kusten,the coast
+fuskaren,the cheat
+bedragaren,the fraudster
+bedrägeriet,the fraud
+oljan,the oil
+bolaget,the company (b)
+strömmen,the stream / electric current
+detaljen,the detail
+molnet,the cloud
+vinden,the wind
+förmågan,the ability
+invånaren,the inhabitant
+skärgården,the archipelago
+branden,the fire (uncontrolled)
+förlossningen,the birth / delivery
+skillnaden,the difference
+underhållningen,the entertainment
+motsatsen,the opposite
+gruvan,the mine
+framsteget,the progress
+uttalet,the pronounciation
+området,the area
+lösningen,the solution
+betydelsen,the meaning / significance
+omdömet,the judgement / opinion
+snickaren,the carpenter
+berget,the mountain / hill (b)
+fjället,the mountain (f)
+älven,the river
+vanan,the habit
+skräpet,the junk / trash
+uttrycket,the expression
+kunskapen,the knowledge
+helgonet,the saint
+ägaren,the owner
+fördelen,the benefit / advantage
+nackdelen,the disadvantage
+rubriken,the headline
+kaninen,the rabbit
+husdjuret,the pet
+verksamheten,the operation / activity
+lexikonet,the dictionary
+riksdagsledamoten,the member of parliament
+landstinget,the county council
+sjukvården,the public health institute
+samhället,the society / community
+åsikten,the opinion / view
+kärnkraften,the nuclear power
+elden,the fire (controlled)
+inställningen,the attitude
+behandlingen,the treatment
+kolet,the coal / carbon
+friheten,the freedom
+orättvisan,the injustice
+lagen,the law
+laget,the team
+regeln,the rule
+samtalet,the discussion / conversation
+åklagaren,the prosecutor
+bruden,the bride / girl
+brudgummen,the bridegroom
+talet,the speech / number / sum
+grottan,the cave
+stunden,the moment / while
+allmänheten,the general public
+paret,the pair
+antalet,the quantity / number
+meddelandet,the message
+hästen,the horse
+ormen,the snake
+nötet,the cattle / idiot
+nöden,the need
+utrustningen,the equipment
+fordonet,the vehicle
+norrmannen,the Norwegian
+ursprunget,the origin
+ron,the peace / calm
+valspråket,the motto
+medeltiden,the Middle Ages
+samen,the Sami
+undersökningen,the investigation / examination
+känslan,the feeling
+flyktingen,the refugee / fugitive
+biståndet,the aid / assistance
+syftet,the purpose / aim
+förståelsen,the understanding / comprehension
+resonemanget,the reasoning
+fängelset,the prison
+djävulen,the devil
+hänsynen,the consideration / respect
+värdet,the value / worth
+skämtet,the joke
+vigseln,the wedding (v)
+dopet,the baptism
+huden,the skin / hide
+skrönan,the cock-and-bull story
+provspelningen,the audition
+slöseriet,the waste / extravagance
+avfallet,the rubbish / refuse / waste
+skulden,the debt
+rättelsen,the correction
+tjuven,the thief
+ficktjuven,the pickpocket
+bensinen,the petrol (UK) / gas (US)
+prylen,the gadget
+lukten,the smell
+knappen,the button
+stavelsen,the syllable
+låten,the tune / song
+ämnet,the subject / substance / material
+rådet,the advice / council / resources
+uppståndelsen,the resurrection
+haren,the hare / coward
+lärjungen,the pupil / disciple
+fjädern,the feather / (mechanical) spring
+misshandeln,the physical abuse / assault
+dråpet,the manslaughter
+mordet,the murder
+förskingringen,the embezzlement
+förfalskningen,the forgery / counterfeiting
+drogen,the drug
+mutan,the bribe
+stölden,the theft
+snatteriet,the shoplifting
+domaren,the judge / referee
+advokaten,the lawyer
+boten,the penalty / fine
+slöjan,the veil
+fånglägret,the concentration camp
+gärningen,the deed / act
+förhållandet,the circumstance / condition / relationship
+påståendet,the statement / assertion

@@ -1,69 +1,66 @@
 ﻿<html>
 <head>
-	<meta charset="utf-8">
-	<title>Svenska</title>
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+<meta charset="utf-8">
+<title>I. Pojken. Tomten</title>
 	<style>
-		body {
-			font-family: 'PT Serif', serif;
+		.main {
+			display: flex;
+		}
+		.comments {
+			width: 20%;
+			min-width: 200px;
+			background-color: #eee;
+			margin: 0 5px;
+			border-right: 1px solid #000;
+			font-size: 10pt;
+		}
+		.comments ul {
+			list-style: none;
+			padding-left: 10px;
 		}
 		
-		.wrapper {
-			width: 100%;
+		.comments li {
+			margin: 5px 0;
 		}
 		
-		.header {
-			margin-top: 30px;
-			text-align: center;
-			padding: 10px;
+		.text {
+			width: 80%;
+			min-width: 400px;
+		}
+		.translate {
+			border-bottom: 1px dotted red;
+		}
+	
+		
+		.note {
+			border-bottom: 1px dotted blue;
 		}
 		
-		.list {
-			list-style-type: none;
-			
-		}
-		
-		.list li {
-			display: inline-block;
-			margin-bottom: 50px;
-		}
-		
-		.list span {
-			width: 200px;
-			margin: 5px;
-			padding: 20px;
-			background-color: #3399ff;
-			cursor: pointer;
-		}
-		
-		.list a {
-			text-decoration: none;
-			color: #fff;
-		}
-		
-		.list a:hover {
-			text-decoration: none;
-			color: #fff;
-		}
+
+	
 	</style>
 </head>
 <body>
-<div class="header"><h1>Svenska</h1>
-<h3>Meny</h3></div>
-<div class="wrapper">
-	<ul class="list">
-		<li><a href ="./nummer/"><span>Nummer</span></a></li>
-		<li><a href ="./fraser/"><span>Fraser</span></a></li>
-		<li><a href ="./fraser/o/"><span>Oppna fraser</span></a></li>
-		<li><a href ="./tid/"><span>Tid</span></a></li>
-		<li><a href ="./fraser/g1/"><span>Svenska → Ryska</span></a></li>
-		<li><a href ="./fraser/g2/"><span>Ryska → Svenska</span></a></li>
-		<li><a href ="./substantiv/"><span>Substantiv</span></a></li>
-		<li><a href ="texts.html"><span>Texts</span></a></li>
-		<li><a href ="./verbs/"><span>Verbs</span></a></li>
-		<li><a href ="./verbs2/"><span>Verbs 2</span></a></li>
-		<li><a href ="./prepositions/"><span>Prepositions</span></a></li>
-	</ul>
+<div class="main">
+	<div class="comments">
+		<ul>
+			<li><b class="translate">en gång</b> &mdash; once</li>
+			<li><b class="note">så där</b> &mdash; sådär</li>
+			<li><b class="note">dugde</b> &mdash; <a href="https://sv.wiktionary.org/wiki/duga">https://sv.wiktionary.org/wiki/duga</a></li>
+		</ul>
+	</div>
+	<div class="text">
+		<h2>I. Pojken. Tomten</h2>
+		<p>
+			Det var <span class="translate">en gång</span> en pojke. Han var <span class="note">så där</span> en fjorton år gammal, lång och ranglig och linhårig. Inte stort <span class="note">dugde</span> han till: han hade mest av allt lust att sova och äta, och därnäst tyckte han om att ställa till odygd.
+		</p>
+		<p>
+			Nu var det en söndagsmorgon, och pojkens föräldrar höllo på att göra sig i ordning för att gå i kyrkan. Pojken själv satt i skjortärmarn på bordskanten och tänkte på hur lyckligt det var, att både far och mor gingo sin väg, så att han skulle få rå sig själv under ett par timmar. "Nu kan jag då ta ner fars bössa och skjuta av ett skott, utan att någon behöver lägga sig i det," sade han för sig själv.
+		</p>
+		<p>
+			Men det var nästan, som om far skulle ha gissat sig till pojkens tankar, för just som han stod på tröskeln och var färdig att gå, stannade han och vände sig mot honom. "Eftersom du inte vill gå i kyrkan med mor och mig," sade han, "så tycker jag, att du åtminstone kan läsa predikan hemma. Vill du lova, att du gör det?" "Ja," sade pojken, "det kan jag väl göra." Och han tänkte förstås, att inte skulle han läsa mer, än han hade lust till.
+		</p>
+	</div>
 </div>
 </body>
 </html>

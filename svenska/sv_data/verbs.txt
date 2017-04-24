@@ -1,0 +1,1100 @@
+att resa,to travel
+att prata,to speak; talk
+att bo,to live
+att komma,to come
+att vara,to be
+att heta,to be called
+att fika,to go for coffee
+att äta,to eat
+att ta,to take
+att ha,to have
+att dricka,to drink
+att få,to get; receive
+att tugga,to chew
+att grilla,to barbecue
+att rensa,to gut
+att laga mat,to cook
+att baka,to bake
+att arbeta,to work
+att kosta,to cost
+att köpa,to buy
+att tvätta sig,to wash oneself
+att hälsa,to greet
+att ge,to give
+att må,to feel (good or bad)
+att betala,to pay
+att sova,to sleep
+att springa,to run
+att beställa,to order
+att tro,to believe
+att försova sig,to oversleep
+att skynda sig,to hurry (up)
+att bestämma sig,to decide
+att klä sig,to get dressed
+att lägga sig,to go to bed; lie down
+att läsa,to read
+att skriva,to write
+att lära sig,to learn
+att gilla,to like (less formal)
+att tycka om,to like (more formal)
+att tycka,to think; find (have an opinion)
+att koppla av,to relax
+att bada,to take a bath
+att simma,to swim
+att sola,to sunbathe
+att ringa,to call; phone
+att köra,to drive
+att åka,to go (by)
+att gå,to go; walk
+att titta,to look
+att titta på TV,to watch television
+jag reser,I travel
+han pratar,he speaks
+hon bor,she lives
+vi kommer,we come
+jag är,I am
+han heter,he is called
+hon fikar,she goes for coffee
+jag äter,I eat
+du tar,you take
+han har,he has
+ni dricker,you (pl.) drink
+de får,they get (receive)
+jag tuggar,I chew
+han grillar,he barbecues
+hon rensar,she guts
+de lagar mat,they cook
+vi bakar,we bake
+jag arbetar,I work
+det kostar,it costs
+han köper,he buys
+jag tvättar mig,I wash myself
+ni hälsar,you (pl.) greet
+de ger,they give
+vi mår,we feel (good or bad)
+du betalar,you pay
+jag sover,I sleep
+du springer,you run
+vi beställer,we order
+hon tror,she believes
+du försover dig,you oversleep
+vi skyndar oss,we hurry (up)
+ni bestämmer er	,you (pl.) decide
+hon klär sig,she gets dressed
+de lägger sig,they go to bed
+han läser,he reads
+hon skriver,she writes
+du lär dig,you learn
+jag gillar,I like (less formal)
+jag tycker om,I like (more formal)
+du tycker,you think (have an opinion)
+hon kopplar av,she relaxes
+de badar,they take a bath
+han simmar,he swims
+hon solar,she sunbathes
+hon ringer,she calls (phones)
+han kör,he drives
+du åker,you go (by)
+vi går,we go (walk)
+han tittar,he looks
+de tittar på TV,they watch television
+jag reste,I traveled
+han pratade,he spoke
+hon bodde,she lived
+vi kom,we came
+jag var,I was
+han hette,he was called
+hon fikade,she went for coffee
+jag åt,I ate
+du tog,you took
+han hade,he had
+ni drack,you (pl.) drank
+de fick,they got (received)
+jag tuggade,I chewed
+han grillade,he barbecued
+hon rensade,she gutted
+de lagade mat,they cooked
+vi bakade,we baked
+jag arbetade,I worked
+det kostade,it costed
+han köpte,he bought
+jag tvättade mig,I washed myself
+ni hälsade,you (pl.) greeted
+de gav,they gave
+vi mådde,we felt (good or bad)
+du betalade,you paid
+jag sov,I slept
+du sprang,you ran
+vi beställde,we ordered
+hon trodde,she believed
+du försov dig,you overslept
+vi skyndade oss,we hurried (up)
+ni bestämde er,you (pl.) decided
+hon klädde sig,she got dressed
+de lade sig,they went to bed
+han läste,he read
+hon skrev,she wrote
+du lärde dig,you learned
+jag gillade,I liked (less formal)
+jag tyckte om,I liked (more formal)
+du tyckte,you thought (had an opinion)
+hon kopplade av,she relaxed
+de badade,they took a bath
+han simmade,he swam
+hon solade,she sunbathed
+hon ringde,she called (phoned)
+han körde,he drove
+du åkte,you went (by)
+vi gick,we went (walked)
+han tittade,he looked
+de tittade på TV,they watched television
+jag har rest,I have traveled
+han har pratat,he has spoken
+hon har bott,she has lived
+vi har kommit,we have come
+jag har varit,I have been
+han har hetat,he has been called
+hon har fikat,she has gone for coffee
+jag har ätit,I have eaten
+du har tagit,you have taken
+han har haft,he has had
+ni har druckit,you (pl.) have drunk
+de har fått,they have gotten
+jag har tuggat,I have chewed
+han har grillat,he has barbecued
+hon har rensat,she has gutted
+de har lagat mat,they have cooked
+vi har bakat,we have baked
+jag har arbetat,I have worked
+det har kostat,it has costed
+han har köpt,he has bought
+jag har tvättat mig,I have washed myself
+ni har hälsat,you (pl.) have greeted
+de har gett,they have given
+vi har mått,we have felt
+du har betalat,you have paid
+jag har sovit,I have slept
+du har sprungit,you have run
+vi har beställt,we have ordered
+hon har trott,she has believed
+du har försovit dig,you have overslept
+vi har skyndat oss,we have hurried (up)
+ni har bestämt er,you (pl.) have decided
+hon har klätt sig,she has gotten dressed
+de har lagt sig,they have gone to bed
+han har läst,he has read
+hon har skrivit,she has written
+du har lärt dig,you have learned
+jag har gillat,I have liked (less formal)
+jag har tyckt om,I have liked (more formal)
+du har tyckt,you have thought (have had an opinion)
+hon har kopplat av,she has relaxed
+de har badat,they have taken a bath
+han har simmat,he has swum
+hon har solat,she has sunbathed
+hon har ringt,she has called (phoned)
+han har kört,he has driven
+du har åkt,you have gone (by)
+vi har gått,we have gone (walked)
+han har tittat,he has looked
+de har tittat på TV,they have watched television
+jag ska resa,I am going to travel
+han ska prata,he is going to speak
+hon kommer att bo,she will live
+vi kommer att komma,we will come
+jag ska vara,I am going to be
+han ska heta,he is going to be called
+hon ska fika,she is going to go for coffee
+jag kommer att äta,I will eat
+du kommer att ta,you will take
+han ska ha,he is going to have
+ni kommer att dricka,you (pl.) will drink
+de kommer att få,they will get (receive)
+jag kommer att tugga,I will chew
+han ska grilla,he is going to barbecue
+hon kommer att rensa,she will gut
+de ska laga mat,they are going to cook
+vi kommer att baka,we will bake
+jag ska arbeta,I am going to work
+det ska kosta,it is going to cost
+han tänker köpa,he intends to buy
+jag ska tvätta mig,I am going to wash myself
+ni kommer att hälsa,you (pl.) will greet
+de tänker ge,they intend to give
+vi kommer att må,we will feel (good or bad)
+du kommer att betala,you will pay
+jag skulle sova,I would sleep
+du skulle springa,you would run
+vi skulle beställa,we would order
+hon skulle tro,she would believe
+du skulle försova dig,you would oversleep
+vi skulle skynda oss,we would hurry (up)
+ni skulle bestämma er,you (pl.) would decide
+hon skulle klä sig,she would get dressed
+de skulle lägga sig,they would go to bed
+han skulle läsa,he would read
+hon skulle skriva,she would write
+du skulle lära dig,you would learn
+jag skulle gilla,I would like (less formal)
+jag skulle tycka om,I would like (more formal)
+du skulle tycka,you would think (have an opinion)
+hon skulle koppla av,she would relax
+de skulle bada,they would take a bath
+han skulle simma,he would swim
+hon skulle sola,she would sunbathe
+hon skulle ringa,she would call (phone)
+han skulle köra,he would drive
+du skulle åka,you would go (by)
+vi skulle gå,we would go (walk)
+han skulle titta,he would look
+de skulle titta på TV,they would watch television
+att vilja,to want (to)
+att kunna,to be able (to); can
+att måste,to have to; must
+att behöva,to need
+att bruka,to be used to; usually
+att bära,to carry
+att öppna,to open
+att stänga,to close; shut
+att säga,to say
+att fråga,to ask
+att svara,to answer; reply
+att hjälpa,to help
+att börja,to begin; start
+att sluta,to stop; end; finish; cease
+att tvätta,to wash
+att leva,to live (be alive)
+att se,to see
+att röra,to touch
+att höra,to hear
+att smaka,to taste
+att lägga,to lay; put; place
+att lära,to teach; instruct
+att sticka,to stick; put
+att spela,to play
+att sjunga,to sing
+att sitta,to sit
+att stå,to stand
+att känna,to know (someone)
+att veta,to know (something)
+att träffa,to meet
+att besöka,to visit
+att trycka,to push; press
+att dra,to pull
+att skrika,to scream; shriek
+att gråta,to cry; weep
+att dö,to die
+att hitta,to find; locate
+att flyga,to fly
+att drömma,to dream
+att undra,to wonder
+att tänka,to think; ponder
+att vinna,to win
+att förlora	,to lose
+att sälja,to sell
+att vänta,to wait
+att ha på sig,to wear (clothing)
+att förlova sig,to get engaged
+att lära känna,to get to know
+att hata,to hate
+att älska,to love
+jag vill,I want (to)
+du kan,you can
+hon måste,she must
+vi behöver,we need
+de brukar,they usually
+han bär,he carries
+jag öppnar,I open
+du stänger,you close
+hon säger,she says
+han frågar,he asks
+de svarar,they answer
+ni hjälper,you (pl.) help
+det börjar,it starts
+det slutar,it stops (ends)
+vi tvättar,we wash
+de lever,they live (are alive)
+hon ser,she sees
+jag rör,I touch
+du hör,you hear
+han smakar,he tastes
+de lägger,they lay (put)
+jag lär,I teach
+ni sticker,you (pl.) stick
+de spelar,they play
+hon sjunger,she sings
+han sitter,he sits
+hon står,she stands
+jag känner,I know (someone)
+du vet,you know (something)
+ni träffar,you (pl.) meet
+vi besöker,we visit
+jag trycker,I push
+du drar,you pull
+hon skriker,she screams
+han gråter,he crys
+de dör,they die
+vi hittar,we find (locate)
+det flyger,it flys
+du drömmer,you dream
+hon undrar,she wonders
+han tänker,he thinks (ponders)
+jag vinner,I win
+du förlorar,you lose
+de säljer,they sell
+jag väntar,I wait
+du har på dig,you wear (clothing)
+vi förlovar oss,we get engaged
+ni lär känna,you (pl.) get to know
+han hatar,he hates
+hon älskar,she loves
+jag ville,I wanted (to)
+du kunde,you were able (to)
+hon måste,she had to
+vi behövde,we needed
+de brukade,they used to
+han bar,he carried
+jag öppnade,I opened
+du stängde,you closed
+hon sade,she said
+han frågade,he asked
+de svarade,they answered
+ni hjälpte,you (pl.) helped
+det började,it started
+det slutade,it stopped (ended)
+vi tvättade,we washed
+de levde,they lived (were alive)
+hon såg,she saw
+jag rörde,I touched
+du hörde,you heard
+han smakade,he tasted
+de lade,they laid (put)
+jag lärde,I taught
+ni stack,you (pl.) stuck
+de spelade,they played
+hon sjöng,she sang
+han satt,he sat
+hon stod,she stood
+jag kände,I knew (someone)
+du visste,you knew (something)
+ni träffade,you (pl.) met
+vi besökte,we visited
+jag tryckte,I pushed
+du drog,you pulled
+hon skrek,she screamed
+han grät,he cried
+de dog,they died
+vi hittade,we found (located)
+det flög,it flew
+du drömde,you dreamt
+hon undrade,she wondered
+han tänkte,he thought (pondered)
+jag vann,I won
+du förlorade,you lost
+de sålde,they sold
+jag väntade,I waited
+du hade på dig,you wore (clothing)
+vi förlovade oss,we got engaged
+ni lärde känna,you (pl.) got to know
+han hatade,he hated
+hon älskade,she loved
+jag hade velat,I had wanted (to)
+du hade kunnat,you had been able (to)
+hon hade måst,she had had to
+vi hade behövt,we had needed
+de hade brukat,they had been used to
+han hade burit,he had carried
+jag hade öppnat,I had opened
+du hade stängt,you had closed
+hon hade sagt,she had said
+han hade frågat,he had asked
+de hade svarat,they had answered
+ni hade hjälpt,you (pl.) had helped
+det hade börjat,it had started
+det hade slutat,it had stopped (ended)
+vi hade tvättat,we had washed
+de hade levat,they had lived (been alive)
+hon hade sett,she had seen
+jag hade rört,I had touched
+du hade hört,you had heard
+han hade smakat,he had tasted
+de hade lagt,they had laid (put)
+jag hade lärt,I had taught
+ni hade stuckit,you (pl.) had stuck
+de hade spelat,they had played
+hon hade sjungit,she had sung
+han hade suttit,he had sat
+hon hade stått,she had stood
+jag hade känt,I had known (someone)
+du hade vetat,you had known (something)
+ni hade träffat,you (pl.) had met
+vi hade besökt,we had visited
+jag hade tryckt,I had pushed
+du hade dragit,you had pulled
+hon hade skrikit,she had screamed
+han hade gråtit,he had cried
+de hade dött,they had died
+vi hade hittat,we had found (located)
+det hade flugit,it had flown
+du hade drömt,you had dreamt
+hon hade undrat,she had wondered
+han hade tänkt,he had thought (pondered)
+jag hade vunnit,I had won
+du hade förlorat,you had lost
+de hade sålt,they had sold
+jag hade väntat,I had waited
+du hade haft på dig,you had worn (clothing)
+vi hade förlovat oss,we had gotten engaged
+ni hade lärt känna,you (pl.) had gotten to know
+han hade hatat,he had hated
+hon hade älskat,she had loved
+jag kommer att ha velat,I will have wanted (to)
+du kommer att ha kunnat,you will have been able (to)
+hon kommer att ha måst,she will have had to
+vi ska ha behövt,we are going to have needed
+de kommer att ha brukat,they will have been used to
+han ska ha burit,he is going to have carried
+jag ska ha öppnat,I am going to have opened
+du kommer att ha stängt,you will have closed
+hon kommer att ha sagt,she will have said
+han ska ha frågat,he is going to have asked
+de kommer att ha svarat,they will have answered
+ni kommer att ha hjälpt,you (pl.) will have helped
+det kommer att ha börjat,it will have started
+det ska ha slutat,it is going to have stopped (ended)
+vi kommer att ha tvättat,we will have washed
+de kommer att ha levat,they will have lived (been alive)
+hon kommer att ha sett,she will have seen
+jag kommer att ha rört,I will have touched
+du ska ha hört,you are going to have heard
+han kommer att ha smakat,he will have tasted
+de kommer att ha lagt,they will have laid (put)
+jag ska ha lärt,I am going to have taught
+ni ska ha stuckit,you (pl.) are going to have stuck
+de kommer att ha spelat,they will have played
+hon kommer att ha sjungit,she will have sung
+han skulle ha suttit,he would have sat
+hon skulle ha stått,she would have stood
+jag skulle ha känt,I would have known (someone)
+du skulle ha vetat,you would have known (something)
+ni skulle ha träffat,you (pl.) would have met
+vi skulle ha besökt,we would have visited
+jag skulle ha tryckt,I would have pushed
+du skulle ha dragit,you would have pulled
+hon skulle ha skrikit,she would have screamed
+han skulle ha gråtit,he would have cried
+de skulle ha dött,they would have died
+vi skulle ha hittat,we would have found (located)
+det skulle ha flugit,it would have flown
+du skulle ha drömt,you would have dreamt
+hon skulle ha undrat,she would have wondered
+han skulle ha tänkt,he would have thought (pondered)
+jag skulle ha vunnit,I would have won
+du skulle ha förlorat,you would have lost
+de skulle ha sålt,they would have sold
+jag skulle ha väntat,I would have waited
+du skulle ha haft på dig,you would have worn (clothing)
+vi skulle ha förlovat oss,we would have gotten engaged
+ni skulle ha lärt känna,you (pl.) would have gotten to know
+han skulle ha hatat,he would have hated
+hon skulle ha älskat,she would have loved
+jag samlade,I collected
+att se,to see
+du ser,you see
+han såg,he saw
+att sitta,to sit
+hon sitter,she sits
+det satt,it sat
+att sjuda,to simmer
+det sjuder,it simmers
+det sjöd,it simmered
+att sjunga,to sing
+vi sjunger,we sing
+ni sjöng,you (pl) sang
+att sjunka,to sink
+de sjunker,they sink
+jag sjönk,I sank
+att ske,to happen
+det sker,it happens
+det skedde,it happened
+att skina,to shine; to glisten
+du skiner,you shine; you glisten
+han sken,he shined; he glistened
+att skjuta,to shoot
+hon skjuter,she shoots
+det sköt,it shot
+att skola,shall; will; be going to
+vi ska,we will
+ni skulle,you (pl) were going to; you (pl) were about to
+att skrida,to proceed
+de skrider,they proceed
+jag skred,I proceeded
+att skrika,to shriek
+du skriker,you shriek
+han skrek,he shrieked
+att skriva,to write
+hon skriver,she writes
+det skrev,it wrote
+att skryta,to boast
+vi skryter,we boast
+ni skröt,you (pl) boasted
+att skära,to cut; to carve
+de skär,they cut; they carve
+jag skar,I cut (past); I carved
+att slippa,to escape
+du slipper,you escape
+han slapp,he escaped
+att slita,to wear (out)
+hon sliter,she wears (out)
+det slet,it wore (out)
+att sluta,to come to an end
+det slutar,it comes to an end
+det slutade,it came to an end
+att sluta,to close (purposefully); to finish
+jag sluter,I close (purposefully); I finish
+du slöt,you closed (purposefully); you finished
+att slå,to beat
+han slår,he beats
+hon slog,she beat
+att slåss,to fight
+vi slåss,we fight
+ni slogs,you (pl) fought
+att släcka,to put out
+de släcker,they put out
+jag släckte,I put out (past)
+att smaka,to taste
+du smakar,you taste
+han smakade,he tasted
+att smyga,to sneak
+hon smyger,she sneaks
+vi smög,we snuck
+att snyta,to blow one&#39;s nose
+ni snyter,you (pl) blow your noses
+de snöt,they blew their noses
+att sova,to sleep
+jag sover,I sleep
+du sov,you slept
+att spela,to play (a game)
+han spelar,he plays (a game)
+hon spelade,she played (a game)
+att spinna,to spin
+det spinner,it spins
+vi spann,we spun
+att spricka,to crack
+det spricker,it cracks
+det sprack,it cracked
+att sprida,to spread
+ni sprider,you (pl) spread
+de spridde,they spread (past)
+att springa,to run
+jag springer,I run
+du sprang,you ran
+att sticka,to stick
+han sticker,he sticks
+hon stack,she stuck
+att stiga,to step
+vi stiger,we step
+ni steg,you (pl) stepped
+att stjäla,to steal
+de stjäl,they steal
+jag stal,I stole
+att strida,to fight; to be in conflict
+du strider,you fight; you were in conflict
+det stred,it fought; it was in conflict
+att stryka,to stroke
+han stryker,he strikes
+hon strök,she struck
+att sträcka,to stretch
+vi sträcker,we stretch
+ni sträckte,you (pl) stretched
+att stå,to stand
+de står,they stand
+jag stod,I stood
+att ställa,to put
+du ställer,you put
+han ställde,he put (past)
+att stänga,to close
+hon stänger,she closes
+vi stängde,we closed
+att stödja,to support
+ni stöder,you (pl) support
+de stödde,they supported
+att störa,to disturb
+jag stör,I disturb
+du störde,you disturbed
+att supa,to drink (alcohol)
+han super,he drinks (alcohol)
+hon söp,she drank (alcohol)
+att svara,to answer
+vi svarar,we answer
+ni svarade,you (pl) answered
+att svida,to ache
+det svider,it aches
+det sved,it ached
+att svika,to fail
+vi sviker,we fail
+ni svek,you (pl) failed
+att svälta,to starve
+de svälter,they starve
+jag svalt,I starved
+att svälta,to starve (someone)
+du svälter,you starve (someone)
+han svälte,he starved (someone)
+att svära,to swear
+hon svär,she swears
+vi svor,we swore
+att sy,to sew
+ni syr,you (pl) sew
+de sydde,they sewed
+att säga,to say
+jag säger,I say
+du sa,you said
+att sälja,to sell
+han säljer,he sells
+hon sålde,she sold
+att sätta,to set
+vi sätter,we set
+ni satte,you (pl) set (past)
+att ta,to take
+de tar,they take
+jag tog,I took
+att tala,to talk
+du talar,you talk
+han talade,he talked
+att tiga,to stay silent
+hon tiger,she stays silent
+vi teg,we stayed silent
+att titta,to look
+ni tittar,you (pl) look
+de tittade,they looked
+att tjuta,to howl
+jag tjuter,I howel
+du tjöt,you howled
+att tro,to believe
+han tror,he believes
+hon trodde,she believed
+att trycka,to print
+vi trycker,we print
+ni tryckte,you (pl) printed
+att träffa,to meet
+de träffar,they meet
+jag träffade,I met
+att tvätta,to wash
+du tvättar,you wash
+han tvättade,he washed
+att tycka,to think; opine
+hon tycker,she thinks; opines
+vi tyckte,we thought; opined
+att tänka,to think (act)
+ni tänker,you (pl) think (act)
+de tänkte,they thought (act)
+att töras,to dare
+jag törs,I dare
+du tordes,you dared
+att undra,to wonder
+han undrar,he wonders
+hon undrade,she wondered
+att vara,to be
+det är,it is
+vi var,we were
+att veta,to know (something)
+ni vet,you (pl) know (something)
+de visste,they knew (something)
+att vika,to fold
+jag viker,I fold
+du vek,you folded
+att vilja,to want (to)
+han vill,he wants (to)
+hon ville,she wanted (to)
+att vina,to buzz
+det viner,it buzzes
+det ven,it buzzed
+att vinna,to win
+vi vinner,we win
+ni vann,you (pl) won
+att visa,to show
+de visar,they show
+jag visade,I showed
+att vrida,to twist
+du vrider,you twist
+han vred,he twisted
+att välja,to choose; to elect
+hon väljer,she chooses; she elects
+vi valde,we chose; we elected
+att vända,to turn
+de vänder,they turn
+jag vände,I turned
+att vänja,to get used to
+du vänjer,you get used to
+han vande,he got used to
+att vänta,to wait
+hon väntar,she waits
+det väntade,it waited
+att växa,to grow
+vi växer,we grow
+ni växte,you (pl) grew
+att åka,to go (by vehicle)
+de åker,they go (by vehicle)
+jag åkte,I went (by vehicle)
+att älska,to love
+du älskar,you love
+han älskade,he loved
+att äta,to eat
+hon äter,she eats
+det åt,it ate
+att önska,to wish
+vi önskar,we wish
+ni önskade,you (pl) wished
+att öppna,to open
+de öppnar,they open
+jag öppnade,I opened
+att arbeta,to work
+jag arbetar,I work
+du arbetade,you worked
+att baka,to bake
+han bakar,he bakes
+hon bakade,she baked
+att be,to ask; to pray
+vi ber,we ask; we pray
+ni bad,you (pl) asked; you (pl) played
+att behöva,to need
+de behöver,they need
+jag behövde,I needed
+att besöka,to visit
+du besöker,you visit
+han besökte,he visited
+att betyda,to mean; to be important
+det betyder,it means
+det betydde,it meant
+att binda,to bind
+hon binder,she binds
+vi band,we bound (past tense)
+att bita,to bite
+ni biter,you (pl) bite
+de bet,they bit
+att bjuda,to offer; to invite
+jag bjuder,I offer; I invite
+du bjöd,you offered; you invited
+att bli,to become
+han blir,he becomes
+hon blev,she became
+att blåsa,to blow
+det blåser,it blows
+det blåste,it blew
+att bo,to live; reside
+vi bor,we live; we reside
+ni bodde,you (pl) lived; you (pl) reside
+att brinna,to burn
+de brinner,they burn
+jag brann,I burned
+att brista,to burst
+det brister,it bursts
+han brast,he burst
+att bryta,to break
+hon bryter,she breaks
+det bröt,it broke
+att bygga,to build
+vi bygger,we build
+ni byggde,you (pl) built
+att bära,to carry
+de bär,they carry
+jag bar,I carried
+att böra,to ought to
+du bör,you ought to
+han borde,he should have
+att börja,to begin
+hon börjar,she begins
+det började,it began
+att dra,to draw; to pull
+vi drar,we draw; we pull
+ni drog,you (pl) drew; you (pl) pulled
+att dricka,to drink
+de dricker,they drink
+jag drack,I drank
+att driva,to drift; to operate
+du driver,you drift; you operate
+han drev,he drifted; he operated
+att drömma,to dream
+hon drömmer,she dreams
+vi drömde,we dreamt
+att duga,to serve; to be fit
+de duger,they serve; they are fit
+jag dugde,I served; I was fit
+att dö,to die
+du dör,you die
+han dog,he died
+att dölja,to conceal
+hon döljer,she conceals
+vi dolde,we concealed
+att falla,to fall
+ni faller,you (pl) fall
+de föll,they fell
+att fara,to go; to travel
+jag far,I go; I travel
+du for,you went; you traveled
+att finna,to find
+han finner,he finds
+hon fann,she found
+att finnas,to exist
+vi finns,we exist
+ni fanns,you (pl) existed
+att fly,to flee
+de flyr,they flee
+jag flydde,I fled
+att flyga,to fly
+du flyger,you fly
+han flög,he flew
+att flyta,to float
+hon flyter,she floats
+det flöt,it floated
+att flytta,to move
+vi flyttar,we move
+ni flyttade,you (pl) moved
+att fordra,to demand; to require
+de fordrar,they demand; they require
+jag fordrade,I demanded; I required
+att frysa,to freeze
+du fryser,you freeze
+han frös,he froze
+att fråga,to ask
+hon frågar,she asks
+vi frågade,we asked
+att få,to get; may
+ni får,you (pl) get; you (pl) may
+de fick,they got; they had permission to
+att föda,to give birth to
+jag föder,I give birth to
+du födde,you gave birth to
+att följa,to follow
+han följer,he follows
+hon följde,she followed
+att föra,to lead
+vi för,we lead
+ni förde,you (pl) led
+att förklara,to explain
+de förklarar,they explain
+jag förklarade,I explained
+att förstöra,to destroy
+du förstör,you destroy
+han förstörde,he destroyed
+att försvinna,to disappear
+hon försvinner,she disappears
+vi försvann,we disappeared
+att gala,to crow; to yell
+det gal,it crows
+det gol,it crowed
+att ge,to give
+ni ger,you (pl) give
+de gav,they gave
+att gjuta,to cast; to pour
+jag gjuter,I cast; I pour
+du göt,you cast (past); you poured
+att glida,to glide
+han glider,he glides
+hon gled,she glided
+att glädja,to please; to gladden
+det gläder,it pleases; it gladdens
+vi gladde,we pleased; we gladdened
+att glädja sig,to be happy; to rejoice over
+jag gläder mig,I am happy; I rejoice over
+du gladde dig,you were happy; you rejoiced over
+att glömma,to forget
+ni glömmer,you (pl) forget
+de glömde,they forgot
+att gnida,to rub
+han gnider,he rubs
+hon gned,she rubbed
+att gripa,to seize
+vi griper,we seize
+ni grep,you (pl) seized
+att gråta,to cry
+de gråter,they cry
+jag grät,I cried
+att gå,to go; to walk
+du går,you go; you walk
+han gick,he went; he walked
+att gömma,to hide
+hon gömmer,she hides
+det gömde,it hid
+att göra,to do; to make
+vi gör,we do; we make
+ni gjorde,you (pl) did; you (pl) made
+att ha,to have
+de har,they have
+jag hade,I had
+att heta,to be called
+du heter,you are called
+han hette,he was called
+att hinna,to have time for
+hon hinner,she has time for
+vi hann,we had time for
+att hjälpa,to help
+ni hjälper,you (pl) help
+de hjälpte,they helped
+att hoppas,to hope
+jag hoppas,I hope
+du hoppades,you hoped
+att hugga,to cut
+han hugger,he cuts
+hon högg,she cut
+att hålla,to hold
+det håller,it holds
+vi höll,we held
+att hälsa,to greet
+ni hälsar,you (pl) greet
+de hälsade,they greeted
+att hända,to happen
+det händer,it happens
+det hände,it happened
+att höra,to hear
+jag hör,I hear
+du hörde,you heard
+att kalla,to call
+han kallar,he calls
+hon kallade,she called
+att kliva,to take a big step
+vi kliver,we take a big step
+ni klev,you (pl) took a big step
+att klyva,to cleave
+de klyver,they cleave
+jag klöv,I cleaved
+att knyta,to tie
+du knyter,you tie
+han knöt,he tied
+att komma,to come
+hon kommer,she comes
+det kom,it came
+att kosta,to cost
+det kostar,it costs
+det kostade,it cost
+att kritisera,to criticize
+vi kritiserar,we criticize
+ni kritiserade,you (pl) criticized
+att krypa,to creep
+de kryper,they creep
+jag kröp,I crept
+att känna,to know; to feel
+du känner,you know; you feel
+han kände,he knew; he felt
+att köpa,to buy
+hon köper,she buys
+vi köpte,we bought
+att köra,to drive (a car)
+ni kör,we drive (a car)
+du körde,you drove (a car)
+att le,to smile
+jag ler,I smile
+du log,you smiled
+att leka,to play (as a child)
+han leker,he plays (as a child)
+hon lekte,she played (as a child)
+att leva,to live
+vi lever,we live
+ni levde,you (pl) lived
+att lida,to suffer
+de lider,they suffer
+jag led,I suffered
+att ligga,to lie (down)
+du ligger,you lie (down)
+det låg,it lay (past)
+att ljuda,to sound
+det ljuder,it sounds
+det ljöd,it sounded
+att ljuga,to (tell a) lie
+han ljuger,he (tells a) lies
+hon ljög,she (told a) lied
+att lova,to promise
+vi lovar,we promise
+ni lovade,you (pl) promised
+att lyda,to obey
+de lyder,they obey
+jag lydde,I obeyed
+att lyfta,to lift
+du lyfter,you lift
+han lyfte,he lifted
+att lysta,to shine (as a beam)
+hon lyser,she shines (as a beam)
+det lyste,it shined (as a beam)
+att låta,to let
+vi låter,we let
+ni lät,you (pl) let (past tense)
+att lägga,to lay (something down)
+de lägger,they lay (something down)
+jag la,I laid (something down)
+att lära,to teach; to learn
+du lär,you teach; you learn
+han lärde,he taught; he learned
+att läsa,to read
+hon läser,she reads
+vi läste,we read (past tense)
+att lösa,to loosen; to undo
+ni löser,you (pl) loosen
+de löste,they loosened
+att måste,to have to
+jag måste,I have to
+du måste,you had to
+att märka,to notice
+han märker,he notices
+hon märkte,she noticed
+att mäta,to measure
+vi mäter,we measure
+ni mätte,you (pl) measured
+att niga,to curtsy
+de niger,they curtsy
+jag neg,I curtsied
+att njuta,to enjoy
+du njuter,you enjoy
+han njöt,he enjoyed
+att nysa,to sneeze
+hon nyser,she sneezes
+vi nös,we sneezed
+att nå,to reach; to attain
+ni når,you (pl) reach; you (pl) attain
+de nådde,they reached; they attained
+att ordna,to arrange
+jag ordnar,I arrange
+du ordnade,you arranged
+att pipa,to beep
+han piper,he beeps
+det pep,it beeped
+att prata,to speak
+hon pratar,she speaks
+vi pratade,we spoke
+att pröva,to try
+ni prövar,you (pl) try
+de prövade,they tried
+att resa,to travel
+jag reser,I travel
+du reste,you traveled
+att rida,to ride (horseback)
+han rider,he rides (horseback)
+hon red,she rode (horseback)
+att ringa,to ring
+vi ringer,we ring
+ni ringde,you (pl) ringed
+att rinna,to flow
+det rinner,it flows
+det rann,it flowed
+att rita,to draw
+de ritar,they draw
+jag ritade,I drew
+att riva,to tear
+du river,you tear
+han rev,he tore
+att ryta,to roar
+hon ryter,she roars
+det röt,it roared
+att råda,to advise
+vi råder,we advise
+ni rådde,you (pl) advised
+att räkna,to count
+de räknar,they count
+jag räknade,I counted
+att röka,to smoke
+du röker,you smoke
+han rökte,he smoked
+att röra,to move; to touch
+han rör,he moves; he touches
+vi rörde,we moved; we touched
+att samla,to collect
+de samlar,they collect
