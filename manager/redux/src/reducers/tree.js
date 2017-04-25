@@ -1,5 +1,8 @@
+import * as types from '../constants/ActionTypes'
+
 const initialState = {
     lastId: 0,
+    selectedId: 0,
     folders: [
         {
             name: 'root',
@@ -11,21 +14,24 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_FOLDER':
+        case types.ADD_FOLDER:
+            let parent = action.parent    
+            if (state.folders.filter(i => i.id === action.parent).length === 0) {
+                parent = 0
+            }
             return {
                 lastId: state.lastId + 1,
+                selectedId: state.selectedId,
                 folders: [
                     ...state.folders,
-                    state.folders.filter(i => i.id === action.parent).length
-                        ? { name: action.name, id: state.lastId + 1, parent: action.parent}
-                        : { name: action.name, id: state.lastId + 1, parent: 0}
+                    { name: action.name, id: state.lastId + 1, parent: parent}
                 ],
                 notes: state.notes
             }
-            break
-        case 'REMOVE_ITEM':
+        case types.REMOVE_ITEM:
             return {
                 lastId: state.lastId,
+                selectedId: action.parentId,
                 folders: [
                     ...state.folders.filter(i => i.id !== action.id)
                 ],
@@ -33,16 +39,25 @@ export default (state = initialState, action) => {
                     ...state.notes.filter(i => i.id !== action.id)
                 ]
             }
-        case 'ADD_NOTE':
+        case types.ADD_NOTE:
+            const newNote = state.folders.filter(i => i.id === action.parent).length
+                        ? { name: action.name, id: state.lastId + 1, parent: action.parent}
+                        : { name: action.name, id: state.lastId + 1, parent: 0}
             return {
                 lastId: state.lastId + 1,
+                selectedId: state.selectedId,
                 folders: state.folders,
                 notes: [
                     ...state.notes,
-                    state.folders.filter(i => i.id === action.parent).length
-                        ? { name: action.name, id: state.lastId + 1, parent: action.parent}
-                        : { name: action.name, id: state.lastId + 1, parent: 0}
+                    newNote
                 ]
+            }
+        case types.SELECT_ITEM:   
+            return {
+                lastId: state.lastId,
+                selectedId: action.id,
+                folders: state.folders,
+                notes: state.notes
             }
         case 'UPDATE_NOTE':
             return state;

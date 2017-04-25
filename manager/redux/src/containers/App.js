@@ -1,10 +1,12 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+
+import TreeContainer from './TreeContainer'
 
 class App extends Component {
   render() {
     return (
         <div>
-            {this.props.value.folders[0].name}
+            <TreeContainer />
         </div>
     )
   }
