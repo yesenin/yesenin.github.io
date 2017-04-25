@@ -2,8 +2,9 @@
 -export([sum/1]).
 %%-compile(export_all).
 
-sum(N) -> io:format("recursion = ~w;~nAcc = ~w;~nfoldl = ~w;~nfoldr = ~w;~n", 
-						[sum_1(N), sum_2(N), sum_3(N), sum_4(N)]).
+sum(N) -> 
+	R = [sum_1(N), sum_2(N), sum_3(N), sum_4(N)],
+	io:format("recursion = ~w;~nAcc = ~w;~nfoldl = ~w;~nfoldr = ~w;~n", R).
 
 sum_1(1) -> 1;
 sum_1(N) when N > 0 -> N + sum_1(N-1);	
