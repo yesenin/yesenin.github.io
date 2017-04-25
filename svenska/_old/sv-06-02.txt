@@ -83,3 +83,29 @@ Frågor
 4. Gör vi väntar hon?
 5. Åker du en buss eller en bil? 
 
+
+2. VID JÄRNVÄGSSTATIONEN
+-- Finns det någon bokhandel här?
+-- Ja, det finns en vid Strandvägen.
+-- Hur ska jag gå för att komma dit?
+-- Ni kan gå Parkvägen rakt fram till Strandvägen. Sedan tar ni till vänster. Bokhandeln ligger på andra sidan Nygatan.
+-- Tack så mycket.
+-- Ingen orsak.
+
+3. VID BRON
+-- Förlåt, var ligger postkontoret?
+-- Det ligger i hörnet av Kyrkvägen och Parkvägen.
+-- Hur ska jag gå för att komma dit?
+-- Ni kan gå Strandvägen och ta till höger vid Parkvägen. Men  ni kan också gå Brogatan till torget och sedan snett över torget. Då kommer ni direkt till postkontoret.
+-- Tack så mycket.
+-- För all del.
+
+4. VID BIBLIOTEKET
+-- Förlåt, var ligger sjukhuset?
+-- Det ligger i hörnet av Brogatan och Strandvägen. Det tar bara ett par minuter att gå dit.
+-- Jag har ont i foten och kan inte gå. Går det någon buss till sjukhuset?
+-- Ja, ni kan ta buss nummer fyra. Den stannar här vid biblioteket.
+-- Jaså. Tack så mycket då.
+-- Ingen orsak.
+
+
