@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-import TreeItem from '../components/TreeItem'
 import TreeItemHierarchy from '../components/TreeItemHierarchy'
 
 class TreeContainer extends Component {
@@ -25,24 +24,48 @@ class TreeContainer extends Component {
         }    
     }
 
+    innerSelectNote = (id) => {
+        this.props.selectNote(id)
+    }
+
+    innerDoubleClick(id) {
+        if (this.props.selectedNote !== id) { 
+            this.props.selectNote(id)
+        } else {
+            console.log('edit ' + id)
+        }
+    }
+
     render() {
-        const renderedItems = this.props.folders.map((item) => {
-            return <TreeItem key={item.id} item={item} selected={item.id === this.props.selectedId} foo={this.innerSelectItem}/>
-        })
         const renderedNotes = this.props.notes.map((item) => {
-            return <li key={item.id}>{item.name}</li>
+            return <div className={this.props.selectedNote === item.id ? 'note selected' : 'note'} 
+            key={item.id} onClick={() => this.innerSelectNote(item.id)}
+            onDoubleClick={() => this.innerDoubleClick(item.id)}>
+                <div className='icon'></div>
+                <span className='text'>{item.name}</span></div>
         })
         return (
-            <div>
-                <div>
-                    <button onClick={this.innerAddFolder}>Add folder</button>
-                    <button onClick={this.innerAddNote}>Add note</button>
-                    <button onClick={this.innerRemoveItem}>Remove item</button>
-                    <ul>{renderedItems}</ul>
-                    <ul>{renderedNotes}</ul>
+            <div className='wrapper'>
+                <div className='menu'>
+                    <div className='menuItem' onClick={this.innerAddFolder}>
+                        <div className='icon'></div>
+                        <span className='text'>Add folder</span></div>
+                    <div className='menuItem' onClick={this.innerAddNote}>
+                        <div className='icon'></div>
+                        <span className='text'>Add note</span></div>
+                    <div className='menuItem' onClick={this.innerRemoveItem}>
+                        <div className='icon'></div>
+                        <span className='text'>Remove item</span></div>
+                    
                 </div>
                 <div className="tree">
-                    <TreeItemHierarchy items={this.props.hierarchy} selectedId={this.props.selectedId} foo={this.innerSelectItem}/>
+                    <TreeItemHierarchy id={this.props.root} items={this.props.folders} selectedId={this.props.selectedId} foo={this.innerSelectItem}/>
+                </div>
+                <div className='notes'>
+                    <div className='search'>Search</div>
+                    <div className='list'>
+                        {renderedNotes}
+                    </div>
                 </div>
             </div>    
         )
@@ -51,7 +74,9 @@ class TreeContainer extends Component {
 
 const mapStateToProps = (state) => (
     {
+        root: null,
         selectedId: state.selectedId,
+        selectedNote: state.selectedNote,
         folders: state.folders,
         notes: state.notes.filter(i => i.parent === state.selectedId),
         hierarchy: state.folders.filter(i => i.id === 0)

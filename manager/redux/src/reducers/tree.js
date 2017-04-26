@@ -8,7 +8,9 @@ const initialState = {
         {
             name: 'root',
             id: 0,
-            children: []
+            children: [],
+            parent: null,
+            selectedNote: null
         }
     ],
     notes: []
@@ -26,7 +28,7 @@ export default (state = initialState, action) => {
             }
             const newFolder = { name: action.name, id: action.id, parent: parent, children: []}
             return {
-                selectedId: state.selectedId,
+                selectedId: action.id,
                 folders: [
                     ...state.folders.map(i => {
                         if (i.id !== parent) {
@@ -44,9 +46,13 @@ export default (state = initialState, action) => {
                     }),
                     newFolder
                 ],
-                notes: state.notes
+                notes: state.notes,
+                selectedNote: null
             }
         case types.REMOVE_ITEM:
+            if (action.id === 0) {
+                return state;
+            }
             return {
                 selectedId: action.parentId,
                 folders: [
@@ -54,7 +60,8 @@ export default (state = initialState, action) => {
                 ],
                 notes: [
                     ...state.notes.filter(i => i.id !== action.id)
-                ]
+                ],
+                selectedNote: state.selectedNote
             }
         case types.ADD_NOTE:
             if (!action.id) {
@@ -69,13 +76,22 @@ export default (state = initialState, action) => {
                 notes: [
                     ...state.notes,
                     newNote
-                ]
+                ],
+                selectedNote: state.selectedNote
             }
         case types.SELECT_ITEM:   
             return {
                 selectedId: action.id,
                 folders: state.folders,
-                notes: state.notes
+                notes: state.notes,
+                selectedNote: null
+            }
+        case types.SELECT_NOTE:
+            return {
+                selectedId: state.selectedId,
+                folders: state.folders,
+                notes: state.notes,
+                selectedNote: action.id
             }
         case 'UPDATE_NOTE':
             return state;

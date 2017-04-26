@@ -22,3 +22,8 @@ export const addNote = parent => ({
     name: "note",
     parent: parent
 })
+
+export const selectNote = id => ({
+    type: types.SELECT_NOTE,
+    id: id
+})
