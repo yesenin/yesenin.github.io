@@ -42,7 +42,7 @@ class TreeContainer extends Component {
                     <ul>{renderedNotes}</ul>
                 </div>
                 <div className="tree">
-                    <TreeItemHierarchy items={this.props.hierarchy}/>
+                    <TreeItemHierarchy items={this.props.hierarchy} selectedId={this.props.selectedId} foo={this.innerSelectItem}/>
                 </div>
             </div>    
         )

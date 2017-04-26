@@ -26,7 +26,6 @@ export default (state = initialState, action) => {
             }
             const newFolder = { name: action.name, id: action.id, parent: parent, children: []}
             return {
-                // lastId: state.lastId + 1,
                 selectedId: state.selectedId,
                 folders: [
                     ...state.folders.map(i => {
@@ -49,7 +48,6 @@ export default (state = initialState, action) => {
             }
         case types.REMOVE_ITEM:
             return {
-                //lastId: state.lastId,
                 selectedId: action.parentId,
                 folders: [
                     ...state.folders.filter(i => i.id !== action.id)
@@ -66,7 +64,6 @@ export default (state = initialState, action) => {
                         ? { name: action.name, id: action.id, parent: action.parent}
                         : { name: action.name, id: action.id, parent: 0}
             return {
-                //lastId: state.lastId + 1,
                 selectedId: state.selectedId,
                 folders: state.folders,
                 notes: [
@@ -76,7 +73,6 @@ export default (state = initialState, action) => {
             }
         case types.SELECT_ITEM:   
             return {
-                //lastId: state.lastId,
                 selectedId: action.id,
                 folders: state.folders,
                 notes: state.notes
