@@ -3,7 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Redux Todos Example</title>
+    <title>Manager</title>
+    <style>
+      .tree {
+        width: 300px;
+        padding-right: 1em;
+        font-family: sans-serif;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: relative;
+      }
+
+      li {
+        list-style-type: none;
+        margin-left: 1em;
+      }
+
+      li div {
+        padding: 5px 1em;
+        position: relative; 
+        width: auto;
+        cursor: pointer;
+        border-bottom: 1px solid #bbb;
+      }
+
+      li div:hover {
+        background-color: pink;
+      } 
+      li div.selected {
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>

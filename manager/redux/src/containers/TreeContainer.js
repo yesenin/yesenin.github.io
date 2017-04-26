@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 import TreeItem from '../components/TreeItem'
+import TreeItemHierarchy from '../components/TreeItemHierarchy'
 
 class TreeContainer extends Component {
     innerAddFolder = () => {
@@ -33,11 +34,16 @@ class TreeContainer extends Component {
         })
         return (
             <div>
-                <button onClick={this.innerAddFolder}>Add folder</button>
-                <button onClick={this.innerAddNote}>Add note</button>
-                <button onClick={this.innerRemoveItem}>Remove item</button>
-                <ul>{renderedItems}</ul>
-                <ul>{renderedNotes}</ul>
+                <div>
+                    <button onClick={this.innerAddFolder}>Add folder</button>
+                    <button onClick={this.innerAddNote}>Add note</button>
+                    <button onClick={this.innerRemoveItem}>Remove item</button>
+                    <ul>{renderedItems}</ul>
+                    <ul>{renderedNotes}</ul>
+                </div>
+                <div className="tree">
+                    <TreeItemHierarchy items={this.props.hierarchy}/>
+                </div>
             </div>    
         )
     }
@@ -47,7 +53,8 @@ const mapStateToProps = (state) => (
     {
         selectedId: state.selectedId,
         folders: state.folders,
-        notes: state.notes.filter(i => i.parent === state.selectedId)
+        notes: state.notes.filter(i => i.parent === state.selectedId),
+        hierarchy: state.folders.filter(i => i.id === 0)
     }
 )
 

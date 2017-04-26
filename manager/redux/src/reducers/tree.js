@@ -24,12 +24,26 @@ export default (state = initialState, action) => {
             if (state.folders.filter(i => i.id === action.parent).length === 0) {
                 parent = 0
             }
+            const newFolder = { name: action.name, id: action.id, parent: parent, children: []}
             return {
                 // lastId: state.lastId + 1,
                 selectedId: state.selectedId,
                 folders: [
-                    ...state.folders,
-                    { name: action.name, id: action.id, parent: parent}
+                    ...state.folders.map(i => {
+                        if (i.id !== parent) {
+                            return i;
+                        }
+                        return {
+                            id: i.id,
+                            name: i.name,
+                            parent: i.parent,
+                            children: [
+                                ...i.children,
+                                newFolder
+                            ]
+                        }
+                    }),
+                    newFolder
                 ],
                 notes: state.notes
             }
