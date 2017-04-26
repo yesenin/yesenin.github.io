@@ -55,6 +55,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(actions, dispatch)
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps)(TreeContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TreeContainer)

@@ -1,12 +1,14 @@
 import * as types from '../constants/ActionTypes'
+import { v4 } from 'uuid'
 
 const initialState = {
-    lastId: 0,
+    //lastId: 0,
     selectedId: 0,
     folders: [
         {
             name: 'root',
-            id: 0
+            id: 0,
+            children: []
         }
     ],
     notes: []
@@ -15,22 +17,25 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case types.ADD_FOLDER:
+            if (!action.id) {
+                action.id = v4()
+            }
             let parent = action.parent    
             if (state.folders.filter(i => i.id === action.parent).length === 0) {
                 parent = 0
             }
             return {
-                lastId: state.lastId + 1,
+                // lastId: state.lastId + 1,
                 selectedId: state.selectedId,
                 folders: [
                     ...state.folders,
-                    { name: action.name, id: state.lastId + 1, parent: parent}
+                    { name: action.name, id: action.id, parent: parent}
                 ],
                 notes: state.notes
             }
         case types.REMOVE_ITEM:
             return {
-                lastId: state.lastId,
+                //lastId: state.lastId,
                 selectedId: action.parentId,
                 folders: [
                     ...state.folders.filter(i => i.id !== action.id)
@@ -40,11 +45,14 @@ export default (state = initialState, action) => {
                 ]
             }
         case types.ADD_NOTE:
+            if (!action.id) {
+                action.id = v4()
+            }
             const newNote = state.folders.filter(i => i.id === action.parent).length
-                        ? { name: action.name, id: state.lastId + 1, parent: action.parent}
-                        : { name: action.name, id: state.lastId + 1, parent: 0}
+                        ? { name: action.name, id: action.id, parent: action.parent}
+                        : { name: action.name, id: action.id, parent: 0}
             return {
-                lastId: state.lastId + 1,
+                //lastId: state.lastId + 1,
                 selectedId: state.selectedId,
                 folders: state.folders,
                 notes: [
@@ -54,7 +62,7 @@ export default (state = initialState, action) => {
             }
         case types.SELECT_ITEM:   
             return {
-                lastId: state.lastId,
+                //lastId: state.lastId,
                 selectedId: action.id,
                 folders: state.folders,
                 notes: state.notes
