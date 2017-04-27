@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-import TreeItemHierarchy from '../components/TreeItemHierarchy'
+import TreeItem from '../components/TreeItem'
+import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
     innerAddFolder = () => {
@@ -52,16 +53,7 @@ class TreeContainer extends Component {
 
     render() {
         const renderedNotes = this.props.notes.map((item) => {
-            return <div className={this.props.selectedNote === item.id ? 'note selected' : 'note'} 
-            key={item.id} onClick={() => this.innerSelectNote(item.id)}
-            onDoubleClick={() => this.innerDoubleClick(item.id)} title={item.name}>
-                <div className='icon'></div>
-                { this.props.editableNote === item.id
-                    ? <input type='text' defaultValue={item.name}
-                        onKeyPress={this.handleChange1.bind(this)}    
-                        onKeyUp={this.handleChange.bind(this, item.id)} />
-                    : <span className='text'>{item.name}</span>}
-                </div>
+            return 
         })
         return (
             <div className='wrapper'>
@@ -78,15 +70,13 @@ class TreeContainer extends Component {
                     
                 </div>
                 <div className="tree">
-                    <TreeItemHierarchy id={this.props.root} items={this.props.folders} 
+                    <TreeItem id={this.props.root} items={this.props.folders} 
                     selectedId={this.props.selectedId} foo={this.innerSelectItem}
                     editableId={this.props.editableId} bar={this.props.toggleEdit} rename={this.props.rename}/>
                 </div>
                 <div className='notes'>
                     <div className='search'>Search</div>
-                    <div className='list'>
-                        {renderedNotes}
-                    </div>
+                    <NoteList items={this.props.notes} />
                 </div>
             </div>    
         )
@@ -101,8 +91,7 @@ const mapStateToProps = (state) => (
         editableId: state.editableId,
         editableNote: state.editableNote,    
         folders: state.folders,
-        notes: state.notes.filter(i => i.parent === state.selectedId),
-        hierarchy: state.folders.filter(i => i.id === 0)
+        notes: state.notes.filter(i => i.parent === state.selectedId)
     }
 )
 
