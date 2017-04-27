@@ -52,9 +52,6 @@ class TreeContainer extends Component {
     }
 
     render() {
-        const renderedNotes = this.props.notes.map((item) => {
-            return 
-        })
         return (
             <div className='wrapper'>
                 <div className='menu'>
@@ -86,12 +83,12 @@ class TreeContainer extends Component {
 const mapStateToProps = (state) => (
     {
         root: null,
-        selectedId: state.selectedId,
-        selectedNote: state.selectedNote,
-        editableId: state.editableId,
-        editableNote: state.editableNote,    
-        folders: state.folders,
-        notes: state.notes.filter(i => i.parent === state.selectedId)
+        selectedId: state.tree.selectedId,
+        selectedNote: state.tree.selectedNote,
+        editableId: state.tree.editableId,
+        editableNote: state.tree.editableNote,    
+        folders: state.tree.folders,
+        notes: state.tree.notes.filter(i => i.parent === state.tree.selectedId)
     }
 )
 

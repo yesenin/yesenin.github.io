@@ -63,7 +63,7 @@ const initialState = {
     editableNote: null
 }
 
-export default (state = initialState, action) => {
+const tree = (state = initialState, action) => {
     switch (action.type) {
         case types.ADD_FOLDER:
             if (!action.id) {
@@ -222,3 +222,5 @@ export default (state = initialState, action) => {
             return state;
     }  
 }
+
+export default tree
