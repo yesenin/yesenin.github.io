@@ -9,11 +9,12 @@ const initialState = {
             name: 'root',
             id: 0,
             children: [],
-            parent: null,
-            selectedNote: null
+            parent: null
         }
     ],
-    notes: []
+    notes: [],
+    selectedNote: null,
+    editableId: null
 }
 
 export default (state = initialState, action) => {
@@ -47,11 +48,23 @@ export default (state = initialState, action) => {
                     newFolder
                 ],
                 notes: state.notes,
-                selectedNote: null
+                selectedNote: null,
+                editableId: state.editableId
             }
         case types.REMOVE_ITEM:
             if (action.id === 0) {
                 return state;
+            }
+            if (state.selectedNote !== null) {
+                return {
+                    selectedId: state.selectedId,
+                    folders: state.folders,
+                    notes: [
+                        ...state.notes.filter(i => i.id !== state.selectedNote)
+                    ],
+                    selectedNote: null,
+                    editableId: state.editableId
+                }
             }
             return {
                 selectedId: action.parentId,
@@ -61,7 +74,8 @@ export default (state = initialState, action) => {
                 notes: [
                     ...state.notes.filter(i => i.id !== action.id)
                 ],
-                selectedNote: state.selectedNote
+                selectedNote: state.selectedNote,
+                editableId: state.editableId
             }
         case types.ADD_NOTE:
             if (!action.id) {
@@ -77,26 +91,63 @@ export default (state = initialState, action) => {
                     ...state.notes,
                     newNote
                 ],
-                selectedNote: state.selectedNote
+                selectedNote: state.selectedNote,
+                editableId: state.editableId
             }
-        case types.SELECT_ITEM:   
+        case types.SELECT_ITEM:
             return {
                 selectedId: action.id,
                 folders: state.folders,
                 notes: state.notes,
-                selectedNote: null
+                selectedNote: null,
+                editableId: null
             }
         case types.SELECT_NOTE:
             return {
                 selectedId: state.selectedId,
                 folders: state.folders,
                 notes: state.notes,
-                selectedNote: action.id
+                selectedNote: action.id,
+                editableId: state.editableId
             }
-        case 'UPDATE_NOTE':
-            return state;
+        case 'TOGGLE_EDIT_FOLDER':
+            if (action.on) {
+                return {
+                    selectedId: state.selectedId,
+                    folders: state.folders,
+                    notes: state.notes,
+                    selectedNote: state.selectedNote,
+                    editableId: action.id
+                }
+            }
+            return {
+                selectedId: state.selectedId,
+                folders: state.folders,
+                notes: state.notes,
+                selectedNote: state.selectedNote,
+                editableId: null
+            }
         case 'RENAME_ITEM':
-            return state;
+            return {
+                selectedId: state.selectedId,
+                folders: [
+                    ...state.folders.map(i => {
+                        if (i.id == action.id) {
+                            return {
+                                id: i.id,
+                                name: action.name,
+                                children: i.children,
+                                parent: i.parent
+                            }
+                        } else {
+                            return i
+                        }
+                    })
+                ],
+                notes: state.notes,
+                selectedNote: state.selectedNote,
+                editableId: state.editableId
+            }
         default:
             return state;
     }

@@ -18,9 +18,13 @@ class TreeContainer extends Component {
     }
 
     innerRemoveItem = () => {
-        let item = this.props.folders.filter(i => i.id === this.props.selectedId)[0]
-        if (item.parent !== undefined) {
-            this.props.removeItem(this.props.selectedId, item.parent)
+        if (this.props.selectNote !== null) {
+            this.props.removeItem(this.props.selectNote, this.props.selectedId)
+        } else {
+            let item = this.props.folders.filter(i => i.id === this.props.selectedId)[0]
+            if (item.parent !== null) {
+                this.props.removeItem(this.props.selectedId, item.parent)
+            }
         }    
     }
 
@@ -59,7 +63,9 @@ class TreeContainer extends Component {
                     
                 </div>
                 <div className="tree">
-                    <TreeItemHierarchy id={this.props.root} items={this.props.folders} selectedId={this.props.selectedId} foo={this.innerSelectItem}/>
+                    <TreeItemHierarchy id={this.props.root} items={this.props.folders} 
+                    selectedId={this.props.selectedId} foo={this.innerSelectItem}
+                    editableId={this.props.editableId} bar={this.props.toggleEdit} rename={this.props.rename}/>
                 </div>
                 <div className='notes'>
                     <div className='search'>Search</div>
@@ -77,6 +83,7 @@ const mapStateToProps = (state) => (
         root: null,
         selectedId: state.selectedId,
         selectedNote: state.selectedNote,
+        editableId: state.editableId,
         folders: state.folders,
         notes: state.notes.filter(i => i.parent === state.selectedId),
         hierarchy: state.folders.filter(i => i.id === 0)

@@ -27,3 +27,15 @@ export const selectNote = id => ({
     type: types.SELECT_NOTE,
     id: id
 })
+
+export const toggleEdit = (on, id) => ({
+    type: types.TOGGLE_EDIT_FOLDER,
+    on: on,
+    id: id
+})
+
+export const rename = (id, name) => ({
+    type: types.RENAME_ITEM,
+    id: id,
+    name: name
+})
