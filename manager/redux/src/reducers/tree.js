@@ -14,7 +14,8 @@ const initialState = {
     ],
     notes: [],
     selectedNote: null,
-    editableId: null
+    editableId: null,
+    editableNote: null
 }
 
 export default (state = initialState, action) => {
@@ -49,7 +50,8 @@ export default (state = initialState, action) => {
                 ],
                 notes: state.notes,
                 selectedNote: null,
-                editableId: state.editableId
+                editableId: null,
+                editableNote: null
             }
         case types.REMOVE_ITEM:
             if (action.id === 0) {
@@ -63,7 +65,8 @@ export default (state = initialState, action) => {
                         ...state.notes.filter(i => i.id !== state.selectedNote)
                     ],
                     selectedNote: null,
-                    editableId: state.editableId
+                    editableId: state.editableId,
+                    editableNote: state.editableNote
                 }
             }
             return {
@@ -75,7 +78,8 @@ export default (state = initialState, action) => {
                     ...state.notes.filter(i => i.id !== action.id)
                 ],
                 selectedNote: state.selectedNote,
-                editableId: state.editableId
+                editableId: state.editableId,
+                editableNote: state.editableNote
             }
         case types.ADD_NOTE:
             if (!action.id) {
@@ -92,7 +96,8 @@ export default (state = initialState, action) => {
                     newNote
                 ],
                 selectedNote: state.selectedNote,
-                editableId: state.editableId
+                editableId: state.editableId,
+                editableNote: state.editableNote
             }
         case types.SELECT_ITEM:
             return {
@@ -100,7 +105,8 @@ export default (state = initialState, action) => {
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: null,
-                editableId: null
+                editableId: null,
+                editableNote: null
             }
         case types.SELECT_NOTE:
             return {
@@ -108,7 +114,8 @@ export default (state = initialState, action) => {
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: action.id,
-                editableId: state.editableId
+                editableId: state.editableId,
+                editableNote: state.editableNote
             }
         case 'TOGGLE_EDIT_FOLDER':
             if (action.on) {
@@ -117,7 +124,8 @@ export default (state = initialState, action) => {
                     folders: state.folders,
                     notes: state.notes,
                     selectedNote: state.selectedNote,
-                    editableId: action.id
+                    editableId: action.id,
+                    editableNote: state.editableNote
                 }
             }
             return {
@@ -125,14 +133,36 @@ export default (state = initialState, action) => {
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: state.selectedNote,
-                editableId: null
+                editableId: null,
+                editableNote: state.editableNote
             }
+
+        case 'TOGGLE_EDIT_NOTE':
+            if (action.on) {
+                return {
+                    selectedId: state.selectedId,
+                    folders: state.folders,
+                    notes: state.notes,
+                    selectedNote: state.selectedNote,
+                    editableId: state.editableId,
+                    editableNote: action.id
+                }
+            }
+            return {
+                selectedId: state.selectedId,
+                folders: state.folders,
+                notes: state.notes,
+                selectedNote: state.selectedNote,
+                editableId: state.editableId,
+                editableNote: null
+            }
+
         case 'RENAME_ITEM':
             return {
                 selectedId: state.selectedId,
                 folders: [
                     ...state.folders.map(i => {
-                        if (i.id == action.id) {
+                        if (i.id === action.id) {
                             return {
                                 id: i.id,
                                 name: action.name,
@@ -146,7 +176,29 @@ export default (state = initialState, action) => {
                 ],
                 notes: state.notes,
                 selectedNote: state.selectedNote,
-                editableId: state.editableId
+                editableId: state.editableId,
+                editableNote: state.editableNote
+            }
+        case 'RENAME_NOTE':
+            return {
+                selectedId: state.selectedId,
+                folders: state.folders,
+                notes: [
+                    ...state.notes.map(i => {
+                        if (i.id === action.id) {
+                            return {
+                                id: i.id,
+                                name: action.name,
+                                parent: i.parent
+                            }
+                        } else {
+                            return i
+                        }
+                    })
+                ],
+                selectedNote: state.selectedNote,
+                editableId: state.editableId,
+                editableNote: state.editableNote
             }
         default:
             return state;

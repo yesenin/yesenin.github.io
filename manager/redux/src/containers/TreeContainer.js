@@ -18,8 +18,8 @@ class TreeContainer extends Component {
     }
 
     innerRemoveItem = () => {
-        if (this.props.selectNote !== null) {
-            this.props.removeItem(this.props.selectNote, this.props.selectedId)
+        if (this.props.selectedNote !== null) {
+            this.props.removeItem(this.props.selectedNote, this.props.selectedId)
         } else {
             let item = this.props.folders.filter(i => i.id === this.props.selectedId)[0]
             if (item.parent !== null) {
@@ -36,30 +36,45 @@ class TreeContainer extends Component {
         if (this.props.selectedNote !== id) { 
             this.props.selectNote(id)
         } else {
-            console.log('edit ' + id)
+            this.props.toggleEditNote(true, id)
         }
+    }
+
+    handleChange(id, event) {
+        this.props.renameNote(id, event.target.value)  
+    }
+
+    handleChange1(event) {
+        if (event.key === 'Enter' || event.keyCode === 27) {
+            this.props.toggleEditNote(false, null)
+        }    
     }
 
     render() {
         const renderedNotes = this.props.notes.map((item) => {
             return <div className={this.props.selectedNote === item.id ? 'note selected' : 'note'} 
             key={item.id} onClick={() => this.innerSelectNote(item.id)}
-            onDoubleClick={() => this.innerDoubleClick(item.id)}>
+            onDoubleClick={() => this.innerDoubleClick(item.id)} title={item.name}>
                 <div className='icon'></div>
-                <span className='text'>{item.name}</span></div>
+                { this.props.editableNote === item.id
+                    ? <input type='text' defaultValue={item.name}
+                        onKeyPress={this.handleChange1.bind(this)}    
+                        onKeyUp={this.handleChange.bind(this, item.id)} />
+                    : <span className='text'>{item.name}</span>}
+                </div>
         })
         return (
             <div className='wrapper'>
                 <div className='menu'>
-                    <div className='menuItem' onClick={this.innerAddFolder}>
+                    <div className='menuItem' onClick={this.innerAddFolder} title="Add folder">
                         <div className='icon'></div>
                         <span className='text'>Add folder</span></div>
-                    <div className='menuItem' onClick={this.innerAddNote}>
+                    <div className='menuItem' onClick={this.innerAddNote} title="Add note">
                         <div className='icon'></div>
                         <span className='text'>Add note</span></div>
-                    <div className='menuItem' onClick={this.innerRemoveItem}>
+                    <div className='menuItem' onClick={this.innerRemoveItem} title="Remove">
                         <div className='icon'></div>
-                        <span className='text'>Remove item</span></div>
+                        <span className='text'>Remove</span></div>
                     
                 </div>
                 <div className="tree">
@@ -84,6 +99,7 @@ const mapStateToProps = (state) => (
         selectedId: state.selectedId,
         selectedNote: state.selectedNote,
         editableId: state.editableId,
+        editableNote: state.editableNote,    
         folders: state.folders,
         notes: state.notes.filter(i => i.parent === state.selectedId),
         hierarchy: state.folders.filter(i => i.id === 0)

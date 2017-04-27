@@ -34,8 +34,20 @@ export const toggleEdit = (on, id) => ({
     id: id
 })
 
+export const toggleEditNote = (on, id) => ({
+    type: 'TOGGLE_EDIT_NOTE',
+    on: on,
+    id: id
+})
+
 export const rename = (id, name) => ({
     type: types.RENAME_ITEM,
+    id: id,
+    name: name
+})
+
+export const renameNote = (id, name) => ({
+    type: 'RENAME_NOTE',
     id: id,
     name: name
 })

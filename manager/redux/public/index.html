@@ -36,6 +36,13 @@
         border-bottom: 1px solid #bbb;
       }
 
+      li div input{
+        border-width: 0;
+        font-size: 12pt;
+        background-color: lightblue;
+        width: 100%;
+      }
+
       li div:hover {
         background-color: pink;
       } 
@@ -95,13 +102,20 @@
       .note .icon {
         background-color: dimgray;
       }
-
+      .menuItem, .note {
+        cursor: pointer;
+      }
       .menuItem .icon {
         background-color: blue;
       }
 
       .note .text, .menuItem .text {
         font-size: 10pt;
+      }
+
+      .note input {
+        width: 45px;
+        border-width: 0;
       }
     </style>
   </head>
