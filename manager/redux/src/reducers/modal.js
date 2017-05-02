@@ -6,9 +6,9 @@ const initialState = {
 
 const modal = (state = initialState, action) => {
     switch (action.type) {
-        case types.ADD_FOLDER:
+        case types.ADD_NOTE:
             return {
-                content: action.parent
+                content: action.id
             }    
         default:
             return state    

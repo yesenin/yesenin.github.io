@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import Note from './Note'
+const Note = () => {
+    return <h1>Note</h1>
+}
 
-class NoteList extends Component {
-    render() {
-        let renderedItems = this.props.items.map(item => <Note key={item.id} item={item}/>)
-        return <div className='list'>{renderedItems}</div>
-    }
+const NoteList = ({items}) => {
+    return (
+        <div className='notes'>
+            <div className='list'>
+                {items.map(item => <Note key={item.id} item={item}/>)}
+            </div>
+        </div>
+    )
 }
 
 export default NoteList

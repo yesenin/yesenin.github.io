@@ -2,79 +2,39 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-import TreeItem from '../components/TreeItem'
+import Menu from '../components/Menu'
+import FolderTree from '../components/FolderTree'
 import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
-    innerAddFolder = () => {
-        this.props.addFolder(this.props.selectedId)
+    addFolder() {
+        this.props.addFolder(this.props.selectedFolder)
     }
-
-    innerAddNote = () => {
-        this.props.addNote(this.props.selectedId)
+    addNote() {
+        this.props.addNote(this.props.selectedFolder)
     }
-
-    innerSelectItem = (id) => {
-        this.props.selectItem(id)
-    }
-
-    innerRemoveItem = () => {
+    remove() {
         if (this.props.selectedNote !== null) {
-            this.props.removeItem(this.props.selectedNote, this.props.selectedId)
+            this.props.removeItem(this.props.selectedNote)
         } else {
-            let item = this.props.folders.filter(i => i.id === this.props.selectedId)[0]
-            if (item.parent !== null) {
-                this.props.removeItem(this.props.selectedId, item.parent)
-            }
-        }    
-    }
-
-    innerSelectNote = (id) => {
-        this.props.selectNote(id)
-    }
-
-    innerDoubleClick(id) {
-        if (this.props.selectedNote !== id) { 
-            this.props.selectNote(id)
-        } else {
-            this.props.toggleEditNote(true, id)
+            this.props.removeItem(this.props.selectedFolder)
         }
     }
-
-    handleChange(id, event) {
-        this.props.renameNote(id, event.target.value)  
+    select(id) {
+        this.props.selectedFolder(id)
     }
-
-    handleChange1(event) {
-        if (event.key === 'Enter' || event.keyCode === 27) {
-            this.props.toggleEditNote(false, null)
-        }    
-    }
-
     render() {
         return (
             <div className='wrapper'>
-                <div className='menu'>
-                    <div className='menuItem' onClick={this.innerAddFolder} title="Add folder">
-                        <div className='icon'></div>
-                        <span className='text'>Add folder</span></div>
-                    <div className='menuItem' onClick={this.innerAddNote} title="Add note">
-                        <div className='icon'></div>
-                        <span className='text'>Add note</span></div>
-                    <div className='menuItem' onClick={this.innerRemoveItem} title="Remove">
-                        <div className='icon'></div>
-                        <span className='text'>Remove</span></div>
-                    
-                </div>
-                <div className="tree">
-                    <TreeItem id={this.props.root} items={this.props.folders} 
-                    selectedId={this.props.selectedId} foo={this.innerSelectItem}
-                    editableId={this.props.editableId} bar={this.props.toggleEdit} rename={this.props.rename}/>
-                </div>
-                <div className='notes'>
-                    <div className='search'>Search</div>
-                    <NoteList items={this.props.notes} />
-                </div>
+                <Menu
+                    addFolder={this.addFolder.bind(this)}
+                    addNote={this.addNote.bind(this)}
+                    remove={this.remove.bind(this)} />
+                <FolderTree
+                    folders={this.props.folders}
+                    selectedFolder={this.props.selectedFolder}/>
+                <NoteList 
+                    items={this.props.notes} />
             </div>    
         )
     }
@@ -82,13 +42,10 @@ class TreeContainer extends Component {
 
 const mapStateToProps = (state) => (
     {
-        root: null,
-        selectedId: state.tree.selectedId,
-        selectedNote: state.tree.selectedNote,
-        editableId: state.tree.editableId,
-        editableNote: state.tree.editableNote,    
         folders: state.tree.folders,
-        notes: state.tree.notes.filter(i => i.parent === state.tree.selectedId)
+        notes: state.tree.notes.filter(i => i.parent === state.tree.selectedId),
+        selectedFolder: state.tree.selectedId,
+        selectedNote: state.tree.selectedNote,
     }
 )
 

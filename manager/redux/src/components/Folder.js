@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class TreeItem extends Component {
+class Folder extends Component {
     isEdit = false
 
     constructor(props) {
