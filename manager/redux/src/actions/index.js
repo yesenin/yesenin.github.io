@@ -6,7 +6,7 @@ export const addFolder = parent => ({
     parent: parent
 })
 
-export const selectItem = id => ({
+export const selectFolder = id => ({
     type: types.SELECT_ITEM,
     id: id
 })
@@ -50,4 +50,16 @@ export const renameNote = (id, name) => ({
     type: 'RENAME_NOTE',
     id: id,
     name: name
+})
+
+export const closeModal = () => ({
+    type: 'CLOSE_MODAL'
+})
+
+export const updateNote = (id, name, body, tags) => ({
+    type: 'UPDATE_NOTE',
+    id: id,
+    name: name,
+    body: body,
+    tags: tags
 })

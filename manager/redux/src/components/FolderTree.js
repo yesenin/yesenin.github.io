@@ -1,24 +1,26 @@
 import React from 'react'
 
-const Folder = ({item, selected}) => {
+const Folder = ({allItems, item, clickHandler}) => {
     return <li>
-        <div className={selected ? 'selected' : ''}>{item.name}</div>
-        <Node items={item.children} />
+        <div className={allItems.selected === item.id ? 'selected' : ''}
+            onClick={() => clickHandler(item.id)}>{item.name + ' ' + item.id}</div>
+        <Node
+            allItems={allItems}
+            items={allItems.all.filter((i) => { return i.parent === item.id })}
+            clickHandler={clickHandler} />
     </li>
 }
 
-const Node = ({items, selectedItem}) => {
+const Node = ({allItems, items, clickHandler}) => {
     return <ul>
-        {items.map(item => {
-            return <Folder key={item.id} item={item} selected={item.id === selectedItem}/>
-        })}
+        { items.map(i => <Folder key={i.id} allItems={allItems} item={i} clickHandler={clickHandler}/>) }
     </ul>
 }
 
-const FolderTree = ({folders, selectedFolder}) => {
+const FolderTree = ({items, folderClickHandler}) => {
     return (
         <div className="tree">
-            <Node items={folders} selectedItem={selectedFolder}/>
+            <Node allItems={items} items={items.all.filter((i) => { return i.id === '0' })} clickHandler={folderClickHandler} />
         </div>
     )
 }

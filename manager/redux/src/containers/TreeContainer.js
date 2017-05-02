@@ -8,21 +8,39 @@ import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
     addFolder() {
-        this.props.addFolder(this.props.selectedFolder)
+        this.props.addFolder(this.props.folders.selected)
     }
     addNote() {
-        this.props.addNote(this.props.selectedFolder)
+        this.props.addNote(this.props.folders.selected)
     }
     remove() {
-        if (this.props.selectedNote !== null) {
-            this.props.removeItem(this.props.selectedNote)
+        if (this.props.notes.selected !== null) {
+            this.props.removeItem(this.props.notes.selected)
         } else {
-            this.props.removeItem(this.props.selectedFolder)
+            this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
         }
     }
     select(id) {
-        this.props.selectedFolder(id)
+        this.props.selectFolder(id)
     }
+    selectNote(id) {
+        this.props.selectNote(id)
+    }
+    editNoteOn(id, e) {
+        e.target.focus()
+        this.props.toggleEditNote(true, id)
+    }
+    editNoteOff(id, event) {
+        if (event.keyCode === 13) {
+            if (event.target.value !== '') {
+                this.props.renameNote(id, event.target.value)
+            }    
+            this.props.toggleEditNote(false, id)
+        } else if (event.keyCode === 27) {
+            this.props.toggleEditNote(false, id)
+        }
+    }
+
     render() {
         return (
             <div className='wrapper'>
@@ -31,10 +49,13 @@ class TreeContainer extends Component {
                     addNote={this.addNote.bind(this)}
                     remove={this.remove.bind(this)} />
                 <FolderTree
-                    folders={this.props.folders}
-                    selectedFolder={this.props.selectedFolder}/>
+                    items={this.props.folders}
+                    folderClickHandler={this.select.bind(this)}/>
                 <NoteList 
-                    items={this.props.notes} />
+                    items={this.props.notes}
+                    selectNoteHandler={this.selectNote.bind(this)}
+                    editNoteOnHandler={this.editNoteOn.bind(this)}
+                    editNoteOffHandler={this.editNoteOff.bind(this)}/>
             </div>    
         )
     }
@@ -42,10 +63,15 @@ class TreeContainer extends Component {
 
 const mapStateToProps = (state) => (
     {
-        folders: state.tree.folders,
-        notes: state.tree.notes.filter(i => i.parent === state.tree.selectedId),
-        selectedFolder: state.tree.selectedId,
-        selectedNote: state.tree.selectedNote,
+        folders: {
+            all: state.tree.folders,
+            selected: state.tree.selectedFolder
+        },
+        notes: {
+            all: state.tree.notes.filter(i => i.parent === state.tree.selectedFolder),
+            selected: state.tree.selectedNote,
+            editedNote: state.tree.editableNote
+        }
     }
 )
 

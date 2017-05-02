@@ -1,58 +1,43 @@
 import * as types from '../constants/ActionTypes'
 import { v4 } from 'uuid'
 
-const folder = (state, action) => {
-    switch (action.type) {
-        case types.ADD_FOLDER:
-            return {
-                name: action.name,
-                id: action.id,
-                parent: action.parent,
-                children: []
-            }
-        case 'ADD_CHILD':
-            return {
-                id: state.id,
-                name: state.name,
-                parent: state.parent,
-                children: [
-                    ...state.children,
-                    action.child
-                ]
-            }    
-        default:
-            return state;    
-    }
-}
-
 const folders = (state, action) => {
     switch (action.type) {
         case types.ADD_FOLDER:
+            const newFolder = {
+                id: action.id,
+                name: action.name,
+                parent: action.parent,
+                children: []
+            }
             return [
+                /*
                 ...state.map(i => {
-                    if (i.id !== parent) {
+                    if (i.id !== action.parent) {
                         return i;
                     }
-                    return folder(i, {
-                        type: 'ADD_CHILD',
-                        child: folder(undefined, action)
-                    })
+                    return {
+                        name: i.name,
+                        id: i.id,
+                        parent: i.parent,
+                        children: [ ...i.children, newFolder]
+                    }
                 }),
-                folder(undefined, action)
+                */
+                ...state,
+                newFolder
             ];
-        case types.REMOVE_ITEM:
-            return     
         default:
             return state;
     }
 }    
 
 const initialState = {
-    selectedId: 0,
+    selectedFolder: '0',
     folders: [
         {
             name: 'root',
-            id: 0,
+            id: '0',
             children: [],
             parent: null
         }
@@ -70,7 +55,7 @@ const tree = (state = initialState, action) => {
                 action.id = v4()
             }
             return {
-                selectedId: action.id,
+                selectedFolder: action.id,
                 folders: folders(state.folders, action),
                 notes: state.notes,
                 selectedNote: null,
@@ -81,20 +66,20 @@ const tree = (state = initialState, action) => {
             if (action.id === 0) {
                 return state;
             }
-            if (state.selectedNote !== null) {
+            if (action.parentId === null) {
                 return {
-                    selectedId: state.selectedId,
+                    selectedFolder: state.selectedFolder,
                     folders: state.folders,
-                    notes: state.notes.filter(i => i.id !== state.selectedNote),
+                    notes: state.notes.filter(i => i.id !== action.id),
                     selectedNote: null,
                     editableId: state.editableId,
                     editableNote: state.editableNote
                 }
             }
             return {
-                selectedId: action.parentId,
+                selectedFolder: action.parentId,
                 folders: state.folders.filter(i => i.id !== action.id),
-                notes: state.notes.filter(i => i.id !== action.id),
+                notes: state.notes.filter(i => i.parent !== action.id),
                 selectedNote: state.selectedNote,
                 editableId: state.editableId,
                 editableNote: state.editableNote
@@ -104,10 +89,10 @@ const tree = (state = initialState, action) => {
                 action.id = v4()
             }
             const newNote = state.folders.filter(i => i.id === action.parent).length
-                ? { name: action.name, id: action.id, parent: action.parent }
-                : { name: action.name, id: action.id, parent: 0 }
+                ? { name: action.name, id: action.id, parent: action.parent, body: 'body', tags: ['tag 1', 'tag 2']}
+                : { name: action.name, id: action.id, parent: 0, body: 'body', tags: ['tag 1', 'tag 2'] }
             return {
-                selectedId: state.selectedId,
+                selectedFolder: state.selectedFolder,
                 folders: state.folders,
                 notes: [
                     ...state.notes,
@@ -119,7 +104,7 @@ const tree = (state = initialState, action) => {
             }
         case types.SELECT_ITEM:
             return {
-                selectedId: action.id,
+                selectedFolder: action.id,
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: null,
@@ -128,7 +113,7 @@ const tree = (state = initialState, action) => {
             }
         case types.SELECT_NOTE:
             return {
-                selectedId: state.selectedId,
+                selectedFolder: state.selectedFolder,
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: action.id,
@@ -158,7 +143,7 @@ const tree = (state = initialState, action) => {
         case 'TOGGLE_EDIT_NOTE':
             if (action.on) {
                 return {
-                    selectedId: state.selectedId,
+                    selectedFolder: state.selectedFolder,
                     folders: state.folders,
                     notes: state.notes,
                     selectedNote: state.selectedNote,
@@ -167,7 +152,7 @@ const tree = (state = initialState, action) => {
                 }
             }
             return {
-                selectedId: state.selectedId,
+                selectedFolder: state.selectedFolder,
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: state.selectedNote,
@@ -199,7 +184,7 @@ const tree = (state = initialState, action) => {
             }
         case 'RENAME_NOTE':
             return {
-                selectedId: state.selectedId,
+                selectedFolder: state.selectedFolder,
                 folders: state.folders,
                 notes: [
                     ...state.notes.map(i => {
@@ -207,7 +192,41 @@ const tree = (state = initialState, action) => {
                             return {
                                 id: i.id,
                                 name: action.name,
-                                parent: i.parent
+                                parent: i.parent,
+                                body: i.body,
+                                tags: i.tags
+                            }
+                        } else {
+                            return i
+                        }
+                    })
+                ],
+                selectedNote: state.selectedNote,
+                editableId: state.editableId,
+                editableNote: state.editableNote
+            }
+        case 'CLOSE_MODAL':
+            return {
+                selectedFolder: state.selectedFolder,
+                folders: state.folders,
+                notes: state.notes,
+                selectedNote: null,
+                editableId: state.editableId,
+                editableNote: state.editableNote
+            } 
+        case 'UPDATE_NOTE':
+           return {
+                selectedFolder: state.selectedFolder,
+                folders: state.folders,
+                notes: [
+                    ...state.notes.map(i => {
+                        if (i.id === action.id) {
+                            return {
+                                id: i.id,
+                                name: action.name,
+                                parent: i.parent,
+                                body: action.body,
+                                tags: [...i.tags, action.tags]
                             }
                         } else {
                             return i
