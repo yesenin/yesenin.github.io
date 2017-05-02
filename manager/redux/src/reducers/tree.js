@@ -1,5 +1,11 @@
 import * as types from '../constants/ActionTypes'
-import { v4 } from 'uuid'
+
+let idGenerator = 1
+
+const getId = () => {
+    idGenerator++
+    return idGenerator
+}
 
 const folders = (state, action) => {
     switch (action.type) {
@@ -11,19 +17,6 @@ const folders = (state, action) => {
                 children: []
             }
             return [
-                /*
-                ...state.map(i => {
-                    if (i.id !== action.parent) {
-                        return i;
-                    }
-                    return {
-                        name: i.name,
-                        id: i.id,
-                        parent: i.parent,
-                        children: [ ...i.children, newFolder]
-                    }
-                }),
-                */
                 ...state,
                 newFolder
             ];
@@ -33,26 +26,101 @@ const folders = (state, action) => {
 }    
 
 const initialState = {
-    selectedFolder: '0',
-    folders: [
-        {
-            name: 'root',
-            id: '0',
-            children: [],
-            parent: null
-        }
-    ],
+    selectedFolder: 1,
+    folders: [],
     notes: [],
     selectedNote: null,
     editableId: null,
     editableNote: null
 }
 
+export const dataService = store => next => action => {
+    next(action)
+    switch (action.type) {
+        case 'API_GET_DIRECTORIES':
+            fetch('http://localhost:3000/directories')
+                .then((resp) => {
+                    resp.json().then((foo) => {
+                        next({
+                            type: 'GET_DIRECTORIES_RECEIVED',
+                            foo
+                        })
+                    })
+                })
+            break
+        case 'API_GET_NOTICES':
+            fetch('http://localhost:3000/notices')
+                .then((resp) => {
+                    resp.json().then((foo) => {
+                        next({
+                            type: 'GET_NOTICES_RECEIVED',
+                            foo
+                        })
+                    })
+                })
+            break
+        case 'API_POST_DIRECTORIES':
+            fetch('http://localhost:3000/directories', {
+                method: 'POST',
+                body: JSON.stringify({ parentId: action.parentId, name: action.name }),
+                headers: new Headers({ 'Content-Type': 'application/json' })
+            })
+                .then(fetch('http://localhost:3000/directories')
+                    .then((resp) => {
+                        resp.json().then((foo) => {
+                            next({
+                                type: 'GET_DIRECTORIES_RECEIVED',
+                                foo
+                            })
+                        })
+                    }))
+            break
+        case 'API_POST_NOTICES':
+            fetch('http://localhost:3000/notices', {
+                method: 'POST',
+                body: JSON.stringify({ directoryId: action.parentId, title: action.name, description: 'desc', tags:[] }),
+                headers: new Headers({ 'Content-Type': 'application/json' })
+            })
+                .then(fetch('http://localhost:3000/notices')
+                    .then((resp) => {
+                        resp.json().then((foo) => {
+                            next({
+                                type: 'GET_NOTICES_RECEIVED',
+                                foo
+                            })
+                        })
+                    }))
+            break
+        default:
+            break    
+    }
+}
+
 const tree = (state = initialState, action) => {
     switch (action.type) {
-        case types.ADD_FOLDER:
+        case 'GET_DIRECTORIES_RECEIVED':
+            return {
+                selectedFolder: action.foo[0].id,
+                folders: action.foo,
+                notes: state.notes,
+                selectedNote: null,
+                editableId: null,
+                editableNote: null
+            }    
+        case 'GET_NOTICES_RECEIVED':
+            return {
+                selectedFolder: state.selectedFolder,
+                folders: state.folders,
+                notes: action.foo,
+                selectedNote: null,
+                editableId: null,
+                editableNote: null
+            }   
+        //case types.ADD_FOLDER:
+                
+        /*    
             if (!action.id) {
-                action.id = v4()
+                action.id = getId()
             }
             return {
                 selectedFolder: action.id,
@@ -62,6 +130,7 @@ const tree = (state = initialState, action) => {
                 editableId: null,
                 editableNote: null
             }
+        */
         case types.REMOVE_ITEM:
             if (action.id === 0) {
                 return state;
@@ -86,7 +155,7 @@ const tree = (state = initialState, action) => {
             }
         case types.ADD_NOTE:
             if (!action.id) {
-                action.id = v4()
+                action.id = getId()
             }
             const newNote = state.folders.filter(i => i.id === action.parent).length
                 ? { name: action.name, id: action.id, parent: action.parent, body: 'body', tags: ['tag 1', 'tag 2']}

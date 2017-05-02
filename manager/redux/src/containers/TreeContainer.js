@@ -7,6 +7,10 @@ import FolderTree from '../components/FolderTree'
 import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
+    componentDidMount() {
+        this.props.api_get_dirs()
+        //this.select(this.props.folderFromUrl)
+    }
     addFolder() {
         this.props.addFolder(this.props.folders.selected)
     }
@@ -68,7 +72,7 @@ const mapStateToProps = (state) => (
             selected: state.tree.selectedFolder
         },
         notes: {
-            all: state.tree.notes.filter(i => i.parent === state.tree.selectedFolder),
+            all: state.tree.notes.filter(i => i.directoryId === state.tree.selectedFolder),
             selected: state.tree.selectedNote,
             editedNote: state.tree.editableNote
         }

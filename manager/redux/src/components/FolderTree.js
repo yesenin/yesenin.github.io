@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Folder = ({allItems, item, clickHandler}) => {
     return <li>
-        <div className={allItems.selected === item.id ? 'selected' : ''}
-            onClick={() => clickHandler(item.id)}>{item.name + ' ' + item.id}</div>
+        <Link to={'/' + item.id}><div className={allItems.selected === item.id ? 'selected' : ''}
+            onClick={() => clickHandler(item.id)}>{item.name + ' ' + item.id}</div></Link>
         <Node
             allItems={allItems}
-            items={allItems.all.filter((i) => { return i.parent === item.id })}
+            items={allItems.all.filter((i) => { return i.parentId === item.id })}
             clickHandler={clickHandler} />
     </li>
 }
@@ -20,7 +21,7 @@ const Node = ({allItems, items, clickHandler}) => {
 const FolderTree = ({items, folderClickHandler}) => {
     return (
         <div className="tree">
-            <Node allItems={items} items={items.all.filter((i) => { return i.id === '0' })} clickHandler={folderClickHandler} />
+            <Node allItems={items} items={items.all.filter((i) => { return i.id === 1 })} clickHandler={folderClickHandler} />
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import * as types from '../constants/ActionTypes'
 
 export const addFolder = parent => ({
-    type: types.ADD_FOLDER,
+    type: 'API_POST_DIRECTORIES',
     name: "folder",
-    parent: parent
+    parentId: parent
 })
 
 export const selectFolder = id => ({
@@ -18,9 +18,9 @@ export const removeItem = (id, parentId) => ({
 })
 
 export const addNote = parent => ({
-    type: types.ADD_NOTE,
+    type: 'API_POST_NOTICES',
     name: "note",
-    parent: parent
+    parentId: parent
 })
 
 export const selectNote = id => ({
@@ -63,3 +63,8 @@ export const updateNote = (id, name, body, tags) => ({
     body: body,
     tags: tags
 })
+
+export const api_get_dirs = () => ({
+        type: 'API_GET_DIRECTORIES'
+    }
+)
