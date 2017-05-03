@@ -5,7 +5,7 @@ const Note = ({item, selected, edited, clickHandler, doubleClickHandler, enterHa
     return <div className={selected ? 'note selected' : 'note'}>
             <div className='icon' onClick={() => clickHandler(item.id)}></div>
             {edited
-                ? <input type='text' defaultValue={item.title} onKeyUp={(e) => enterHandler(item.id, e)}  autoFocus/>
+                ? <input type='text' defaultValue={item.title} onKeyUp={(e) => enterHandler(item, e)}  autoFocus/>
                 : <span className='text' onDoubleClick={(e) => doubleClickHandler(item.id, e)}>{item.title}</span>
             }
         </div>

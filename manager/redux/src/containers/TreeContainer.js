@@ -23,9 +23,9 @@ class TreeContainer extends Component {
         if (this.props.notes.selected !== null) {
             //this.props.removeItem(this.props.notes.selected)
             this.props.apiDeleteNote(this.props.notes.selected)
-        } else if (this.props.folders.selected != 1
-            && this.props.folders.all.filter(i => i.parentId == this.props.folders.selected).length === 0
-            && this.props.notes.all.filter(i => i.directoryId == this.props.folders.selected).length === 0) {
+        } else if (this.props.folders.selected !== 1
+            && this.props.folders.all.filter(i => i.parentId === this.props.folders.selected).length === 0
+            && this.props.notes.all.filter(i => i.directoryId === this.props.folders.selected).length === 0) {
             //this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
             this.props.apiDeleteDirectory(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parentId)
         }
@@ -37,17 +37,32 @@ class TreeContainer extends Component {
         this.props.selectNote(id)
     }
     editNoteOn(id, e) {
-        e.target.focus()
         this.props.toggleEditNote(true, id)
     }
-    editNoteOff(id, event) {
+
+    editFolderOn(id, e) {
+        this.props.toggleEdit(true, id)
+    }
+
+    editFolderOff(item, event) {
         if (event.keyCode === 13) {
             if (event.target.value !== '') {
-                this.props.renameNote(id, event.target.value)
-            }    
-            this.props.toggleEditNote(false, id)
+                this.props.apiRenameFolder(item, event.target.value)
+            } 
+            this.props.toggleEdit(false, item.id)
         } else if (event.keyCode === 27) {
-            this.props.toggleEditNote(false, id)
+            this.props.toggleEdit(false, item.id)
+        }
+    }
+
+    editNoteOff(item, event) {
+        if (event.keyCode === 13) {
+            if (event.target.value !== '') {
+                this.props.apiRenameNote(item, event.target.value)
+            }    
+            this.props.toggleEditNote(false, item.id)
+        } else if (event.keyCode === 27) {
+            this.props.toggleEditNote(false, item.id)
         }
     }
     
@@ -61,7 +76,9 @@ class TreeContainer extends Component {
                 <FolderTree
                     items={this.props.folders}
                     isFetching={this.props.isFetching}
-                    folderClickHandler={this.select.bind(this)}/>
+                    folderClickHandler={this.select.bind(this)}
+                    doubleClickHandler1={this.editFolderOn.bind(this)}
+                    keyHandler={this.editFolderOff.bind(this)}/>
                 <NoteList 
                     items={this.props.notes}
                     selectNoteHandler={this.selectNote.bind(this)}
@@ -77,7 +94,8 @@ const mapStateToProps = (state) => (
         isFetching: state.api.isFetching,
         folders: {
             all: state.tree.folders,
-            selected: state.tree.selectedFolder
+            selected: state.tree.selectedFolder,
+            editedFolder: state.tree.editableId
         },
         notes: {
             all: state.tree.notes.filter(i => i.directoryId === state.tree.selectedFolder),

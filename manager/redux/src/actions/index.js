@@ -1,27 +1,11 @@
 import * as types from '../constants/ActionTypes'
 
-export const addFolder = parent => ({
-    type: types.ADD_FOLDER,
-    name: "folder",
-    parentId: parent
-})
-
 export const selectFolder = id => ({
     type: types.SELECT_ITEM,
     id: id
 })
 
-export const removeItem = (id, parentId) => ({
-    type: types.REMOVE_ITEM,
-    id: id,
-    parentId: parentId
-})
 
-export const addNote = parent => ({
-    type: types.ADD_NOTE,
-    title: "note",
-    directoryId: parent
-})
 
 export const selectNote = id => ({
     type: types.SELECT_NOTE,
@@ -40,29 +24,11 @@ export const toggleEditNote = (on, id) => ({
     id: id
 })
 
-export const rename = (id, name) => ({
-    type: types.RENAME_ITEM,
-    id: id,
-    name: name
-})
-
-export const renameNote = (id, name) => ({
-    type: 'RENAME_NOTE',
-    id: id,
-    name: name
-})
 
 export const closeModal = () => ({
     type: 'CLOSE_MODAL'
 })
 
-export const updateNote = (id, name, body, tags) => ({
-    type: 'UPDATE_NOTE',
-    id: id,
-    name: name,
-    body: body,
-    tags: tags
-})
 
 export const request = () => ({
   type: 'API_REQUEST'
@@ -182,7 +148,7 @@ export const apiAddNote = id => (dispatch, getState) => {
 export const apiUpdateNote = (id, directoryId) => (dispatch, getState) => {
     const foo = getState()
     if (!foo.data) {
-        dispatch(apiNotesPut(id, directoryId, "Changed Note", "A changed text.", ["A", "tag"]))
+        dispatch(apiNotesPut(id, directoryId, "Changed title", "A changed text.", ["A", "tag"]))
             .catch((error) => {
                 console.log(error);
             })
@@ -195,5 +161,34 @@ export const apiDeleteNote = (id) => (dispatch, getState) => {
     if (!foo.data) {
         dispatch(apiNotesDelete(id))
             .then(() =>  dispatch(apiNotesGet()))
+    }
+}
+
+const apiFolderPut = (id, parentId, name) => dispatch => {
+  dispatch(request())
+  return fetch(`http://localhost:3000/directories/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({ id: id, parentId: parentId, name: name }),
+        headers: new Headers({'Content-Type': 'application/json'})
+    })
+}
+
+export const apiRenameFolder = (item, newName) => (dispatch, getState) => {
+    const foo = getState()
+    if (!foo.data) {
+        dispatch(apiFolderPut(item.id, item.parentId, newName))
+            .catch((error) => {
+                console.log(error);
+            })
+            .then(() =>  dispatch(apiGet()))   
+    }
+}
+
+
+export const apiRenameNote = (item, newName) => (dispatch, getState) => {
+    const foo = getState()
+    if (!foo.data) {
+        dispatch(apiNotesPut(item.id, item.directoryId, newName, item.description, item.tags))
+            .then(() =>  dispatch(apiNotesGet()))   
     }
 }

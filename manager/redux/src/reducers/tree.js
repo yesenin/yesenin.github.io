@@ -125,7 +125,7 @@ const tree = (state = initialState, action) => {
         case 'TOGGLE_EDIT_FOLDER':
             if (action.on) {
                 return {
-                    selectedId: state.selectedId,
+                    selectedFolder: state.selectedFolder,
                     folders: state.folders,
                     notes: state.notes,
                     selectedNote: state.selectedNote,
@@ -134,7 +134,7 @@ const tree = (state = initialState, action) => {
                 }
             }
             return {
-                selectedId: state.selectedId,
+                selectedFolder: state.selectedFolder,
                 folders: state.folders,
                 notes: state.notes,
                 selectedNote: state.selectedNote,
