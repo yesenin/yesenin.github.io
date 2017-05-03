@@ -8,11 +8,18 @@ import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
     componentDidMount() {
-        this.props.api_get_dirs()
-        //this.select(this.props.folderFromUrl)
+        const { dispatch } = this.props
+        dispatch(actions.fetchPosts())
     }
+
+    componentWillReceiveProps(nextProps) {
+        const { dispatch } = nextProps
+        dispatch(actions.fetchPosts())
+    }
+
     addFolder() {
-        this.props.addFolder(this.props.folders.selected)
+        const { dispatch } = this.props
+        dispatch(actions.fetchPosts())
     }
     addNote() {
         this.props.addNote(this.props.folders.selected)
@@ -54,6 +61,7 @@ class TreeContainer extends Component {
                     remove={this.remove.bind(this)} />
                 <FolderTree
                     items={this.props.folders}
+                    isFetching={this.props.isFetching}
                     folderClickHandler={this.select.bind(this)}/>
                 <NoteList 
                     items={this.props.notes}
@@ -67,6 +75,7 @@ class TreeContainer extends Component {
 
 const mapStateToProps = (state) => (
     {
+        isFetching: state.tree.isFetching,
         folders: {
             all: state.tree.folders,
             selected: state.tree.selectedFolder

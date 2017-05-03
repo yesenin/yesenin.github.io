@@ -64,7 +64,23 @@ export const updateNote = (id, name, body, tags) => ({
     tags: tags
 })
 
-export const api_get_dirs = () => ({
-        type: 'API_GET_DIRECTORIES'
-    }
-)
+export const requestPosts = reddit => ({
+  type: 'REQUEST_POSTS'
+})
+
+export const receivePosts = (json) => ({
+  type: 'RECEIVE_POSTS',
+  foo: json
+})
+
+export const fetchPosts = () => dispatch => {
+  dispatch(requestPosts())
+  return fetch('http://localhost:3000/directories', {
+        method: 'POST',
+        body: JSON.stringify({ parentId: 1, name: 'folder' }),
+        headers: new Headers({ 'Content-Type': 'application/json' })
+    }).then(
+   fetch('http://localhost:3000/directories')
+    .then(response => response.json())
+    .then(json => dispatch(receivePosts(json))))
+}

@@ -18,11 +18,13 @@ const Node = ({allItems, items, clickHandler}) => {
     </ul>
 }
 
-const FolderTree = ({items, folderClickHandler}) => {
+const FolderTree = ({items, isFetching, folderClickHandler}) => {
     return (
-        <div className="tree">
-            <Node allItems={items} items={items.all.filter((i) => { return i.id === 1 })} clickHandler={folderClickHandler} />
-        </div>
+        isFetching
+            ? <h1>Loading...</h1>
+            : <div className="tree" style={{ opacity: isFetching ? 0.5 : 1 }}>
+                <Node allItems={items} items={items.all.filter((i) => { return i.id === 1 })} clickHandler={folderClickHandler} />
+            </div>
     )
 }
 

@@ -26,6 +26,7 @@ const folders = (state, action) => {
 }    
 
 const initialState = {
+    isFetching: false,
     selectedFolder: 1,
     folders: [],
     notes: [],
@@ -36,17 +37,18 @@ const initialState = {
 
 export const dataService = store => next => action => {
     next(action)
+    
     switch (action.type) {
+        
         case 'API_GET_DIRECTORIES':
             fetch('http://localhost:3000/directories')
-                .then((resp) => {
-                    resp.json().then((foo) => {
-                        next({
-                            type: 'GET_DIRECTORIES_RECEIVED',
-                            foo
-                        })
+                .then(resp => resp.json())
+                .then(json => 
+                    next({
+                        type: 'RECEIVE_POSTS',
+                        foo: json
                     })
-                })
+                )
             break
         case 'API_GET_NOTICES':
             fetch('http://localhost:3000/notices')
@@ -66,14 +68,16 @@ export const dataService = store => next => action => {
                 headers: new Headers({ 'Content-Type': 'application/json' })
             })
                 .then(fetch('http://localhost:3000/directories')
-                    .then((resp) => {
-                        resp.json().then((foo) => {
-                            next({
-                                type: 'GET_DIRECTORIES_RECEIVED',
-                                foo
-                            })
+                .then((resp) => {
+                    resp.json()
+                    .then((foo) => {
+                        next({
+                            type: 'GET_DIRECTORIES_RECEIVED',
+                            foo
                         })
-                    }))
+                    })
+                }))
+                
             break
         case 'API_POST_NOTICES':
             fetch('http://localhost:3000/notices', {
@@ -98,6 +102,26 @@ export const dataService = store => next => action => {
 
 const tree = (state = initialState, action) => {
     switch (action.type) {
+        case 'REQUEST_POSTS':
+            return {
+                isFetching: true,
+                selectedFolder: state.selectedFolder,
+                folders: state.folders,
+                notes: state.notes,
+                selectedNote: state.selectedNote,
+                editableId: state.editableId,
+                editableNote: state.editableNote
+            }
+        case 'RECEIVE_POSTS':
+            return {
+                isFetching: false,
+                selectedFolder: state.selectedFolder,
+                folders: action.foo,
+                notes: state.notes,
+                selectedNote: state.selectedNote,
+                editableId: state.editableId,
+                editableNote: state.editableNote
+            }
         case 'GET_DIRECTORIES_RECEIVED':
             return {
                 selectedFolder: action.foo[0].id,
