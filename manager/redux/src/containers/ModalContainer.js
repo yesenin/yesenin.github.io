@@ -12,8 +12,8 @@ const Tag = ({ tag }) => {
 
 const Note = ({ item }) => {
     return <div>
-        <h2>Name</h2><input type='text' defaultValue={item.name} />
-        <h2>Body</h2><textarea cols='70' rows='5' defaultValue={item.body} />
+        <h2>Title</h2><input type='text' defaultValue={item.title} />
+        <h2>Description</h2><textarea cols='70' rows='5' defaultValue={item.description} />
         <h2>Tags</h2><p>{item.tags.map((tag) => <Tag key={tag} tag={tag} />)}</p>
         <h2>Add tag</h2><input type='text' />
     </div>
@@ -27,8 +27,8 @@ class ModalContainer extends Component {
                     {this.props.foo ? <Note item={this.props.foo}/> : <div></div>}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={() => this.props.removeItem(this.props.id, null)}>Delete</Button>
-                    <Button onClick={() => this.props.updateNote(this.props.id, Date.now(), Date.now(), [Date.now()])}>Save</Button>
+                    <Button onClick={() => this.props.apiDeleteNote(this.props.id)}>Delete</Button>
+                    <Button onClick={() => this.props.apiUpdateNote(this.props.id, 1)}>Save</Button>
                     <Button onClick={this.props.closeModal}>Cancel</Button>
                 </Modal.Footer>
             </Modal>

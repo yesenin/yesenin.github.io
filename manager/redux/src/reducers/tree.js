@@ -41,16 +41,16 @@ const initialState = {
 
 const tree = (state = initialState, action) => {
     switch (action.type) {
-        case 'RECEIVE':
-            return {
-                ...state,
-                folders: action.data
-            }
-        case 'RECEIVE1':
+        case 'GET_DIRECTORIES':
             return {
                 ...state,
                 folders: action.data,
                 selectedFolder: action.id
+            }
+        case 'GET_NOTES':
+            return {
+                ...state,
+                notes: action.data
             }
         case types.ADD_FOLDER:
             if (!action.id) {

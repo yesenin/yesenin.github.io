@@ -8,21 +8,24 @@ import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
     componentDidMount() {
-        this.props.fetchIfNeeded1()
+        this.props.apiGetDirectories(1)
+        this.props.getNotes()
     }
     addFolder() {
         //this.props.addFolder(this.props.folders.selected)
-        this.props.fetchIfNeeded(this.props.folders.selected)
+        this.props.apiAddDirectory(this.props.folders.selected)
     }
     addNote() {
-        this.props.addNote(this.props.folders.selected)
+        //this.props.addNote(this.props.folders.selected)
+        this.props.apiAddNote(this.props.folders.selected)
     }
     remove() {
         if (this.props.notes.selected !== null) {
-            this.props.removeItem(this.props.notes.selected)
+            //this.props.removeItem(this.props.notes.selected)
+            this.props.apiDeleteNote(this.props.notes.selected)
         } else {
             //this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
-            this.props.fetchIfNeeded2(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parentId)
+            this.props.apiDeleteDirectory(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parentId)
         }
     }
     select(id) {
@@ -45,10 +48,6 @@ class TreeContainer extends Component {
             this.props.toggleEditNote(false, id)
         }
     }
-
-    api() {
-        this.props.fetchIfNeeded()
-    }   
     
     render() {
         return (
@@ -73,6 +72,7 @@ class TreeContainer extends Component {
 
 const mapStateToProps = (state) => (
     {
+        isFetching: state.api.isFetching,
         folders: {
             all: state.tree.folders,
             selected: state.tree.selectedFolder

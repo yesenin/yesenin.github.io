@@ -19,7 +19,7 @@ const Node = ({allItems, items, clickHandler}) => {
 }
 
 const FolderTree = ({items, isFetching, folderClickHandler}) => {
-    return (<div className="tree">
+    return (<div className="tree" style={{ opacity: isFetching ? 0.5 : 1 }}>
                 <Node allItems={items} items={[items.all[0]]} clickHandler={folderClickHandler} />
             </div>
     )

@@ -3,23 +3,31 @@ const api = (state = {
     data: {}
 }, action) => {
     switch (action.type) {
-        case 'REQUEST':
+        case 'API_REQUEST':
             return {
                 ...state,
                 isFetching: true
             }
-        case 'RECEIVE':
+        /*
+        case 'GET_DIRECTORIES':
             return {
                 ...state,
                 isFetching: false,
                 data: action.data
             }
-        case 'RECEIVE1':
+        */
+        case 'GET_DIRECTORIES':
             return {
                 ...state,
                 isFetching: false,
                 data: action.data,
                 id: action.id
+            }
+        case 'GET_NOTES':
+            return {
+                ...state,
+                isFetching: false,
+                data: action.data
             }
         default:
             return state

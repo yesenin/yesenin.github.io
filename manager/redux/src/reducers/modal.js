@@ -35,6 +35,8 @@ const modal = (state = initialState, action) => {
                     tags: ['tag 1', 'tag 2']
                 }
             } 
+        case 'GET_DIRECTORIES':
+        case 'GET_NOTES':
         case 'UPDATE_NOTE':
         case 'CLOSE_MODAL':
             return {
