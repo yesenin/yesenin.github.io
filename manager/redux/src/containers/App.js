@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     
     return <div>
-      <TreeContainer folderFromUrl={this.props.match.params || 1}/>
+      <TreeContainer />
       <ModalContainer />
     </div> 
   }

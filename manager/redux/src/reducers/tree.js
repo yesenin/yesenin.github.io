@@ -13,8 +13,7 @@ const folders = (state, action) => {
             const newFolder = {
                 id: action.id,
                 name: action.name,
-                parent: action.parent,
-                children: []
+                parentId: action.parentId,
             }
             return [
                 ...state,
@@ -26,123 +25,34 @@ const folders = (state, action) => {
 }    
 
 const initialState = {
-    isFetching: false,
     selectedFolder: 1,
-    folders: [],
+    folders: [
+        {
+            id: 1,
+            name: "root",
+            parentId: null
+        }
+    ],
     notes: [],
     selectedNote: null,
     editableId: null,
     editableNote: null
 }
 
-export const dataService = store => next => action => {
-    next(action)
-    
-    switch (action.type) {
-        
-        case 'API_GET_DIRECTORIES':
-            fetch('http://localhost:3000/directories')
-                .then(resp => resp.json())
-                .then(json => 
-                    next({
-                        type: 'RECEIVE_POSTS',
-                        foo: json
-                    })
-                )
-            break
-        case 'API_GET_NOTICES':
-            fetch('http://localhost:3000/notices')
-                .then((resp) => {
-                    resp.json().then((foo) => {
-                        next({
-                            type: 'GET_NOTICES_RECEIVED',
-                            foo
-                        })
-                    })
-                })
-            break
-        case 'API_POST_DIRECTORIES':
-            fetch('http://localhost:3000/directories', {
-                method: 'POST',
-                body: JSON.stringify({ parentId: action.parentId, name: action.name }),
-                headers: new Headers({ 'Content-Type': 'application/json' })
-            })
-                .then(fetch('http://localhost:3000/directories')
-                .then((resp) => {
-                    resp.json()
-                    .then((foo) => {
-                        next({
-                            type: 'GET_DIRECTORIES_RECEIVED',
-                            foo
-                        })
-                    })
-                }))
-                
-            break
-        case 'API_POST_NOTICES':
-            fetch('http://localhost:3000/notices', {
-                method: 'POST',
-                body: JSON.stringify({ directoryId: action.parentId, title: action.name, description: 'desc', tags:[] }),
-                headers: new Headers({ 'Content-Type': 'application/json' })
-            })
-                .then(fetch('http://localhost:3000/notices')
-                    .then((resp) => {
-                        resp.json().then((foo) => {
-                            next({
-                                type: 'GET_NOTICES_RECEIVED',
-                                foo
-                            })
-                        })
-                    }))
-            break
-        default:
-            break    
-    }
-}
-
 const tree = (state = initialState, action) => {
     switch (action.type) {
-        case 'REQUEST_POSTS':
+        case 'RECEIVE':
             return {
-                isFetching: true,
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: state.notes,
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ...state,
+                folders: action.data
             }
-        case 'RECEIVE_POSTS':
+        case 'RECEIVE1':
             return {
-                isFetching: false,
-                selectedFolder: state.selectedFolder,
-                folders: action.foo,
-                notes: state.notes,
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ...state,
+                folders: action.data,
+                selectedFolder: action.id
             }
-        case 'GET_DIRECTORIES_RECEIVED':
-            return {
-                selectedFolder: action.foo[0].id,
-                folders: action.foo,
-                notes: state.notes,
-                selectedNote: null,
-                editableId: null,
-                editableNote: null
-            }    
-        case 'GET_NOTICES_RECEIVED':
-            return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: action.foo,
-                selectedNote: null,
-                editableId: null,
-                editableNote: null
-            }   
-        //case types.ADD_FOLDER:
-                
-        /*    
+        case types.ADD_FOLDER:
             if (!action.id) {
                 action.id = getId()
             }
@@ -154,7 +64,6 @@ const tree = (state = initialState, action) => {
                 editableId: null,
                 editableNote: null
             }
-        */
         case types.REMOVE_ITEM:
             if (action.id === 0) {
                 return state;
@@ -181,9 +90,9 @@ const tree = (state = initialState, action) => {
             if (!action.id) {
                 action.id = getId()
             }
-            const newNote = state.folders.filter(i => i.id === action.parent).length
-                ? { name: action.name, id: action.id, parent: action.parent, body: 'body', tags: ['tag 1', 'tag 2']}
-                : { name: action.name, id: action.id, parent: 0, body: 'body', tags: ['tag 1', 'tag 2'] }
+            const newNote = state.folders.filter(i => i.id === action.directoryId).length
+                ? { title: action.title, id: action.id, directoryId: action.directoryId, description: 'body', tags: ['tag 1', 'tag 2'], position: 0}
+                : { title: action.title, id: action.id, directoryId: 1, description: 'body', tags: ['tag 1', 'tag 2'], position: 0 }
             return {
                 selectedFolder: state.selectedFolder,
                 folders: state.folders,
@@ -262,8 +171,7 @@ const tree = (state = initialState, action) => {
                             return {
                                 id: i.id,
                                 name: action.name,
-                                children: i.children,
-                                parent: i.parent
+                                parentId: i.parentId
                             }
                         } else {
                             return i
@@ -284,10 +192,11 @@ const tree = (state = initialState, action) => {
                         if (i.id === action.id) {
                             return {
                                 id: i.id,
-                                name: action.name,
-                                parent: i.parent,
-                                body: i.body,
-                                tags: i.tags
+                                title: action.title,
+                                directoryId: i.directoryId,
+                                description: i.description,
+                                tags: i.tags,
+                                position: i.position
                             }
                         } else {
                             return i
@@ -316,10 +225,11 @@ const tree = (state = initialState, action) => {
                         if (i.id === action.id) {
                             return {
                                 id: i.id,
-                                name: action.name,
-                                parent: i.parent,
-                                body: action.body,
-                                tags: [...i.tags, action.tags]
+                                title: action.name,
+                                directoryId: i.directoryId,
+                                description: action.body,
+                                tags: [...i.tags, action.tags],
+                                position: i.position
                             }
                         } else {
                             return i

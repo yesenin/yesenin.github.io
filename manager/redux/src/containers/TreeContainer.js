@@ -8,18 +8,11 @@ import NoteList from '../components/NoteList'
 
 class TreeContainer extends Component {
     componentDidMount() {
-        const { dispatch } = this.props
-        dispatch(actions.fetchPosts())
+        this.props.fetchIfNeeded1()
     }
-
-    componentWillReceiveProps(nextProps) {
-        const { dispatch } = nextProps
-        dispatch(actions.fetchPosts())
-    }
-
     addFolder() {
-        const { dispatch } = this.props
-        dispatch(actions.fetchPosts())
+        //this.props.addFolder(this.props.folders.selected)
+        this.props.fetchIfNeeded(this.props.folders.selected)
     }
     addNote() {
         this.props.addNote(this.props.folders.selected)
@@ -28,7 +21,8 @@ class TreeContainer extends Component {
         if (this.props.notes.selected !== null) {
             this.props.removeItem(this.props.notes.selected)
         } else {
-            this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
+            //this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
+            this.props.fetchIfNeeded2(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parentId)
         }
     }
     select(id) {
@@ -52,6 +46,10 @@ class TreeContainer extends Component {
         }
     }
 
+    api() {
+        this.props.fetchIfNeeded()
+    }   
+    
     render() {
         return (
             <div className='wrapper'>
@@ -75,7 +73,6 @@ class TreeContainer extends Component {
 
 const mapStateToProps = (state) => (
     {
-        isFetching: state.tree.isFetching,
         folders: {
             all: state.tree.folders,
             selected: state.tree.selectedFolder
@@ -88,7 +85,7 @@ const mapStateToProps = (state) => (
     }
 )
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(actions, dispatch)
 }
 

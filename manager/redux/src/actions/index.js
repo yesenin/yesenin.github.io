@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes'
 
 export const addFolder = parent => ({
-    type: 'API_POST_DIRECTORIES',
+    type: types.ADD_FOLDER,
     name: "folder",
     parentId: parent
 })
@@ -18,9 +18,9 @@ export const removeItem = (id, parentId) => ({
 })
 
 export const addNote = parent => ({
-    type: 'API_POST_NOTICES',
-    name: "note",
-    parentId: parent
+    type: types.ADD_NOTE,
+    title: "note",
+    directoryId: parent
 })
 
 export const selectNote = id => ({
@@ -64,23 +64,73 @@ export const updateNote = (id, name, body, tags) => ({
     tags: tags
 })
 
-export const requestPosts = reddit => ({
-  type: 'REQUEST_POSTS'
+export const request = () => ({
+  type: 'REQUEST'
 })
 
-export const receivePosts = (json) => ({
-  type: 'RECEIVE_POSTS',
-  foo: json
+export const receive = (data) => ({
+  type: 'RECEIVE',
+  data
 })
 
-export const fetchPosts = () => dispatch => {
-  dispatch(requestPosts())
-  return fetch('http://localhost:3000/directories', {
+export const receive1 = (data, id) => ({
+    type: 'RECEIVE1',
+    data,  
+    id
+})
+
+const apiPost = id => dispatch => {
+  dispatch(request())
+  return fetch('http://localhost:3000/directories/', {
         method: 'POST',
-        body: JSON.stringify({ parentId: 1, name: 'folder' }),
-        headers: new Headers({ 'Content-Type': 'application/json' })
-    }).then(
-   fetch('http://localhost:3000/directories')
+        body: JSON.stringify({ parentId: id, name: "foo2" }),
+        headers: new Headers({'Content-Type': 'application/json'})
+    })
+    .then(r => {
+        fetch('http://localhost:3000/directories/')
+            .then(response => response.json())
+            .then(json => dispatch(receive(json)))
+    })
+}
+
+const apiGet = () => dispatch => {
+  dispatch(request())
+  return fetch('http://localhost:3000/directories/')
     .then(response => response.json())
-    .then(json => dispatch(receivePosts(json))))
+    .then(json => dispatch(receive(json)))
+}
+
+
+const apiDelete = (id, parentId) => dispatch => {
+  dispatch(request())
+  return fetch(`http://localhost:3000/directories/${id}`, {
+        method: 'DELETE'
+    })
+    .then(r => {
+        fetch('http://localhost:3000/directories/')
+            .then(response => response.json())
+            .then(json => dispatch(receive1(json, parentId)))
+    })
+}
+
+
+export const fetchIfNeeded = id => (dispatch, getState) => {
+    const foo = getState()
+    if (!foo.data) {
+        return dispatch(apiPost(id))
+    }
+}
+
+export const fetchIfNeeded1 = () => (dispatch, getState) => {
+    const foo = getState()
+    if (!foo.data) {
+        return dispatch(apiGet())
+    }
+}
+
+export const fetchIfNeeded2 = (id, parentId) => (dispatch, getState) => {
+    const foo = getState()
+    if (!foo.data) {
+        return dispatch(apiDelete(id, parentId))
+    }
 }

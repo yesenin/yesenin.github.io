@@ -1,4 +1,5 @@
 import React from 'react'
+//import { DragSource } from 'react-dnd';
 
 const Note = ({item, selected, edited, clickHandler, doubleClickHandler, enterHandler}) => {
     return <div className={selected ? 'note selected' : 'note'}>
