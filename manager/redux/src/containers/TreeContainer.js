@@ -23,7 +23,9 @@ class TreeContainer extends Component {
         if (this.props.notes.selected !== null) {
             //this.props.removeItem(this.props.notes.selected)
             this.props.apiDeleteNote(this.props.notes.selected)
-        } else {
+        } else if (this.props.folders.selected != 1
+            && this.props.folders.all.filter(i => i.parentId == this.props.folders.selected).length === 0
+            && this.props.notes.all.filter(i => i.directoryId == this.props.folders.selected).length === 0) {
             //this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
             this.props.apiDeleteDirectory(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parentId)
         }
