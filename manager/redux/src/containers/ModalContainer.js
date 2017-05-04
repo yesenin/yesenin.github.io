@@ -20,15 +20,26 @@ const Note = ({ item }) => {
 }
 
 class ModalContainer extends Component {
+    titleChange(e) {
+        this.props.content.title = e.target.value
+    }
+    descriptionChange(e) {
+        this.props.content.description = e.target.value
+    }
     render() {
         return (
             <Modal show={this.props.isOpen}>
                 <Modal.Body>
-                    {this.props.foo ? <Note item={this.props.foo}/> : <div></div>}
+                    <div>
+                        <h2>Title</h2><input name='title' onChange={this.titleChange.bind(this)} type='text' defaultValue={this.props.content.title} />
+                        <h2>Description</h2><textarea name='description' onChange={this.descriptionChange.bind(this)} cols='70' rows='5' defaultValue={this.props.content.description} />
+                    </div>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={() => this.props.apiDeleteNote(this.props.id)}>Delete</Button>
-                    <Button onClick={() => this.props.apiUpdateNote(this.props.id, 1)}>Save</Button>
+                    <Button onClick={() => this.props.mode === 'NEW' 
+                        ? this.props.apiAddNote1(this.props.parent, this.props.content)
+                        : this.props.apiUpdateNote(this.props.id, this.props.parent, this.props.content)}>Save</Button>
                     <Button onClick={this.props.closeModal}>Cancel</Button>
                 </Modal.Footer>
             </Modal>
@@ -38,9 +49,10 @@ class ModalContainer extends Component {
 
 const mapStateToProps = (state) => ({
     isOpen: state.modal.isOpen,
+    mode: state.modal.mode,
     id: state.modal.id,
     content: state.modal.content,
-    foo: state.tree.notes.filter((i) => i.id === state.tree.selectedNote)[0]
+    parent: state.tree.selectedFolder,
 })
 
 function mapDispatchToProps(dispatch) {

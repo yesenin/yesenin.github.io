@@ -3,6 +3,7 @@ import * as types from '../constants/ActionTypes'
 const initialState = {
     isNew: null,
     isOpen: null,
+    mode: null,
     id: null,
     content: {
         name: null,
@@ -13,10 +14,12 @@ const initialState = {
 
 const modal = (state = initialState, action) => {
     switch (action.type) {
+        case 'API_REQUEST1':
         case types.ADD_NOTE:
             return {
                 isNew: true,
-                isOpen: false,
+                isOpen: true,
+                mode: 'NEW',
                 id: action.id,
                 content: {
                     name: null,
@@ -28,12 +31,9 @@ const modal = (state = initialState, action) => {
             return {
                 isNew: false,
                 isOpen: true,
-                id: action.id,
-                content: {
-                    name: 'a name',
-                    body: 'a body',
-                    tags: ['tag 1', 'tag 2']
-                }
+                id: action.data.id,
+                mode: 'EDIT',
+                content: action.data
             } 
         case 'GET_DIRECTORIES':
         case 'GET_NOTES':
@@ -42,6 +42,7 @@ const modal = (state = initialState, action) => {
             return {
                 isNew: null,
                 isOpen: false,
+                mode: null,
                 id: null,
                 content: {
                     name: null,
@@ -53,6 +54,7 @@ const modal = (state = initialState, action) => {
             return {
                 isNew: null,
                 isOpen: false,
+                mode: null,
                 id: null,
                 content: {
                     name: null,

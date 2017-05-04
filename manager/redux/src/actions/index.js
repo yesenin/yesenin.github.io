@@ -7,9 +7,9 @@ export const selectFolder = id => ({
 
 
 
-export const selectNote = id => ({
+export const selectNote = data => ({
     type: types.SELECT_NOTE,
-    id: id
+    data: data
 })
 
 export const toggleEdit = (on, id) => ({
@@ -32,6 +32,10 @@ export const closeModal = () => ({
 
 export const request = () => ({
   type: 'API_REQUEST'
+})
+
+export const request1 = () => ({
+  type: 'API_REQUEST1'
 })
 
 export const receive = (data, id) => ({
@@ -134,21 +138,26 @@ export const getNotes = id => (dispatch, getState) => {
 }
 
 export const apiAddNote = id => (dispatch, getState) => {
+    dispatch(request1())
+}
+
+export const apiAddNote1 = (directoryId, content) => (dispatch, getState) => {
     const foo = getState()
     if (!foo.data) {
-        dispatch(apiNotesPost(id, "New Note", "A text.", ["A", "tag"]))
+        dispatch(apiNotesPost(directoryId, content.title, content.description, content.tags))
             .catch((error) => {
                 console.log(error);
             })
+            .then(() => dispatch(closeModal()))
             .then(() =>  dispatch(apiNotesGet()))
             
     }
 }
 
-export const apiUpdateNote = (id, directoryId) => (dispatch, getState) => {
+export const apiUpdateNote = (id, directoryId, content) => (dispatch, getState) => {
     const foo = getState()
     if (!foo.data) {
-        dispatch(apiNotesPut(id, directoryId, "Changed title", "A changed text.", ["A", "tag"]))
+        dispatch(apiNotesPut(id, directoryId, content.title, content.description, content.tags))
             .catch((error) => {
                 console.log(error);
             })

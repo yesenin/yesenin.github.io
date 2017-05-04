@@ -34,7 +34,7 @@ class TreeContainer extends Component {
         this.props.selectFolder(id)
     }
     selectNote(id) {
-        this.props.selectNote(id)
+        this.props.selectNote(this.props.notes.all.filter(i => i.id === id)[0])
     }
     editNoteOn(id, e) {
         this.props.toggleEditNote(true, id)
