@@ -114,11 +114,11 @@ const apiNotesPost = (directoryId, title, description, tags) => dispatch => {
     })
 }
 
-const apiNotesPut = (id, directoryId, title, description, tags) => dispatch => {
+const apiNotesPut = (id, directoryId, title, description, tags, position) => dispatch => {
   dispatch(request())
   return fetch(`http://localhost:3000/notices/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({ id: id, directoryId: directoryId, title: title, description: description, tags: tags }),
+        body: JSON.stringify({ id: id, directoryId: directoryId, title: title, description: description, tags: tags, position: position }),
         headers: new Headers({'Content-Type': 'application/json'})
     })
 }
@@ -157,7 +157,7 @@ export const apiAddNote1 = (directoryId, content) => (dispatch, getState) => {
 export const apiUpdateNote = (id, directoryId, content) => (dispatch, getState) => {
     const foo = getState()
     if (!foo.data) {
-        dispatch(apiNotesPut(id, directoryId, content.title, content.description, content.tags))
+        dispatch(apiNotesPut(id, directoryId, content.title, content.description, content.tags, content.position))
             .catch((error) => {
                 console.log(error);
             })

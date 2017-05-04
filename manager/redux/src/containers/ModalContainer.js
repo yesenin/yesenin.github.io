@@ -31,6 +31,7 @@ class ModalContainer extends Component {
             <Modal show={this.props.isOpen}>
                 <Modal.Body>
                     <div>
+                        <h2>Position: {this.props.content.position}</h2>
                         <h2>Title</h2><input name='title' onChange={this.titleChange.bind(this)} type='text' defaultValue={this.props.content.title} />
                         <h2>Description</h2><textarea name='description' onChange={this.descriptionChange.bind(this)} cols='70' rows='5' defaultValue={this.props.content.description} />
                     </div>
