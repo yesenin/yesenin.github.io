@@ -6,41 +6,70 @@ import * as actions from '../actions'
 
 import { Modal, Button } from 'react-bootstrap'
 
-const Tag = ({ tag }) => {
-    return <span className='tag'>{tag}</span>
-}
-
-const Note = ({ item }) => {
-    return <div>
-        <h2>Title</h2><input type='text' defaultValue={item.title} />
-        <h2>Description</h2><textarea cols='70' rows='5' defaultValue={item.description} />
-        <h2>Tags</h2><p>{item.tags.map((tag) => <Tag key={tag} tag={tag} />)}</p>
-        <h2>Add tag</h2><input type='text' />
-    </div>
-}
-
 class ModalContainer extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            tags: []
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            tags: nextProps.content.tags
+        })
+    }
+
     titleChange(e) {
         this.props.content.title = e.target.value
     }
     descriptionChange(e) {
         this.props.content.description = e.target.value
     }
+    handleTags(e) {
+        if (e.keyCode === 32) {
+            if (this.state.tags.indexOf(e.target.value.trim()) < 0) {
+                this.setState({
+                    tags: [ ...this.state.tags, e.target.value.trim()]
+                })
+            }    
+            e.target.value = ''
+        }
+    }
+    deleteTag(tag) {
+        this.setState({
+            tags: this.state.tags.filter(t => t !== tag)
+        })
+    }
+
+    foo() {
+        this.props.content.tags = this.state.tags
+        this.props.mode === 'NEW' 
+            ? this.props.apiAddNote1(this.props.parent, this.props.content)
+            : this.props.apiUpdateNote(this.props.id, this.props.parent, this.props.content)
+    }
     render() {
         return (
             <Modal show={this.props.isOpen}>
                 <Modal.Body>
                     <div>
-                        <h2>Position: {this.props.content.position}</h2>
+                        Position: {this.props.content.position}
                         <h2>Title</h2><input name='title' onChange={this.titleChange.bind(this)} type='text' defaultValue={this.props.content.title} />
                         <h2>Description</h2><textarea name='description' onChange={this.descriptionChange.bind(this)} cols='70' rows='5' defaultValue={this.props.content.description} />
+                        <h2>Tags</h2>
+                        <div>
+                            <div className='tagInput'>
+                                <input type="text" onKeyUp={this.handleTags.bind(this)} />
+                            </div>    
+                            <div>
+                                {this.state.tags.map(t => <span key={t} className='tag'>{t}<span className='delete' onClick={() => this.deleteTag(t)}>x</span></span>)}
+                            </div>
+                        </div>
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={() => this.props.apiDeleteNote(this.props.id)}>Delete</Button>
-                    <Button onClick={() => this.props.mode === 'NEW' 
-                        ? this.props.apiAddNote1(this.props.parent, this.props.content)
-                        : this.props.apiUpdateNote(this.props.id, this.props.parent, this.props.content)}>Save</Button>
+                    <Button onClick={this.foo.bind(this)}>Save</Button>
                     <Button onClick={this.props.closeModal}>Cancel</Button>
                 </Modal.Footer>
             </Modal>

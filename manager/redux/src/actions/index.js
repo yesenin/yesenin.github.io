@@ -44,11 +44,11 @@ export const receive = (data, id) => ({
   id
 })
 
-const apiPost = id => dispatch => {
+const apiPost = (parentId, name) => dispatch => {
   dispatch(request())
   return fetch('http://localhost:3000/directories/', {
         method: 'POST',
-        body: JSON.stringify({ parentId: id, name: "foo2" }),
+        body: JSON.stringify({ parentId, name }),
         headers: new Headers({'Content-Type': 'application/json'})
     }).then(resp => resp.json())
 }
@@ -69,10 +69,10 @@ const apiDelete = (id) => dispatch => {
 }
 
 
-export const apiAddDirectory = id => (dispatch, getState) => {
+export const apiAddDirectory = (parentId, name) => (dispatch, getState) => {
     const foo = getState()
     if (!foo.data) {
-        dispatch(apiPost(id))
+        dispatch(apiPost(parentId, name))
             .then((json) =>  dispatch(apiGet(json["id"])))
     }
 }

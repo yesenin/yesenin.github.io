@@ -5,7 +5,9 @@ const initialState = {
     isOpen: null,
     mode: null,
     id: null,
-    content: {}
+    content: {
+        tags:[]
+    }
 }
 
 const modal = (state = initialState, action) => {
@@ -17,7 +19,9 @@ const modal = (state = initialState, action) => {
                 isOpen: true,
                 mode: 'NEW',
                 id: action.id,
-                content: {}
+                content: {
+                    tags:[]
+                }
             }  
         case types.SELECT_NOTE:
             return {
@@ -27,16 +31,25 @@ const modal = (state = initialState, action) => {
                 mode: 'EDIT',
                 content: action.data
             } 
-        case 'GET_DIRECTORIES':
         case 'GET_NOTES':
+        case 'CLOSE_MODAL': {
+            return {
+                ...state,
+                isOpen: false
+            }
+        }
+        case 'GET_DIRECTORIES':
+        
         case 'UPDATE_NOTE':
-        case 'CLOSE_MODAL':
+        
             return {
                 isNew: null,
                 isOpen: false,
                 mode: null,
                 id: null,
-                content: {}
+                content: {
+                    tags:[]
+                }
             }
         case types.REMOVE_ITEM:
             return {
@@ -44,7 +57,9 @@ const modal = (state = initialState, action) => {
                 isOpen: false,
                 mode: null,
                 id: null,
-                content: {}
+                content: {
+                    tags:[]
+                }
             }    
         default:
             return state    

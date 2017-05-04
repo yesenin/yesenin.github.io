@@ -12,21 +12,17 @@ class TreeContainer extends Component {
         this.props.getNotes()
     }
     addFolder() {
-        //this.props.addFolder(this.props.folders.selected)
-        this.props.apiAddDirectory(this.props.folders.selected)
+        this.props.apiAddDirectory(this.props.folders.selected, "New Directory")
     }
     addNote() {
-        //this.props.addNote(this.props.folders.selected)
         this.props.apiAddNote(this.props.folders.selected)
     }
     remove() {
-        if (this.props.notes.selected !== null) {
-            //this.props.removeItem(this.props.notes.selected)
+        if (this.props.notes.selected) {
             this.props.apiDeleteNote(this.props.notes.selected)
         } else if (this.props.folders.selected !== 1
             && this.props.folders.all.filter(i => i.parentId === this.props.folders.selected).length === 0
             && this.props.notes.all.filter(i => i.directoryId === this.props.folders.selected).length === 0) {
-            //this.props.removeItem(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parent)
             this.props.apiDeleteDirectory(this.props.folders.selected, this.props.folders.all.filter((i) => i.id === this.props.folders.selected)[0].parentId)
         }
     }
@@ -119,7 +115,7 @@ const mapStateToProps = (state) => (
                 ? state.tree.notes.filter(i => i.directoryId === state.tree.selectedFolder)
                 : (state.tree.isAdvancedSearch 
                     ? state.tree.notes.filter(i => (i.description !== undefined && i.description.indexOf(state.tree.searchText) >= 0)
-                        || (i.tags !== undefined && i.tags.filter(t => t.indexOf(state.tree.searchText).length > 0)))
+                        || (i.tags !== undefined && i.tags.filter(t => t.indexOf(state.tree.searchText) >= 0).length > 0))
                     : state.tree.notes.filter(i => i.title.indexOf(state.tree.searchText) >= 0)
                 ).filter(i => i.directoryId === state.tree.selectedFolder),
             selected: state.tree.selectedNote,
