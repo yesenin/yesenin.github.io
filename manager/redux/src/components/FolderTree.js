@@ -1,13 +1,13 @@
 import React from 'react'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Folder = ({allItems, item, clickHandler, doubleClickHandler, keyHandler}) => {
     return <li>
         { allItems.editedFolder === item.id 
         ? <input type='text' defaultValue={item.name} onKeyUp={(e) => keyHandler(item, e)}  autoFocus/>
-        : <div className={allItems.selected === item.id ? 'selected' : ''}
+            : <Link to={`/${item.id}`} ><div className={allItems.selected === item.id ? 'selected' : ''}
             onClick={() => clickHandler(item.id)}
-            onDoubleClick={() => doubleClickHandler(item.id)}>{item.name}</div>}
+            onDoubleClick={() => doubleClickHandler(item.id)}>{item.name}</div></Link>}
         <Node
             allItems={allItems}
             items={allItems.all.filter((i) => { return i.parentId === item.id })}

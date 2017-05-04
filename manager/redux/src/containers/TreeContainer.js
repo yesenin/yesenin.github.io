@@ -8,7 +8,7 @@ import NoteList from '../components/NoteList'
 import Autocomplete from 'react-autocomplete'
 class TreeContainer extends Component {
     componentDidMount() {
-        this.props.apiGetDirectories(1)
+        this.props.apiGetDirectories(parseInt(this.props.folderFromUrl))
         this.props.getNotes()
     }
     addFolder() {

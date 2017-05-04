@@ -3,16 +3,17 @@ import React, {Component} from 'react'
 import TreeContainer from './TreeContainer'
 import ModalContainer from './ModalContainer'
 
-/*
-const App = ({params}) => {
+
+const App = (foo) => {
+  console.log(foo.match.params.dir)
     return <div>
-      <TreeContainer folderFromUrl='0'/>
+      <TreeContainer folderFromUrl={foo.match.params.dir}/>
       <ModalContainer />
     </div>
-}*/
+}
+
+/*
 class App extends Component {
-  componentDidMount() {
-  }
   render() {
     
     return <div>
@@ -21,5 +22,5 @@ class App extends Component {
     </div> 
   }
 }
-
+*/
 export default App

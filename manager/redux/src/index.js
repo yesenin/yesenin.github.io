@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-//import { HashRouter as Router, Route } from 'react-router-dom'; 
+import { HashRouter as Router, Route } from 'react-router-dom'; 
 import { createLogger } from 'redux-logger'
 
 //import { dataService } from './reducers/tree'
@@ -14,7 +14,9 @@ import reducers from './reducers/'
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <App />
+    <Router>
+      <Route path='/:dir?' component={App} />
+    </Router>
   </Provider>
 )
 
