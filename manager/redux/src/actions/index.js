@@ -212,6 +212,17 @@ export const changeSearch = (flag) => ({
   flag
 })
 
-export const swap = (o) => {
-    console.log(o)
+export const swap = (a, b) => (dispatch, getState) => {
+    const foo = getState()
+    let noteA = foo.tree.notes.filter(i => i.id === a)[0]
+    const posA = noteA.position
+    let noteB = foo.tree.notes.filter(i => i.id === b)[0]
+    const posB = noteB.position
+    noteA.position = posB
+    noteB.position = posA
+
+    dispatch(apiNotesPut(noteA.id, noteA.directoryId, noteA.title, noteA.description, noteA.tags, noteA.position))
+        .then(dispatch(apiNotesPut(noteB.id, noteB.directoryId, noteB.title, noteB.description, noteB.tags, noteB.position)))
+        .then(() =>  dispatch(apiNotesGet()))
+
 }

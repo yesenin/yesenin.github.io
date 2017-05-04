@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { findDOMNode } from 'react-dom';
 import { DragSource, DropTarget } from 'react-dnd';
 
 const Note = ({ item, selected, edited, clickHandler, doubleClickHandler, enterHandler, connectDragSource, connectDropTarget, isDragging, swap }) => {
@@ -14,7 +14,6 @@ const Note = ({ item, selected, edited, clickHandler, doubleClickHandler, enterH
 
 const noteSource = {
     beginDrag(props) {
-      console.log(props)
       return {
         id: props.item.id,
         position: props.item.position
@@ -23,12 +22,32 @@ const noteSource = {
 }
 
 const noteTarget = {
-  drop(props) {
-      console.log(props.item.position)
-      props.swap({
-          id: props.item.id,
-          position: props.item.position
-      });  
+    hover(props, monitor, component) {
+      const dragIndex = monitor.getItem().id;
+      const hoverIndex = props.item.id;
+      if (dragIndex === hoverIndex) {
+        return;
+      }  
+    const hoverBoundingRect = findDOMNode(component).getBoundingClientRect();
+
+    // Get vertical middle
+    const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+
+    // Determine mouse position
+    const clientOffset = monitor.getClientOffset();
+
+    // Get pixels to the top
+    const hoverClientY = clientOffset.y - hoverBoundingRect.top;
+
+    // Only perform the move when the mouse has crossed half of the items height
+    // When dragging downwards, only move when the cursor is below 50%
+    // When dragging upwards, only move when the cursor is above 50%
+
+    // Dragging downwards
+ 
+    props.swap(dragIndex, hoverIndex); 
+
+      monitor.getItem().index = hoverIndex;  
   }
 };
 

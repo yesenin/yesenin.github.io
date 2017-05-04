@@ -7,7 +7,7 @@ import ModalContainer from './ModalContainer'
 const App = (foo) => {
   console.log(foo.match.params.dir)
     return <div>
-      <TreeContainer folderFromUrl={foo.match.params.dir}/>
+      <TreeContainer folderFromUrl={parseInt(foo.match.params.dir) || 1}/>
       <ModalContainer />
     </div>
 }

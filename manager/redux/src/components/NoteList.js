@@ -9,7 +9,7 @@ const NoteList = ({items, selectNoteHandler, editNoteOnHandler, editNoteOffHandl
     return (
         <div className='notes'>
             <div className='list'>
-                {items.all.map(note => <Note key={note.id} item={note}
+                {items.all.sort((a,b) => a.position - b.position).map(note => <Note key={note.id} item={note}
                     selected={note.id === items.selected} edited={note.id === items.editedNote}
                     clickHandler={selectNoteHandler} doubleClickHandler={editNoteOnHandler}
                     enterHandler={editNoteOffHandler} swap={swap}/>)}

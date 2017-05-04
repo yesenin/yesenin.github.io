@@ -44,6 +44,21 @@ const initialState = {
 
 const tree = (state = initialState, action) => {
     switch (action.type) {
+        case 'SWAP':
+            let noteA = state.notes.filter(i => i.id === action.a)[0]
+            let posA = noteA.position
+            let noteB = state.notes.filter(i => i.id === action.b)[0]
+            let posB = noteB.position
+            noteA.position = posB
+            noteB.position = posA
+            return {
+                ...state,
+                notes: [
+                    ...state.notes.filter(i => i.id !== action.a && i.id !== action.b),
+                    noteA,
+                    noteB
+                ]
+            }
         case 'SEARCH':
             return {
                 ...state,
