@@ -44,9 +44,11 @@ class ModalContainer extends Component {
 
     foo() {
         this.props.content.tags = this.state.tags
-        this.props.mode === 'NEW' 
-            ? this.props.apiAddNote1(this.props.parent, this.props.content)
-            : this.props.apiUpdateNote(this.props.id, this.props.parent, this.props.content)
+        if (this.props.mode === 'NEW') {
+            this.props.apiAddNote1(this.props.parent, this.props.content)
+        } else {
+            this.props.apiUpdateNote(this.props.id, this.props.parent, this.props.content)
+        }
     }
     render() {
         return (

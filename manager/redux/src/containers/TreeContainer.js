@@ -5,7 +5,7 @@ import * as actions from '../actions'
 import Menu from '../components/Menu'
 import FolderTree from '../components/FolderTree'
 import NoteList from '../components/NoteList'
-
+import Autocomplete from 'react-autocomplete'
 class TreeContainer extends Component {
     componentDidMount() {
         this.props.apiGetDirectories(1)
@@ -62,6 +62,13 @@ class TreeContainer extends Component {
         }
     }
 
+    search2(e, text) {
+        this.props.search(text)
+    } 
+    
+    search1(text) {
+        this.props.search(text)
+    }    
     search(e) {
         this.props.search(e.target.value)
     }
@@ -85,6 +92,7 @@ class TreeContainer extends Component {
                     keyHandler={this.editFolderOff.bind(this)}/>
                 <div>
                     <div>
+                        
                         <input type='text' defaultValue='' placeholder='Search' onKeyUp={this.search.bind(this)} />
                         <label>
                             <input type='checkbox' onChange={this.changeSearch.bind(this)}/>
@@ -95,7 +103,8 @@ class TreeContainer extends Component {
                     items={this.props.notes}
                     selectNoteHandler={this.selectNote.bind(this)}
                     editNoteOnHandler={this.editNoteOn.bind(this)}
-                    editNoteOffHandler={this.editNoteOff.bind(this)} />
+                    editNoteOffHandler={this.editNoteOff.bind(this)}
+                    swap={this.props.swap}/>
                 </div>
             </div>    
         )
@@ -120,7 +129,8 @@ const mapStateToProps = (state) => (
                 ).filter(i => i.directoryId === state.tree.selectedFolder),
             selected: state.tree.selectedNote,
             editedNote: state.tree.editableNote
-        }
+        },
+        fooItems: state.tree.notes.map(i => i.title)
     }
 )
 
@@ -129,3 +139,16 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TreeContainer)
+
+/*
+<Autocomplete
+                            value=''
+                            inputProps={{ name: 'US state', id: 'states-autocomplete' }}
+                            items={this.props.fooItems}
+                            getItemValue={(item) => item}    
+                            onChange={(event, value) => this.search2(value)}   
+                            onSelect={(item) => this.search1(item)}
+                            renderItem={(item, isHighlighted) => (
+                                <div key={item} style={{ opacity: isHighlighted ? 0.5 : 1 }}>{item}</div>
+                            )}/>
+                            */

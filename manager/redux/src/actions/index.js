@@ -211,3 +211,7 @@ export const changeSearch = (flag) => ({
   type: 'CHANGE_SEARCH',
   flag
 })
+
+export const swap = (o) => {
+    console.log(o)
+}

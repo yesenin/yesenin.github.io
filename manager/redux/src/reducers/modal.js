@@ -39,7 +39,6 @@ const modal = (state = initialState, action) => {
             }
         }
         case 'GET_DIRECTORIES':
-        
         case 'UPDATE_NOTE':
         
             return {
