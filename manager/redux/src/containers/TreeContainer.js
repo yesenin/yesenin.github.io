@@ -65,7 +65,15 @@ class TreeContainer extends Component {
             this.props.toggleEditNote(false, item.id)
         }
     }
+
+    search(e) {
+        this.props.search(e.target.value)
+    }
     
+    changeSearch(e) {
+        this.props.changeSearch(e.target.checked)
+    }
+
     render() {
         return (
             <div className='wrapper'>
@@ -79,11 +87,20 @@ class TreeContainer extends Component {
                     folderClickHandler={this.select.bind(this)}
                     doubleClickHandler1={this.editFolderOn.bind(this)}
                     keyHandler={this.editFolderOff.bind(this)}/>
-                <NoteList 
+                <div>
+                    <div>
+                        <input type='text' defaultValue='' placeholder='Search' onKeyUp={this.search.bind(this)} />
+                        <label>
+                            <input type='checkbox' onChange={this.changeSearch.bind(this)}/>
+                            Advanced
+                        </label>
+                    </div>
+                    <NoteList 
                     items={this.props.notes}
                     selectNoteHandler={this.selectNote.bind(this)}
                     editNoteOnHandler={this.editNoteOn.bind(this)}
-                    editNoteOffHandler={this.editNoteOff.bind(this)}/>
+                    editNoteOffHandler={this.editNoteOff.bind(this)} />
+                </div>
             </div>    
         )
     }
@@ -98,7 +115,13 @@ const mapStateToProps = (state) => (
             editedFolder: state.tree.editableId
         },
         notes: {
-            all: state.tree.notes.filter(i => i.directoryId === state.tree.selectedFolder),
+            all: state.tree.searchText === null
+                ? state.tree.notes.filter(i => i.directoryId === state.tree.selectedFolder)
+                : (state.tree.isAdvancedSearch 
+                    ? state.tree.notes.filter(i => (i.description !== undefined && i.description.indexOf(state.tree.searchText) >= 0)
+                        || (i.tags !== undefined && i.tags.filter(t => t.indexOf(state.tree.searchText).length > 0)))
+                    : state.tree.notes.filter(i => i.title.indexOf(state.tree.searchText) >= 0)
+                ).filter(i => i.directoryId === state.tree.selectedFolder),
             selected: state.tree.selectedNote,
             editedNote: state.tree.editableNote
         }

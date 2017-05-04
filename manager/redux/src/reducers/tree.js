@@ -34,13 +34,26 @@ const initialState = {
         }
     ],
     notes: [],
+    resultNotes: [],
+    isAdvancedSearch: false,
     selectedNote: null,
     editableId: null,
-    editableNote: null
+    editableNote: null,
+    searchText: null
 }
 
 const tree = (state = initialState, action) => {
     switch (action.type) {
+        case 'SEARCH':
+            return {
+                ...state,
+                searchText: action.text === '' ? null : action.text
+            }  
+        case 'CHANGE_SEARCH':  
+            return {
+                ...state,
+            isAdvancedSearch: action.flag    
+        }       
         case 'GET_DIRECTORIES':
             return {
                 ...state,
@@ -50,19 +63,17 @@ const tree = (state = initialState, action) => {
         case 'GET_NOTES':
             return {
                 ...state,
-                notes: action.data
+                notes: action.data,
+                resultNotes: action.data
             }
         case types.ADD_FOLDER:
             if (!action.id) {
                 action.id = getId()
             }
             return {
+                ...state,
                 selectedFolder: action.id,
-                folders: folders(state.folders, action),
-                notes: state.notes,
-                selectedNote: null,
-                editableId: null,
-                editableNote: null
+                folders: folders(state.folders, action)
             }
         case types.REMOVE_ITEM:
             if (action.id === 0) {
@@ -70,101 +81,54 @@ const tree = (state = initialState, action) => {
             }
             if (action.parentId === null) {
                 return {
-                    selectedFolder: state.selectedFolder,
-                    folders: state.folders,
+                    ...state,
                     notes: state.notes.filter(i => i.id !== action.id),
-                    selectedNote: null,
-                    editableId: state.editableId,
-                    editableNote: state.editableNote
+                    selectedNote: null
                 }
             }
             return {
-                selectedFolder: action.parentId,
+                ...state,
                 folders: state.folders.filter(i => i.id !== action.id),
-                notes: state.notes.filter(i => i.parent !== action.id),
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                notes: state.notes.filter(i => i.parent !== action.id)
             }
-        case types.ADD_NOTE:
-            if (!action.id) {
-                action.id = getId()
-            }
-            const newNote = state.folders.filter(i => i.id === action.directoryId).length
-                ? { title: action.title, id: action.id, directoryId: action.directoryId, description: 'body', tags: ['tag 1', 'tag 2'], position: 0}
-                : { title: action.title, id: action.id, directoryId: 1, description: 'body', tags: ['tag 1', 'tag 2'], position: 0 }
-            return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: [
-                    ...state.notes,
-                    newNote
-                ],
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
-            }
+
         case types.SELECT_ITEM:
             return {
-                selectedFolder: action.id,
-                folders: state.folders,
-                notes: state.notes,
-                selectedNote: null,
-                editableId: null,
-                editableNote: null
+                ...state,
+                selectedFolder: action.id
             }
         case types.SELECT_NOTE:
             return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: state.notes,
-                selectedNote: action.id,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ...state,
+                selectedNote: action.id
             }
         case 'TOGGLE_EDIT_FOLDER':
             if (action.on) {
                 return {
-                    selectedFolder: state.selectedFolder,
-                    folders: state.folders,
-                    notes: state.notes,
-                    selectedNote: state.selectedNote,
-                    editableId: action.id,
-                    editableNote: state.editableNote
+                    ...state,
+                    editableId: action.id
                 }
             }
             return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: state.notes,
-                selectedNote: state.selectedNote,
-                editableId: null,
-                editableNote: state.editableNote
+                ...state,
+                editableId: null
             }
 
         case 'TOGGLE_EDIT_NOTE':
             if (action.on) {
                 return {
-                    selectedFolder: state.selectedFolder,
-                    folders: state.folders,
-                    notes: state.notes,
-                    selectedNote: state.selectedNote,
-                    editableId: state.editableId,
+                    ...state,
                     editableNote: action.id
                 }
             }
             return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: state.notes,
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
+                ...state,
                 editableNote: null
             }
 
         case 'RENAME_ITEM':
             return {
-                selectedId: state.selectedId,
+                ...state,
                 folders: [
                     ...state.folders.map(i => {
                         if (i.id === action.id) {
@@ -177,68 +141,46 @@ const tree = (state = initialState, action) => {
                             return i
                         }
                     })
-                ],
-                notes: state.notes,
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ]
             }
         case 'RENAME_NOTE':
             return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
+                ...state,
                 notes: [
                     ...state.notes.map(i => {
                         if (i.id === action.id) {
                             return {
-                                id: i.id,
-                                title: action.title,
-                                directoryId: i.directoryId,
-                                description: i.description,
-                                tags: i.tags,
-                                position: i.position
+                                ...i,
+                                title: action.title
                             }
                         } else {
                             return i
                         }
                     })
-                ],
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ]
             }
         case 'CLOSE_MODAL':
             return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
-                notes: state.notes,
-                selectedNote: null,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ...state,
+                selectedNote: null
             } 
         case 'UPDATE_NOTE':
            return {
-                selectedFolder: state.selectedFolder,
-                folders: state.folders,
+                ...state,
                 notes: [
                     ...state.notes.map(i => {
                         if (i.id === action.id) {
                             return {
-                                id: i.id,
+                                ...i,
                                 title: action.name,
-                                directoryId: i.directoryId,
                                 description: action.body,
-                                tags: [...i.tags, action.tags],
-                                position: i.position
+                                tags: [...i.tags, action.tags]
                             }
                         } else {
                             return i
                         }
                     })
-                ],
-                selectedNote: state.selectedNote,
-                editableId: state.editableId,
-                editableNote: state.editableNote
+                ]
             }
         default:
             return state;

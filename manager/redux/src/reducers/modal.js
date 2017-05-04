@@ -5,11 +5,7 @@ const initialState = {
     isOpen: null,
     mode: null,
     id: null,
-    content: {
-        name: null,
-        body: null,
-        tags: []
-    }
+    content: {}
 }
 
 const modal = (state = initialState, action) => {
@@ -21,11 +17,7 @@ const modal = (state = initialState, action) => {
                 isOpen: true,
                 mode: 'NEW',
                 id: action.id,
-                content: {
-                    name: null,
-                    body: null,
-                    tags: []
-                }
+                content: {}
             }  
         case types.SELECT_NOTE:
             return {
@@ -44,11 +36,7 @@ const modal = (state = initialState, action) => {
                 isOpen: false,
                 mode: null,
                 id: null,
-                content: {
-                    name: null,
-                    body: null,
-                    tags: []
-                }
+                content: {}
             }
         case types.REMOVE_ITEM:
             return {
@@ -56,11 +44,7 @@ const modal = (state = initialState, action) => {
                 isOpen: false,
                 mode: null,
                 id: null,
-                content: {
-                    name: null,
-                    body: null,
-                    tags: []
-                }
+                content: {}
             }    
         default:
             return state    

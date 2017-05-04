@@ -201,3 +201,13 @@ export const apiRenameNote = (item, newName) => (dispatch, getState) => {
             .then(() =>  dispatch(apiNotesGet()))   
     }
 }
+
+export const search = (text) => ({
+  type: 'SEARCH',
+  text
+})
+
+export const changeSearch = (flag) => ({
+  type: 'CHANGE_SEARCH',
+  flag
+})
