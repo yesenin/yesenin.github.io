@@ -11,13 +11,26 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
     <style>
       body {
-        font-family: sans-serif;
+        font-family: serif;
         width: 100%;
         height: 100%;
-        background-color: lightcyan;
       }
-      a, a:hover, a:active, a:visited {
+      a.underline {
         text-decoration: none;
+        border-bottom: 1px solid;
+      }
+
+      a:visited.menu {
+        color: #B40EB4;
+      }
+      a:visited.menu {
+        color: #008ACE;
+      }
+      a:link {
+        color: #008ACE;
+      }
+      a:hover {
+        color: #CC0000;
       }
       .tree {
         padding-right: 1em;
@@ -68,7 +81,7 @@
         margin: 15px;
       }
 
-      .menu {
+      .menu1 {
         display: flex;
         flex-direction: column;
         justify-content: center;

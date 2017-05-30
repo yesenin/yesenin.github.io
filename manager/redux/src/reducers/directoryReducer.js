@@ -1,0 +1,29 @@
+import * as types from '../actions/actionTypes'
+import initialState from './initialState'
+
+const directoryReducer = (state = initialState.directories, action) => {
+    switch(action.type) {
+        case types.LOAD_DIRECTORIES_SUCCESS:
+            return Object.assign({}, state, {all: action.directories})
+        case types.ADD_DIRECTORY_SUCCESS:
+            return Object.assign({}, state, {all: 
+                [
+                    ...state.all,
+                    Object.assign({}, action.directory)
+                ]
+            })
+        case types.UPDATE_DIRECTORY_SUCCESS:
+            return Object.assign({}, state, {all: 
+                [
+                    ...state.all.filter(directory => directory.id !== action.directory.id),
+                    Object.assign({}, action.directory)
+                ]
+            })
+        case types.SELECT_DIRECTORY:
+            return Object.assign({}, state, {selectedId: action.id})
+        default:
+            return state
+    }
+}
+
+export default directoryReducer

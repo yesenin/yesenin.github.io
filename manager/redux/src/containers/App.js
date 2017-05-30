@@ -1,26 +1,36 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { saveDirectory, selectDirectory } from '../actions/directoryActions'
+import Tree from '../components/TreeContainer'
 
-import TreeContainer from './TreeContainer'
-import ModalContainer from './ModalContainer'
-
-
-const App = (foo) => {
-  console.log(foo.match.params.dir)
-    return <div>
-      <TreeContainer folderFromUrl={parseInt(foo.match.params.dir) || 1}/>
-      <ModalContainer />
-    </div>
-}
-
-/*
 class App extends Component {
   render() {
-    
-    return <div>
-      <TreeContainer />
-      <ModalContainer />
-    </div> 
+    return (
+      <div>
+        <div>
+          <a href="#" className="menu underline" onClick={this.props.saveDirectory}>Add a folder</a>
+          <a href="#" className="menu underline">Add a note</a>
+          <a href="#" className="menu underline">Delete selected item</a>
+        </div>
+        <Tree
+          directories={this.props.directories}
+          saveDirectory={this.props.saveDirectory} />
+      </div>
+      )
   }
 }
-*/
-export default App
+
+const mapProps = (state, ownProps) => {
+    return {
+        directories: state.directories
+    }
+}
+
+const mapActions = (dispatch) => {
+    return {
+        saveDirectory: () => dispatch(saveDirectory({name: 'New folder'})),
+        selectDirectory: (id) => dispatch(selectDirectory(id))
+    }
+}
+
+export default connect(mapProps, mapActions)(App)
