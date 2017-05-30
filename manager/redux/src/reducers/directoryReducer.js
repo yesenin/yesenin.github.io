@@ -12,12 +12,11 @@ const directoryReducer = (state = initialState.directories, action) => {
                     Object.assign({}, action.directory)
                 ]
             })
-        case types.UPDATE_DIRECTORY_SUCCESS:
+        case types.DELETE_DIRECTORY_SUCCESS:
             return Object.assign({}, state, {all: 
                 [
-                    ...state.all.filter(directory => directory.id !== action.directory.id),
-                    Object.assign({}, action.directory)
-                ]
+                    ...state.all.filter(directory => directory.id !== action.id)
+                ], selectedId: 1
             })
         case types.SELECT_DIRECTORY:
             return Object.assign({}, state, {selectedId: action.id})

@@ -1,10 +1,5 @@
 import delay from './delay'
-
-let id = 0
-
-const next = () => {
-    return ++id
-}
+import { next } from './idGenerator'
 
 const directories = [
     {
@@ -34,6 +29,16 @@ class DirectoryApi {
                     directories.push(directory)
                 }
                 resolve(directory)
+            }, delay)
+        })
+    }
+
+    static deleteDirectory = (id) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const index = directories.findIndex(a => a.id === id);
+                directories.splice(index, 1);
+                resolve(id)
             }, delay)
         })
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { saveDirectory, selectDirectory } from '../actions/directoryActions'
+import { saveDirectory, selectDirectory, deleteDirectory } from '../actions/directoryActions'
+import { saveNote } from '../actions/noteActions'
 import Tree from '../components/TreeContainer'
 
 class App extends Component {
@@ -9,12 +10,15 @@ class App extends Component {
       <div>
         <div>
           <a href="#" className="menu underline" onClick={this.props.saveDirectory}>Add a folder</a>
-          <a href="#" className="menu underline">Add a note</a>
-          <a href="#" className="menu underline">Delete selected item</a>
+          <a href="#" className="menu underline" onClick={this.props.saveNote}>Add a note</a>
+          <a href="#" className="menu underline" onClick={() => this.props.deleteDirectory(this.props.directories.selectedId)}>Delete selected item</a>
         </div>
         <Tree
           directories={this.props.directories}
-          saveDirectory={this.props.saveDirectory} />
+          selectDirectory={this.props.selectDirectory} />
+        <ul>
+            {this.props.notes.all.map((note, i) => <li key={i}>{note.name}</li>)}    
+        </ul>    
       </div>
       )
   }
@@ -22,14 +26,17 @@ class App extends Component {
 
 const mapProps = (state, ownProps) => {
     return {
-        directories: state.directories
+        directories: state.directories,
+        notes: state.notes
     }
 }
 
 const mapActions = (dispatch) => {
     return {
         saveDirectory: () => dispatch(saveDirectory({name: 'New folder'})),
-        selectDirectory: (id) => dispatch(selectDirectory(id))
+        selectDirectory: (id) => dispatch(selectDirectory(id)),
+        deleteDirectory: (id) => dispatch(deleteDirectory(id)),
+        saveNote: () => dispatch(saveNote({name: 'New note'}))
     }
 }
 
