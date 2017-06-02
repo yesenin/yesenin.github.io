@@ -1,0 +1,159 @@
+    <style>
+      body {
+        font-family: serif;
+        width: 100%;
+        height: 100%;
+      }
+      a.underline {
+        text-decoration: none;
+        border-bottom: 1px solid;
+      }
+
+      a:visited.menu {
+        color: #B40EB4;
+      }
+      a:visited.menu {
+        color: #008ACE;
+      }
+      a:link {
+        color: #008ACE;
+      }
+      a:hover {
+        color: #CC0000;
+      }
+      .tree {
+        padding-right: 1em;
+        max-width: 300px;
+        min-width: 300px;
+        margin: 5px;
+        padding: 5px;
+        overflow: auto;
+        height: 500px;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: relative;
+      }
+
+      li {
+        list-style-type: none;
+        margin-left: 1em;
+      }
+
+      li div {
+        padding: 5px 1em;
+        position: relative; 
+        cursor: pointer;
+        border-bottom: 1px solid #bbb;
+      }
+
+      li div input{
+        border-width: 0;
+        font-size: 12pt;
+        background-color: lightblue;
+        width: 100%;
+      }
+
+      li div:hover {
+        background-color: pink;
+      } 
+      li div.selected {
+        background-color: lightblue;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 15px;
+      }
+
+      .menu1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100px;
+        height: 300px;
+        background-color: #ccc;
+        border-radius: 4px;
+      }
+      .notes {
+        margin: 5px;
+      }
+      .notes .list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        height: 300px;
+        overflow-y: scroll;
+        align-content: flex-start;
+        border: 1px solid black;
+        
+      }
+
+      .note, .menuItem {
+        text-align: center;
+        margin: 10px;
+      }
+      .note.selected .text {
+        font-weight: bold;
+      }
+
+      .note.selected .icon {
+        opacity: 0.7;
+      }
+      .note .icon, .menuItem .icon {
+        width: 50px;
+        height: 50px;
+        
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .note .icon {
+        background-color: dimgray;
+      }
+      .menuItem, .note {
+        cursor: pointer;
+      }
+      .menuItem .icon {
+        background-color: blue;
+      }
+
+      .note .text, .menuItem .text {
+        font-size: 10pt;
+      }
+
+      .note input {
+        width: 45px;
+        border-width: 0;
+      }
+
+      .modal {
+        background-color: lightslategray;
+        display: none;
+      }
+      .shown {
+        display: block;
+      }
+      .tag {
+        background-color: lightskyblue;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 1px;
+      }
+      .delete {
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: lightgray;
+        color: gray;
+        padding: 0 3px;
+        margin: 0 3px;
+        cursor: pointer;
+      }
+      .tagInput {
+        margin: 5px;
+      }
+    </style>
