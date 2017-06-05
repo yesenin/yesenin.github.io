@@ -2,31 +2,34 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveDirectory, selectDirectory, deleteDirectory } from '../actions/directoryActions'
 import { saveNote } from '../actions/noteActions'
+
+import Menu from '../components/Menu'
 import Tree from '../components/TreeContainer'
+import Notes from '../components/Notes'
 
 import logo from '../assets/logo.svg'
 import Radium from 'radium'
-import styles from '../styles'
+import styles from '../styles/app'
 
 class App extends Component {
   render() {
     return (
-        <div>
+        <div style={[styles.wrapper]}>
             <header style={[styles.header]}><img src={logo} role="presentation"/></header>  
             <main style={[styles.main]}>
-                <aside>    
-                    <a href="#" onClick={this.props.saveDirectory}>Add a folder</a>
-                    <a href="#" onClick={this.props.saveNote}>Add a note</a>
-                    <a href="#" onClick={() => this.props.deleteDirectory(this.props.directories.selectedId)}>Delete selected item</a>
-                </aside>
-                <article>    
-                    <Tree
-                    directories={this.props.directories}
-                    selectDirectory={this.props.selectDirectory} />
-                    <ul>
-                        {this.props.notes.all.map((note, i) => <li key={i}>{note.name}</li>)}    
-                    </ul>    
-                </article>
+                <Menu
+                    saveDirectory={() => { this.props.saveDirectory(this.props.directories.selectedId) } }
+                    saveNote={this.props.saveNote}
+                    deleteDirectory={() => this.props.deleteDirectory(this.props.directories.selectedId)}/>
+                <content style={[styles.content]}>    
+                    <Tree    
+                        items={this.props.directories.all}
+                        parentId={null}
+                        selectedId={this.props.directories.selectedId}
+                        selectDirectory={this.props.selectDirectory} />
+                    <Notes
+                        items={this.props.notes.all}/>    
+                </content>
             </main>
             <footer style={[styles.footer]}>
                 2017, Anton Yesenin
@@ -47,7 +50,7 @@ const mapProps = (state, ownProps) => {
 
 const mapActions = (dispatch) => {
     return {
-        saveDirectory: () => dispatch(saveDirectory({name: 'New folder'})),
+        saveDirectory: (parentId) => dispatch(saveDirectory({name: 'New folder', parentId: parentId})),
         selectDirectory: (id) => dispatch(selectDirectory(id)),
         deleteDirectory: (id) => dispatch(deleteDirectory(id)),
         saveNote: () => dispatch(saveNote({name: 'New note'}))

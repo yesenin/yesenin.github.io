@@ -4,7 +4,8 @@ import { next } from './idGenerator'
 const directories = [
     {
         id: next(),
-        name: 'root'
+        name: 'root',
+        parentId: null
     }
 ]
 
