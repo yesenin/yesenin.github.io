@@ -19,6 +19,8 @@ const directoryReducer = (state = initialState.directories, action) => {
             })
         case types.SELECT_DIRECTORY:
             return Object.assign({}, state, {selectedId: action.id})
+        case types.EDIT_DIRECTORY:
+            return Object.assign({}, state, {editingId: action.id})
         default:
             return state
     }

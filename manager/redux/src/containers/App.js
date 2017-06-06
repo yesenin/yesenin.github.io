@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { saveDirectory, selectDirectory, deleteDirectory } from '../actions/directoryActions'
-import { saveNote } from '../actions/noteActions'
+import { saveDirectory, selectDirectory, deleteDirectory, editDirectory } from '../actions/directoryActions'
+import { saveNote, selectNote } from '../actions/noteActions'
 
 import Menu from '../components/Menu'
 import Tree from '../components/TreeContainer'
@@ -19,16 +19,18 @@ class App extends Component {
             <main style={[styles.main]}>
                 <Menu
                     saveDirectory={() => { this.props.saveDirectory(this.props.directories.selectedId) } }
-                    saveNote={this.props.saveNote}
+                    saveNote={() => { this.props.saveNote(this.props.directories.selectedId) }}
                     deleteDirectory={() => this.props.deleteDirectory(this.props.directories.selectedId)}/>
                 <content style={[styles.content]}>    
                     <Tree    
                         items={this.props.directories.all}
                         parentId={null}
                         selectedId={this.props.directories.selectedId}
-                        selectDirectory={this.props.selectDirectory} />
+                        editingId={this.props.directories.editingId}
+                        selectDirectory={this.props.selectDirectory}
+                        editDirectory={this.props.editDirectory}/>
                     <Notes
-                        items={this.props.notes.all}/>    
+                        notes={this.props.notes} select={this.props.selectNote}/>    
                 </content>
             </main>
             <footer style={[styles.footer]}>
@@ -39,21 +41,24 @@ class App extends Component {
   }
 }
 
-
-
 const mapProps = (state, ownProps) => {
     return {
         directories: state.directories,
-        notes: state.notes
+        notes: {
+            all: [...state.notes.all.filter(note => note.directoryId === state.directories.selectedId)],
+            selectedId: state.notes.selectedId
+        }
     }
 }
 
 const mapActions = (dispatch) => {
     return {
-        saveDirectory: (parentId) => dispatch(saveDirectory({name: 'New folder', parentId: parentId})),
+        saveDirectory: (parentId) => dispatch(saveDirectory({name: 'New folder', parentId})),
         selectDirectory: (id) => dispatch(selectDirectory(id)),
         deleteDirectory: (id) => dispatch(deleteDirectory(id)),
-        saveNote: () => dispatch(saveNote({name: 'New note'}))
+        saveNote: (directoryId) => dispatch(saveNote({ title: 'New note', directoryId })),
+        selectNote: (id) => dispatch(selectNote(id)),
+        editDirectory: (id) => dispatch(editDirectory(id))
     }
 }
 export default connect(mapProps, mapActions)(Radium(App))

@@ -13,6 +13,11 @@ export const selectDirectory = (id) => {
     return {type: types.SELECT_DIRECTORY, id}
 }
 
+export const editDirectory = (id) => {
+    return {type: types.EDIT_DIRECTORY, id}
+}
+
+
 export const deleteDirectorySuccess = (id) => {
     return {type: types.DELETE_DIRECTORY_SUCCESS, id}
 }

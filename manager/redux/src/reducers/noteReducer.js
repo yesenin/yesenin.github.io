@@ -12,6 +12,10 @@ const noteReducer = (state = initialState.notes, action) => {
                     Object.assign({}, action.note)
                 ]
             })
+        case types.SELECT_NOTE:
+            return Object.assign({}, state, { selectedId: action.id })
+        case types.SELECT_DIRECTORY:
+            return Object.assign({}, state, { selectedId: null })
         default:
             return state
     }

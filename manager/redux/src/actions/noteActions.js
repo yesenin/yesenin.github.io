@@ -9,6 +9,10 @@ export const addNoteSuccess = (note) => {
     return {type: types.ADD_NOTE_SUCCESS, note}
 }
 
+export const selectNote = (id) => {
+    return {type: types.SELECT_NOTE, id}
+}
+
 export const loadNotes = () => {
     return (dispatch) => {
         return NoteApi.getAllNotes()

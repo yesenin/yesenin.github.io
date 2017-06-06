@@ -1,20 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Directory from './Directory'
 
 import Radium from 'radium'
 import styles from '../styles/app'
 
-const Tree = ({items, parentId, selectedId, selectDirectory}) => {
+const Tree = ({items, parentId, selectedId, editingId, selectDirectory, editDirectory}) => {
     return <div style={[styles.tree]}>
         <ul style={[styles.ul]}>
             {items.filter(item => item.parentId === parentId).map((directory, i) =>
                 <li key={i}>
-                    <div
+                    <Directory 
+                        name={directory.name}
                         onClick={() => selectDirectory(directory.id)}
-                        style={{ color: selectedId === directory.id ? 'red' : 'black' }}>
-                        {directory.name}
-                    </div>
-                    <Tree items={items} parentId={directory.id} selectedId={selectedId} selectDirectory={selectDirectory}/>
+                        onDoubleClick={() => editDirectory(directory.id)}
+                        isSelected={selectedId === directory.id}
+                        isEditing={editingId === directory.id}/>
+                    <Tree 
+                        items={items}
+                        parentId={directory.id}
+                        selectedId={selectedId}
+                        editingId={editingId}
+                        selectDirectory={selectDirectory}
+                        editDirectory={editDirectory}/>
                 </li>)}
         </ul>
     </div>

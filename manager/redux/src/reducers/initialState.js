@@ -1,10 +1,12 @@
 export default {
     directories: {
         all: [],
-        selectedId: null
+        selectedId: null,
+        editingId: null
     },
     notes: {
         all: [],
-        selectedId: null
+        selectedId: null,
+        editingId: null
     },
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import Note from './Note'
 
 import Radium from 'radium'
 import styles from '../styles/app'
 
-const Notes = ({ items }) => {
+const Notes = ({ notes, select }) => {
     return <div style={[styles.notes]}>
-        {items.map((note, i) => <li key={i}>{note.name}</li>)}
+        {notes.all.map((note, i) => <Note key={i} note={note} isSelected={notes.selectedId === note.id} select={() => select(note.id)}/>)}
         </div>
 }
 
