@@ -1,39 +1,49 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { saveDirectory, editDirectory } from '../actions/directoryActions'
 
 class Directory extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            isEditing: false
-        }
         this.onKeyDown = this.onKeyDown.bind(this)
         this.onDoubleClick = this.onDoubleClick.bind(this)
     }
 
     onDoubleClick() {
-        this.setState({
-            isEditing: true
-        })
+        this.props.dispatch(editDirectory(this.props.directory.id))
     }
 
     onKeyDown(event) {
         if (event.keyCode === 13) {
-            this.setState({
-                isEditing: false
-            })
+            this.props.dispatch(editDirectory(null))
+            this.props.dispatch(saveDirectory(Object.assign({}, this.props.directory, {name: event.target.value})))
         }
     }
 
-    // = ({name, onClick, onDoubleClick, isSelected, isEditing}) => {
-    render() {return this.state.isEditing 
+    componentDidUpdate(){
+        if (this.nameInput) {
+            this.nameInput.setSelectionRange(0, this.nameInput.value.length)
+            this.nameInput.focus()
+        }
+    }
+
+    render() {return this.props.editingId === this.props.directory.id
         ? <input
+            onClick={(e) => {e.stopPropagation()}}
+            ref={(input) => { this.nameInput = input; }} 
             onKeyDown={this.onKeyDown}
-            type="text" defaultValue={this.props.name}></input>
+            type="text" defaultValue={this.props.directory.name}></input>
         : <div
             style={{ color: this.props.isSelected ? 'red' : 'black' }}
             onClick={this.props.onClick}
-            onDoubleClick={this.onDoubleClick}>{this.props.name}</div>
+            onDoubleClick={this.onDoubleClick}>{this.props.directory.name}</div>
     }
 }
 
-export default Directory
+const mapToProps = (state) => {
+    return {
+        editingId: state.directories.editingId
+    }
+}
+
+export default connect(mapToProps)(Directory)

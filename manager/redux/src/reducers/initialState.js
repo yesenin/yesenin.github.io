@@ -6,7 +6,7 @@ export default {
     },
     notes: {
         all: [],
-        selectedId: null,
+        selected: null,
         editingId: null
-    },
+    }
 }

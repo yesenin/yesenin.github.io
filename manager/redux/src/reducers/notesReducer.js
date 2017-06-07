@@ -1,7 +1,7 @@
 import * as types from '../actions/actionTypes'
 import initialState from './initialState'
 
-const noteReducer = (state = initialState.notes, action) => {
+const notesReducer = (state = initialState.notes, action) => {
     switch (action.type) {
         case types.LOAD_NOTES_SUCCESS:
             return Object.assign({}, state, {all: action.notes})
@@ -13,12 +13,16 @@ const noteReducer = (state = initialState.notes, action) => {
                 ]
             })
         case types.SELECT_NOTE:
-            return Object.assign({}, state, { selectedId: action.id })
+            return Object.assign({}, state, { selected: state.all.filter(item => {return item.id === action.id})[0] })
         case types.SELECT_DIRECTORY:
-            return Object.assign({}, state, { selectedId: null })
+            return Object.assign({}, state, { selected: null })
+        case types.EDIT_NOTE:
+            return Object.assign({}, state, { editingId: action.id })
+        case types.ADD_DIRECTORY_SUCCESS:
+            return Object.assign({}, state, { selected: null }) 
         default:
             return state
     }
 }
 
-export default noteReducer
+export default notesReducer

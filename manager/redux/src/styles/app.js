@@ -25,7 +25,9 @@ export default {
     menu: {
         marginLeft: '10px',
         fontFamily: 'serif',
-        fontSize: '14pt'
+        fontSize: '14pt',
+        width: '50%',
+        float: 'left'
     },
     menuItem: {
         margin: '5px',

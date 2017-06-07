@@ -11,7 +11,7 @@ const Tree = ({items, parentId, selectedId, editingId, selectDirectory, editDire
             {items.filter(item => item.parentId === parentId).map((directory, i) =>
                 <li key={i}>
                     <Directory 
-                        name={directory.name}
+                        directory={directory}
                         onClick={() => selectDirectory(directory.id)}
                         onDoubleClick={() => editDirectory(directory.id)}
                         isSelected={selectedId === directory.id}
