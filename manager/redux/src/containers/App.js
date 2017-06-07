@@ -8,8 +8,6 @@ import Tree from '../components/TreeContainer'
 import Notes from '../components/Notes'
 
 import logo from '../assets/logo.svg'
-import Radium from 'radium'
-import styles from '../styles/app'
 
 class App extends Component {
     constructor(props) {
@@ -23,17 +21,17 @@ class App extends Component {
     }
   render() {
     return (
-        <div style={[styles.wrapper]} onClick={this.resetEdit}>
-            <header style={[styles.header]}><img src={logo} role="presentation"/></header>  
-            <main style={[styles.main]}>
+        <div onClick={this.resetEdit}>
+            <header><img src={logo} role="presentation"/></header>  
+            <main>
                 <aside>
                     <Menu
                         saveDirectory={() => { this.props.saveDirectory(this.props.directories.selectedId) } }
                         saveNote={() => { this.props.saveNote(this.props.directories.selectedId) }}
                         deleteDirectory={() => this.props.deleteDirectory(this.props.directories.selectedId)}/>
-                    <div style={{float: 'left'}}>Search panel</div>
+                    <div>Search panel</div>
                 </aside>
-                <content style={[styles.content]}>    
+                <content>    
                     <Tree    
                         items={this.props.directories.all}
                         parentId={null}
@@ -45,7 +43,7 @@ class App extends Component {
                         notes={this.props.notes} select={this.props.selectNote}/>    
                 </content>
             </main>
-            <footer style={[styles.footer]}>
+            <footer>
                 2017, Anton Yesenin
             </footer>
       </div>
@@ -74,4 +72,4 @@ const mapActions = (dispatch) => {
         editNote: (id) => dispatch(editNote(id))
     }
 }
-export default connect(mapProps, mapActions)(Radium(App))
+export default connect(mapProps, mapActions)(App)
