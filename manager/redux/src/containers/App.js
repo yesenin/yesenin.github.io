@@ -9,6 +9,8 @@ import Notes from '../components/Notes'
 
 import logo from '../assets/logo.svg'
 
+import styles from '../styles/base.css'
+
 class App extends Component {
     constructor(props) {
         super(props)
@@ -23,7 +25,7 @@ class App extends Component {
     return (
         <div onClick={this.resetEdit}>
             <header><img src={logo} role="presentation"/></header>  
-            <main>
+            <main className={styles.main}>
                 <aside>
                     <Menu
                         saveDirectory={() => { this.props.saveDirectory(this.props.directories.selectedId) } }
@@ -44,7 +46,6 @@ class App extends Component {
                 </content>
             </main>
             <footer>
-                2017, Anton Yesenin
             </footer>
       </div>
       )
