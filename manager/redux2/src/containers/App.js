@@ -39,7 +39,7 @@ class App extends Component {
                     <Notes
                         notes={this.props.notes} select={this.props.selectNote} />
                         {
-                            this.props.notes.selected && <NoteEditor />
+                            //this.props.notes.selected && <NoteEditor />
                         }
                 </content>
             </main>
