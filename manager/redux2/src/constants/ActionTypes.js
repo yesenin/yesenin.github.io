@@ -1,0 +1,7 @@
+export const ADD_FOLDER = 'ADD_FOLDER'
+export const SELECT_ITEM = 'SELECT_ITEM'
+export const REMOVE_ITEM = 'REMOVE_ITEM'
+export const ADD_NOTE = 'ADD_NOTE'
+export const SELECT_NOTE = 'SELECT_NOTE'
+export const TOGGLE_EDIT_FOLDER = 'TOGGLE_EDIT_FOLDER'
+export const RENAME_ITEM = 'RENAME_ITEM'
