@@ -1,6 +1,10 @@
 import * as types from './actionTypes'
 import DirectoryApi from '../api/mockDirectoryApi'
 
+const directoryRequest = () => {
+    return {type: types.DIRECTORY_REQUEST}
+}
+
 export const loadDirectoriesSuccess = (directories) => {
     return {type: types.LOAD_DIRECTORIES_SUCCESS, directories}
 }
@@ -27,6 +31,7 @@ export const deleteDirectorySuccess = (id) => {
 
 export const loadDirectories = () => {
     return (dispatch) => {
+        dispatch(directoryRequest())
         return DirectoryApi.getAllDirectories()
             .then(directories => {
                 dispatch(loadDirectoriesSuccess(directories))
@@ -39,6 +44,7 @@ export const loadDirectories = () => {
 
 export const saveDirectory = (directory) => {
     return (dispatch) => {
+        dispatch(directoryRequest())
         if (directory.id) {
             return DirectoryApi.updateDirectory(directory)
                 .then(directory => 
@@ -62,6 +68,7 @@ export const saveDirectory = (directory) => {
 export const deleteDirectory = (id) => {
     return (dispatch) => {
         if (id > 1) {
+            dispatch(directoryRequest())
             return DirectoryApi.deleteDirectory(id)
                 .then(id =>
                     dispatch(deleteDirectorySuccess(id))

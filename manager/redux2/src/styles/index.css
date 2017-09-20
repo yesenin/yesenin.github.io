@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 main {
@@ -14,7 +18,7 @@ aside {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: #aaa;
+    /*background-color: #aaa;*/
 }
 
 aside > div {
@@ -25,15 +29,19 @@ content {
     display: flex;
     flex-direction: row;
     flex-grow: 9;
-    background-color: #ddd;
+    /*background-color: #ddd;*/
 }
 
 content > div {
     flex-grow: 1;
 }
 
-.menu {
-    background-color: lightblue;
+.menuBox {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 45px;
 }
 
 .searchMode {
@@ -42,7 +50,9 @@ content > div {
     height: 20px;
     position: relative;
     border-radius: 15px;
-    background-color: grey;
+    cursor: pointer;
+    margin: 2px;
+    box-shadow: inset 0 0 0 1px #d5d5d5;
 }
 
 .searchMode:before {
@@ -53,9 +63,10 @@ content > div {
     bottom: 0;
     display: block;
     width: 21px;
-    background-color: grey;
+    background-color: white;
     border-radius: 15px;
     transition: .25s ease-in-out;
+    background: rgba(19,191,17,0);
 }
 
 .searchMode:after {
@@ -69,15 +80,151 @@ content > div {
     width: 21px;
     border-radius: 15px;
     transition: .25s ease-in-out;
+    background: white;
+    box-shadow: 
+        inset 0 0 0 1px rgba(0,0,0,0.2),
+        0 2px 4px rgba(0,0,0,0.2);
 }
 
 .searchMode.on:before {
     content: "";
     width: 100%;
-    background-color: red;
+    background-color: #b88b58;
 }
 
 .searchMode.on:after {
     content: "";
     left: 19px;
+    box-shadow:
+        inset 0 0 0 1px #775733,
+        0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+input {
+    font-family: sans-serif;
+    font-size: 14pt;
+    display: block;
+    width: 75%;
+    height: 20pt;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background-color: black;
+}
+
+button {
+    position: relative;
+    min-width: 45px;
+    height: 100%;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0 5px;
+    user-select: none;
+    color: white;
+}
+
+button:hover {
+    color: #999;
+}
+
+button > span {
+    text-transform: uppercase;
+    font-size: 10pt;
+    letter-spacing: -.07em;
+}
+
+button:not(:last-child):after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 0;
+    border-right: 1px solid white;
+}
+
+ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+li {
+  display: inline-block;
+  width: 100%;  
+}
+
+.folder {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.folder:hover {
+    background-color: #ddd;
+}
+
+.folder:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 0;
+    border-right: 1px solid red;
+}
+.folder.selected {  
+    background-color: lightblue;
+}
+
+.folder > input {
+    font-family: sans-serif;
+    font-size: 12pt;
+    display: block;
+    width: 100%;
+    height: 18px;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: grey;
+    background-color: transparent;
+    font-weight: 100;
+}
+
+.spinner {
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    background-color: rgba(26,26,26,0.9);
+    transition: opacity .25s ease-out;
+    opacity: 0;
+    color: white;
+}
+
+.spinner.on {
+    opacity: 1;
+    z-index: 99;
 }

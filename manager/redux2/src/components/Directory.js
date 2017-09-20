@@ -27,16 +27,20 @@ class Directory extends Component {
         }
     }
 
-    render() {return this.props.editingId === this.props.directory.id
-        ? <input
-            onClick={(e) => {e.stopPropagation()}}
-            ref={(input) => { this.nameInput = input; }} 
-            onKeyDown={this.onKeyDown}
-            type="text" defaultValue={this.props.directory.name}></input>
-        : <div
-            style={{ color: this.props.isSelected ? 'red' : 'black' }}
+    render() {return(<div className={"folder" + (this.props.isSelected ? " selected" : "")}
             onClick={this.props.onClick}
-            onDoubleClick={this.onDoubleClick}>{this.props.directory.name}</div>
+            onDoubleClick={this.onDoubleClick}>
+            {
+                this.props.editingId === this.props.directory.id
+                ? <input
+                    onClick={(e) => {e.stopPropagation()}}
+                    ref={(input) => { this.nameInput = input; }} 
+                    onKeyDown={this.onKeyDown}
+                    type="text" defaultValue={this.props.directory.name}></input>
+                : this.props.directory.name
+            }
+        </div>
+    )
     }
 }
 

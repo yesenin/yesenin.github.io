@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const SearchPanel = () => {
-    return (
-        <div className="search">
-            <input type="text" />
-            <span className="searchMode on">
+class SearchPanel extends Component {
+    constructor(props) {
+        super(props)
+        this.onClick = this.onClick.bind(this)
+        this.state = {
+            mode: props.initMode
+        };
+    }
 
-            </span>
-        </div>
-    )
+    onClick() {
+        this.setState(
+            {
+                mode: !this.state.mode
+            }
+        )
+    }
+
+    render() {
+        return (
+                <div className="searchBox">
+                    <input type="text" />
+                    <label>
+                        <span>Advanced</span>
+                        <span onClick={this.onClick} className={"searchMode" + (this.state.mode ? " on" : "")}>
+                        </span>
+                    </label>
+                </div>
+            )
+    }
 }
 
 export default SearchPanel

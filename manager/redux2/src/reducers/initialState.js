@@ -8,5 +8,8 @@ export default {
         all: [],
         selected: null,
         editingId: null
+    },
+    api: {
+        isRequesting: false
     }
 }

@@ -3,10 +3,22 @@ import PropTypes from 'prop-types'
 
 const Menu = ({saveDirectory, saveNote, deleteDirectory}) => {
     return (
-    <div className="menu">    
-        <a href="#" onClick={saveDirectory}>Add a folder</a>
-        <a href="#" onClick={saveNote}>Add a note</a>
-        <a href="#" onClick={deleteDirectory}>Delete selected item</a>
+    <div className="menuBox">    
+        <button type="button" onClick={saveDirectory}>
+            <span>
+                Add folder
+            </span>
+        </button>
+        <button type="button" onClick={saveNote}>
+            <span>
+                Add note
+            </span>
+        </button>
+        <button type="button" onClick={deleteDirectory}>
+            <span>
+                Delete selected
+            </span>
+        </button>
     </div>
     )
 }

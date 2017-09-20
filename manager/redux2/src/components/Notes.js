@@ -7,7 +7,7 @@ import SearchPanel from './SearchPanel'
 const Notes = ({ notes, select }) => {
     return (
     <div>
-        <SearchPanel />
+        <SearchPanel initMode={false}/>
         <div>
             {notes.all.map((note, i) => <Note
                 key={i}

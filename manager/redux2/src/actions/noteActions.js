@@ -1,6 +1,10 @@
 import * as types from './actionTypes'
 import NoteApi from '../api/mockNoteApi'
 
+const noteRequest = () => {
+    return {type: types.NOTE_REQUEST}
+}
+
 export const loadNotesSuccess = (notes) => {
     return {type: types.LOAD_NOTES_SUCCESS, notes}
 }
@@ -23,6 +27,7 @@ export const editNote = (id) => {
 
 export const loadNotes = () => {
     return (dispatch) => {
+        dispatch(noteRequest())
         return NoteApi.getAllNotes()
             .then(directories => {
                 dispatch(loadNotesSuccess(directories))
@@ -35,6 +40,7 @@ export const loadNotes = () => {
 
 export const updateNote = (note) => {
     return (dispatch) => {
+        dispatch(noteRequest())
         return NoteApi.updateNote(note)
             .then(note => 
                 dispatch(updateNoteSuccess(note))
@@ -47,6 +53,7 @@ export const updateNote = (note) => {
 
 export const saveNote = (note) => {
     return (dispatch) => {
+        dispatch(noteRequest())
         return NoteApi.addNote(note)
             .then(note => 
                 dispatch(addNoteSuccess(note))
