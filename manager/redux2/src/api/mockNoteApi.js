@@ -22,6 +22,16 @@ class NoteApi {
             }, delay)
         })
     }
+
+    static updateNote = (note) => {
+        note = Object.assign({}, note)
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                notes = notes.filter(item => { return item.id === note.id ? note : item})
+                resolve(note)
+            }, delay)
+        })
+    }
 }
 
 export default NoteApi

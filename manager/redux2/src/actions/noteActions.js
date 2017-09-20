@@ -9,6 +9,10 @@ export const addNoteSuccess = (note) => {
     return {type: types.ADD_NOTE_SUCCESS, note}
 }
 
+export const updateNoteSuccess = (note) => {
+    return {type: types.UPDATE_NOTE_SUCCESS, note}
+}
+
 export const selectNote = (id) => {
     return {type: types.SELECT_NOTE, id}
 }
@@ -23,6 +27,18 @@ export const loadNotes = () => {
             .then(directories => {
                 dispatch(loadNotesSuccess(directories))
             })
+            .catch(error => {
+                throw(error)
+            })
+    }
+}
+
+export const updateNote = (note) => {
+    return (dispatch) => {
+        return NoteApi.updateNote(note)
+            .then(note => 
+                dispatch(updateNoteSuccess(note))
+            )
             .catch(error => {
                 throw(error)
             })

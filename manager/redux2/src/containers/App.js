@@ -6,8 +6,7 @@ import { saveNote, selectNote, editNote } from '../actions/noteActions'
 import Menu from '../components/Menu'
 import Tree from '../components/TreeContainer'
 import Notes from '../components/Notes'
-
-import logo from '../assets/_M1.png'
+import NoteEditor from '../components/NoteEditor'
 
 class App extends Component {
     constructor(props) {
@@ -22,20 +21,12 @@ class App extends Component {
   render() {
     return (
         <div onClick={this.resetEdit}>
-            <header>
-                <div>
-                    <img src={logo} alt="logo"/>
-                </div>
-            </header>  
             <main>
                 <aside>
                     <Menu
                         saveDirectory={() => { this.props.saveDirectory(this.props.directories.selectedId) } }
                         saveNote={() => { this.props.saveNote(this.props.directories.selectedId) }}
-                        deleteDirectory={() => this.props.deleteDirectory(this.props.directories.selectedId)}/>
-                    <div>Search panel</div>
-                </aside>
-                <content>    
+                        deleteDirectory={() => this.props.deleteDirectory(this.props.directories.selectedId)} />
                     <Tree    
                         items={this.props.directories.all}
                         parentId={null}
@@ -43,12 +34,15 @@ class App extends Component {
                         editingId={this.props.directories.editingId}
                         selectDirectory={this.props.selectDirectory}
                         editDirectory={this.props.editDirectory}/>
+                </aside>
+                <content>    
                     <Notes
-                        notes={this.props.notes} select={this.props.selectNote}/>    
+                        notes={this.props.notes} select={this.props.selectNote} />
+                        {
+                            this.props.notes.selected && <NoteEditor />
+                        }
                 </content>
             </main>
-            <footer>
-            </footer>
       </div>
       )
   }

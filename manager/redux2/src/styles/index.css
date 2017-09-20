@@ -5,9 +5,33 @@ body {
 
 main {
     display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
 }
 
-img {
-    margin: 10px;
-    width: 64px;
+aside {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #aaa;
+}
+
+aside > div {
+    flex-grow: 1;
+}
+
+content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 9;
+    background-color: #ddd;
+}
+
+content > div {
+    flex-grow: 1;
+}
+
+.menu {
+    background-color: lightblue;
 }

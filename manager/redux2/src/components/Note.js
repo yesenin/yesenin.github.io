@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { editNote } from '../actions/noteActions'
+import { editNote, updateNote } from '../actions/noteActions'
 //import { findDOMNode } from 'react-dom';
 //import { DragSource, DropTarget } from 'react-dnd';
 
@@ -16,8 +16,9 @@ class Note extends Component {
   }
 
   onKeyDown(event) {
-      if (event.keyCode === 13) {
-          this.props.dispatch(editNote(null))
+    if (event.keyCode === 13) {
+      this.props.dispatch(editNote(null))
+          this.props.dispatch(updateNote(Object.assign({}, this.props.note, {title: event.target.value})))
           //this.props.dispatch(saveDirectory(Object.assign({}, this.props.directory, {name: event.target.value})))
       }
   }

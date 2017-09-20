@@ -12,6 +12,14 @@ const notesReducer = (state = initialState.notes, action) => {
                     Object.assign({}, action.note)
                 ]
             })
+        case types.UPDATE_NOTE_SUCCESS:
+            return Object.assign({}, state, {all: 
+                [
+                    ...state.all.map((item) => {
+                        return item.id === action.note.id ? action.note : item
+                    })
+                ]
+            })
         case types.SELECT_NOTE:
             return Object.assign({}, state, { selected: state.all.filter(item => {return item.id === action.id})[0] })
         case types.SELECT_DIRECTORY:
