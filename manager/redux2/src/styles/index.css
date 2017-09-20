@@ -35,3 +35,49 @@ content > div {
 .menu {
     background-color: lightblue;
 }
+
+.searchMode {
+    display: block;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    border-radius: 15px;
+    background-color: grey;
+}
+
+.searchMode:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 21px;
+    background-color: grey;
+    border-radius: 15px;
+    transition: .25s ease-in-out;
+}
+
+.searchMode:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    background: white;
+    left: 0px;
+    width: 21px;
+    border-radius: 15px;
+    transition: .25s ease-in-out;
+}
+
+.searchMode.on:before {
+    content: "";
+    width: 100%;
+    background-color: red;
+}
+
+.searchMode.on:after {
+    content: "";
+    left: 19px;
+}
