@@ -25,6 +25,10 @@ export const editNote = (id) => {
     return {type: types.EDIT_NOTE, id}
 }
 
+export const prepareNote = (parentId) => {
+    return { type: types.PREPARE_NOTE, note: {directoryId: parentId, title: "New note", isDraft: true} }
+}
+
 export const loadNotes = () => {
     return (dispatch) => {
         dispatch(noteRequest())
@@ -52,6 +56,7 @@ export const updateNote = (note) => {
 }
 
 export const saveNote = (note) => {
+    note.isDraft = null
     return (dispatch) => {
         dispatch(noteRequest())
         return NoteApi.addNote(note)

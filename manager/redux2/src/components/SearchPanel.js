@@ -19,14 +19,14 @@ class SearchPanel extends Component {
 
     render() {
         return (
-                <div className="searchBox">
-                    <input type="text" />
-                    <label>
-                        <span>Advanced</span>
-                        <span onClick={this.onClick} className={"searchMode" + (this.state.mode ? " on" : "")}>
-                        </span>
-                    </label>
-                </div>
+            <div className="searchBox">
+                <label>
+                    <span>Advanced</span>
+                    <span onClick={this.onClick} className={"searchMode" + (this.state.mode ? " on" : "")}>
+                    </span>
+                </label>
+                <input type="text" />                   
+            </div>
             )
     }
 }

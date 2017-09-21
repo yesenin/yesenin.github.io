@@ -8,7 +8,7 @@ const notesReducer = (state = initialState.notes, action) => {
         case types.ADD_NOTE_SUCCESS:
             return Object.assign({}, state, {all: 
                 [
-                    ...state.all,
+                    ...state.all.filter(note => note.id),
                     Object.assign({}, action.note)
                 ]
             })
@@ -27,7 +27,23 @@ const notesReducer = (state = initialState.notes, action) => {
         case types.EDIT_NOTE:
             return Object.assign({}, state, { editingId: action.id })
         case types.ADD_DIRECTORY_SUCCESS:
-            return Object.assign({}, state, { selected: null }) 
+            return Object.assign({}, state, { selected: null })
+
+        case types.PREPARE_NOTE:
+            return Object.assign({}, state, {
+                all:
+                [
+                    ...state.all,
+                    action.note
+                ]
+            })
+        case types.CANCEL_EDITOR:  
+            return Object.assign({}, state, {
+                all:
+                [
+                    ...state.all.filter(note => !note.isDraft)
+                ]
+            })
         default:
             return state
     }

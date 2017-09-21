@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveDirectory, selectDirectory, deleteDirectory, editDirectory } from '../actions/directoryActions'
-import { saveNote, selectNote, editNote } from '../actions/noteActions'
+import { prepareNote, selectNote, editNote } from '../actions/noteActions'
+import { openEditor, closeEditor } from '../actions/editorActions'
 
 import Menu from '../components/Menu'
 import Tree from '../components/TreeContainer'
@@ -40,9 +41,6 @@ class App extends Component {
                     <content>    
                         <Notes
                             notes={this.props.notes} select={this.props.selectNote} />
-                            {
-                                //this.props.notes.selected && <NoteEditor />
-                            }
                     </content>
                 </main>
         </div>
@@ -68,10 +66,11 @@ const mapActions = (dispatch) => {
         saveDirectory: (parentId) => dispatch(saveDirectory({name: 'New folder', parentId})),
         selectDirectory: (id) => dispatch(selectDirectory(id)),
         deleteDirectory: (id) => dispatch(deleteDirectory(id)),
-        saveNote: (directoryId) => dispatch(saveNote({ title: 'New note', directoryId })),
+        saveNote: (directoryId) => { dispatch(prepareNote(directoryId)) },
         selectNote: (id) => dispatch(selectNote(id)),
         editDirectory: (id) => dispatch(editDirectory(id)),
-        editNote: (id) => dispatch(editNote(id))
+        editNote: (id) => dispatch(editNote(id)),
+        closeEditor: () => dispatch(closeEditor())
     }
 }
 export default connect(mapProps, mapActions)(App)

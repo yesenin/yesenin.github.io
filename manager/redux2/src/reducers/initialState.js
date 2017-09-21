@@ -11,5 +11,10 @@ export default {
     },
     api: {
         isRequesting: false
+    },
+    editor: {
+        isOpen: false,
+        isNew: true,
+        note: null
     }
 }

@@ -12,3 +12,8 @@ export const UPDATE_NOTE_SUCCESS = 'UPDATE_NOTE_SUCCESS'
 export const SELECT_NOTE = 'SELECT_NOTE'
 export const EDIT_NOTE = 'EDIT_NOTE'
 export const NOTE_REQUEST = 'NOTE_REQUEST'
+export const PREPARE_NOTE = 'PREPARE_NOTE'
+
+export const OPEN_EDITOR = 'OPEN_EDITOR'
+export const CANCEL_EDITOR = 'CANCEL_EDITOR'
+export const SAVE_EDITOR = 'SAVE_EDITOR'

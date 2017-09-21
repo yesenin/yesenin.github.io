@@ -31,7 +31,8 @@ class Note extends Component {
     }
 
   render() {
-    return <div onClick={this.props.select}>
+    return <div onClick={this.props.select} className="note">
+        <div className="icon"/>
         { 
           this.props.editingId === this.props.note.id 
             ? <input

@@ -21,9 +21,6 @@ aside {
     /*background-color: #aaa;*/
 }
 
-aside > div {
-    flex-grow: 1;
-}
 
 content {
     display: flex;
@@ -111,7 +108,7 @@ input {
     font-family: sans-serif;
     font-size: 14pt;
     display: block;
-    width: 75%;
+    width: 50%;
     height: 20pt;
     padding: 0 10px 0 10px;
     border: none;
@@ -183,14 +180,6 @@ li {
     background-color: #ddd;
 }
 
-.folder:after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    right: 0;
-    border-right: 1px solid red;
-}
 .folder.selected {  
     background-color: lightblue;
 }
@@ -227,4 +216,86 @@ li {
 .spinner.on {
     opacity: 1;
     z-index: 99;
+}
+
+.note {
+    width: 74px;
+    height: 74px;
+    font-size: 10pt;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+.note > .icon {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+}
+
+.note > input {
+    font-family: sans-serif;
+    font-size: 10pt;
+    display: block;
+    width: 100%;
+    height: 18px;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: grey;
+    background-color: transparent;
+    font-weight: 100;
+}
+
+.notesBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.notesList {
+    flex-grow: 2;
+}
+.notesEditor {
+    flex-grow: 1;
+    transition: .25s ease-in-out;
+    margin-right: -100%;
+    display: none;
+}
+
+.notesEditor.on {
+    margin-right: 0;
+    display: block;
+}
+
+input.editor {
+    font-family: sans-serif;
+    font-size: 14pt;
+    display: block;
+    width: 100%;
+    height: 18pt;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: grey;
+    background-color: transparent;
+    font-weight: 100;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    resize: none;
+    font-family: sans-serif;
+    font-size: 12pt;
+    width: 100%;
+    height: 200px;
+}
+
+.editorPart {
+    margin: 5px;
 }

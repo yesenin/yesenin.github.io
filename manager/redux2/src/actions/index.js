@@ -5,8 +5,6 @@ export const selectFolder = id => ({
     id: id
 })
 
-
-
 export const selectNote = data => ({
     type: types.SELECT_NOTE,
     data: data
