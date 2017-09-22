@@ -7,11 +7,16 @@ import { saveNote, updateNote } from '../actions/noteActions'
 class NoteEditor extends Component {
     constructor(props) {
         super(props)
-        this.handleChange = this.handleChange.bind(this)
+        this.handleTitleChange = this.handleTitleChange.bind(this)
+        this.handleMessageChange = this.handleMessageChange.bind(this)
     }
 
-    handleChange(event) {
+    handleTitleChange(event) {
         this.props.note.title = event.target.value;
+    }
+    
+    handleMessageChange(event) {
+        this.props.note.message = event.target.value;
       }
 
     
@@ -19,13 +24,13 @@ class NoteEditor extends Component {
         return (this.props.note ? <div className= { "notesEditor" + (this.props.isOpen ? " on" : "") } >
             <div className="editorPart">
                 <input name="title" type="text" placeholder="Title" className="editor"
-                    defaultValue={this.props.note.title} onChange={this.handleChange}></input>
+                    defaultValue={this.props.note.title} onChange={this.handleTitleChange}></input>
             </div>
             <div className="editorPart">
                 Tags
             </div>
             <div className="editorPart">
-                <textarea placeholder="Body"></textarea>
+                <textarea placeholder="Body" defaultValue={this.props.note.message} onChange={this.handleMessageChange}></textarea>
             </div>
             <div className="editorPart">
                 <a href="#" onClick={() => { this.props.dispatch(closeEditor()) }}>Close</a>

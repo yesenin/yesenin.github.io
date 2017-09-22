@@ -26,7 +26,13 @@ export const editNote = (id) => {
 }
 
 export const prepareNote = (parentId) => {
-    return { type: types.PREPARE_NOTE, note: {directoryId: parentId, title: "New note", isDraft: true} }
+    return {
+        type: types.PREPARE_NOTE, note: {
+            directoryId: parentId,
+            title: "New note1",
+            isDraft: true
+        }
+    }
 }
 
 export const loadNotes = () => {
