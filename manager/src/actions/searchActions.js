@@ -13,3 +13,10 @@ export const changeQuery = (query) => {
         query
     }
 }
+
+export const changeState = (isOpen) => {
+    return {
+        type: types.CHANGED_SEARCH_STATE,
+        isOpen
+    }
+}

@@ -20,7 +20,7 @@ class Search extends Component {
 
     changeQuery(value) {
         this.setState({query: value})
-        // this.props.changeQuery(value)
+        this.props.changeQuery(value)
     }
 
     render() {
@@ -52,7 +52,7 @@ class Search extends Component {
 export default connect(
     (state, ownProps) => {
         return {
-            isAdvanced: state.notes.isAdvanced,
+            isAdvanced: state.search.isAdvanced,
             items: Array.from(new Set(state.notes.list.map(x => x.title))).map(x => {return {id: x, label: x}})
         }
     },

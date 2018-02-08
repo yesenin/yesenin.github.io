@@ -5,16 +5,19 @@ export default {
     },
     notes: {
         list: [],
-        current: [],
         selectedId: null,
-        isAdvanced: false,
-        query: "",
-        parent: null
+        search: {
+            isOpen: false,
+            isAdvanced: false,
+            query: null,
+            results: []
+        }
     },
     editor: {
         note: null
     }, 
     api: {
         isRequesting: false
-    }
+    },
+    
 }

@@ -10,6 +10,7 @@ import NewSearch from './NewSearch'
 
 import { selectFolder, loadFolders } from '../actions/folderActions'
 import { selectNote } from '../actions/noteAction'
+import { changeState } from '../actions/searchActions'
 
 import { connect } from 'react-redux'
 
@@ -19,14 +20,9 @@ class App extends Component {
         this.state = {
             isSearchOn: false
         }
-        this.openSearch = this.openSearch.bind(this)
         this.closeSearch = this.closeSearch.bind(this)
     }
-    openSearch() {
-        this.setState({
-            isSearchOn: true
-        })
-    }
+
     closeSearch() {
         this.setState({
             isSearchOn: false
@@ -42,17 +38,15 @@ class App extends Component {
                     </div>
                     <div className="col">
                         <div>
-                            <b onClick={this.openSearch}>Search</b>
+                            <b onClick={() => this.props.changeState(true)}>Search</b>
                         </div>
-                        
-                        {/* <Search /> */}
                         <NoteList/>
                     </div>
                     <div className="col">
                         <Editor/>
                     </div>
                 </div>
-                <NewSearch mode={this.state.isSearchOn} close={this.closeSearch}/>
+                <NewSearch/>
                 <Spinner mode={this.props.isRequesting} />
             </div>
         )
@@ -63,6 +57,7 @@ export default connect(
     (state, ownProps) => {
         return {
             isRequesting: state.api.isRequesting,
+            isOpen: state.notes.search.isOpen
         }
     },
     (dispatch) => {
@@ -71,6 +66,6 @@ export default connect(
                 dispatch(selectFolder(id));
                 dispatch(selectNote(null));
             },
-            loadFolders: () => loadFolders()
+            changeState: (isOpen) => dispatch(changeState(isOpen))
         }
     })(App)
