@@ -2,6 +2,10 @@ import * as types from '../actions/actionTypes';
 import initialState from './initialState';
 import _ from 'lodash'
 
+const changeState = (orig, changes) => {
+    return Object.assign({}, orig, changes)
+}
+
 const notesReducer = (state = initialState.notes, action) => {
     switch(action.type) {
         case types.ADD_NOTE:
@@ -14,20 +18,20 @@ const notesReducer = (state = initialState.notes, action) => {
                 selectedId: action.note.id
             })
         case types.SELECT_NOTE:
-            if (action.id !== state.selectedId) {
-                return Object.assign({}, state, { selectedId: action.id })
+            if (state.list.length > 0) {
+                const noteCandidate = state.list.find(x => x.id === action.id)
+                if (!state.selected) {
+                    return Object.assign({}, state, { selected: noteCandidate, selectedId: action.id })
+                }
+                if (action.id !== state.selected.id && noteCandidate) {
+                    return Object.assign({}, state, { selected: noteCandidate, selectedId: action.id })
+                }
             }
             return state
         case types.LOAD_NOTES:
-            return Object.assign({}, state, { 
-                list: _.orderBy(action.data, x => x.action)
-            })
-        case types.SELECT_FOLDER:
-            return Object.assign({}, state, { 
-                parent: action.id })
-        case types.CHANGED_SEARCH_QUERY:
-            return Object.assign({}, state, {
-                results: state.list
+            return changeState(state, {
+                list: _.orderBy(action.data, x => x.position),
+                selected: state.list.find(x => x.id === state.selectedId)
             })
         case types.UPDATE_NOTE:
             return Object.assign({}, state, {
@@ -37,14 +41,24 @@ const notesReducer = (state = initialState.notes, action) => {
             return Object.assign({}, state, {
                 list: _.orderBy(state.list.filter(x => x.id !== action.id), x => x.position)
             })
-        case types.SWAP_NOTES:
-            const note_a = state.list.find(x => x.id === action.a)
-            const note_b = state.list.find(x => x.id === action.b)
-            let newList = state.list.map(x => x.id === action.a ? Object.assign({}, x, { position: note_b.position}) : x)
-            newList = newList.map(x => x.id === action.b ? Object.assign({}, x, { position: note_a.position}): x)
-            return Object.assign({}, state, {
-                list: _.orderBy(newList, x => x.position)
-            })
+        case types.CHANGED_SEARCH_QUERY:
+            if (action.query) {
+                if (action.isAdvanced) {
+                    return Object.assign({}, state, {
+                        searchResult: state.list.filter(x => {
+                            return x.description.toLowerCase().indexOf(action.query.toLowerCase()) >= 0 ||
+                                x.tags.filter(t => t.indexOf(action.query) >= 0).length > 0
+                        })
+                    })
+                } else {
+                    return Object.assign({}, state, {
+                        searchResult: state.list.filter(x => x.title.toLowerCase().indexOf(action.query.toLowerCase()) >= 0)
+                    })
+                }
+            } else {return Object.assign({}, state, {
+                    searchResult: []
+                })
+            }
         default:
             return state
     }

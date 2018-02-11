@@ -5,7 +5,7 @@ import * as types from './actionTypes'
 import DirectoriesApi from '../api/directoriesApi'
 import NoticesApi from '../api/noticesApi'
 
-import { loadNotes, selectNote } from './noteAction'
+import { loadNotes, selectNote } from './noteActions'
 
 import { apiRequest, apiOk } from './apiActions'
 
@@ -30,13 +30,6 @@ export const addFolder = (name, parentId) => {
     }
 }
 
-const addNoteOk = (note) => {
-    return {
-        type: types.ADD_NOTE,
-        note
-    }
-}
-
 export const addNote = (title, directoryId) => {
     return (dispatch) => {
         dispatch(apiRequest())
@@ -46,7 +39,6 @@ export const addNote = (title, directoryId) => {
             .then(data => {
                 dispatch(apiOk())
                 dispatch(loadNotes()).then(() => dispatch(selectNote(data.id)))
-                
             })
             .catch(error => {
                 throw(error)

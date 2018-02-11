@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { selectNote, update, swap, loadNotes} from '../actions/noteAction'
+import { selectNote, update, loadNotes } from '../actions/noteActions'
 
 import { DragSource, DropTarget } from 'react-dnd';
 
@@ -53,8 +53,7 @@ class NoteIcon extends Component {
     render() {
         const { connectDragSource, connectDropTarget } = this.props;
         return connectDragSource(connectDropTarget(
-            <div className={this.props.note.id == this.props.selectedId ? "note selected" : "note"}
-                onClick={() => this.props.selectNote(this.props.note.id)}>
+            <div className={this.props.note.id === (this.props.selected && this.props.selected.id) ? "note selected" : "note"}>
                 <Link to={`/${this.props.note.directoryId}/${this.props.note.id}`}>
                     <div className="icon">
                     </div>
@@ -71,7 +70,7 @@ NoteIcon = DropTarget('NoteIcon', noteTarget, collectTarget)(NoteIcon)
 export default connect(
     (state, ownProps) => {
         return {
-            selectedId: state.notes.selectedId
+            selected: state.notes.selected
         }
     },
     (dispatch) => {
@@ -79,13 +78,12 @@ export default connect(
             selectNote: (id) => dispatch(selectNote(id)),
             update: (note) => dispatch(update(note)),
             swap: (a, b) => {
-            //dispatch(swap(a,b))
-
                 const a_position = a.position
                 const b_position = b.position
                 dispatch(update(Object.assign({}, a, { position: b_position})))
                     .then(() => dispatch(update(Object.assign({}, b, { position: a_position}))))
                     .then(() => dispatch(loadNotes()))
+                    .then(() => dispatch(selectNote(a.id)))
             }
         }
     })(NoteIcon)

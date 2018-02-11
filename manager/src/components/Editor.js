@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
-import { selectNote, update } from '../actions/noteAction'
+import { selectNote, update } from '../actions/noteActions'
 import { deleteNote } from '../actions/menuActions'
 
 import MenuItem from './MenuItem'
@@ -69,7 +69,7 @@ class Editor extends Component {
                     <label htmlFor="title">Title</label>
                     <input name="title" value={this.state.note.title} onChange={e => this.changeTitle(e.target.value)}/>
                 </div>
-                <div className="editor-row">
+                <div className="editor-row" title="To delete tag click 'X'. To add new press Enter after input">
                     <label htmlFor="tags">Tags</label>
                     <div className="tag-list">
                         {this.state.note.tags.map(x => <Tag key={x} text={x} removeTag={t => this.removeTag(t)}/>)}
@@ -82,9 +82,14 @@ class Editor extends Component {
                     value={this.state.note.description} onChange={e => this.changeDescription(e.target.value)}></textarea>
                 </div>
                 <div className="editor-row">
-                    <MenuItem onClickHandler={this.props.close}>Close</MenuItem>
-                    <MenuItem onClickHandler={() => this.props.delete(this.state.note.id)}>Delete</MenuItem>
-                    <MenuItem onClickHandler={this.save}>Save</MenuItem>
+                    {/* <MenuItem onClickHandler={this.props.close}
+                        >Close</MenuItem> */}
+                    <MenuItem
+                        onClickHandler={() => this.props.delete(this.state.note.id)}
+                        title="Delete note">Delete</MenuItem>
+                    <MenuItem
+                        onClickHandler={this.save}
+                        title="Save changes">Save</MenuItem>
                 </div>
             </div> 
             : <div className="editor"></div>
@@ -95,7 +100,7 @@ class Editor extends Component {
 export default connect(
     (state, ownProps) => {
         return {
-            selectedNote: state.notes.list.filter(x => x.id === state.notes.selectedId)[0]
+            selectedNote: state.notes.selected
         }
     },
     (dispatch) => {

@@ -1,7 +1,5 @@
 import * as types from './actionTypes'
-
 import NoticesApi from '../api/noticesApi'
-
 import { apiRequest, apiOk } from './apiActions'
 
 export const selectNote = (id) => {
@@ -50,11 +48,5 @@ export const loadNotes = () => {
             .catch(error => {
                 throw(error)
             })
-    }
-}
-
-export const swap = (a, b) => {
-    return (dispatch) => {
-        dispatch(apiRequest())
     }
 }

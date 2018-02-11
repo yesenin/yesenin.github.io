@@ -1,24 +1,25 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { configureStore } from './store/configureStore'
 import App from './components/App'
 import './styles/index.css'
 
-import { loadFolders, selectFolder } from './actions/folderActions'
-import { loadNotes } from './actions/noteAction'
-
 const store = configureStore()
-store.dispatch(loadFolders())
-  .then(() => store.dispatch(loadNotes()))
-  .then(() => store.dispatch(selectFolder(1)))
-
 
 render(
   <Provider store={store}>
     <Router>
-      <Route exact path='/:directory?/:note?' component={App} />
+      <Switch>
+        <Route exact path='/' component={App}/>
+        <Route exact path='/search' component={App}/>
+        <Route exact path='/advanced_search' component={App}/>
+        <Route exact path='/error' component={App}/>
+        <Route exact path='/:directory?/:note?' component={App}/>
+        
+        <Route render={() => <div>404</div>}/>
+      </Switch>
     </Router>
   </Provider>,
   document.getElementById('app')

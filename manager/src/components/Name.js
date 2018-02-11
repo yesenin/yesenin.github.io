@@ -44,7 +44,7 @@ class Name extends Component {
                     ref={(input) => { this.titleInput = input; }}
                     onClick={(e) => {e.stopPropagation()}}
                     onKeyDown={this.onKeyDown}/>
-                : <span onDoubleClick={this.enterEditMode}>
+                : <span onDoubleClick={this.enterEditMode} title="Double click to edit, Enter — save, Esc — cancel">
                     {this.props.name} {
                         this.props.children && <i>{this.props.children}</i> 
                     }</span>

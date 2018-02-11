@@ -1,17 +1,15 @@
 export default {
     folders: {
         list: [],
+        selected: null,
         selectedId: null
     },
     notes: {
         list: [],
+        selected: null,
         selectedId: null,
-        search: {
-            isOpen: false,
-            isAdvanced: false,
-            query: null,
-            results: []
-        }
+        suggestions: [],
+        searchResult: []
     },
     editor: {
         note: null
@@ -19,5 +17,9 @@ export default {
     api: {
         isRequesting: false
     },
-    
+    search: {
+        isOpen: false,
+        isAdvanced: false,
+        query: ''
+    }
 }

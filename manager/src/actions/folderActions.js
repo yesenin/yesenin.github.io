@@ -46,7 +46,7 @@ export const loadFolders = () => {
             .then(data => {
                 dispatch(apiOk())
                 dispatch(loadFoldersOk(data))
-                dispatch(selectFolder(1))
+                //dispatch(selectFolder(1))
             })
             .catch(error => {
                 throw(error)

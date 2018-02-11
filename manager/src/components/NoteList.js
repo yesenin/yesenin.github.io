@@ -20,8 +20,10 @@ const connectedNoteList = connect(
     (state, ownProps) => {
         return {
             notes: {
-                list: state.notes.list.filter(x => x.directoryId === state.folders.selectedId),
-                selectedId: state.notes.selectedId
+                list: state.folders.selected
+                    ? state.notes.list.filter(x => x.directoryId === state.folders.selected.id)
+                    : [],
+                selected: state.notes.selected
             }
         }
     },

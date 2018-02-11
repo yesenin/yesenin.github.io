@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import Folder from './Folder'
@@ -13,12 +14,13 @@ class Tree extends Component {
     }
 }
 
+Tree.propTypes = {
+    folders: PropTypes.array.isRequired
+}
+
 export default connect(
     (state, ownProps) => {
         return {
             folders: state.folders.list.filter(x => x.parentId === ownProps.parentId)
         }
-    },
-    (dispatch) => {
-        return {}
     })(Tree)
