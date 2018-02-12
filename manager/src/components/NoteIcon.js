@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { selectNote, update, loadNotes } from '../actions/noteActions'
-
 import { DragSource, DropTarget } from 'react-dnd';
 
 import Name from './Name'
+
+import { selectNote, update, loadNotes } from '../actions/noteActions'
 
 const noteSource = {
     beginDrag(props) {

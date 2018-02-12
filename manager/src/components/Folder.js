@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { Link } from 'react-router-dom'
-
-import { updateFolder } from '../actions/folderActions'
 
 import Tree from './Tree'
 import Name from './Name'
+
+import { updateFolder } from '../actions/folderActions'
+
 
 class Folder extends Component {
     constructor(props) {

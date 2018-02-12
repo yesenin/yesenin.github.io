@@ -9,6 +9,7 @@ import NoteList from './NoteList'
 import Editor from './Editor'
 import Spinner from './Spinner'
 import NewSearch from './NewSearch'
+
 import { selectFolder, loadFolders } from '../actions/folderActions'
 import { changeState, changeQuery } from '../actions/searchActions'
 import * as menuActions from '../actions/menuActions'

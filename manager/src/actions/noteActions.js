@@ -1,5 +1,7 @@
 import * as types from './actionTypes'
+
 import NoticesApi from '../api/noticesApi'
+
 import { apiRequest, apiOk } from './apiActions'
 
 export const selectNote = (id) => {

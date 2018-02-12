@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
-
 import ReactAutocomplete from 'react-autocomplete'
 
 import MenuItem from './MenuItem'

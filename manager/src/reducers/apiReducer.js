@@ -1,5 +1,5 @@
-import * as types from '../actions/actionTypes';
-import initialState from './initialState';
+import * as types from '../actions/actionTypes'
+import initialState from './initialState'
 
 const apiReducer = (state = initialState.api, action) => {
     switch (action.type) {

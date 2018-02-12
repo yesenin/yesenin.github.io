@@ -1,4 +1,5 @@
 import * as types from './actionTypes'
+
 // import FoldersApi from '../api/mockFoldersApi'
 // import NotesApi from '../api/mockNoteApi'
 
@@ -6,7 +7,6 @@ import DirectoriesApi from '../api/directoriesApi'
 import NoticesApi from '../api/noticesApi'
 
 import { loadNotes, selectNote } from './noteActions'
-
 import { apiRequest, apiOk } from './apiActions'
 
 const addFolderOk = (folder) => {

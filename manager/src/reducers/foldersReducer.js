@@ -1,5 +1,5 @@
-import * as types from '../actions/actionTypes';
-import initialState from './initialState';
+import * as types from '../actions/actionTypes'
+import initialState from './initialState'
 
 const foldersReducer = (state = initialState.folders, action) => {
     switch (action.type) {

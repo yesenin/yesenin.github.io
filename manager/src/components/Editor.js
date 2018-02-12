@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
+import MenuItem from './MenuItem'
+
 import { selectNote, update } from '../actions/noteActions'
 import { deleteNote } from '../actions/menuActions'
-
-import MenuItem from './MenuItem'
 
 const Tag = ({text, removeTag}) => {
     return (
