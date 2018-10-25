@@ -120,8 +120,8 @@
   					'aria-valuemin="0" aria-valuemax="100" style="width: ' + percent + '%">' +
   					'</div></div>';
 
-			$('#my-list').append('<div class="row"><div class="col-sm-4 col-xs-4"><a href="' + items[i].href + '">' + items[i].name + (items[i].death == null ? '</a>' : '</a> &#8224;') + '</br><i>' +
-				getYearWord(diff.totalYears) + getMonthWord(diff.totalMonths % 12) + getDayWord(diff.days) + '</i></div><div class="col-sm-8 col-xs-8">' + bar + '</div></div>');
+			$('#my-list').append('<div class="row"><div class="col-sm-6 col-lg-3"><a href="' + items[i].href + '">' + items[i].name + (items[i].death == null ? '</a>' : '</a> &#8224;') + '</br><i>' +
+				getYearWord(diff.totalYears) + getMonthWord(diff.totalMonths % 12) + getDayWord(diff.days) + '</i></div><div class="col-sm-12 col-lg-9">' + bar + '</div></div>');
 		}
 	}
 	var raw_data = {};
