@@ -1,1 +1,0 @@
-export const delay = 1 * 1000
