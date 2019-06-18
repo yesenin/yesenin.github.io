@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using yesenin.Orden.App.Domain;
-using yesenin.Orden.App.Models;
+using yesenin.Orden.App.ViewModels;
 
 namespace yesenin.Orden.App.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly string _connectionString = "mongodb://yesenin:D_%2BeqP%26rp3%21_ZJ%23g@159.65.28.129:27017/admin?readPreference=primary";
+        private readonly string _connectionString = "";
         private readonly MongoClient _client;
         private readonly IMongoDatabase _database;
         private readonly IMongoCollection<Word> _collection;

@@ -1,27 +1,76 @@
 ﻿@model WordViewModel
 @{
     ViewData["Title"] = "Word";
+    var wordKinds = new List<SelectListItem> {
+        new SelectListItem {
+            Text = "N/A",
+            Value = "null"
+        },
+        new SelectListItem {
+            Text = "Substantiv",
+            Value = "substantiv"
+        },
+        new SelectListItem {
+            Text = "Verb",
+            Value = "verb"
+        },
+        new SelectListItem {
+            Text = "Konjunktion",
+            Value = "konjunktion"
+        },
+        new SelectListItem {
+            Text = "Adverb",
+            Value = "adverb"
+        },
+        new SelectListItem {
+            Text = "Adjektiv",
+            Value = "adjektiv"
+        },
+        new SelectListItem {
+            Text = "Preposition",
+            Value = "preposition"
+        }
+    };
 }
 
-<div class="row">
-    <h2>@Model.Value</h2>
-</div>
 
 <div class="row">
     @Html.ActionLink("List", "Index", "Home")
 </div>
 
 <div class="row">
-    <h2>Kind</h2>
-    <p>@Model.Kind</p>
+    <div class="word_title">
+        <h1>@Model.Value</h1>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <h3>Kind</h3>
+
+    <form asp-action="Index" asp-controller="Home"
+        data-ajax="true" data-ajax-method="POST">
+
+    </form>
 </div>
 
 <div class="row">
-    <h2>Translations</h2>
-    <ul>
-        @foreach (var translate in Model.TranslationList)
-        {
-            <li>@translate.Value (@translate.Language)</li>
-        }
-    </ul>
+    <h3>Kind details</h3>
+</div>
+
+<div class="row">
+    <h3>Translations</h3>
+</div>
+
+<div class="row">
+    <h3>Relations</h3>
+</div>
+
+<div class="row">
+    <h3>Exmaples</h3>
+</div>
+
+<div class="row">
+    <h3>Statistics</h3>
 </div>
