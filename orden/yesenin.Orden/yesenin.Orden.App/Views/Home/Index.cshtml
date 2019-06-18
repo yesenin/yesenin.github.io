@@ -1,0 +1,49 @@
+﻿@model WordListViewModel
+@{
+    ViewData["Title"] = "Word list";
+}
+<div class="row">
+    <ul>
+        <li>@Model.Total</li>
+        <li>@Model.Skip</li>
+        <li>@Model.Take</li>
+    </ul>
+</div>
+<div class="row">
+    <h1>Word list</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Word</th>
+                <th>Kind</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var word in Model.Items)
+            {
+                <tr>
+                    <td>
+                        @word.Order
+                    </td>
+                    <td>
+                        @Html.ActionLink(word.Value, "Word", "Home", new { id = word.Id })
+                    </td>
+                    <td>
+                        @word.Kind
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    @if (Model.Skip - 10 >= 0)
+    {
+        @Html.ActionLink("Prev", "Index", "Home", new { skip = Model.Skip - 10 })
+    }
+    @if (Model.Skip + 10 < Model.Total)
+    {
+        @Html.ActionLink("Next", "Index", "Home", new { skip = Model.Skip + 10 })
+    }
+</div>
