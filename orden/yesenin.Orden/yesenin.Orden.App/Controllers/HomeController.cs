@@ -27,7 +27,7 @@ namespace yesenin.Orden.App.Controllers
 
         public IActionResult Index(int skip = 0, int take = 10)
         {
-            var items = _collection.Find(_ => true).Skip(skip).Limit(take).ToList().Select(word => new WordViewModel
+            var items = _collection.Find(document => document.Part == 3).Skip(skip).Limit(take).ToList().Select(word => new WordViewModel
             {
                 Value = word.Value, Kind = word.Kind, Id = word.Id.ToString(), Order = word.Order
             });
@@ -40,7 +40,8 @@ namespace yesenin.Orden.App.Controllers
             });
         }
 
-        [Route("/{id}")]
+        [HttpGet]
+        [Route("/{id}", Name = "worddetails")]
         public IActionResult Word(string id)
         {
             var word = _collection.Find(document => document.Id == ObjectId.Parse(id)).FirstOrDefault();
@@ -52,6 +53,14 @@ namespace yesenin.Orden.App.Controllers
                 Order = word.Order,
                 TranslationList = word.Translations.Select(tr => new TranslateViewModel { Language = tr.Language, Value = tr.Value})
             });
+        }
+
+        
+        [HttpPost]
+        [Route("/{id}", Name = "updateword")]
+        public IActionResult UpdateWord(WordViewModel word)
+        {
+            return BadRequest(word.Kind);
         }
     }
 }

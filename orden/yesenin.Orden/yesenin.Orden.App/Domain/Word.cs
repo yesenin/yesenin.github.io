@@ -29,5 +29,7 @@ namespace yesenin.Orden.App.Domain
         public List<string> SubKind { get; set; }
         [BsonElement("root_id")]
         public ObjectId? RootId { get; set; }
+        [BsonElement("part")]
+        public int Part { get; set; }
     }
 }

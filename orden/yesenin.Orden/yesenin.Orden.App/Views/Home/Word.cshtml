@@ -4,7 +4,7 @@
     var wordKinds = new List<SelectListItem> {
         new SelectListItem {
             Text = "N/A",
-            Value = "null"
+            Value = null
         },
         new SelectListItem {
             Text = "Substantiv",
@@ -49,9 +49,15 @@
 <div class="row">
     <h3>Kind</h3>
 
-    <form asp-action="Index" asp-controller="Home"
-        data-ajax="true" data-ajax-method="POST">
-
+    <form asp-route="updateword" asp-route-id="@Model.Id"
+        data-ajax="true" data-ajax-method="POST" >
+        <div class="form-group">
+            <input type="text" class="form-control" id="AjaxValidationModelAge" asp-for="Kind" placeholder="0">
+            <span asp-validation-for="Kind" class="text-danger"></span>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 </div>
 
