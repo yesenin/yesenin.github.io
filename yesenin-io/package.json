@@ -1,0 +1,23 @@
+{
+  "name": "yesenin-io",
+  "version": "0.1.0",
+  "description": "Some small JS things",
+  "main": "index.js",
+  "scripts": {
+    "dev-build": "webpack --config dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesenin/yesenin.github.io.git"
+  },
+  "author": "Anton Yesenin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yesenin/yesenin.github.io/issues"
+  },
+  "homepage": "https://github.com/yesenin/yesenin.github.io#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2",
+    "webpack-cli": "^4.7.2"
+  }
+}
