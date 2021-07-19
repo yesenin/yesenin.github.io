@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
+import { App } from './app';
 
-render(<div>yesenin webpack react</div>,
+render(<App/>,
     window.document.getElementById('root')
 );
