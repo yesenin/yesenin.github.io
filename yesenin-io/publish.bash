@@ -1,1 +1,1 @@
-cp -a dist/. ../
+cp -a build/prod/. ../

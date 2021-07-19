@@ -1,1 +1,1 @@
-xcopy .\dist ..\ /E
+xcopy .\build\prod ..\ /E

@@ -1,1 +1,1 @@
-Copy-item -Force -Recurse -Verbose ".\dist\*" -Destination "..\"
+Copy-item -Force -Recurse -Verbose ".\build\prod\*" -Destination "..\"

@@ -2,10 +2,10 @@ const path = require('path');
 var nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const outputPath = __dirname + "/build/dev";
+const outputPath = __dirname + "/build/prod";
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.jsx",
   output: {
     filename: "index.js",
