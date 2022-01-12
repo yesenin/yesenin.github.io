@@ -1,1 +1,0 @@
-xcopy .\build\prod ..\ /E

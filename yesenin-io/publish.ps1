@@ -1,1 +1,0 @@
-Copy-item -Force -Recurse -Verbose ".\build\prod\*" -Destination "..\"
