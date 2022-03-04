@@ -62,36 +62,89 @@
   src: url(../fonts/DejaVuSerif.ttf);
 }
 
+.tile-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.tile {
+  font-size: 60pt;
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.amName {
+  font-family: amSerif;
+  font-size: 24pt;
+}
 
 .tile-decorative {
-  font-size: 62pt;
   font-family: amDecorative;
+  height: 100px;
 }
 
 .tile-school {
-  font-size: 62pt;
   font-family: amSchool;
+  height: 100px;
 }
 
 .tile-hand {
-  font-size: 62pt;
   font-family: amHand;
+  height: 100px;
 }
 
 .tile-sans {
-  font-size: 62pt;
   font-family: amSans;
+  height: 100px;
 }
 
 .tile-serif {
-  font-size: 62pt;
   font-family: amSerif;
+  height: 100px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
 .transliteration {
-  font-size: 24pt;
+  font-size: 18pt;
   font-family: 'PT Mono', monospace;
-  color: #ccc;
+  color: #666;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.name {
+  background-color: aquamarine;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.pronunciation {
+  background-color: beige;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.name span {
+  padding: 0 10px;
+}
+
+.pronunciation span {
+  padding: 0 10px;
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  background-color: aliceblue;
+  border: 1px solid black;
+  padding: 0;
+  margin: 5px;
+  border-radius: 5px;
 }

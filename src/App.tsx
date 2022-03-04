@@ -8,11 +8,15 @@ import {User} from 'firebase/auth';
 import {auth} from './firebase/firebase.util';
 
 import {Letter, LowercaseLetters, UppercaseLetters} from './data/alphabet';
-import {LetterTile} from './components/tile';
+import {LettersComponent} from './components/letters';
+import {HashRouter} from 'react-router-dom';
 
 interface AppState {
   currentUser?: User | null;
+  index: number;
 }
+
+const allLetters = [...UppercaseLetters, ...LowercaseLetters];
 
 
 class App extends React.Component<{}, AppState> {
@@ -21,6 +25,7 @@ class App extends React.Component<{}, AppState> {
 
         this.state = {
             currentUser: null,
+            index: _.random(allLetters.length - 1),
         };
     }
 
@@ -33,19 +38,29 @@ class App extends React.Component<{}, AppState> {
     }
 
     render() {
-        const allLetters = [...UppercaseLetters, ...LowercaseLetters];
-        const letter: Letter = _.sample(allLetters) || allLetters[0];
+        const {index} = this.state;
+
+        const letter: Letter = allLetters[index];
 
         return (
-            <div className="App">
-                <LetterTile letter={letter} style='decorative'/>
-                <LetterTile letter={letter} style='school'/>
-                <LetterTile letter={letter} style='hand'/>
-                <LetterTile letter={letter} style='sans'/>
-                <LetterTile letter={letter} style='serif'/>
-            </div>
+            <HashRouter>
+                <div className="App">
+                    <LettersComponent
+                        letter={letter}
+                        onNext={this.changeIndex}
+                        oneStyle
+                    />
+                </div>
+            </HashRouter>
         );
     }
+
+    private changeIndex = () => {
+        const newIndex = _.random(allLetters.length - 1);
+        this.setState({
+            index: newIndex,
+        });
+    };
 }
 
 export default App;
