@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: amDecorative;
+  src: url(../fonts/ArmeniapediaGeghagrutyun.ttf);
+}
+
+@font-face {
+  font-family: amSchool;
+  src: url(../fonts/poqrik.ttf);
+}
+
+@font-face {
+  font-family: amHand;
+  src: url(../fonts/ArTar_TumanianDzeragir_U.ttf);
+}
+
+@font-face {
+  font-family: amSans;
+  src: url(../fonts/DejaVuSans.ttf);
+}
+
+@font-face {
+  font-family: amSerif;
+  src: url(../fonts/DejaVuSerif.ttf);
+}
+
+
+.tile-decorative {
+  font-size: 62pt;
+  font-family: amDecorative;
+}
+
+.tile-school {
+  font-size: 62pt;
+  font-family: amSchool;
+}
+
+.tile-hand {
+  font-size: 62pt;
+  font-family: amHand;
+}
+
+.tile-sans {
+  font-size: 62pt;
+  font-family: amSans;
+}
+
+.tile-serif {
+  font-size: 62pt;
+  font-family: amSerif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+.transliteration {
+  font-size: 24pt;
+  font-family: 'PT Mono', monospace;
+  color: #ccc;
+}
