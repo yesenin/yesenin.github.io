@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.0d87e0fc.js",
+    "main.css": "/static/css/main.2bce0344.css",
+    "main.js": "/static/js/main.c66402cf.js",
     "static/js/787.070363ec.chunk.js": "/static/js/787.070363ec.chunk.js",
+    "static/media/DejaVuSans.ttf": "/static/media/DejaVuSans.67ed0b9aeb82e75288aa.ttf",
+    "static/media/DejaVuSerif.ttf": "/static/media/DejaVuSerif.048a8a58876f2565daa2.ttf",
+    "static/media/ArTar_TumanianDzeragir_U.ttf": "/static/media/ArTar_TumanianDzeragir_U.dc5d31710fb6563fccb4.ttf",
+    "static/media/poqrik.ttf": "/static/media/poqrik.8ed12c1ec22abd574fb0.ttf",
+    "static/media/ArmeniapediaGeghagrutyun.ttf": "/static/media/ArmeniapediaGeghagrutyun.4223f42e2712eff3f75d.ttf",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.0d87e0fc.js.map": "/static/js/main.0d87e0fc.js.map",
+    "main.2bce0344.css.map": "/static/css/main.2bce0344.css.map",
+    "main.c66402cf.js.map": "/static/js/main.c66402cf.js.map",
     "787.070363ec.chunk.js.map": "/static/js/787.070363ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0d87e0fc.js"
+    "static/css/main.2bce0344.css",
+    "static/js/main.c66402cf.js"
   ]
 }
