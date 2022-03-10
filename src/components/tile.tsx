@@ -1,12 +1,18 @@
 import * as React from 'react';
 import {Letter} from '../data/alphabet';
 
-export const LetterTile = (props: {letter: Letter, style: string}) => {
-    const {letter, style} = props;
+interface LetterTileProps {
+    letter: Letter;
+    style: string;
+    isUpperCase: boolean;
+}
+
+export const LetterTile = (props: LetterTileProps) => {
+    const {letter, style, isUpperCase} = props;
     return <div className='tile-wrapper'>
         <div className='tile'>
             <div className={`tile-${style}`}>
-                {letter.armenian}
+                {isUpperCase ? letter.upperCase : letter.lowerCase}
             </div>
             <div className='amName'>
                 {letter.amName}

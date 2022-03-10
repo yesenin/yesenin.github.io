@@ -16,7 +16,7 @@ export const LettersComponent = (props: LettersComponentProps) => {
     const style = oneStyle ? 'serif' : _.sample(styles) || 'sans';
     return <>
         <div className='letters'>
-            <LetterTile letter={letter} style={style}/>
+            <LetterTile letter={letter} style={style} isUpperCase/>
         </div>
         <button
             onClick={onNext}
