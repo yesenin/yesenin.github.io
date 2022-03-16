@@ -24,3 +24,21 @@ provider.setCustomParameters({prompt: 'select_account'});
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default Firebase;
+
+export interface Word {
+    origin: string;
+    translate: string;
+}
+
+export const getWords = (): Promise<Array<Word>> => {
+    return firestore.collection('armenian').get()
+        .then((snapshot: any) => {
+            return snapshot.docs.map((x: any) => {
+                return {origin: x.word, translate: 'none'};
+            });
+        });
+};
+
+export const addWord = (word: Word) => {
+    firestore.doc;
+};

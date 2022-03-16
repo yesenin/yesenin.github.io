@@ -1,16 +1,17 @@
 /* eslint-disable require-jsdoc */
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import './App.css';
 import * as _ from 'lodash';
 
 import {User} from 'firebase/auth';
 
-import {auth} from './firebase/firebase.util';
+import {auth, getWords, Word} from './firebase/firebase.util';
 
 import {Letter, ArmenianLetters} from './data/alphabet';
 import {GameLetterTile} from './components/game-tile';
 import {HashRouter} from 'react-router-dom';
 import {Keyboard} from './components/keyboard';
+import {SignIn} from './components/sign-in';
 
 interface AppState {
   currentUser?: User | null;
@@ -21,6 +22,8 @@ interface AppState {
   isUpperCase: boolean;
   mode: number;
   word: string;
+  translation: string;
+  words: Array<Word>;
 }
 
 interface Option {
@@ -45,11 +48,20 @@ class App extends React.Component<{}, AppState> {
             isUpperCase: _.random(2) > 1,
             mode: _.sample(modes) || 1,
             word: '',
+            translation: '',
+            words: [],
         };
     }
 
     componentDidMount() {
         auth.onAuthStateChanged((user: any) => {
+            const {words} = this.state;
+            user &&
+            words.length === 0 && getWords().then((foo: Array<Word>) => {
+                this.setState({
+                    words: foo,
+                });
+            });
             this.setState({
                 currentUser: user,
             });
@@ -58,13 +70,50 @@ class App extends React.Component<{}, AppState> {
 
     render() {
         const {
+            word,
+            translation,
+            currentUser,
+        } = this.state;
+
+        return (
+            <HashRouter>
+                <SignIn currentUser={currentUser}>
+                    <>
+                        <input value={word}
+                            onKeyDown={this.onInputChange}
+                            onChange={() => false}></input>
+                        <input value={translation}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                                return this.onTranslationChange(e.target.value);
+                            }}></input>
+                        <Keyboard onKeyPressed={this.onKeyPressed}/>
+                        <button>Add word</button>
+                        <div>
+                            <h3>Words</h3>
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </>
+                </SignIn>
+            </HashRouter>
+        );
+    }
+
+    private onTranslationChange = (value: string) => {
+        this.setState({
+            translation: value,
+        });
+    };
+
+    private renderGame = () => {
+        const {
             index,
             answer,
             totalClicks,
             rightClicks,
             isUpperCase,
             mode,
-            word,
         } = this.state;
 
         const letter: Letter = ArmenianLetters[index];
@@ -76,51 +125,43 @@ class App extends React.Component<{}, AppState> {
         const options: Array<Option> = [letter, ...otherLetters]
             .map((l: Letter) => ({id: l.id, letter: l}));
 
-        return (
-            <HashRouter>
-                <div className="App">
-                    <div className='letters'>
-                        <GameLetterTile
-                            letter={letter}
-                            isUpperCase={isUpperCase}
-                            style='serif'
-                        />
-                    </div>
-                    {answer && <div><h3>{answer}</h3></div>}
-                    <div>
-                        {_.shuffle(options)
-                            .map((o: Option) => {
-                                return <button
-                                    disabled={!!answer}
-                                    className='button'
-                                    key={o.id}
-                                    onClick={() => this.checkOption(o.id)}>
-                                    {mode == 1 ?
-                                        o.letter.pronunciation :
-                                        isUpperCase ?
-                                            o.letter.lowerCase :
-                                            o.letter.upperCase }
-                                </button>;
-                            },
-                            )}
-                    </div>
-                    <div>
-                        <button
-                            disabled={!answer}
+        return <div className="App">
+            <div className='letters'>
+                <GameLetterTile
+                    letter={letter}
+                    isUpperCase={isUpperCase}
+                    style='serif'
+                />
+            </div>
+            {answer && <div><h3>{answer}</h3></div>}
+            <div>
+                {_.shuffle(options)
+                    .map((o: Option) => {
+                        return <button
+                            disabled={!!answer}
                             className='button'
-                            onClick={this.changeIndex}>Next</button>
-                    </div>
-                    <div>
-                        <h2>{rightClicks} for {totalClicks}</h2>
-                    </div>
-                </div>
-                <input value={word}
-                    onKeyDown={this.onInputChange}
-                    onChange={() => false}></input>
-                <Keyboard onKeyPressed={this.onKeyPressed}/>
-            </HashRouter>
-        );
-    }
+                            key={o.id}
+                            onClick={() => this.checkOption(o.id)}>
+                            {mode == 1 ?
+                                o.letter.pronunciation :
+                                isUpperCase ?
+                                    o.letter.lowerCase :
+                                    o.letter.upperCase }
+                        </button>;
+                    },
+                    )}
+            </div>
+            <div>
+                <button
+                    disabled={!answer}
+                    className='button'
+                    onClick={this.changeIndex}>Next</button>
+            </div>
+            <div>
+                <h2>{rightClicks} for {totalClicks}</h2>
+            </div>
+        </div>;
+    };
 
     private onInputChange = (e: any) => {
         if (e.keyCode === 8) {
