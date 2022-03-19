@@ -21,6 +21,7 @@
     ],
     "rules": {
         "indent": ["error", 4],
-        "linebreak-style": ["off"]
+        "linebreak-style": ["off"],
+        "max-len": ["error", {"code": 120}]
     }
 }

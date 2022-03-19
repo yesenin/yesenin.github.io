@@ -8,10 +8,14 @@ export interface Letter {
     amName: string;
     pronunciation: string;
     namePronunciation: string;
+    row: number;
+    position: number;
 }
 
 export const ArmenianLetters: Array<Letter> = [
     {
+        row: 2,
+        position: 0,
         id: 0,
         lowerCase: 'ա',
         upperCase: 'Ա',
@@ -23,6 +27,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ɑjb/',
     },
     {
+        row: 3,
+        position: 4,
         id: 1,
         lowerCase: 'բ',
         upperCase: 'Բ',
@@ -34,6 +40,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/bɛn/',
     },
     {
+        row: 2,
+        position: 4,
         id: 2,
         lowerCase: 'գ',
         upperCase: 'Գ',
@@ -45,6 +53,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ɡim/',
     },
     {
+        row: 2,
+        position: 2,
         id: 3,
         lowerCase: 'դ',
         upperCase: 'Դ',
@@ -56,6 +66,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/dɑ/',
     },
     {
+        row: 1,
+        position: 2,
         id: 4,
         lowerCase: 'ե',
         upperCase: 'Ե',
@@ -67,6 +79,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/jɛtʃʰ/',
     },
     {
+        row: 3,
+        position: 0,
         id: 5,
         lowerCase: 'զ',
         upperCase: 'Զ',
@@ -78,6 +92,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/zɑ/',
     },
     {
+        row: 0,
+        position: 0,
         id: 6,
         lowerCase: 'է',
         upperCase: 'Է',
@@ -89,6 +105,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ɛː/',
     },
     {
+        row: 1,
+        position: 5,
         id: 7,
         lowerCase: 'ը',
         upperCase: 'Ը',
@@ -100,6 +118,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ətʰ/',
     },
     {
+        row: 0,
+        position: 1,
         id: 8,
         lowerCase: 'թ',
         upperCase: 'Թ',
@@ -111,6 +131,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/tʰo/',
     },
     {
+        row: 0,
+        position: 9,
         id: 9,
         lowerCase: 'ժ',
         upperCase: 'Ժ',
@@ -122,6 +144,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ʒɛː/',
     },
     {
+        row: 1,
+        position: 7,
         id: 10,
         lowerCase: 'ի',
         upperCase: 'Ի',
@@ -133,6 +157,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ini/',
     },
     {
+        row: 2,
+        position: 8,
         id: 11,
         lowerCase: 'լ',
         upperCase: 'Լ',
@@ -144,6 +170,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/lʏn/',
     },
     {
+        row: 1,
+        position: 10,
         id: 12,
         lowerCase: 'խ',
         upperCase: 'Խ',
@@ -155,6 +183,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/χɛː/',
     },
     {
+        row: 1,
+        position: 11,
         id: 13,
         lowerCase: 'ծ',
         upperCase: 'Ծ',
@@ -166,6 +196,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/tsɑ/',
     },
     {
+        row: 2,
+        position: 7,
         id: 14,
         lowerCase: 'կ',
         upperCase: 'Կ',
@@ -177,6 +209,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/kɛn/',
     },
     {
+        row: 2,
+        position: 5,
         id: 15,
         lowerCase: 'հ',
         upperCase: 'Հ',
@@ -188,6 +222,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ho/',
     },
     {
+        row: 0,
+        position: 3,
         id: 16,
         lowerCase: 'ձ',
         upperCase: 'Ձ',
@@ -199,6 +235,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/dzɑ/',
     },
     {
+        row: 3,
+        position: 1,
         id: 17,
         lowerCase: 'ղ',
         upperCase: 'Ղ',
@@ -210,6 +248,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ɫɑt/',
     },
     {
+        row: 0,
+        position: 8,
         id: 18,
         lowerCase: 'ճ',
         upperCase: 'Ճ',
@@ -221,6 +261,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/tʃɛː/',
     },
     {
+        row: 3,
+        position: 6,
         id: 19,
         lowerCase: 'մ',
         upperCase: 'Մ',
@@ -232,6 +274,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/mɛn/',
     },
     {
+        row: 2,
+        position: 6,
         id: 20,
         lowerCase: 'յ',
         upperCase: 'Յ',
@@ -243,6 +287,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ji/',
     },
     {
+        row: 3,
+        position: 5,
         id: 21,
         lowerCase: 'ն',
         upperCase: 'Ն',
@@ -254,6 +300,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/nu/',
     },
     {
+        row: 0,
+        position: 10,
         id: 22,
         lowerCase: 'շ',
         upperCase: 'Շ',
@@ -265,6 +313,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ʃɑ/',
     },
     {
+        row: 1,
+        position: 1,
         id: 23,
         lowerCase: 'ո',
         upperCase: 'Ո',
@@ -276,6 +326,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ɔ/',
     },
     {
+        row: 0,
+        position: 7,
         id: 24,
         lowerCase: 'չ',
         upperCase: 'Չ',
@@ -287,6 +339,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/tʃʰɑ/',
     },
     {
+        row: 1,
+        position: 9,
         id: 25,
         lowerCase: 'պ',
         upperCase: 'Պ',
@@ -298,6 +352,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/pɛː/',
     },
     {
+        row: 0,
+        position: 4,
         id: 26,
         lowerCase: 'ջ',
         upperCase: 'Ջ',
@@ -309,6 +365,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/dʒɛː/',
     },
     {
+        row: 1,
+        position: 3,
         id: 27,
         lowerCase: 'ռ',
         upperCase: 'Ռ',
@@ -320,6 +378,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/rɑ/',
     },
     {
+        row: 2,
+        position: 1,
         id: 28,
         lowerCase: 'ս',
         upperCase: 'Ս',
@@ -331,6 +391,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/sɛː/',
     },
     {
+        row: 3,
+        position: 3,
         id: 29,
         lowerCase: 'վ',
         upperCase: 'Վ',
@@ -342,6 +404,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/vɛv/',
     },
     {
+        row: 1,
+        position: 4,
         id: 30,
         lowerCase: 'տ',
         upperCase: 'Տ',
@@ -353,6 +417,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/tʏn/',
     },
     {
+        row: 0,
+        position: 6,
         id: 31,
         lowerCase: 'ր',
         upperCase: 'Ր',
@@ -364,6 +430,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/ɹɛː/',
     },
     {
+        row: 3,
+        position: 2,
         id: 32,
         lowerCase: 'ց',
         upperCase: 'Ց',
@@ -375,6 +443,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/tsʰo/',
     },
     {
+        row: 1,
+        position: 6,
         id: 33,
         lowerCase: 'ւ',
         upperCase: 'Ւ',
@@ -386,6 +456,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/hʏn/',
     },
     {
+        row: 0,
+        position: 2,
         id: 34,
         lowerCase: 'փ',
         upperCase: 'Փ',
@@ -397,6 +469,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/pʰʏɹ/',
     },
     {
+        row: 1,
+        position: 0,
         id: 35,
         lowerCase: 'ք',
         upperCase: 'Ք',
@@ -408,6 +482,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/kʰɛː/',
     },
     {
+        row: 1,
+        position: 8,
         id: 36,
         lowerCase: 'օ',
         upperCase: 'Օ',
@@ -419,6 +495,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/o/',
     },
     {
+        row: 2,
+        position: 3,
         id: 37,
         lowerCase: 'ֆ',
         upperCase: 'Ֆ',
@@ -430,9 +508,11 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/fɛ/',
     },
     {
+        row: 4,
+        position: 0,
         id: 38,
-        lowerCase: null,
-        upperCase: 'ու',
+        lowerCase: 'ու',
+        upperCase: 'Ու',
         transliteration: 'u',
         capital: false,
         name: 'ow',
@@ -441,6 +521,8 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/u/',
     },
     {
+        row: 0,
+        position: 5,
         id: 39,
         lowerCase: null,
         upperCase: 'և',

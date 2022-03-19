@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import './App.css';
-import * as _ from 'lodash';
+import _ from 'lodash';
 
 import {User} from 'firebase/auth';
 
@@ -9,9 +9,8 @@ import {auth, getWords, Word} from './firebase/firebase.util';
 
 import {Letter, ArmenianLetters} from './data/alphabet';
 import {GameLetterTile} from './components/game-tile';
-import {HashRouter} from 'react-router-dom';
-import {Keyboard} from './components/keyboard';
 import {SignIn} from './components/sign-in';
+import {AddWord} from './components/add-word';
 
 interface AppState {
   currentUser?: User | null;
@@ -21,10 +20,15 @@ interface AppState {
   rightClicks: number;
   isUpperCase: boolean;
   mode: number;
-  word: string;
-  translation: string;
+  word: Word;
   words: Array<Word>;
 }
+
+const emptyWord: Word = {
+    word: '',
+    translation: '',
+    pronunciation: '',
+};
 
 interface Option {
     id: number;
@@ -47,21 +51,13 @@ class App extends React.Component<{}, AppState> {
             rightClicks: 0,
             isUpperCase: _.random(2) > 1,
             mode: _.sample(modes) || 1,
-            word: '',
-            translation: '',
+            word: emptyWord,
             words: [],
         };
     }
 
     componentDidMount() {
         auth.onAuthStateChanged((user: any) => {
-            const {words} = this.state;
-            user &&
-            words.length === 0 && getWords().then((foo: Array<Word>) => {
-                this.setState({
-                    words: foo,
-                });
-            });
             this.setState({
                 currentUser: user,
             });
@@ -70,40 +66,51 @@ class App extends React.Component<{}, AppState> {
 
     render() {
         const {
-            word,
-            translation,
+            words,
             currentUser,
         } = this.state;
 
         return (
-            <HashRouter>
-                <SignIn currentUser={currentUser}>
-                    <>
-                        <input value={word}
-                            onKeyDown={this.onInputChange}
-                            onChange={() => false}></input>
-                        <input value={translation}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                                return this.onTranslationChange(e.target.value);
-                            }}></input>
-                        <Keyboard onKeyPressed={this.onKeyPressed}/>
-                        <button>Add word</button>
-                        <div>
-                            <h3>Words</h3>
-                            <ul>
-
-                            </ul>
-                        </div>
-                    </>
-                </SignIn>
-            </HashRouter>
+            <SignIn currentUser={currentUser}>
+                <>
+                    <AddWord />
+                    <div>
+                        <h3>Words</h3>
+                        <table>
+                            <tr>
+                                <th>Word</th>
+                                <th>Translation</th>
+                                <th>Pronunciation</th>
+                            </tr>
+                            {words.map((w: Word) => {
+                                return <tr key={w.translation}>
+                                    <td>{w.word}</td>
+                                    <td>{w.translation}</td>
+                                    <td>{w.pronunciation}</td>
+                                </tr>;
+                            })}
+                        </table>
+                    </div>
+                    <div>
+                        <button onClick={() => this.getWordsHere()}>
+        Get words
+                        </button>
+                    </div>
+                </>
+            </SignIn>
         );
     }
 
-    private onTranslationChange = (value: string) => {
-        this.setState({
-            translation: value,
-        });
+    private getWordsHere = () => {
+        const {words} = this.state;
+        if (words.length === 0) {
+            getWords()
+                .then((words: Array<Word>) => {
+                    this.setState({
+                        words,
+                    });
+                });
+        }
     };
 
     private renderGame = () => {
@@ -161,22 +168,6 @@ class App extends React.Component<{}, AppState> {
                 <h2>{rightClicks} for {totalClicks}</h2>
             </div>
         </div>;
-    };
-
-    private onInputChange = (e: any) => {
-        if (e.keyCode === 8) {
-            const {word} = this.state;
-            this.setState({
-                word: word.length > 0 ? word.slice(0, word.length - 1) : word,
-            });
-        }
-    };
-
-    private onKeyPressed = (character: string): void => {
-        const {word} = this.state;
-        this.setState({
-            word: word + character,
-        });
     };
 
     private checkOption = (selected: number) => {

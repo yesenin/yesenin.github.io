@@ -26,19 +26,32 @@ export const signInWithGoogle = () => auth.signInWithPopup(provider);
 export default Firebase;
 
 export interface Word {
-    origin: string;
-    translate: string;
+    id?: string | null,
+    word: string;
+    translation: string;
+    pronunciation: string;
 }
 
 export const getWords = (): Promise<Array<Word>> => {
     return firestore.collection('armenian').get()
         .then((snapshot: any) => {
-            return snapshot.docs.map((x: any) => {
-                return {origin: x.word, translate: 'none'};
+            return snapshot.docs.map((x: any): Word => {
+                const data = x.data();
+                return {
+                    id: data.id,
+                    word: data.word,
+                    translation: data.translation,
+                    pronunciation: data.pronunciation,
+                };
             });
         });
 };
 
 export const addWord = (word: Word) => {
-    firestore.doc;
+    const ref = firestore.collection('armenian').doc();
+    return firestore.collection('armenian').doc(ref.id).set({
+        word: word.word,
+        translation: word.translation,
+        // pronunciation: word.pronunciation && word.pronunciation,
+    });
 };

@@ -13,11 +13,15 @@ export const SignIn = (props: SignInProps) => {
     const {currentUser, children} = props;
     return currentUser ?
         <div>
-            <p>{currentUser.displayName}</p>
-            <button onClick={() => auth.signOut()}>
-                  Sign out
-            </button>
-            {children}
+            <div>
+                <p>{currentUser.displayName}</p>
+                <button onClick={() => auth.signOut()}>
+                    Sign out
+                </button>
+            </div>
+            <div>
+                {children}
+            </div>
         </div> :
         <button onClick={signInWithGoogle}>Sign in</button>;
 };
