@@ -1,15 +1,16 @@
 .keyboard {
   width: 700px;
   margin: 0 auto;
-}
+  text-align: center;
 
-.keyboard-key {
-  margin: 4px;
-  font-size: 18pt;
-  width: 50px;
-  height: 50px;
-}
+  .keyboard-key {
+    margin: 4px;
+    font-size: 18pt;
+    width: 50px;
+    height: 50px;
+  }
 
-.double-key {
-  width: 100px;
+  .double-key {
+    width: 100px;
+  }
 }

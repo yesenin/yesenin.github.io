@@ -20,11 +20,12 @@ export const Keyboard = (props: KeyboardProps) => {
                 return <div key={r}>
                     {_.orderBy(rows[r], (l: Letter) => l.position)
                         .map((l: Letter) => {
-                            const character = shift ? l.upperCase : l.lowerCase || '_';
+                            const character = shift ? l.upperCase || '_' : l.lowerCase;
                             return <button key={l.id} type='button'
                                 className='keyboard-key'
                                 onClick={() => onKeyPressed(character)}
-                                title={l.pronunciation}>
+                                title={l.pronunciation}
+                                disabled={character === '_'}>
                                 {character}
                             </button>;
                         })}
@@ -33,6 +34,15 @@ export const Keyboard = (props: KeyboardProps) => {
             <div>
                 <button className='keyboard-key double-key' onClick={() => toggleShift(!shift)} type='button'>
                     {shift ? 'SHIFT' : 'shift'}
+                </button>
+                <button className='keyboard-key double-key' onClick={() => onKeyPressed(' ')} type='button'>
+                    space
+                </button>
+                <button className='keyboard-key' onClick={() => onKeyPressed(':')} type='button'>
+                    :
+                </button>
+                <button className='keyboard-key' onClick={() => onKeyPressed('\'')} type='button'>
+                    &apos;
                 </button>
             </div>
         </div>

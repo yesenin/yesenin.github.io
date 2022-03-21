@@ -3,6 +3,8 @@ import * as React from 'react';
 import {Word} from '../firebase/firebase.util';
 import {Keyboard} from './keyboard';
 
+import './add-word-form.scss';
+
 interface AddWordFormProps {
     onAddWord: (word: Word) => Promise<void>;
 }
@@ -41,33 +43,38 @@ export const AddWordForm = (props: AddWordFormProps) => {
     };
 
     return <form onSubmit={formik.handleSubmit} onReset={formik.handleReset}>
-        <div>
+        <div className='form-row'>
             <label htmlFor="word">Armenian</label>
             <input
+                placeholder='Word'
                 id='word'
                 name='word'
                 value={formik.values.word}
                 onKeyDown={onKeyDown}
                 onChange={() => false}></input>
         </div>
-        <div>
+        <div className='form-row'>
             <label htmlFor="translation">Translation</label>
             <input
+                placeholder='Translation'
                 id='translation'
                 name='translation'
                 value={formik.values.translation}
                 onChange={formik.handleChange}></input>
         </div>
-        <div>
+        <div className='form-row'>
             <label htmlFor="pronunciation">Pronunciation</label>
             <input
+                placeholder='Pronunciation'
                 id='pronunciation'
                 name='pronunciation'
                 value={formik.values.pronunciation}
                 onChange={formik.handleChange}></input>
         </div>
+        <div className='form-row'>
+            <button type='submit'>Add word</button>
+            <button type='reset'>Clean</button>
+        </div>
         <Keyboard onKeyPressed={onKeyboardKeyClick}/>
-        <button type='submit'>Add word</button>
-        <button type='reset'>Clean</button>
     </form>;
 };

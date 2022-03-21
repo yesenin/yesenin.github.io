@@ -1,7 +1,7 @@
 export interface Letter {
     id: number;
-    upperCase: string;
-    lowerCase: string | null;
+    upperCase?: string | null;
+    lowerCase: string;
     transliteration: string;
     capital: boolean;
     name: string;
@@ -524,8 +524,8 @@ export const ArmenianLetters: Array<Letter> = [
         row: 0,
         position: 5,
         id: 39,
-        lowerCase: null,
-        upperCase: 'և',
+        lowerCase: 'և',
+        upperCase: null,
         transliteration: 'ew',
         capital: false,
         name: 'jew',

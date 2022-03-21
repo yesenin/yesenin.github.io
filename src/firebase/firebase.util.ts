@@ -52,6 +52,6 @@ export const addWord = (word: Word) => {
     return firestore.collection('armenian').doc(ref.id).set({
         word: word.word,
         translation: word.translation,
-        // pronunciation: word.pronunciation && word.pronunciation,
+        pronunciation: word.pronunciation && word.pronunciation,
     });
 };

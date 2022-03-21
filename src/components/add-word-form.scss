@@ -1,0 +1,20 @@
+form {
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    .form-row {
+        margin: 10px 0;
+        label {
+            display: block;
+            font-size: 10pt;
+        }
+        input {
+            font-family: amSans;
+            font-size: 18pt;
+        }
+        button {
+            font-size: 16pt;
+            margin: 0 5px;
+        }
+    }
+}
