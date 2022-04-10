@@ -14,6 +14,10 @@ const modes: Array<number> = [
     2, // opposite
 ];
 
+interface GameProps {
+    match: any;
+}
+
 interface GameState {
     index: number;
     answer?: string | null;

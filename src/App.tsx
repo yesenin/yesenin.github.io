@@ -6,8 +6,8 @@ import {User} from 'firebase/auth';
 import {auth} from './firebase/firebase.util';
 import {AdminPage} from './components/admin';
 import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import {Game} from './components/game';
-import {WordList} from './components/word-list';
+import {HomePage} from './pages/home-page';
+import {ArmenianRoutes} from './routes/armenian-routes';
 
 interface AppState {
   currentUser: User | null;
@@ -40,16 +40,14 @@ class App extends React.Component<{}, AppState> {
             <div>
                 <BrowserRouter>
                     <div>
-                        <Link to='/'>Main</Link>
-                        { currentUser && <>
-                            <Link to='/admin'>Admin</Link>
-                            <Link to='/words'>Words</Link>
-                        </> }
+                        <Link to='/'>Home</Link>
+                        <Link to='/armenian'>Armenian</Link>
+                        { currentUser && <Link to='/admin'>Admin</Link>}
                     </div>
                     <Routes>
-                        <Route path='/' element={<Game />} />
+                        <Route path='/' element={<HomePage />} />
                         <Route path='/admin' element={<AdminPage currentUser={currentUser}/>} />
-                        <Route path='/words' element={<WordList />} />
+                        <Route path='/armenian' element={<ArmenianRoutes />} />
                     </Routes>
                 </BrowserRouter>
             </div>
