@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './App.scss';
 
 import {User} from 'firebase/auth';
 
@@ -7,7 +8,8 @@ import {auth} from './firebase/firebase.util';
 import {AdminPage} from './components/admin';
 import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import {HomePage} from './pages/home-page';
-import {ArmenianRoutes} from './routes/armenian-routes';
+import {SignIn} from './components/sign-in';
+import {ArmenianPage} from './pages/armenian-page';
 
 interface AppState {
   currentUser: User | null;
@@ -40,14 +42,16 @@ class App extends React.Component<{}, AppState> {
             <div>
                 <BrowserRouter>
                     <div>
-                        <Link to='/'>Home</Link>
-                        <Link to='/armenian'>Armenian</Link>
-                        { currentUser && <Link to='/admin'>Admin</Link>}
+                        <ul>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/armenian'>Armenian</Link></li>
+                            <li>{ currentUser ? <Link to='/admin'>Admin</Link> : <SignIn />}</li>
+                        </ul>
                     </div>
                     <Routes>
                         <Route path='/' element={<HomePage />} />
                         <Route path='/admin' element={<AdminPage currentUser={currentUser}/>} />
-                        <Route path='/armenian' element={<ArmenianRoutes />} />
+                        <Route path='/armenian/*' element={<ArmenianPage />} />
                     </Routes>
                 </BrowserRouter>
             </div>

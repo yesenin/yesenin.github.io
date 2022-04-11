@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import { number } from 'yup';
 import {ArmenianLetters, Letter} from '../data/alphabet';
 import {GameLetterTile} from './game-tile';
 
@@ -14,10 +13,6 @@ const modes: Array<number> = [
     2, // opposite
 ];
 
-interface GameProps {
-    match: any;
-}
-
 interface GameState {
     index: number;
     answer?: string | null;
@@ -27,11 +22,7 @@ interface GameState {
     mode: number;
   }
 
-  /**
-   * Game page
-   * @param {number} id.
-   */
-export class Game extends React.Component<{}, GameState> {
+export default class Game extends React.Component<{}, GameState> {
     constructor(props: {}) {
         super(props);
 
@@ -56,9 +47,10 @@ export class Game extends React.Component<{}, GameState> {
 
         const letter: Letter = ArmenianLetters[index];
 
+        const foo = this.getAnother([letter.id], isUpperCase);
         const otherLetters = [
-            this.getAnother(letter.id, isUpperCase),
-            this.getAnother(letter.id, isUpperCase)];
+            foo,
+            this.getAnother([letter.id, foo.id], isUpperCase)];
 
         const options: Array<Option> = [letter, ...otherLetters]
             .map((l: Letter) => ({id: l.id, letter: l}));
@@ -68,7 +60,7 @@ export class Game extends React.Component<{}, GameState> {
                 <GameLetterTile
                     letter={letter}
                     isUpperCase={isUpperCase}
-                    style='serif'
+                    style={_.sample(['serif', 'sans-serif', 'decorative', 'school']) || 'serif'}
                 />
             </div>
             {answer && <div><h3>{answer}</h3></div>}
@@ -101,10 +93,10 @@ export class Game extends React.Component<{}, GameState> {
         </div>;
     }
 
-    private getAnother = (id: number, isUpperCase: boolean): Letter => {
+    private getAnother = (ids: Array<number>, isUpperCase: boolean): Letter => {
         const shift = isUpperCase ? 1 : 3;
         let anotherIndex: number = _.random(ArmenianLetters.length - shift);
-        while (ArmenianLetters[anotherIndex].id === id) {
+        while (ids.indexOf(ArmenianLetters[anotherIndex].id) >= 0) {
             anotherIndex = _.random(ArmenianLetters.length - shift);
         }
         return ArmenianLetters[anotherIndex];
@@ -114,7 +106,7 @@ export class Game extends React.Component<{}, GameState> {
         const {index, totalClicks, rightClicks} = this.state;
         if (selected === index) {
             this.setState({
-                answer: 'OK',
+                answer: `OK ${ArmenianLetters[index].pronunciation}`,
                 totalClicks: totalClicks + 1,
                 rightClicks: rightClicks + 1,
             });
@@ -137,4 +129,3 @@ export class Game extends React.Component<{}, GameState> {
         });
     };
 };
-

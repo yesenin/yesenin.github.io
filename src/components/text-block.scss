@@ -1,0 +1,67 @@
+.controls {
+    span {
+        padding: 2px;
+        margin: 0 5px;
+        border: 1px solid grey;
+
+        &.active {
+            background-color: lightgrey;
+        }
+    }
+}
+
+p {
+    font-size: 25pt;
+    margin: 10px;
+}
+
+@font-face {
+    font-family: amDecorative;
+    src: url(../../fonts/ArmeniapediaGeghagrutyun.ttf);
+  }
+  
+  @font-face {
+    font-family: amSchool;
+    src: url(../../fonts/poqrik.ttf);
+  }
+  
+  @font-face {
+    font-family: amHand;
+    src: url(../../fonts/ArTar_TumanianDzeragir_U.ttf);
+  }
+  
+  @font-face {
+    font-family: amSans;
+    src: url(../../fonts/DejaVuSans.ttf);
+  }
+  
+  @font-face {
+    font-family: amSerif;
+    src: url(../../fonts/DejaVuSerif.ttf);
+  }
+
+ .decorative {
+    font-family: amDecorative;
+  }
+  
+.school {
+    font-family: amSchool;
+    font-size: 35pt;
+  }
+  
+.hand {
+    font-family: amHand;
+    font-size: 35pt;
+  }
+  
+.sans {
+    font-family: amSans;
+  }
+  
+.serif {
+    font-family: amSerif;
+  }
+
+b {
+    font-family: inherit;
+}
