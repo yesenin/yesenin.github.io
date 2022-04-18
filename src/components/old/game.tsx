@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import {ArmenianLetters, Letter} from '../data/alphabet';
+import {ArmenianLetters, Letter} from '../../data/alphabet';
 import {GameLetterTile} from './game-tile';
 
 interface Option {

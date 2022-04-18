@@ -1,23 +1,22 @@
 import React from 'react';
-import './App.css';
-import './App.scss';
 
 import {User} from 'firebase/auth';
-
 import {auth} from './firebase/firebase.util';
-import {AdminPage} from './components/admin';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import {HomePage} from './pages/home-page';
 import {SignIn} from './components/sign-in';
-import {ArmenianPage} from './pages/armenian-page';
+
+import './App.scss';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import {MainPage} from './pages/main-page';
+import {KeyboardPage} from './pages/keyboard-page';
+import {LettersPage} from './pages/letters-page';
+import {NumeralsPage} from './pages/numerals-page';
+import {NotFoundPage} from './pages/not-found-page';
+import {AdminPage} from './pages/admin-page';
 
 interface AppState {
   currentUser: User | null;
 }
 
-/**
- * App root page
- */
 class App extends React.Component<{}, AppState> {
     constructor(props: {}) {
         super(props);
@@ -39,22 +38,27 @@ class App extends React.Component<{}, AppState> {
         const {currentUser} = this.state;
 
         return (
-            <div>
-                <BrowserRouter>
+            <BrowserRouter>
+                <header>
                     <div>
-                        <ul>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/armenian'>Armenian</Link></li>
-                            <li>{ currentUser ? <Link to='/admin'>Admin</Link> : <SignIn />}</li>
-                        </ul>
+                        { currentUser ? <Link to='/admin'>{currentUser.displayName}</Link> : <SignIn />}
                     </div>
+                </header>
+                <main>
+                    <Link to='/'>Тут когда-то будут крошки</Link>
                     <Routes>
-                        <Route path='/' element={<HomePage />} />
-                        <Route path='/admin' element={<AdminPage currentUser={currentUser}/>} />
-                        <Route path='/armenian/*' element={<ArmenianPage />} />
+                        <Route path='/' element={<MainPage />} />
+                        <Route path='/armenian/keyboard' element={<KeyboardPage />} />
+                        <Route path='/armenian/letters' element={<LettersPage />} />
+                        <Route path='/armenian/numerals' element={<NumeralsPage />} />
+                        <Route path='*' element={<NotFoundPage />} />
+                        { currentUser && <Route path='/admin' element={<AdminPage />}/>}
                     </Routes>
-                </BrowserRouter>
-            </div>
+                </main>
+                <footer>
+                    anton.yesenin@gmail.com
+                </footer>
+            </BrowserRouter>
         );
     }
 }

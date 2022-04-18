@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import {getWords, Word} from '../firebase/firebase.util';
+import {getWords, Word} from '../../firebase/firebase.util';
 
 
 interface WordListState {

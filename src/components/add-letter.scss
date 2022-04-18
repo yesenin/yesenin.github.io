@@ -1,0 +1,39 @@
+@import '../values.scss';
+
+form {
+    width: $xxl_size * 3;
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        margin: $s_size 0;
+
+        label {
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+
+        &.horizontal {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        &.click {
+            label {
+                font-size: 12pt;
+            }
+        }
+
+        input[type='radio'] {
+            margin-right: $s_size;
+        }
+
+        .form-col {
+            margin: 0 10px;
+        }
+    }
+
+    button {
+        width: $xxl_size;
+        height: $l_size;
+    }
+}

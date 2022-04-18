@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Letter} from '../data/alphabet';
+import {Letter} from '../../data/alphabet';
 
 interface LetterTileProps {
     letter: Letter;

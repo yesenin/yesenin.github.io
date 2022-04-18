@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as _ from 'lodash';
-import {ArmenianLetters, Letter} from '../data/alphabet';
+import {ArmenianLetters, Letter} from '../../data/alphabet';
 
 import './keyboard.scss';
 
@@ -8,7 +8,7 @@ interface KeyboardProps {
     onKeyPressed: (character: string) => void;
 }
 
-export const Keyboard = (props: KeyboardProps) => {
+export const Keyboard1 = (props: KeyboardProps) => {
     const {onKeyPressed} = props;
     const [shift, toggleShift] = React.useState(false);
 

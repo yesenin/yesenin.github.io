@@ -1,5 +1,5 @@
 import React from 'react';
-import {addWord, Word} from '../firebase/firebase.util';
+import {addWord, Word} from '../../firebase/firebase.util';
 import {AddWordForm} from './add-word-form';
 
 export const AddWord = () => {

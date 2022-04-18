@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as _ from 'lodash';
-import {Letter} from '../data/alphabet';
+import {Letter} from '../../data/alphabet';
 import {LetterTile} from './tile';
 
 const styles = ['sans', 'serif', 'decorative', 'school', 'hand'];

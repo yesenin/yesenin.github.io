@@ -1,7 +1,6 @@
 import {useFormik} from 'formik';
 import * as React from 'react';
-import {Word} from '../firebase/firebase.util';
-import {Keyboard} from './keyboard';
+import {Word} from '../../firebase/firebase.util';
 
 import './add-word-form.scss';
 
@@ -28,11 +27,6 @@ export const AddWordForm = (props: AddWordFormProps) => {
             });
         },
     });
-
-    const onKeyboardKeyClick = (character: string) => {
-        const {word} = formik.values;
-        formik.setFieldValue('word', word + character);
-    };
 
     const onKeyDown = (e: any) => {
         if (e.keyCode === 8) {
@@ -75,6 +69,5 @@ export const AddWordForm = (props: AddWordFormProps) => {
             <button type='submit'>Add word</button>
             <button type='reset'>Clean</button>
         </div>
-        <Keyboard onKeyPressed={onKeyboardKeyClick}/>
     </form>;
 };

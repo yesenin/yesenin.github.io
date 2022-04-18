@@ -2,6 +2,7 @@ import {FirebaseApp} from '@firebase/app';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import {ArmenianLetter} from '../models/armenian-letter';
 
 const config = {
     apiKey: 'AIzaSyBG88uTin-v_rDJYNAGiKBrrbS9b-i6dnE',
@@ -53,5 +54,24 @@ export const addWord = (word: Word) => {
         word: word.word,
         translation: word.translation,
         pronunciation: word.pronunciation && word.pronunciation,
+    });
+};
+
+export const getLettersCall = (): Promise<Array<ArmenianLetter>> => {
+    return firestore.collection('armenian_letters').get()
+        .then((snapshot: any) => {
+            return snapshot.docs.map((x: any): ArmenianLetter => {
+                const data: ArmenianLetter = x.data();
+                return {
+                    ...data,
+                };
+            });
+        });
+};
+
+export const addLetterCall = (letter: ArmenianLetter): Promise<void> => {
+    const ref = firestore.collection('armenian_letters').doc();
+    return firestore.collection('armenian_letters').doc(ref.id).set({
+        ...letter,
     });
 };
