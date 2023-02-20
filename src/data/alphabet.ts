@@ -3,6 +3,7 @@ export interface Letter {
     upperCase?: string | null;
     lowerCase: string;
     transliteration: string;
+    sound?: string;
     capital: boolean;
     name: string;
     amName: string;
@@ -72,6 +73,7 @@ export const ArmenianLetters: Array<Letter> = [
         lowerCase: 'ե',
         upperCase: 'Ե',
         transliteration: 'e',
+        sound: 'ye',
         capital: true,
         name: 'yech’',
         amName: 'եչ',
@@ -176,6 +178,7 @@ export const ArmenianLetters: Array<Letter> = [
         lowerCase: 'խ',
         upperCase: 'Խ',
         transliteration: 'x',
+        sound: 'kh',
         capital: true,
         name: 'khē',
         amName: 'խէ',
@@ -228,6 +231,7 @@ export const ArmenianLetters: Array<Letter> = [
         lowerCase: 'ձ',
         upperCase: 'Ձ',
         transliteration: 'dz',
+        sound: 'dz',
         capital: true,
         name: 'dza',
         amName: 'ձա',
@@ -254,6 +258,7 @@ export const ArmenianLetters: Array<Letter> = [
         lowerCase: 'ճ',
         upperCase: 'Ճ',
         transliteration: 'č',
+        sound: 'ch',
         capital: true,
         name: 'chē',
         amName: 'ճէ',
@@ -306,6 +311,7 @@ export const ArmenianLetters: Array<Letter> = [
         lowerCase: 'շ',
         upperCase: 'Շ',
         transliteration: 'š',
+        sound: 'sh',
         capital: true,
         name: 'sha',
         amName: 'շա',
@@ -332,6 +338,7 @@ export const ArmenianLetters: Array<Letter> = [
         lowerCase: 'չ',
         upperCase: 'Չ',
         transliteration: 'čʿ',
+        sound: 'ch\'',
         capital: true,
         name: 'ch’a',
         amName: 'չա',
@@ -442,7 +449,7 @@ export const ArmenianLetters: Array<Letter> = [
         pronunciation: '/tsʰ/',
         namePronunciation: '/tsʰo/',
     },
-    {
+    /* {
         row: 1,
         position: 6,
         id: 33,
@@ -454,6 +461,19 @@ export const ArmenianLetters: Array<Letter> = [
         amName: 'հիւն',
         pronunciation: '/w/',
         namePronunciation: '/hʏn/',
+    }, */
+    {
+        row: 4,
+        position: 0,
+        id: 38,
+        lowerCase: 'ու',
+        upperCase: 'Ու',
+        transliteration: 'u',
+        capital: false,
+        name: 'ow',
+        amName: 'ու',
+        pronunciation: '/u/',
+        namePronunciation: '/u/',
     },
     {
         row: 0,
@@ -482,6 +502,19 @@ export const ArmenianLetters: Array<Letter> = [
         namePronunciation: '/kʰɛː/',
     },
     {
+        row: 0,
+        position: 5,
+        id: 39,
+        lowerCase: 'և',
+        upperCase: null,
+        transliteration: 'ew',
+        capital: false,
+        name: 'jew',
+        amName: 'և',
+        pronunciation: '/ɛv/',
+        namePronunciation: '/jɛv/',
+    },
+    {
         row: 1,
         position: 8,
         id: 36,
@@ -506,31 +539,5 @@ export const ArmenianLetters: Array<Letter> = [
         amName: 'ֆէ',
         pronunciation: '/f/',
         namePronunciation: '/fɛ/',
-    },
-    {
-        row: 4,
-        position: 0,
-        id: 38,
-        lowerCase: 'ու',
-        upperCase: 'Ու',
-        transliteration: 'u',
-        capital: false,
-        name: 'ow',
-        amName: 'ու',
-        pronunciation: '/u/',
-        namePronunciation: '/u/',
-    },
-    {
-        row: 0,
-        position: 5,
-        id: 39,
-        lowerCase: 'և',
-        upperCase: null,
-        transliteration: 'ew',
-        capital: false,
-        name: 'jew',
-        amName: 'և',
-        pronunciation: '/ɛv/',
-        namePronunciation: '/jɛv/',
     },
 ];
