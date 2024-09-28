@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import CalendarPage from './calendar/Calendar';
+import WordGamesPage from './wordGames/WordGamesPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,12 +14,18 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <App />,
+    children: [
+      {
+        path: 'calendar',
+        element: <CalendarPage />
+      },
+      {
+        path: 'word-games',
+        element: <WordGamesPage />
+      },
+    ]
   },
-  {
-    path: '/calendar',
-    element: <CalendarPage />
-  }
 ]);
 
 root.render(

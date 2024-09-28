@@ -1,13 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {Outlet} from "react-router";
+import {Link} from "react-router-dom";
 
-function App() {
-  return (
-    <div>
-      Hi from React :-)
+const App = () => {
+    return <div>
+        <div>
+            <Link to='/calendar'>Calendar</Link>
+        </div>
+        <div>
+            <Outlet />
+        </div>
     </div>
-  );
 }
 
 export default App;
