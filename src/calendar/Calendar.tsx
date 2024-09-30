@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Month, russianMonths, WeekDay, russianWeekDays, Week} from '.';
+import {Month, russianMonths, WeekDay, russianWeekDays, Week, englishMonths, englishWeekDays} from '.';
 import * as _ from 'lodash';
 import moment from 'moment';
 
 const CalendarWrapperDiv = styled.div`
-    margin-top: 20px;
+    margin: 10px, 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+    }
 `;
 
 const CalendarDiv = styled.div`
@@ -17,6 +21,13 @@ const CalendarDiv = styled.div`
     grid-template-rows: repeat(3, 1fr);
     column-gap: 10px;
     row-gap: 10px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+    }
 `;
 
 const MonthWrapperDiv = styled.div`
@@ -25,48 +36,67 @@ const MonthWrapperDiv = styled.div`
     align-items: center;
     border: 1px solid black;
     padding: 10px;
+    @media (max-width: 768px) {
+        padding: 5px;
+        h3 {
+            margin: 2px;
+        }
+    }
 `;
 
 const MonthDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     column-gap: 5px;
     row-gap: 5px;
+    @media (max-width: 768px) {
+        column-gap: 5px;
+        row-gap: 5px;
+    }
 `;
 
 const DayHeaderDiv = styled.div`
-    font-weight: bold;
+    color: blue;
 `;
 
 const WeekNumberDiv = styled.div`
     color: gray;
     font-size: 12px;
+    @media (max-width: 768px) {
+        font-size: 8px;
+    }
 `;
 
 const DayDiv = styled.div`
-    font: monospace;
+    font-family: monospace;
     text-align: right;
 `;
 
-const sortedRusMonths: Month[] = _.sortBy(russianMonths, (m: Month) => m.name);
+type CalendarMode = 'russian' | 'english';
 
-const sortedRusWeekDays: WeekDay[] = _.sortBy(russianWeekDays, (wd: WeekDay) => wd.name);
+
+const CalendarPage = () => {
+    const [mode, setMode] = React.useState<CalendarMode>('russian');
+
+    const sortedRusMonths: Month[] = _.sortBy(mode === 'russian' ? russianMonths : englishMonths, (m: Month) => m.name);
+
+const sortedRusWeekDays: WeekDay[] = _.sortBy(mode === 'russian' ? russianWeekDays : englishWeekDays, (wd: WeekDay) => wd.name);
 
 const getMonth = (monthNumber: number): Week[] => {
-    const m = moment(`2024-${monthNumber}-1`);
+    const formatedMonth = monthNumber < 10 ? `0${monthNumber}` : `${monthNumber}`;
+    const m = moment(`2024-${formatedMonth}-01`);
     let weekNumber = m.week();
     let d = 1;
     const result: Week[] = [];
+    let w = m.weekday() === 0 ? 7 : m.weekday();
     let currentWeek: Week = {
         number: weekNumber,
-        shift: m.weekday(),
+        shift: w,
         days: [0, 0, 0, 0, 0, 0, 0]
     };
 
     const daysInMonth = m.daysInMonth();
-
-    let w = m.weekday();
 
     while (d <= daysInMonth) {
         if (w > 7) {
@@ -84,22 +114,24 @@ const getMonth = (monthNumber: number): Week[] => {
     }
     result.push(currentWeek);
     return result;
-}
+    }
 
-const CalendarPage = () => {
     return (
         <CalendarWrapperDiv>
             <h2>Бёйнтуы календарь 2024</h2>
+            <div>
+                <span onClick={() => setMode('russian')}>русский</span> | <span onClick={() => setMode('english')}>english</span>
+            </div>
             <CalendarDiv>
-                {sortedRusMonths.map((month: Month) => <MonthWrapperDiv key={month.number}>
+                {sortedRusMonths.map((month: Month) => <MonthWrapperDiv key={`m${month.number}`}>
                     <h3>{month.name}</h3>
                     <MonthDiv>
                         <div></div>
-                        {sortedRusWeekDays.map((day: WeekDay) => <DayHeaderDiv key={day.number}>{day.name}</DayHeaderDiv>)}
+                        {sortedRusWeekDays.map((day: WeekDay) => <DayHeaderDiv key={`w${day.number}_${month.number}`}>{day.name}</DayHeaderDiv>)}
                         {getMonth(month.number).map((week: Week) => {
                             return <>
                                 <WeekNumberDiv>{week.number}</WeekNumberDiv>
-                                {week.days.map((day: number) => <DayDiv key={day}>{day || ''}</DayDiv>)}
+                                {week.days.map((day: number, index: number) => <DayDiv key={`${day}_${index}_${week.number}_${month.number}`}>{day || ''}</DayDiv>)}
                             </>
                         })} 
                     </MonthDiv>
