@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Month, russianMonths, WeekDay, russianWeekDays, Week, englishMonths, englishWeekDays} from '.';
-import * as _ from 'lodash';
+import _ from 'lodash';
 import moment from 'moment';
+import { englishMonths, englishWeekDays, Month, russianMonths, russianWeekDays, Week, WeekDay } from '.';
 
 const CalendarWrapperDiv = styled.div`
     margin: 10px, 20px;
@@ -10,6 +10,7 @@ const CalendarWrapperDiv = styled.div`
     flex-direction: column;
     align-items: center;
 
+    
     @media (max-width: 768px) {
         font-size: 10px;
     }
@@ -76,44 +77,44 @@ const DayDiv = styled.div`
 type CalendarMode = 'russian' | 'english';
 
 
-const CalendarPage = () => {
+const CalendarFeature = () => {
     const [mode, setMode] = React.useState<CalendarMode>('russian');
 
     const sortedRusMonths: Month[] = _.sortBy(mode === 'russian' ? russianMonths : englishMonths, (m: Month) => m.name);
 
-const sortedRusWeekDays: WeekDay[] = _.sortBy(mode === 'russian' ? russianWeekDays : englishWeekDays, (wd: WeekDay) => wd.name);
+    const sortedRusWeekDays: WeekDay[] = _.sortBy(mode === 'russian' ? russianWeekDays : englishWeekDays, (wd: WeekDay) => wd.name);
 
-const getMonth = (monthNumber: number): Week[] => {
-    const formatedMonth = monthNumber < 10 ? `0${monthNumber}` : `${monthNumber}`;
-    const m = moment(`2024-${formatedMonth}-01`);
-    let weekNumber = m.week();
-    let d = 1;
-    const result: Week[] = [];
-    let w = m.weekday() === 0 ? 7 : m.weekday();
-    let currentWeek: Week = {
-        number: weekNumber,
-        shift: w,
-        days: [0, 0, 0, 0, 0, 0, 0]
-    };
+    const getMonth = (monthNumber: number): Week[] => {
+        const formatedMonth = monthNumber < 10 ? `0${monthNumber}` : `${monthNumber}`;
+        const m = moment(`${moment().get('year')}-${formatedMonth}-01`);
+        let weekNumber = m.week();
+        let d = 1;
+        const result: Week[] = [];
+        let w = m.weekday() === 0 ? 7 : m.weekday();
+        let currentWeek: Week = {
+            number: weekNumber,
+            shift: w,
+            days: [0, 0, 0, 0, 0, 0, 0]
+        };
 
-    const daysInMonth = m.daysInMonth();
+        const daysInMonth = m.daysInMonth();
 
-    while (d <= daysInMonth) {
-        if (w > 7) {
-            result.push(currentWeek);
-            currentWeek = {
-                number: ++weekNumber,
-                shift: 0,
-                days: [0, 0, 0, 0, 0, 0, 0]
-            };
-            w = 1;
+        while (d <= daysInMonth) {
+            if (w > 7) {
+                result.push(currentWeek);
+                currentWeek = {
+                    number: ++weekNumber,
+                    shift: 0,
+                    days: [0, 0, 0, 0, 0, 0, 0]
+                };
+                w = 1;
+            }
+            currentWeek.days[_.findIndex(sortedRusWeekDays, (wd: WeekDay) => wd.number === w)] = d;
+            d++;
+            w++;
         }
-        currentWeek.days[_.findIndex(sortedRusWeekDays, (wd: WeekDay) => wd.number === w)] = d;
-        d++;
-        w++;
-    }
-    result.push(currentWeek);
-    return result;
+        result.push(currentWeek);
+        return result;
     }
 
     return (
@@ -141,4 +142,4 @@ const getMonth = (monthNumber: number): Week[] => {
     );
 }
 
-export default CalendarPage;
+export default CalendarFeature;
