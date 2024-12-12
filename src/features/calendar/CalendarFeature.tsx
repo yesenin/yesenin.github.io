@@ -1,8 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
 import _ from 'lodash';
 import moment from 'moment';
 import { englishMonths, englishWeekDays, Month, russianMonths, russianWeekDays, Week, WeekDay } from '.';
+import { useState } from 'react';
 
 const CalendarWrapperDiv = styled.div`
     margin: 10px, 20px;
@@ -78,7 +78,7 @@ type CalendarMode = 'russian' | 'english';
 
 
 const CalendarFeature = () => {
-    const [mode, setMode] = React.useState<CalendarMode>('russian');
+    const [mode, setMode] = useState<CalendarMode>('russian');
 
     const sortedRusMonths: Month[] = _.sortBy(mode === 'russian' ? russianMonths : englishMonths, (m: Month) => m.name);
 
