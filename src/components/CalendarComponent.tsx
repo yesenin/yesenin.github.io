@@ -2,19 +2,8 @@ import styled from 'styled-components';
 import _ from 'lodash';
 import moment from 'moment';
 import { englishMonths, englishWeekDays, Month, russianMonths, russianWeekDays, Week, WeekDay } from '.';
-import { useState } from 'react';
-
-const CalendarWrapperDiv = styled.div`
-    margin: 10px, 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    
-    @media (max-width: 768px) {
-        font-size: 10px;
-    }
-`;
+import { useContext } from 'react';
+import { LanguageContext } from '../pages/CalendarPage';
 
 const CalendarDiv = styled.div`
     display: grid;
@@ -74,11 +63,10 @@ const DayDiv = styled.div`
     text-align: right;
 `;
 
-type CalendarMode = 'russian' | 'english';
 
 
-const CalendarFeature = () => {
-    const [mode, setMode] = useState<CalendarMode>('russian');
+function CalendarComponent() {
+    const mode = useContext(LanguageContext)
 
     const sortedRusMonths: Month[] = _.sortBy(mode === 'russian' ? russianMonths : englishMonths, (m: Month) => m.name);
 
@@ -118,28 +106,22 @@ const CalendarFeature = () => {
     }
 
     return (
-        <CalendarWrapperDiv>
-            <h2>Бёйнтуы календарь 2025</h2>
-            <div>
-                <span onClick={() => setMode('russian')}>русский</span> | <span onClick={() => setMode('english')}>english</span>
-            </div>
-            <CalendarDiv>
-                {sortedRusMonths.map((month: Month) => <MonthWrapperDiv key={`m${month.number}`}>
-                    <h3>{month.name}</h3>
-                    <MonthDiv>
-                        <div></div>
-                        {sortedRusWeekDays.map((day: WeekDay) => <DayHeaderDiv key={`w${day.number}_${month.number}`}>{day.name}</DayHeaderDiv>)}
-                        {getMonth(month.number).map((week: Week) => {
-                            return <>
-                                <WeekNumberDiv>{week.number}</WeekNumberDiv>
-                                {week.days.map((day: number, index: number) => <DayDiv key={`${day}_${index}_${week.number}_${month.number}`}>{day || ''}</DayDiv>)}
-                            </>
-                        })} 
-                    </MonthDiv>
-                </MonthWrapperDiv>)}
-            </CalendarDiv>
-        </CalendarWrapperDiv>
+        <CalendarDiv>
+            {sortedRusMonths.map((month: Month) => <MonthWrapperDiv key={`m${month.number}`}>
+                <h3>{month.name}</h3>
+                <MonthDiv>
+                    <div></div>
+                    {sortedRusWeekDays.map((day: WeekDay) => <DayHeaderDiv key={`w${day.number}_${month.number}`}>{day.name}</DayHeaderDiv>)}
+                    {getMonth(month.number).map((week: Week) => {
+                        return <>
+                            <WeekNumberDiv>{week.number}</WeekNumberDiv>
+                            {week.days.map((day: number, index: number) => <DayDiv key={`${day}_${index}_${week.number}_${month.number}`}>{day || ''}</DayDiv>)}
+                        </>
+                    })} 
+                </MonthDiv>
+            </MonthWrapperDiv>)}
+        </CalendarDiv>
     );
 }
 
-export default CalendarFeature;
+export default CalendarComponent;
