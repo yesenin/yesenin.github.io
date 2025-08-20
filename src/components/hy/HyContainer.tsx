@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router";
+import { Link } from "react-router";
 import "./HyContainer.css";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { BsPlayFill } from "react-icons/bs";
 
 interface PlayIconProps {
