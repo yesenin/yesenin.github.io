@@ -119,7 +119,7 @@ const CalendarFeature = () => {
 
     return (
         <CalendarWrapperDiv>
-            <h2>Бёйнтуы календарь 2024</h2>
+            <h2>Бёйнтуы календарь 2025</h2>
             <div>
                 <span onClick={() => setMode('russian')}>русский</span> | <span onClick={() => setMode('english')}>english</span>
             </div>
