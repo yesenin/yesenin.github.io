@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #121221;
+    color: white;
+
+    font-family: "Playfair Display", serif;
+}
+
+.container a {
+  color: rgb(129, 177, 250);
+}
+
+
+.hy-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+}
+
+.nav-bar span {
+    font-size: 1.2em;
+    color: #e5ea61;
+}
+
+.hy-caption {
+    font-size: 32pt;
+}
+
+.gradient-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    170deg,
+    #D90012 20%,
+    #0033A0 50%,
+    #F2A800 95%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Chrome/Safari */
+  background-clip: text; /* Firefox */
+  color: transparent; /* Fallback */
+}
+
+.hy-sub-caption {
+    font-size: 14pt;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.silent-link {
+    text-decoration: none;
+    color: inherit;
+}

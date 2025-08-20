@@ -1,0 +1,11 @@
+.hy-content {
+    font-family: 'Arian Grqi', serif;
+}
+
+.hy-big-input {
+    font-size: 32pt;
+    border: 1px solid #ccc;
+    border-bottom-color: white;
+    background-color: #121221;
+    color: white;
+}
