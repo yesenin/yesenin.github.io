@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CalendarComponent from "../components/CalendarComponent";
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 const CalendarWrapperDiv = styled.div`
     margin: 10px, 20px;
