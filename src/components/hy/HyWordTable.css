@@ -1,15 +1,5 @@
-.hy-landing {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
-}
 
-.hy-landing-search {
-    margin: 24px 0;
-}
+
 
 .hy-table {
     width: 100%;
@@ -43,27 +33,7 @@
     border-right: none;
 }
 
-.hy-landing-content {
-    min-width: 800px;
-    margin: 20px 40px;
-    padding: 12px;
-}
-
 @media only screen and (max-width: 600px) {
-    .hy-landing-search {
-        margin: 8px 0;
-    }
-
-    .hy-landing-search > input {
-        max-width: 400px;
-    }
-
-    .hy-landing-content {
-        min-width: auto;
-        margin: 12px 16px;
-        padding: 4px;
-    }
-
     .hy-table td {
         font-size: 11pt;
     }
@@ -73,8 +43,6 @@
     display: flex;
     gap: 8px;
 }
-
-
 
 .word-cell {
     display: flex;

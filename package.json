@@ -4,7 +4,7 @@
   "homepage": "https://yesenin.github.io",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5171",
     "build": "tsc -b && vite build",
     "deploy": "tsc -b && vite build && gh-pages -d dist",
     "lint": "eslint .",

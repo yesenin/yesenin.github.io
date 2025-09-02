@@ -61,3 +61,19 @@
     text-decoration: none;
     color: inherit;
 }
+
+.hy-nav-bar span {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #e5ea61;
+}
+
+.hy-nav-bar span:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .hy-caption {
+        font-size: 28pt;
+    }
+}

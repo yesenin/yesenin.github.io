@@ -3,10 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <Link to='/calendar'>Calendar</Link>
-      <Link to='/hy'>Армянский язык</Link>
-    </>
+    <ul>
+      <li><Link to='/calendar'>Calendar</Link></li>
+      <li><Link to='/hy'>Армянский язык</Link></li>
+    </ul>
   )
 }
 

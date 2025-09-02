@@ -7,28 +7,52 @@ interface Area {
     caption: string;
 }
 
+const areas: Area[] = [
+    {
+        name: 'all',
+        caption: 'Все'
+    },
+    {
+        name: 'verb',
+        caption: 'Глаголы'
+    },
+    {
+        name: 'noun',
+        caption: 'Существительные'
+    },
+    {
+        name: 'adjective',
+        caption: 'Прилагательные'
+    },
+    {
+        name: 'adjective',
+        caption: 'Прилагательные'
+    },
+    {
+        name: 'adverb',
+        caption: 'Наречия'
+    },
+    {
+        name: 'pronoun',
+        caption: 'Местоимения'
+    },
+    {
+        name: 'conjunction',
+        caption: 'Союзы'
+    },
+    {
+        name: 'numeral',
+        caption: 'Числительные'
+    },
+    {
+        name: 'phrase',
+        caption: 'Фразы'
+    }
+]
+
 function KindPane() {
     const currentArea = useSelector((state: any) => state.words.currentArea);
     const dispatch = useDispatch();
-
-    const areas: Area[] = [
-        {
-            name: "all",
-            caption: "Все"
-        },
-        {
-            name: "noun",
-            caption: "Существительные"
-        },
-        {
-            name: "verb",
-            caption: "Глаголы"
-        },
-        {
-            name: "adjective",
-            caption: "Прилагательные"
-        }
-    ];
 
     return (
         <div className="hy-nav-bar">

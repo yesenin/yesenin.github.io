@@ -1,0 +1,114 @@
+.entry-tile {
+    width: 200px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    margin: 8px;
+    text-align: center;
+    font-size: 16pt;
+    background-color: darksalmon;
+    cursor: pointer;
+    color: #3f3f3f;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    height: 50px;;
+
+    /* animation: apear 0.5s ease-in-out; */
+}
+
+.entry-tile:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tile-key {
+  display: inline-flex;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 16px;
+  min-width: 16px;
+  justify-content: center;
+  font-size: 10pt;
+}
+
+.tile-value {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.empty {
+  background-color: lightgray;
+  border: 1px dotted gray;
+}
+
+.appeared {
+    animation: appear 0.5s ease-in-out;
+}
+
+.disappeared {
+    animation: disapear 0.5s ease-in-out;
+}
+
+.wrong {
+    background-color: lightcoral;
+    animation: shakeRotate 0.5s ease-in-out;
+}
+
+.empty {
+    background-color: lightgray;
+    border: 1px dotted gray;
+}
+
+.selected {
+    background-color: powderblue;
+    animation: pick 0.5s ease-in-out;
+}
+
+.animated-cell {
+  animation: pop 0.2s;
+}
+
+@keyframes pick {
+    0% { scale: 1; }
+    50% { scale: 1.1; }
+    100% { scale: 1; }
+}
+
+@keyframes shakeRotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    50% { transform: rotate(3deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes disappear {
+    0% { opacity: 1; scale: 1; }
+    50% { opacity: 0.5; scale: 0.5; }
+    100% { opacity: 0; scale: 0.4; }
+}
+
+@keyframes appear {
+    0% { opacity: 0; scale: 0.4; }
+    50% { opacity: 0.5; scale: 0.5; }
+    100% { opacity: 1; scale: 1; }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    background: #eee;
+  }
+  50% {
+    transform: scale(1.2);
+    background: #b2f2b8;
+  }
+  100% {
+    transform: scale(1);
+    background: #c8f7c5;
+  }
+}

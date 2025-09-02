@@ -1,12 +1,10 @@
-import { BsArrowUpRightCircleFill, BsPlayFill } from "react-icons/bs";
-import type { DataSetItem } from "../../types";
-import { Link } from "react-router-dom";
+import PlayIcon from "./PlayIcon";
+import { TableRowProps } from "./TableRow";
 
-interface TableRowWithTagsProps {
-    item: DataSetItem;
-}
 
-const TableRowWithTags = ({ item }: TableRowWithTagsProps) => {
+const TableRowWithTags = ({ item, onPlayClick }: TableRowProps) => {
+    const isMobile = window.innerWidth < 600;
+
     return (
         <tr>
             <td>
@@ -15,14 +13,9 @@ const TableRowWithTags = ({ item }: TableRowWithTagsProps) => {
                         <span className="hy-content">
                             {item.hy}
                         </span>
-                        <span>
-                            <Link to={`/hy/words/${item.id}`}><BsArrowUpRightCircleFill /></Link>
-                        </span>
+                        <PlayIcon onClick={() => {onPlayClick(item.audioUrl);}} />
                     </div>
                     <div>
-                        <span>
-                            <BsPlayFill />
-                        </span>
                         <span>
                             <a href={`https://en.wiktionary.org/wiki/${item.hy}`} target="_blank" rel="noopener noreferrer">wiki</a>
                         </span>
@@ -33,9 +26,9 @@ const TableRowWithTags = ({ item }: TableRowWithTagsProps) => {
             <td>
                 <span>{item.ru}</span>
             </td>
-            <td>
-                {item.tags.map((tag, i) => <span key={i} className="tag"><i>{tag}</i></span>)}
-            </td>
+            {!isMobile && <td>
+                 {item.tags.map((tag, i) => <span key={i} className="tag"><i>{tag}</i></span>)}
+            </td>}
         </tr>
     );
 }

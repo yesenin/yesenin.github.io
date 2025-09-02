@@ -1,0 +1,48 @@
+.hy-landing {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hy-landing-content {
+    min-width: 800px;
+    margin: 20px 40px;
+    padding: 12px;
+}
+
+.hy-big-input {
+    margin: 24px 0;
+    font-size: 32pt;
+    border: 1px solid #ccc;
+    border-bottom-color: white;
+    background-color: #121221;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .hy-caption {
+        font-size: 28pt;
+    }
+
+    .hy-landing-search {
+        margin: 8px 0;
+    }
+
+    .hy-landing-content {
+        min-width: auto;
+        margin: 12px 16px;
+        padding: 4px;
+    }
+
+    .hy-big-input {
+        max-width: 300px;
+        font-size: 26pt;
+    }
+
+    .main-td {
+        width: 60%;
+    }
+}

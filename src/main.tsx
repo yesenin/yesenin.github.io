@@ -1,23 +1,45 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createHashRouter, RouterProvider } from 'react-router';
 import CalendarPage from './pages/CalendarPage.tsx';
 import HyPage from './pages/HyPage.tsx';
+import MainContainer from './components/MainContainer.tsx';
+import HyCards from './components/hy/HyCards.tsx';
+import HyWords from './components/hy/HyWords.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
   },
   {
-    path: 'calendar',
-    element: <CalendarPage />
-  },
-  {
-    path: '/hy',
-    element: <HyPage />
-  }
+      element: <MainContainer />,
+      children: [
+        {
+          path: 'calendar',
+          element: <CalendarPage />
+        },
+        {
+          path: 'hy',
+          element: <HyPage />,
+          children: [
+            {
+              path: '',
+              element: <HyWords />
+            },
+            {
+              path: 'cards',
+              element: <HyCards />
+            },
+            {
+              path: 'words',
+              element: <HyWords />
+            }
+          ]
+        }
+      ]
+    }
 ]);
 
 createRoot(document.getElementById('root')!).render(
