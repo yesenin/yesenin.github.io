@@ -1,10 +1,10 @@
 import _ from "lodash";
 import { useEffect, useReducer } from "react";
-import HyWordTile from "./HyWordTile";
+import HyWordTile from "../HyWordTile";
 
 import './HyCards.css';
 import { useSelector } from "react-redux";
-import { DataSetItem } from "../../types";
+import { DataSetItem } from "../../../types";
 
 interface GameItem {
     id: string;
@@ -90,7 +90,7 @@ function gameReducer(state: GameState, action: any): GameState {
             const rightValue = state.rightColumn.find(item => item.id === state.selectedRight);
 
             if (leftValue?.value === rightValue?.value) {
-                const nextPlayed = [...state.played, state.selectedRight, state.selectedLeft];
+                // const nextPlayed = [...state.played, state.selectedRight, state.selectedLeft];
                 const nextLeftColumn = state.leftColumn.map(item => item.id === leftValue?.id ? { ...item, value: '' } : item);
                 const nextRightColumn = state.rightColumn.map(item => item.id === rightValue?.id ? { ...item, value: '' } : item);
                 return Object.assign({}, state, {

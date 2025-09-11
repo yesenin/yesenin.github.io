@@ -5,8 +5,10 @@ import { createHashRouter, RouterProvider } from 'react-router';
 import CalendarPage from './pages/CalendarPage.tsx';
 import HyPage from './pages/HyPage.tsx';
 import MainContainer from './components/MainContainer.tsx';
-import HyCards from './components/hy/HyCards.tsx';
+import HyCards from './components/hy/games/HyCards.tsx';
 import HyWords from './components/hy/HyWords.tsx';
+import HyVerb from './components/hy/HyVerb.tsx';
+import HyTyping from './components/hy/games/HyTyping.tsx';
 
 const router = createHashRouter([
   {
@@ -35,6 +37,14 @@ const router = createHashRouter([
             {
               path: 'words',
               element: <HyWords />
+            },
+            {
+              path: 'verb',
+              element: <HyVerb />
+            },
+            {
+              path: 'typing',
+              element: <HyTyping />
             }
           ]
         }
