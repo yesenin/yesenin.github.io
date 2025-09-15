@@ -1,0 +1,10 @@
+.typing-history {
+    display: flex;
+    flex-direction: row;
+}
+
+.overlay {
+    overflow-x: scroll;
+    width: 400px;
+    display: block;
+}

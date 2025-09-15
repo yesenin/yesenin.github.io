@@ -1,0 +1,20 @@
+.big-input {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.typing-wrapper {
+    margin: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+}

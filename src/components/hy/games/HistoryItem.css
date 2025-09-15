@@ -1,0 +1,30 @@
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    margin: 4px;
+}
+
+.history-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+}
+
+.correct {
+    background-color: #9cf6b1;
+    border-color: #c3e6cb;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.value {
+    font-size: 18pt;
+    margin-bottom: 4px;
+    padding: 0 4px;
+}
