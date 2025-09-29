@@ -26,9 +26,6 @@ const TableRowWithTags = ({ item, onPlayClick }: TableRowProps) => {
             <td>
                 <span>{item.ru}</span>
             </td>
-            {!isMobile && <td>
-                 {item.tags.map((tag, i) => <span key={i} className="tag"><i>{tag}</i></span>)}
-            </td>}
         </tr>
     );
 }

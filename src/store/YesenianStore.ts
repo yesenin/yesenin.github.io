@@ -1,11 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import wordsReducer from "./WordsSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import { graphqlApi } from '../services/graphqlApi';
 
-const YesenianStore = configureStore({
-    reducer: {
-        words: wordsReducer,
-    }
+export const store = configureStore({
+  reducer: {
+    [graphqlApi.reducerPath]: graphqlApi.reducer,
+  },
+  middleware: (getDefault) => getDefault().concat(graphqlApi.middleware),
 });
 
-export type RootState = ReturnType<typeof YesenianStore.getState>;
-export default YesenianStore;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

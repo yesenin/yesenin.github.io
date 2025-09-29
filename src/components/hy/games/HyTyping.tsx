@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { ResultItem, WordToLearn } from ".";
+import { ResultItem, WordEntity } from ".";
 import _, { set } from "lodash";
+import { gql } from "@apollo/client";
 
 import './HyTyping.css';
 import TypingHistory from "./TypingHistory";
@@ -12,9 +13,34 @@ interface WordStats {
     shown: number;
 }
 
+const endpoint = "https://graphqlzero.almansi.me/api"; // GraphQL API endpoint
+
+// GraphQL query to fetch all adjectives
+const get_all_adjectives = gql`
+query {
+  words(kind: "adjective") { id, value, translation, speechUrl }
+}
+`;
+
+// GraphQL query to fetch all nouns
+const get_all_nouns = gql`
+query {
+  words(kind: "noun") { id, value, translation, speechUrl }
+}
+`;
+
+
 function HyTyping() {
-    const [dataSet, setDataSet] = useState<WordToLearn[]>([]);
-    const [currentWord, setCurrentWord] = useState<WordToLearn | null>(null);
+    // const { loading: adjective_loading, error: adjective_error, data: adjective_data } = useQuery(get_all_adjectives, { pollInterval: 6000 });
+    // const { loading: noun_loading, error: noun_error, data: noun_data } = useQuery(get_all_nouns);
+
+/*     const [nounList, setNounList] = useState<WordEntity[]>([]);
+    const [adjectiveList, setAdjectiveList] = useState<WordEntity[]>([]);
+    const [verbList, setVerbList] = useState<WordEntity[]>([]); */
+
+    const [roundWordList, setRoundWordList] = useState<WordEntity[]>([]);
+
+    const [currentWord, setCurrentWord] = useState<WordEntity | undefined>(undefined);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [userInput, setUserInput] = useState("");
     const [hintCount, setHintCount] = useState(3);
@@ -32,34 +58,29 @@ function HyTyping() {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    useEffect(() => {
+    const [numberNouns, setNumberNouns] = useState(10);
+    const [numberAdjectives, setNumberAdjectives] = useState(10);
+    const [numberVerbs, setNumberVerbs] = useState(0);
+
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    const playSpeech = (url: string) => {
+        if (audioRef.current && url) {
+            audioRef.current.src = url;
+            audioRef.current.play();
+        }
+    }
+
+/*     useEffect(() => {
         Promise.all([
-            fetch('https://gist.githubusercontent.com/yesenin/5e3a1f27a38cbc0cf961945772ddb2c8/raw/c230eb71b238529f9031679c46cc97ecc2414668/hy_typing_adj.tsv'),
-            fetch('https://gist.githubusercontent.com/yesenin/5e3a1f27a38cbc0cf961945772ddb2c8/raw/c230eb71b238529f9031679c46cc97ecc2414668/hy_typing_noun.tsv')
-        ]).then((responses) => Promise.all(responses.map(res => res.text())))
+            fetch('https://yesenian-word-function.azurewebsites.net/api/words/hy/adjective'),
+            fetch('https://yesenian-word-function.azurewebsites.net/api/words/hy/noun')
+        ]).then((responses) => Promise.all(responses.map(res => res.json())))
         .then(([adjectives, nouns]) => {
-            const adjLines = adjectives.split('\n').slice(0, 50);
-            const nounLines = nouns.split('\n').slice(0, 10);
-            const newWords: WordToLearn[] = [];
-            _.sampleSize(adjLines, 10).forEach(line => {
-                const [value, answer] = line.split('\t');
-                if (value && answer) {
-                    newWords.push({ value: value.trim(), answer: answer.trim() });
-                }
-            });
-            _.sampleSize(nounLines, 10).forEach(line => {
-                const [value, answer] = line.split('\t');
-                if (value && answer) {
-                    newWords.push({ value: value.trim(), answer: answer.trim() });
-                }
-            });
-            setDataSet(newWords);
-            const randomWord = _.sample(newWords);
-            if (randomWord) {
-                setCurrentWord(randomWord);
-            }
+            setNounList(nouns);
+            setAdjectiveList(adjectives);
         });
-    }, []);
+    }, []); */
 
     const handleHint = () => {
         if (hintCount > 0) {
@@ -73,14 +94,36 @@ function HyTyping() {
     };
 
     const getNext = () => {
+        const leftWords = [];
         // не нужны слова, которые показали 3 раза и хотя бы один раз ответили правильно
         const skipWords = roundStats.filter(rs => rs.shown > 2 && rs.correct > 0).map(rs => rs.word);
-        const availableWords = dataSet.filter(word => !skipWords.includes(word.value));
-        if (availableWords.length === 0) {
+        if (skipWords.length === 0) {
+            const availableWords: WordEntity[] = [
+            // ...nont_data.slice(0, numberNouns), 
+            //...adjective_data.words.slice(0, numberAdjectives),
+            // ...verbList.slice(0, numberVerbs)
+            ];
+            setRoundWordList(availableWords);
+            leftWords.push(...availableWords);
+        } else {
+            leftWords.push(...roundWordList.filter(word => !skipWords.includes(word.value)));
+        }
+        if (leftWords.length === 0) {
             setRoundIsActive(false);
             return null;
         }
-        return _.sample(availableWords);
+
+        var nextWord = _.sample(leftWords);
+        if (nextWord) {
+            setCurrentWord(nextWord);
+            setCurrentIndex(0);
+            setHintCount(2);
+            setUserInput("");
+            setTypos(0);
+        } else {
+            setRoundIsActive(false);
+        }
+        
     }
 
     const addStatRecord = (word: string, correct: boolean) => {
@@ -106,41 +149,28 @@ function HyTyping() {
             addStatRecord(currentWord.value, true);
 
             setHistory([{
-            word: currentWord?.value || "",
-            correct: true,
-            typos: typos
-        }, ...history]);
+                word: currentWord?.value || "",
+                correct: true,
+                typos: typos
+            }, ...history]);
+            playSpeech(currentWord.speechUrl);
         } else {
             addStatRecord(currentWord?.value || "", false);
 
             setHistory([{
-            word: currentWord?.value || "",
-            correct: false,
-            typos: typos
-        }, ...history]);
+                word: currentWord?.value || "",
+                correct: false,
+                typos: typos
+            }, ...history]);
         }
-        const randomWord = getNext();
-        if (randomWord) {
-            setCurrentWord(randomWord);
-            setCurrentIndex(0);
-            setHintCount(2);
-            setUserInput("");
-            setTypos(0);
-        }
+        getNext();
         inputRef.current?.focus();
     }
 
     const handleSkip = () => {
         addStatRecord(currentWord?.value || "", false);
 
-        const randomWord = getNext();
-        if (randomWord) {
-            setCurrentWord(randomWord);
-            setCurrentIndex(0);
-            setHintCount(2);
-            setUserInput("");
-            setTypos(0);
-        }
+        getNext();
         inputRef.current?.focus();
         setHistory([{
             word: currentWord?.value || "",
@@ -170,15 +200,17 @@ function HyTyping() {
     if (!roundIsActive) {
         return (
             <div>
-                <h1>HyTyping Game</h1>
-                <button onClick={() => setRoundIsActive(true)}>Start Round</button>
+                <h1>Игра про печатанье</h1>
+                <button onClick={() => {
+                    setRoundIsActive(true);
+                    getNext();
+                }}>Начать раунд</button>
             </div>
         );
     }
 
     return (
         <div>
-            <h1>HyTyping Game</h1>
             {currentWord && (
                 <div className="typing-wrapper">
                     <div className="game-wrapper">
@@ -186,10 +218,15 @@ function HyTyping() {
                             <h3>Current Score: {score}</h3>
                         </div>
                         <div>
-                            <h2>{currentWord.answer}</h2>
+                            <h2>{currentWord.translation}</h2>
                             <p>{currentIndex} / {currentWord.value.length}</p>
                             <p>Hints left: {hintCount}</p>
                             <p>Typos: {typos}</p>
+                            <audio
+                                ref={audioRef}
+                                preload="metadata"
+                                style={{ display: 'none' }} // hidden element
+                            />
                         </div>
                         <div>
                             <input 
@@ -226,16 +263,6 @@ function HyTyping() {
                         <div>
                             <button onClick={() => setShowWordList(!showWordList)}>{showWordList ? "Hide Word List" : "Show Word List"}</button>
                         </div>
-                        {showWordList && (
-                            <div>
-                                <h3>Word List</h3>
-                                <ul>
-                                    {dataSet.map((word) => (
-                                        <li key={word.value}>{word.value}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
                     </div>
                 </div>
             )}

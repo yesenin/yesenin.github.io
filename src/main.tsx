@@ -7,8 +7,8 @@ import HyPage from './pages/HyPage.tsx';
 import MainContainer from './components/MainContainer.tsx';
 import HyCards from './components/hy/games/HyCards.tsx';
 import HyWords from './components/hy/HyWords.tsx';
-import HyVerb from './components/hy/HyVerb.tsx';
 import HyTyping from './components/hy/games/HyTyping.tsx';
+import HyWord from './components/hy/HyWord.tsx';
 
 const router = createHashRouter([
   {
@@ -31,19 +31,19 @@ const router = createHashRouter([
               element: <HyWords />
             },
             {
-              path: 'cards',
-              element: <HyCards />
+              path: 'words/:id',
+              element: <HyWord />
             },
             {
               path: 'words',
               element: <HyWords />
             },
             {
-              path: 'verb',
-              element: <HyVerb />
+              path: 'games/cards',
+              element: <HyCards />
             },
             {
-              path: 'typing',
+              path: 'games/typing',
               element: <HyTyping />
             }
           ]

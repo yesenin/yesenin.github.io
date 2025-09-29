@@ -2,7 +2,6 @@ import "./HyWordTable.css";
 import type { DataSetItem } from "../../types";
 import TableRow from "./TableRow";
 import _ from "lodash";
-import KindPane from "./KindPane";
 import TableRowWithTags from "./TableRowWithTags";
 import { useRef } from "react";
 
@@ -24,7 +23,6 @@ function HyWordTable(props: HyWordTableProps) {
 
     return (
         <>
-            <KindPane />
             <audio
                 ref={audioRef}
                 preload="metadata"
@@ -36,11 +34,7 @@ function HyWordTable(props: HyWordTableProps) {
             <div className="hy-landing-content">
                 <table className="hy-table">
                     <tbody>
-                        {_.sortBy(items, ['hy']).map(item => (
-                            area === "all" 
-                                ? <TableRow key={item.id} item={item} onPlayClick={onPlayClick} />
-                                : <TableRowWithTags key={item.id} item={item} onPlayClick={onPlayClick} />
-                        ))}
+                        {_.sortBy(items, ['value']).map(item => <TableRow key={item.id} item={item} onPlayClick={onPlayClick} />)}
                     </tbody>
                 </table>
             </div>

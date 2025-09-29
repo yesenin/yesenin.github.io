@@ -1,45 +1,46 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import HyWordTable from "./HyWordTable";
 import type { DataSetItem } from "../../types";
 import { useEffect, useState } from "react";
-import { setSearchQuery } from "../../store/WordsSlice";
 
 import './HyWords.css';
+import { useGetWordsQuery } from "../../services/graphqlApi";
 
 function HyWords() {
-    const dispatch = useDispatch();
-    const originalDataSet: DataSetItem[] = useSelector((state: any) => state.words.dataSet);
-    const currentArea = useSelector((state: any) => state.words.currentArea);
+    const { data, isLoading, isError } = useGetWordsQuery();
 
+    const [originalDataSet, setOriginalDataSet] = useState<DataSetItem[]>([]);
     const [filteredData, setFilteredData] = useState<DataSetItem[]>([]);
-    const searchQuery = useSelector((state: any) => state.words.searchQuery);
+    const [searchQuery, setSearchQueryState] = useState<string>("");
 
     const search = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        dispatch(setSearchQuery(value));
+        setSearchQueryState(value);
         if (value === "") {
             setFilteredData(originalDataSet);
         } else {
-            setFilteredData(originalDataSet.filter(item => item.hy.toLowerCase().includes(value.toLowerCase())
-                || item.ru.toLowerCase().includes(value.toLowerCase())));
+            setFilteredData(originalDataSet.filter(item => item.value.toLowerCase().includes(value.toLowerCase())
+                || item.translation.toLowerCase().includes(value.toLowerCase())));
         }
     }
 
     useEffect(() => {
-        if (originalDataSet.length > 0) {
-            setFilteredData(originalDataSet);
+        if (data && data.words && data.words.length > 0) {
+            setOriginalDataSet(data.words);
+            setFilteredData(data.words);
         }
-    }, [originalDataSet]);
+    }, [data]);
 
     useEffect(() => {
         window.document.title = "Армянский язык";
     }, []);
 
-    const filterForArea = (): DataSetItem[] => {
-        if (currentArea === "all") {
-            return filteredData;
-        }
-        return filteredData.filter(item => item.kind === currentArea);
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (isError) {
+        return <div>Error loading words</div>;
     }
 
     return (
@@ -57,7 +58,7 @@ function HyWords() {
             </div>
             { !filteredData || filteredData.length === 0 
                 ? <div>Нет слов.</div>
-                : <HyWordTable items={filterForArea()} area={currentArea} />
+                : <HyWordTable items={filteredData} />
             }
         </div>
     )
