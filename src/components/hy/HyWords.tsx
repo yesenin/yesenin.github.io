@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import HyWordTable from "./HyWordTable";
 import type { DataSetItem } from "../../types";
 import { useEffect, useState } from "react";

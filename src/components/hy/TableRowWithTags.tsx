@@ -3,28 +3,26 @@ import { TableRowProps } from "./TableRow";
 
 
 const TableRowWithTags = ({ item, onPlayClick }: TableRowProps) => {
-    const isMobile = window.innerWidth < 600;
-
     return (
         <tr>
             <td>
                 <div className="word-cell">
                     <div>
                         <span className="hy-content">
-                            {item.hy}
+                            {item.value}
                         </span>
-                        <PlayIcon onClick={() => {onPlayClick(item.audioUrl);}} />
+                        <PlayIcon onClick={() => {onPlayClick(item.speechUrl);}} />
                     </div>
                     <div>
                         <span>
-                            <a href={`https://en.wiktionary.org/wiki/${item.hy}`} target="_blank" rel="noopener noreferrer">wiki</a>
+                            <a href={`https://en.wiktionary.org/wiki/${item.value}`} target="_blank" rel="noopener noreferrer">wiki</a>
                         </span>
                     </div>
                 </div>
                 
             </td>
             <td>
-                <span>{item.ru}</span>
+                <span>{item.translation}</span>
             </td>
         </tr>
     );

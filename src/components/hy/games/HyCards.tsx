@@ -57,7 +57,7 @@ function gameReducer(state: GameState, action: any): GameState {
             mockData = _.shuffle(mockData);
             const startLeftColumn = emptyLeftColumn.map((item: GameItem, i: number) => ({
                 ...item,
-                value: mockData[i].hy
+                value: mockData[i].value
             }));
             const emptyRightColumn = Array.from({ length: state.size }, (_, i) => ({
                 id: `right-${i}`,
@@ -67,7 +67,7 @@ function gameReducer(state: GameState, action: any): GameState {
             mockData = _.shuffle(mockData);
             const startRightColumn = emptyRightColumn.map((item: GameItem, i: number) => ({
                 ...item,
-                value: mockData[i].ru
+                value: mockData[i].value
             }));
             return Object.assign({}, state, {
                 phase: 'PLAYING',

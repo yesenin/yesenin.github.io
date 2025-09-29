@@ -2,7 +2,6 @@ import "./HyWordTable.css";
 import type { DataSetItem } from "../../types";
 import TableRow from "./TableRow";
 import _ from "lodash";
-import TableRowWithTags from "./TableRowWithTags";
 import { useRef } from "react";
 
 interface HyWordTableProps {
@@ -11,7 +10,7 @@ interface HyWordTableProps {
 }
 
 function HyWordTable(props: HyWordTableProps) {
-    const { items, area } = props;
+    const { items } = props;
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
     const onPlayClick = (url: string) => {

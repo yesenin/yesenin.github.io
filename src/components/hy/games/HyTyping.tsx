@@ -1,43 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ResultItem, WordEntity } from ".";
-import _, { set } from "lodash";
-import { gql } from "@apollo/client";
-
+import _ from "lodash";
 import './HyTyping.css';
-import TypingHistory from "./TypingHistory";
-
-interface WordStats {
-    word: string;
-    lastShown: Date;
-    correct: number;
-    shown: number;
-}
-
-const endpoint = "https://graphqlzero.almansi.me/api"; // GraphQL API endpoint
-
-// GraphQL query to fetch all adjectives
-const get_all_adjectives = gql`
-query {
-  words(kind: "adjective") { id, value, translation, speechUrl }
-}
-`;
-
-// GraphQL query to fetch all nouns
-const get_all_nouns = gql`
-query {
-  words(kind: "noun") { id, value, translation, speechUrl }
-}
-`;
+import { useGetWordsQuery } from "../../../services/graphqlApi";
 
 
-function HyTyping() {
-    // const { loading: adjective_loading, error: adjective_error, data: adjective_data } = useQuery(get_all_adjectives, { pollInterval: 6000 });
-    // const { loading: noun_loading, error: noun_error, data: noun_data } = useQuery(get_all_nouns);
-
-/*     const [nounList, setNounList] = useState<WordEntity[]>([]);
-    const [adjectiveList, setAdjectiveList] = useState<WordEntity[]>([]);
-    const [verbList, setVerbList] = useState<WordEntity[]>([]); */
-
+const HyTyping: React.FC = () => {
+    const { data, isLoading, isError } = useGetWordsQuery();
+    
     const [roundWordList, setRoundWordList] = useState<WordEntity[]>([]);
 
     const [currentWord, setCurrentWord] = useState<WordEntity | undefined>(undefined);
@@ -49,20 +19,18 @@ function HyTyping() {
 
     const [history, setHistory] = useState<ResultItem[]>([]);
 
-    const [roundStats, setRoundStats] = useState<WordStats[]>([]);
-
-    const [showStats, setShowStats] = useState(false);
-    const [showWordList, setShowWordList] = useState(false);
-
     const [roundIsActive, setRoundIsActive] = useState(false);
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const [numberNouns, setNumberNouns] = useState(10);
-    const [numberAdjectives, setNumberAdjectives] = useState(10);
-    const [numberVerbs, setNumberVerbs] = useState(0);
-
     const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    
+    useEffect(() => {
+        if (data && data.words && data.words.length > 0) {
+            setRoundWordList(data.words);
+        }
+    }, [data]);
 
     const playSpeech = (url: string) => {
         if (audioRef.current && url) {
@@ -70,17 +38,6 @@ function HyTyping() {
             audioRef.current.play();
         }
     }
-
-/*     useEffect(() => {
-        Promise.all([
-            fetch('https://yesenian-word-function.azurewebsites.net/api/words/hy/adjective'),
-            fetch('https://yesenian-word-function.azurewebsites.net/api/words/hy/noun')
-        ]).then((responses) => Promise.all(responses.map(res => res.json())))
-        .then(([adjectives, nouns]) => {
-            setNounList(nouns);
-            setAdjectiveList(adjectives);
-        });
-    }, []); */
 
     const handleHint = () => {
         if (hintCount > 0) {
@@ -91,29 +48,10 @@ function HyTyping() {
             alert("No more hints available.");
         }
         inputRef.current?.focus();
-    };
+    }
 
     const getNext = () => {
-        const leftWords = [];
-        // не нужны слова, которые показали 3 раза и хотя бы один раз ответили правильно
-        const skipWords = roundStats.filter(rs => rs.shown > 2 && rs.correct > 0).map(rs => rs.word);
-        if (skipWords.length === 0) {
-            const availableWords: WordEntity[] = [
-            // ...nont_data.slice(0, numberNouns), 
-            //...adjective_data.words.slice(0, numberAdjectives),
-            // ...verbList.slice(0, numberVerbs)
-            ];
-            setRoundWordList(availableWords);
-            leftWords.push(...availableWords);
-        } else {
-            leftWords.push(...roundWordList.filter(word => !skipWords.includes(word.value)));
-        }
-        if (leftWords.length === 0) {
-            setRoundIsActive(false);
-            return null;
-        }
-
-        var nextWord = _.sample(leftWords);
+        var nextWord = _.sample(roundWordList);
         if (nextWord) {
             setCurrentWord(nextWord);
             setCurrentIndex(0);
@@ -123,31 +61,11 @@ function HyTyping() {
         } else {
             setRoundIsActive(false);
         }
-        
     }
-
-    const addStatRecord = (word: string, correct: boolean) => {
-        let existedWord: WordStats | undefined = _.find(roundStats, { word: word });
-        if (existedWord) {
-            existedWord.lastShown = new Date();
-            existedWord.correct += correct ? 1 : 0;
-            existedWord.shown += 1;
-        } else {
-            existedWord = {
-                word: word,
-                lastShown: new Date(),
-                correct: correct ? 1 : 0,
-                shown: 1
-            };
-        }
-        setRoundStats([...roundStats.filter(rs => rs.word !== word), existedWord]);
-    };
 
     const handleSubmit = () => {
         if (userInput.toLowerCase() === currentWord?.value.toLowerCase()) {
             setScore(score + 1);
-            addStatRecord(currentWord.value, true);
-
             setHistory([{
                 word: currentWord?.value || "",
                 correct: true,
@@ -155,8 +73,6 @@ function HyTyping() {
             }, ...history]);
             playSpeech(currentWord.speechUrl);
         } else {
-            addStatRecord(currentWord?.value || "", false);
-
             setHistory([{
                 word: currentWord?.value || "",
                 correct: false,
@@ -168,7 +84,6 @@ function HyTyping() {
     }
 
     const handleSkip = () => {
-        addStatRecord(currentWord?.value || "", false);
 
         getNext();
         inputRef.current?.focus();
@@ -195,7 +110,17 @@ function HyTyping() {
                 setTypos(typos + 1);
             }
         }
-    };
+    }
+
+    
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (isError) {
+        return <div>Error loading words</div>;
+    }
 
     if (!roundIsActive) {
         return (
@@ -243,25 +168,6 @@ function HyTyping() {
                             <button onClick={handleHint}>Hint</button>
                             <button onClick={handleSubmit}>Submit</button>
                             <button onClick={handleSkip}>Skip</button>
-                        </div>
-                        <div>
-                            <TypingHistory items={history} />
-                        </div>
-                    </div>
-                    <div className="info-wrapper">
-                        <div>
-                            <button onClick={() => setShowStats(!showStats)}>{showStats ? "Hide Stats" : "Show Stats"}</button>
-                        </div>
-                        {showStats && (
-                            <div>
-                                <h3>Round Statistics</h3>
-                                <pre>
-                                    {JSON.stringify(roundStats.map(rs => ({ ...rs, score: rs.shown > 0 ? rs.correct / rs.shown : 0 })), null, 2)}
-                                </pre>
-                            </div>
-                        )}
-                        <div>
-                            <button onClick={() => setShowWordList(!showWordList)}>{showWordList ? "Hide Word List" : "Show Word List"}</button>
                         </div>
                     </div>
                 </div>
