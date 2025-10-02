@@ -4,7 +4,7 @@ import { gql } from 'graphql-request';
 import { DataSetItem } from '../types';
 
 // Вынесите в .env (например VITE_API_URL) при необходимости
-const GRAPHQL_URL = 'https://yesenian-api.azurewebsites.net/api/graphql/';
+const GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_URL;
 
 export const graphqlApi = createApi({
   reducerPath: 'graphqlApi',
