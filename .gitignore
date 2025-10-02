@@ -42,3 +42,4 @@ dist-ssr
 *.sw?
 dist/index.html
 dist/index.html
+.env

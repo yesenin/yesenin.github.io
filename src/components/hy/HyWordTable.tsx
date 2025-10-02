@@ -29,7 +29,7 @@ function HyWordTable(props: HyWordTableProps) {
                 style={{ display: 'none' }} // hidden element
             />
             <div>
-                <p>Всего записей: {items.length}. {import.meta.env.VITE_CAN_ADD && <Link to="/hy/words/add">Добавить.</Link>}</p>
+                <p>Всего записей: {items.length}. {import.meta.env.VITE_CAN_ADD === 'true' && <Link to="/hy/words/add">Добавить.</Link>}</p>
             </div>
             <div className="hy-landing-content">
                 <table className="hy-table">

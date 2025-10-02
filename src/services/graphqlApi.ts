@@ -11,6 +11,7 @@ export const graphqlApi = createApi({
   baseQuery: graphqlRequestBaseQuery({
     url: GRAPHQL_URL
   }),
+
   // Можно вообще не указывать tagTypes, если нет инвалидации
   endpoints: (builder) => ({
     getWords: builder.query<{ words: DataSetItem[] }, void>({
