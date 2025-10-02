@@ -3,6 +3,7 @@ import type { DataSetItem } from "../../types";
 import TableRow from "./TableRow";
 import _ from "lodash";
 import { useRef } from "react";
+import { Link } from "react-router";
 
 interface HyWordTableProps {
     items: DataSetItem[];
@@ -28,7 +29,7 @@ function HyWordTable(props: HyWordTableProps) {
                 style={{ display: 'none' }} // hidden element
             />
             <div>
-                <p>Всего записей: {items.length}</p>
+                <p>Всего записей: {items.length}. {import.meta.env.VITE_CAN_ADD && <Link to="/hy/words/add">Добавить.</Link>}</p>
             </div>
             <div className="hy-landing-content">
                 <table className="hy-table">

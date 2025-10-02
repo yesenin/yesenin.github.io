@@ -10,6 +10,7 @@ function HyContainer() {
             </div>
             <div className="hy-nav-bar">
                 <span><Link to="/hy/words" className="silent-link">Словарь</Link></span>
+                <span><Link to="/hy/games" className="silent-link">Игры</Link></span>
                 {/* <span><Link to="/hy/cards" className="silent-link">Карточки</Link></span> */}
             </div>
             <Outlet />

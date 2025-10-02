@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import { store } from "../store/YesenianStore";
+import { store } from "../store/HyStore";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./HyPage.css";
 import HyContainer from "../components/hy/HyContainer";

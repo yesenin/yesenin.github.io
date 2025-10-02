@@ -44,7 +44,21 @@ export const graphqlApi = createApi({
         variables: { id },
       }),
     }),
+    addWord: builder.mutation<{ addWord: DataSetItem }, { value: string; translation: string; kind: string }>({
+      query: ({ value, translation, kind }) => ({
+        document: gql`mutation {
+          addWord(input: {
+            value: "${value}",
+            kind: "${kind}",
+            firstTranslation: {
+              language: "ru", values: ["${translation}"]
+            },tags: []})
+        }
+        `,
+        variables: { value, translation, kind },
+      }),
+    }),
   }),
 });
 
-export const { useGetWordsQuery, useGetWordByIdQuery } = graphqlApi;
+export const { useGetWordsQuery, useGetWordByIdQuery, useAddWordMutation } = graphqlApi;

@@ -9,6 +9,13 @@ import HyCards from './components/hy/games/HyCards.tsx';
 import HyWords from './components/hy/HyWords.tsx';
 import HyTyping from './components/hy/games/HyTyping.tsx';
 import HyWord from './components/hy/HyWord.tsx';
+import FrPage from './pages/FrPage.tsx';
+import EnPage from './pages/EnPage.tsx';
+import SvPage from './pages/SvPage.tsx';
+import ZhPage from './pages/ZhPage.tsx';
+import HyAddWord from './components/hy/HyAddWord.tsx';
+import HySelectWords from './components/hy/games/HySelectWords.tsx';
+import HyGames from './components/hy/games/HyGames.tsx';
 
 const router = createHashRouter([
   {
@@ -31,22 +38,56 @@ const router = createHashRouter([
               element: <HyWords />
             },
             {
-              path: 'words/:id',
-              element: <HyWord />
-            },
-            {
               path: 'words',
-              element: <HyWords />
+              children: [
+                {
+                  path: '',
+                  element: <HyWords />
+                },
+                {
+                  path: ':id',
+                  element: <HyWord />
+                },
+                {
+                  path: 'add',
+                  element: <HyAddWord />
+                },
+              ]
             },
             {
-              path: 'games/cards',
-              element: <HyCards />
-            },
-            {
-              path: 'games/typing',
-              element: <HyTyping />
+              path: 'games',
+              children: [
+                {
+                  path: '',
+                  element: <HyGames />
+                },
+                {
+                  path: 'typing',
+                  element: <HyTyping />
+                },
+                {
+                  path: 'select',
+                  element: <HySelectWords />
+                }
+              ]
             }
           ]
+        },
+        {
+          path: 'zh',
+          element: <ZhPage />
+        },
+        {
+          path: 'en',
+          element: <EnPage />
+        },
+        {
+          path: 'sv',
+          element: <SvPage />
+        },
+        {
+          path: 'fr',
+          element: <FrPage />
         }
       ]
     }
