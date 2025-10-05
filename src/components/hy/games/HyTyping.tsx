@@ -25,10 +25,12 @@ const HyTyping: React.FC = () => {
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
+    const [learnMode, setLearnMode] = useState<boolean>(false);
+
     
     useEffect(() => {
         if (data && data.words && data.words.length > 0) {
-            setRoundWordList(data.words);
+            setRoundWordList(data.words.filter(word => word.kind === 'verb'));
         }
     }, [data]);
 
@@ -58,33 +60,45 @@ const HyTyping: React.FC = () => {
             setHintCount(2);
             setUserInput("");
             setTypos(0);
+            setLearnMode(false);
         } else {
             setRoundIsActive(false);
         }
     }
 
+    const handleCorrect = () => {
+        setScore(score + 1);
+        setHistory([{
+            word: currentWord?.value || "",
+            correct: true,
+            typos: typos
+        }, ...history]);
+        playSpeech(currentWord!.speechUrl);
+        getNext();
+    }
+
     const handleSubmit = () => {
         if (userInput.toLowerCase() === currentWord?.value.toLowerCase()) {
-            setScore(score + 1);
-            setHistory([{
-                word: currentWord?.value || "",
-                correct: true,
-                typos: typos
-            }, ...history]);
-            playSpeech(currentWord.speechUrl);
+            handleCorrect();
         } else {
             setHistory([{
                 word: currentWord?.value || "",
                 correct: false,
                 typos: typos
             }, ...history]);
+            setCurrentIndex(0);
+            setUserInput("");
+            setLearnMode(true);
         }
-        getNext();
+
         inputRef.current?.focus();
     }
 
     const handleSkip = () => {
-
+        setCurrentIndex(0);
+        setUserInput("");
+        setLearnMode(true);
+        /*
         getNext();
         inputRef.current?.focus();
         setHistory([{
@@ -92,6 +106,7 @@ const HyTyping: React.FC = () => {
             correct: false,
             typos: typos
         }, ...history]);
+        */
     }
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -105,7 +120,11 @@ const HyTyping: React.FC = () => {
         } else if (currentWord && 'աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքևօֆ'.includes(e.key.toLowerCase())) {
             if (currentWord.value.toLowerCase()[currentIndex] === e.key.toLowerCase()) {
                 setCurrentIndex(currentIndex + 1);
-                setUserInput(userInput + e.key);
+                const nextUserInput = userInput + e.key;
+                setUserInput(nextUserInput);
+                if (nextUserInput.toLowerCase() === currentWord.value.toLowerCase()) {
+                    handleCorrect();
+                }
             } else {
                 setTypos(typos + 1);
             }
@@ -153,6 +172,11 @@ const HyTyping: React.FC = () => {
                                 style={{ display: 'none' }} // hidden element
                             />
                         </div>
+                        {learnMode && (
+                            <div>
+                                <h2 className="hy-content">{currentWord.value}</h2>
+                            </div>
+                        )}
                         <div>
                             <input 
                                 ref={inputRef}

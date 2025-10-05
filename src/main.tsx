@@ -16,6 +16,8 @@ import HyAddWord from './components/hy/HyAddWord.tsx';
 import HySelectWords from './components/hy/games/HySelectWords.tsx';
 import HyGames from './components/hy/games/HyGames.tsx';
 import HyVerbGame from './components/hy/games/HyVerbGame.tsx';
+import HyPhrases from './components/hy/HyPhrases.tsx';
+import HyRandomWord from './components/hy/HyRandomWord.tsx';
 
 const router = createHashRouter([
   {
@@ -52,7 +54,15 @@ const router = createHashRouter([
                   path: 'add',
                   element: <HyAddWord />
                 },
+                {
+                  path: 'random',
+                  element: <HyRandomWord />
+                }
               ]
+            },
+            {
+              path: 'phrases',
+              element: <HyPhrases />
             },
             {
               path: 'games',

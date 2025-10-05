@@ -1,9 +1,12 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 
 function HyWord() {
     const { id } = useParams();
 
-    return <h2>Слово: {id}.</h2>
+    return <div>
+        <h2>Слово: {id}.</h2>
+        <Link to="/hy/words">Назад.</Link>
+        </div>
 }
 
 export default HyWord;

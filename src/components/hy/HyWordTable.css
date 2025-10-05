@@ -70,3 +70,15 @@
 .hy-nav-item {
     cursor: pointer;
 }
+
+.hy-table .tiny-td {
+    width: 50px;
+    text-align: center;
+}  
+
+.hy-content-small {
+    font-size: 11pt;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 8px;
+}

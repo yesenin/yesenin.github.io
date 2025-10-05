@@ -15,13 +15,12 @@ const TableRow = ({ item, onPlayClick }: TableRowProps) => {
             <td className="main-td">
                 <div className="word-cell">
                     <div>
-                        <span>
-                            <Link to={`${item.id}`}>&#8594;</Link>&nbsp;
-                        </span>
                         <span className="hy-content">
                             {item.value}
                         </span>
-                        {item.speechUrl && <PlayIcon onClick={() => {onPlayClick(item.speechUrl);}} />}
+                        <span className="hy-content-small">
+                            <Link to={`${item.id}`}>Детали</Link>&nbsp;
+                        </span>
                         {isMobile && (<div>
                             <span style={{ paddingRight: '4px' }}><i>{item.kind}</i></span>
                             <span>
@@ -38,7 +37,9 @@ const TableRow = ({ item, onPlayClick }: TableRowProps) => {
                         }
                     </div>
                 </div>
-                
+            </td>
+            <td className="tiny-td">
+                {item.speechUrl && <PlayIcon onClick={() => {onPlayClick(item.speechUrl);}} />}
             </td>
             {!isMobile && <>
                 <td>

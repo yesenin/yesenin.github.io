@@ -3,7 +3,6 @@ import { graphqlRequestBaseQuery } from '@rtk-query/graphql-request-base-query';
 import { gql } from 'graphql-request';
 import { DataSetItem } from '../types';
 
-// Вынесите в .env (например VITE_API_URL) при необходимости
 const GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_URL;
 
 export const graphqlApi = createApi({
@@ -28,6 +27,9 @@ export const graphqlApi = createApi({
           }
         `,
       }),
+      transformResponse: (response: { words: DataSetItem[] }) => ({
+        words: response.words.filter(word => word.kind !== 'phrase'),
+      }),
     }),
     getWordById: builder.query<{ word: DataSetItem }, string>({
       query: (id) => ({
@@ -45,7 +47,7 @@ export const graphqlApi = createApi({
         variables: { id },
       }),
     }),
-    addWord: builder.mutation<{ addWord: DataSetItem }, { value: string; translation: string; kind: string }>({
+    addWord: builder.mutation<{ addWord: DataSetItem }, { value: string; translation: string; kind: string, tags: string[] }>({
       query: ({ value, translation, kind }) => ({
         document: gql`mutation {
           addWord(input: {
@@ -59,7 +61,25 @@ export const graphqlApi = createApi({
         variables: { value, translation, kind },
       }),
     }),
+    getPhrases: builder.query<{ phrases: DataSetItem[] }, void>({
+      query: () => ({
+        document: gql`
+          query GetPhrases {
+            phrases {
+              id
+              value
+              translation
+              speechUrl
+              kind
+            }
+          }
+        `,
+      }),
+      transformResponse: (response: { phrases: DataSetItem[] }) => ({
+        phrases: response.phrases.filter(phrase => phrase.kind === 'phrase'),
+      }),
+    }),
   }),
 });
 
-export const { useGetWordsQuery, useGetWordByIdQuery, useAddWordMutation } = graphqlApi;
+export const { useGetWordsQuery, useGetWordByIdQuery, useAddWordMutation, useGetPhrasesQuery } = graphqlApi;
