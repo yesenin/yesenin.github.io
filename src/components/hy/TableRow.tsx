@@ -18,9 +18,6 @@ const TableRow = ({ item, onPlayClick }: TableRowProps) => {
                         <span className="hy-content">
                             {item.value}
                         </span>
-                        <span className="hy-content-small">
-                            <Link to={`${item.id}`}>Детали</Link>&nbsp;
-                        </span>
                         {isMobile && (<div>
                             <span style={{ paddingRight: '4px' }}><i>{item.kind}</i></span>
                             <span>
@@ -49,6 +46,11 @@ const TableRow = ({ item, onPlayClick }: TableRowProps) => {
                     <span><i>{item.kind}</i></span>
                 </td>
             </>}
+            <td>
+                <span className="hy-content-small">
+                    <Link to={`${item.id}`}>Детали</Link>&nbsp;
+                </span>
+            </td>
         </tr>
     );
 }
