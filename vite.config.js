@@ -1,9 +1,17 @@
 // vite.config.js
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
+import { resolve } from "node:path";
 
 export default defineConfig({
-  base: '/',
+  base: "/",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        calendar: resolve(__dirname, "pages/calendar.html"),
+        files: resolve(__dirname, "pages/files.html"),
+      },
+    },
   },
-})
+});
